@@ -1,0 +1,89 @@
+import React from 'react'
+import SectionHeader from '../../components/common/SectionHeader'
+import Reveal from '../../components/common/Reveal'
+import { aboutData } from '../../data/portfolioData'
+import './About.css'
+
+function About() {
+  const highlights = [
+    {
+      label: 'STATUS & PENDIDIKAN',
+      value: 'Siswa Kelas 10 RPL · SMKN 1 Talaga',
+      delay: 200,
+    },
+    {
+      label: 'PROYEK UTAMA',
+      value: 'AURA GLOBAL, LifeHub AI & NEXUS AI OFFICE',
+      delay: 320,
+    },
+    {
+      label: 'DOMISILI',
+      value: 'Jawa Barat, Indonesia',
+      delay: 440,
+    },
+  ]
+
+  return (
+    <section className="about-section" id="about">
+      <div className="container">
+        {/* Title reveals first */}
+        <Reveal effect="fade-up" delay={0}>
+          <SectionHeader
+            title="TENTANG"
+            watermark="PROFIL"
+            meta="Software Engineer &amp; Web Developer"
+          />
+        </Reveal>
+
+        <div className="about-grid">
+          {/* Main Editorial Bio */}
+          <div className="about-main-content">
+            <Reveal effect="fade-up" delay={150}>
+              <h3 className="about-lead">
+                Software Engineer &amp; Web Developer
+              </h3>
+            </Reveal>
+
+            <Reveal effect="fade-up" delay={240}>
+              <div className="about-text-content">
+                <p className="about-desc">
+                  {aboutData.p1}
+                </p>
+                <p className="about-detail">
+                  {aboutData.p2}
+                </p>
+
+                {/* 3 Poin Fokus Saat Ini */}
+                <div className="about-focus-box">
+                  <span className="focus-box-label">FOKUS SAAT INI</span>
+                  <ul className="focus-box-list">
+                    {aboutData.currentFocus.map((point, idx) => (
+                      <li key={idx} className="focus-box-item">
+                        <span className="focus-bullet" aria-hidden="true">✦</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Highlights / Info Cards with Staggered Delays */}
+          <div className="about-sidebar">
+            {highlights.map((item, index) => (
+              <Reveal key={index} effect="fade-up" delay={item.delay}>
+                <div className="about-stat-box hover-lift">
+                  <span className="stat-label">{item.label}</span>
+                  <p className="stat-value">{item.value}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default About

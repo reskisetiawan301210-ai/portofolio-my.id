@@ -1,0 +1,247 @@
+.experience-section {
+  padding: 3rem 0;
+}
+
+/* Dark Card Container (Ref: Frame 00:07 - 00:10) */
+.experience-dark-card {
+  position: relative;
+  background: #11141a;
+  color: #ffffff;
+  border-radius: 28px;
+  padding: 3.5rem 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+  overflow: visible;
+}
+
+.experience-header-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+}
+
+.experience-counter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #c4c9d4;
+  letter-spacing: -0.01em;
+}
+
+.experience-counter-badge .counter-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.experience-rows-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.experience-table-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.25rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.25s ease, padding 0.25s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.experience-table-row:hover {
+  background: rgba(255, 255, 255, 0.035);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.exp-info-left {
+  display: flex;
+  align-items: baseline;
+  gap: 1.75rem;
+}
+
+.exp-number {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #646b79;
+  font-family: monospace;
+}
+
+.exp-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.exp-institution-name {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.experience-table-row:hover .exp-institution-name {
+  color: #f3f5f8;
+}
+
+.exp-role-title {
+  font-size: 0.95rem;
+  color: #9299a6;
+  font-weight: 500;
+}
+
+.exp-meta-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.exp-period-text {
+  font-size: 0.9375rem;
+  color: #9299a6;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.exp-arrow-icon {
+  font-size: 1.35rem;
+  color: #646b79;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.experience-table-row:hover .exp-arrow-icon {
+  transform: translate(3px, -3px);
+  color: #ffffff;
+}
+
+/* Floating Image Preview on Hover (Ref: Frame 00:10) */
+.experience-floating-preview-wrap {
+  position: absolute;
+  right: 14%;
+  top: 15%;
+  z-index: 10;
+  pointer-events: none;
+  animation: float-appear 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes float-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(2deg);
+  }
+}
+
+.experience-floating-card {
+  width: 270px;
+  background: #1c202a;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55), 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  background: #14171f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.floating-pill {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #10b981;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.floating-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #b0b7c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.floating-card-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.floating-card-fallback {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: radial-gradient(circle at 50% 40%, #272d3a 0%, #151821 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  color: #ffffff;
+}
+
+.fallback-monogram {
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.fallback-note {
+  font-size: 0.7rem;
+  color: #8f98a6;
+}
+
+@media (max-width: 900px) {
+  .experience-dark-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .experience-floating-preview-wrap {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-table-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .exp-meta-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

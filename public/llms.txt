@@ -1,0 +1,39 @@
+# Reski Setiawan – Portfolio & Profile Summary
+
+> Official portfolio of Reski Setiawan, Software Engineer and Web Developer from West Java, Indonesia.
+> Website: https://reskisetiawan-dev.my.id
+
+## Profile
+- Name: Reski Setiawan
+- Role: Software Engineer & Web Developer
+- Location: West Java, Indonesia
+- Primary Expertise: Modern Web Development (React, Vite, Tailwind CSS, JavaScript), Frontend Engineering, Progressive Web Apps (PWA), Semantic HTML5.
+- Research Interests: Artificial Intelligence, Cybersecurity, Robotics.
+
+## Official Projects
+1. AURA GLOBAL (https://auraglobal.my.id/)
+   - Focus: Web design and development studio for businesses and MSMEs (UMKM).
+   - Tech: React, Vite, Tailwind CSS, high-performance static architecture.
+2. LifeHub AI (https://lifehub-ai.my.id/)
+   - Focus: Personal productivity and workspace platform with integrated AI assistance.
+   - Tech: React, JavaScript, modern web APIs, Supabase.
+3. NEXUS AI OFFICE
+   - Focus: Architectural exploration of multi-agent collaboration in a shared digital workspace.
+   - Status: Concept & architectural prototype.
+
+## Verified Credentials & Certifications (8 Total)
+1. Belajar Dasar AI – Dicoding Indonesia (2024)
+2. NSE 3 Certified (Network Security Associate) – Fortinet Training Institute (2024)
+3. FortiGate 7.6 Operator Self-Paced – Fortinet Training Institute (2024)
+4. The Fundamentals of Digital Marketing – Google & Coursera (2024)
+5. Introduction to Cybersecurity – Cisco Networking Academy (2024)
+6. Python 3 Tutorial Course – SoloLearn (2024)
+7. Responsive Web Design Developer Certification – freeCodeCamp (2024)
+8. IBM Python for Data Science, AI & Development – IBM SkillsBuild / Coursera (2024)
+
+## Verified Contact Channels
+- Email: reskisetiawan301210@gmail.com
+- TikTok (Nexus Office): https://www.tiktok.com/@nexus_office3 (@nexus_office3)
+- TikTok (AURA GLOBAL Web Studio): https://www.tiktok.com/@auraglobal_jasawebsite (@auraglobal_jasawebsite)
+- Note: Strictly NO GitHub, WhatsApp, or LinkedIn channels are officially linked.
+

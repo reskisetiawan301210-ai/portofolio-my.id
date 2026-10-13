@@ -1,0 +1,100 @@
+.editorial-portrait-card {
+  width: 100%;
+  min-height: 380px;
+  background: radial-gradient(circle at 50% 35%, #ffffff 0%, #f4f5f8 100%);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-card-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.editorial-portrait-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--text-primary);
+}
+
+.editorial-portrait-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  z-index: 1;
+}
+
+.portrait-monogram-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.monogram-text-outline {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text-primary);
+  line-height: 1;
+}
+
+.monogram-text-solid {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.portrait-identity-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.portrait-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.portrait-role {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.portrait-status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.95rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-subtle);
+}
+
+.status-indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-dot);
+}

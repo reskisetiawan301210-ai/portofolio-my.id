@@ -1,0 +1,140 @@
+.footer-wrap {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border-light);
+  background: var(--bg-primary);
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.footer-tagline {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.footer-nav-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav-item {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-item:hover {
+  color: var(--text-primary);
+}
+
+.footer-nav-highlight {
+  color: var(--accent-orange, #f97316);
+  font-weight: 700;
+}
+
+.footer-meta {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
+  min-height: 44px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  touch-action: manipulation;
+  transition: all 0.2s ease;
+}
+
+.footer-social-link:hover {
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.footer-social-link:hover .footer-social-icon {
+  color: var(--text-primary);
+}
+
+.footer-arrow {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.footer-social-link:hover .footer-arrow {
+  transform: translate(2px, -2px);
+  color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .footer-social-row {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .footer-social-link {
+    width: 100%;
+    justify-content: center;
+  }
+}

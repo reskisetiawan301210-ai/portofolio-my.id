@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SITEMAP PORTOFOLIO RESKI SETIAWAN (https://reskisetiawan-dev.my.id) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Beranda Utama -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/og-image.png</image:loc>
+      <image:title>Reski Setiawan – Software Engineer &amp; Web Developer</image:title>
+    </image:image>
+  </url>
+
+  <!-- Halaman Dedikasi Kredensial & Sertifikat -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/sertifikat</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/certificates/dicoding-dasar-ai.webp</image:loc>
+      <image:title>Sertifikat Belajar Dasar AI - Dicoding Indonesia</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/certificates/fortinet-nse3-cybersecurity.webp</image:loc>
+      <image:title>Sertifikat NSE 3 Certified in Cybersecurity - Fortinet</image:title>
+    </image:image>
+  </url>
+
+  <!-- Halaman Pendidikan -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/pendidikan</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Rute Detail Layanan -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/layanan/website-bisnis-umkm</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/layanan/redesain-kustomisasi-web</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/layanan/seo-teknis-metadata-lokal</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/layanan/katalog-produk-menu-digital</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Rute Detail Proyek Terverifikasi -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/proyek/aura-global</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/proyek/lifehub-ai</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/proyek/nexus-ai-office</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Rute Detail Pengalaman & Inisiatif -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/pengalaman/aura-global</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/pengalaman/lifehub-ai</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/pengalaman/nexus-ai-office</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Rute Detail Area Fokus & Jalur Belajar -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/area-fokus/kecerdasan-buatan-agent</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/area-fokus/keamanan-siber-web</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/area-fokus/robotika-sistem-tertanam</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+</urlset>

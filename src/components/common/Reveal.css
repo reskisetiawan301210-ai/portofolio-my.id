@@ -1,0 +1,71 @@
+.reveal-wrapper {
+  transition-property: opacity, transform;
+  transition-duration: 800ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-wrapper.is-revealed {
+  will-change: auto;
+}
+
+/* Effect 1: Fade Up */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.reveal-fade-up.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Effect 2: Scale Up (for photos, cards) */
+.reveal-scale-up {
+  opacity: 0;
+  transform: scale(0.95) translateY(16px);
+}
+
+.reveal-scale-up.is-revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Effect 3: Pure Fade */
+.reveal-fade {
+  opacity: 0;
+}
+
+.reveal-fade.is-revealed {
+  opacity: 1;
+}
+
+/* Effect 4: Mask Up Reveal for Typography */
+.reveal-mask-up {
+  display: block;
+  overflow: hidden;
+}
+
+.reveal-mask-up > * {
+  display: block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-mask-up.is-revealed > * {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-wrapper,
+  .reveal-mask-up > * {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

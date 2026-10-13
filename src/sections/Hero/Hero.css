@@ -1,0 +1,454 @@
+.hero-section {
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 4.5rem;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* 1. Status Pill Entrance */
+.hero-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.45rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-subtle);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 350ms cubic-bezier(0.16, 1, 0.3, 1) 40ms,
+              transform 350ms cubic-bezier(0.16, 1, 0.3, 1) 40ms;
+  will-change: opacity, transform;
+}
+
+.hero-status-pill.entered {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-dot);
+}
+
+.status-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* 2. Big Name Typography with Mask/Reveal */
+.hero-title-wrap {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-big-name {
+  font-size: clamp(2.4rem, 7.8vw, 7.2rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  user-select: none;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 0.3em;
+  max-width: 100%;
+}
+
+.name-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.08em;
+}
+
+.name-text {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 450ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.name-stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text-primary);
+  font-weight: 900;
+  transition-delay: 100ms;
+}
+
+.name-solid {
+  color: var(--text-primary);
+  transition-delay: 180ms;
+}
+
+.name-text.revealed {
+  transform: translateY(0);
+  opacity: 1;
+  will-change: auto;
+}
+
+/* 3. Main Grid */
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0.75rem;
+}
+
+/* 4. Left Column Entrance */
+.hero-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 450ms cubic-bezier(0.16, 1, 0.3, 1) 240ms,
+              transform 450ms cubic-bezier(0.16, 1, 0.3, 1) 240ms;
+  will-change: opacity, transform;
+}
+
+.hero-left-col.entered {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+.hero-role-title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hero-bio-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-bio-text {
+  font-size: clamp(0.95rem, 1.2vw, 1.0625rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+.hero-actions {
+  margin-top: 0.5rem;
+}
+
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  min-height: 44px;
+  background: var(--text-primary);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  touch-action: manipulation;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.hero-cta-btn:hover {
+  background: #232730;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-cta-btn .arrow {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-cta-btn:hover .arrow {
+  transform: translate(3px, -3px);
+}
+
+/* 5. Center Column Photo Entrance */
+.hero-center-col {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-portrait-frame {
+  width: 100%;
+  max-width: 360px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 0.75rem;
+  /* Entrance state */
+  opacity: 0;
+  transform: scale(0.96) translateY(18px);
+  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1) 200ms,
+              transform 500ms cubic-bezier(0.16, 1, 0.3, 1) 200ms;
+  will-change: opacity, transform;
+}
+
+.hero-portrait-frame.entered {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  will-change: auto;
+}
+
+.hero-photo-frame {
+  border-radius: var(--radius-card-sm);
+  background: #f8fafc;
+}
+
+/* 6. Right Column Social Pills Entrance */
+.hero-right-col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-pill-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 290px;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1.15rem;
+  min-height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-subtle);
+  cursor: pointer;
+  touch-action: manipulation;
+  white-space: nowrap;
+  /* Staggered entrance */
+  opacity: 0;
+  transform: translateX(16px);
+  transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1) calc(280ms + var(--stagger-index, 0) * 60ms),
+              transform 400ms cubic-bezier(0.16, 1, 0.3, 1) calc(280ms + var(--stagger-index, 0) * 60ms),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+  will-change: opacity, transform;
+}
+
+.social-pill.entered {
+  opacity: 1;
+  transform: translateX(0);
+  will-change: auto;
+}
+
+.social-pill:hover {
+  border-color: var(--text-primary);
+  transform: translateX(-4px) !important;
+  box-shadow: var(--shadow-card-hover);
+}
+
+.pill-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.social-pill:hover .pill-icon-wrap {
+  color: var(--text-primary);
+}
+
+.pill-title {
+  font-size: clamp(0.75rem, 1.2vw, 0.8125rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-big-name {
+    font-size: clamp(2.2rem, 7.5vw, 5.5rem);
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+  }
+
+  .hero-right-col {
+    grid-column: span 2;
+    justify-content: center;
+  }
+
+  .social-pill-stack {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-title-wrap {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-title-wrap {
+    margin-bottom: 2rem;
+  }
+
+  /* SEJAJAR SATU BARIS di tablet dan layar di atas 480px */
+  .hero-big-name {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    gap: 0.25em;
+    font-size: clamp(2rem, 7vw, 3.8rem);
+    line-height: 1;
+  }
+
+  .name-space {
+    display: inline-block;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  /* Order: teks hero & tombol dulu, lalu kartu profil di bawahnya */
+  .hero-left-col {
+    order: 1;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-center-col {
+    order: 2;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-right-col {
+    order: 3;
+    grid-column: span 1;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .hero-portrait-frame {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+
+  .social-pill-stack {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 0.65rem;
+  }
+}
+
+/* Hanya bertumpuk 2 baris di HP kecil di bawah 480px */
+@media (max-width: 480px) {
+  .hero-status-pill {
+    padding: 0.35rem 0.85rem;
+    gap: 0.45rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-title-wrap {
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-big-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: normal;
+    font-size: clamp(2.1rem, 11.5vw, 2.95rem);
+    letter-spacing: -0.03em;
+    gap: 0.05em;
+  }
+
+  .name-space {
+    display: none;
+  }
+
+  .hero-role-title {
+    font-size: 1.35rem;
+  }
+
+  .hero-bio-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-cta-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+
+  .social-pill-stack {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .social-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}
