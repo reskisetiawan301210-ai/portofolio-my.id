@@ -34,9 +34,9 @@ function ExperienceDetailPage() {
   }
 
   return (
-    <main className="detail-page-wrap">
+    <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title={`${exp.institution} – Pengalaman Reski Setiawan`}
+        title={`${exp.institution} – Pengalaman & Inisiatif | Reski Setiawan`}
         description={exp.oneLiner}
         path={`/pengalaman/${exp.slug}`}
       />
@@ -44,10 +44,16 @@ function ExperienceDetailPage() {
       <div className="container">
         {/* Navigation Bar */}
         <div className="detail-nav-bar">
-          <Link to="/#experience" className="back-btn">
-            <span>←</span>
-            <span>Kembali ke Pengalaman</span>
+          <Link to="/perjalanan" className="back-btn" aria-label="Kembali ke Perjalanan Saya">
+            <span aria-hidden="true">←</span>
+            <span>Kembali ke Perjalanan Saya</span>
           </Link>
+          <div className="detail-status-pill">
+            <span className="status-dot status-dot-pulse"></span>
+            <span className="pill-accent-purple" style={{ padding: '0.15rem 0.6rem', borderRadius: '9999px', fontWeight: 700 }}>
+              Inisiatif #{exp.tag}
+            </span>
+          </div>
         </div>
 
         {/* Section Header dengan pola /JUDUL */}
@@ -61,6 +67,7 @@ function ExperienceDetailPage() {
 
         {/* Header Block */}
         <div className="detail-header-block">
+          <div className="reading-accent-bar" />
           <Reveal effect="fade-up" delay={100}>
             <div className="detail-badges-row">
               <span className="detail-pill-tag">INISIASI #{exp.tag}</span>
@@ -188,8 +195,8 @@ function ExperienceDetailPage() {
             <p className="detail-cta-desc">
               Punya ide produk, kebutuhan website, atau proyek kolaborasi? Mari bicarakan langkah berikutnya.
             </p>
-            <Link to="/#contact" className="external-live-btn" style={{ padding: '0.85rem 2.25rem' }}>
-              <span>Mari Bicara</span>
+            <Link to="/kontak" className="external-live-btn" style={{ padding: '0.85rem 2.25rem' }}>
+              <span>Konsultasi Proyek</span>
               <span>↗</span>
             </Link>
           </div>

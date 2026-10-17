@@ -66,7 +66,7 @@ function ContactPage() {
   ]
 
   return (
-    <main className="detail-page-wrap" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
+    <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Kontak Resmi – Reski Setiawan"
         description="Hubungi Reski Setiawan (Software Engineer &amp; Siswa SMKN 1 Talaga PPLG) melalui email reskisetiawan301210@gmail.com dan kanal TikTok resmi."
@@ -88,12 +88,15 @@ function ContactPage() {
           </Link>
           <div className="detail-status-pill">
             <span className="status-dot status-dot-pulse"></span>
-            <span>Available for Collaboration</span>
+            <span className="pill-accent-emerald" style={{ padding: '0.15rem 0.6rem', borderRadius: '9999px', fontWeight: 700 }}>
+              Available for Collaboration
+            </span>
           </div>
         </div>
 
         {/* Header Block */}
         <header className="detail-header-block">
+          <div className="reading-accent-bar" />
           <div className="detail-badges-row">
             <span className="detail-pill-tag">/ HUBUNGI SAYA</span>
           </div>
@@ -162,3 +165,4 @@ function ContactPage() {
 }
 
 export default ContactPage
+

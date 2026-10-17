@@ -5,6 +5,23 @@ import { articlesData } from '../data/articlesData'
 import siteConfig from '../config/site'
 import './ArticleDetailPage.css'
 
+function getCategoryPillClass(category) {
+  switch (category) {
+    case 'Pendidikan Vokasi':
+      return 'pill-accent-emerald'
+    case 'AI & Workspace':
+      return 'pill-accent-purple'
+    case 'Produk & Software':
+      return 'pill-accent-blue'
+    case 'Web Studio & UMKM':
+      return 'pill-accent-orange'
+    case 'SEO & Rekayasa Web':
+      return 'pill-accent-amber'
+    default:
+      return 'pill-accent-blue'
+  }
+}
+
 function ArticleDetailPage() {
   const { slug } = useParams()
   const article = articlesData.find((a) => a.slug === slug)
@@ -135,7 +152,7 @@ function ArticleDetailPage() {
   }
 
   return (
-    <article className="article-page-wrap">
+    <article className="article-page-wrap page-enter">
       <SEO
         title={`${article.title} – Reski Setiawan`}
         description={article.excerpt}
@@ -150,13 +167,18 @@ function ArticleDetailPage() {
       />
 
       <div className="article-container">
+        {/* Reading Progress / Accent Bar */}
+        <div className="reading-accent-bar" style={{ maxWidth: '820px', margin: '0 auto 2rem auto' }} />
+
         {/* Nav & Breadcrumbs */}
         <nav className="article-nav-bar" aria-label="Navigasi artikel">
           <Link to="/blog" className="article-back-link">
             <span aria-hidden="true">←</span>
             <span>Kembali ke Semua Artikel</span>
           </Link>
-          <span className="article-category-badge">{article.category}</span>
+          <span className={`article-category-badge ${getCategoryPillClass(article.category)}`} style={{ padding: '0.2rem 0.65rem', borderRadius: '9999px', fontWeight: 700 }}>
+            {article.category}
+          </span>
         </nav>
 
         {/* Article Header */}

@@ -102,6 +102,38 @@ function Experience() {
               </div>
             )}
           </div>
+
+          {/* Link ke Halaman Perjalanan Lengkap */}
+          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <Link
+              to="/perjalanan"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                color: 'var(--text-on-dark, #ffffff)',
+                fontSize: '0.875rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                padding: '0.65rem 1.5rem',
+                borderRadius: '9999px',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)',
+                transition: 'all 0.25s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)'
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
+              }}
+            >
+              <span>Baca Catatan Perjalanan Belajar Saya</span>
+              <span>↗</span>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

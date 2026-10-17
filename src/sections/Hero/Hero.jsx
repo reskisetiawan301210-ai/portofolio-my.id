@@ -82,7 +82,7 @@ function Hero() {
             <h2 className="hero-role-title">Software Engineer &amp; Web Developer</h2>
             <div className="hero-bio-block">
               <p className="hero-bio-text">
-                Membangun produk digital, website modern, dan proyek berbasis kecerdasan buatan dengan arsitektur bersih dan performa optimal.
+                Halo, saya Reski Setiawan. Saya mengembangkan produk digital fungsional, website bisnis modern, dan mengeksplorasi kecerdasan buatan melalui pembelajaran mandiri dan kurikulum vokasi PPLG di SMKN 1 Talaga.
               </p>
             </div>
             <div className="hero-actions">

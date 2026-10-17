@@ -14,6 +14,7 @@ const EducationDetailPage = React.lazy(() => import('./pages/EducationDetailPage
 const FocusAreaDetailPage = React.lazy(() => import('./pages/FocusAreaDetailPage'))
 const CertificatesPage = React.lazy(() => import('./pages/CertificatesPage'))
 const AboutPage = React.lazy(() => import('./pages/AboutPage'))
+const JourneyPage = React.lazy(() => import('./pages/JourneyPage'))
 const ProjectsPage = React.lazy(() => import('./pages/ProjectsPage'))
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'))
 const BlogPage = React.lazy(() => import('./pages/BlogPage'))
@@ -76,6 +77,8 @@ function App() {
 
             {/* Rute Mandiri Halaman Utama */}
             <Route path="/tentang" element={<AboutPage />} />
+            <Route path="/perjalanan" element={<JourneyPage />} />
+            <Route path="/pengalaman" element={<JourneyPage />} />
             <Route path="/proyek" element={<ProjectsPage />} />
             <Route path="/layanan" element={<ServicesPage />} />
             <Route path="/blog" element={<BlogPage />} />

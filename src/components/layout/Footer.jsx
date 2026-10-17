@@ -51,9 +51,10 @@ function Footer() {
 
         {/* Quick Nav Links in Footer */}
         <div className="footer-nav-row">
-          <a href="/#projects" className="footer-nav-item">Karya [03]</a>
-          <a href="/#services" className="footer-nav-item">Layanan [04]</a>
-          <a href="/#experience" className="footer-nav-item">Pengalaman [03]</a>
+          <a href="/proyek" className="footer-nav-item">Karya [03]</a>
+          <a href="/layanan" className="footer-nav-item">Layanan [04]</a>
+          <a href="/pendidikan" className="footer-nav-item">Pendidikan</a>
+          <a href="/perjalanan" className="footer-nav-item">Perjalanan</a>
           <a href="/sertifikat" className="footer-nav-item footer-nav-highlight">Sertifikat [08] ↗</a>
           <a href="/blog" className="footer-nav-item footer-nav-highlight">Blog [06] ↗</a>
           <a href="/tentang" className="footer-nav-item">Tentang</a>

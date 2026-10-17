@@ -110,7 +110,7 @@ function CertificatesPage() {
   }
 
   return (
-    <main className="certificates-page-wrap">
+    <main className="certificates-page-wrap page-enter">
       <SEO
         title="Sertifikat & Kredensial Terverifikasi – Reski Setiawan"
         description="Daftar 8 sertifikasi terverifikasi Reski Setiawan dari Dicoding, Fortinet, Google, Cisco, SoloLearn, freeCodeCamp, dan IBM di bidang AI, Cyber, & Web."
@@ -134,12 +134,15 @@ function CertificatesPage() {
 
           <div className="cert-total-badge">
             <span className="cert-badge-pulse-dot" aria-hidden="true"></span>
-            <span>8 Kredensial Terverifikasi</span>
+            <span className="pill-accent-emerald" style={{ padding: '0.15rem 0.6rem', borderRadius: '9999px', fontWeight: 700 }}>
+              8 Kredensial Terverifikasi
+            </span>
           </div>
         </div>
 
         {/* Page Header */}
         <header className="cert-page-header">
+          <div className="reading-accent-bar" style={{ maxWidth: '780px', margin: '0 0 2rem 0' }} />
           <div className="cert-header-meta">
             <span className="cert-header-slash">/ SERTIFIKAT</span>
           </div>

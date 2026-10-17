@@ -30,7 +30,7 @@ function ProjectsPage() {
   }
 
   return (
-    <main className="detail-page-wrap" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
+    <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Karya &amp; Proyek Digital – Reski Setiawan"
         description="Katalog proyek karya Reski Setiawan (siswa SMKN 1 Talaga PPLG): LifeHub AI Workspace, AURA GLOBAL Web Studio, dan konsep NEXUS AI OFFICE."
@@ -58,6 +58,7 @@ function ProjectsPage() {
 
         {/* Header Block */}
         <header className="detail-header-block">
+          <div className="reading-accent-bar" />
           <div className="detail-badges-row">
             <span className="detail-pill-tag">/ KATALOG KARYA &amp; PORTFOLIO</span>
           </div>
@@ -159,3 +160,4 @@ function ProjectsPage() {
 }
 
 export default ProjectsPage
+

@@ -6,6 +6,23 @@ import { articlesData, ARTICLE_CATEGORIES } from '../data/articlesData'
 import siteConfig from '../config/site'
 import './BlogPage.css'
 
+function getCategoryPillClass(category) {
+  switch (category) {
+    case 'Pendidikan Vokasi':
+      return 'pill-accent-emerald'
+    case 'AI & Workspace':
+      return 'pill-accent-purple'
+    case 'Produk & Software':
+      return 'pill-accent-blue'
+    case 'Web Studio & UMKM':
+      return 'pill-accent-orange'
+    case 'SEO & Rekayasa Web':
+      return 'pill-accent-amber'
+    default:
+      return 'pill-accent-blue'
+  }
+}
+
 function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('Semua')
 
@@ -45,7 +62,7 @@ function BlogPage() {
   }
 
   return (
-    <main className="blog-page-wrap">
+    <main className="blog-page-wrap page-enter">
       <SEO
         title="Blog &amp; Studi Kasus – Reski Setiawan"
         description="Artikel dan studi kasus teknis Reski Setiawan: profil siswa SMKN 1 Talaga PPLG, solo dev LifeHub AI, arsitektur NEXUS AI OFFICE, dan AURA GLOBAL."
@@ -74,6 +91,7 @@ function BlogPage() {
 
         {/* Page Header */}
         <header className="blog-page-header">
+          <div className="reading-accent-bar" />
           <div className="blog-header-meta">
             <span className="blog-header-slash">/ INSIGHTS &amp; ARTIKEL</span>
           </div>
@@ -117,7 +135,9 @@ function BlogPage() {
                 aria-label={`Baca artikel: ${article.title}`}
               >
                 <div className="blog-card-top-row">
-                  <span className="blog-card-tag">{article.category}</span>
+                  <span className={`blog-card-tag ${getCategoryPillClass(article.category)}`} style={{ padding: '0.2rem 0.6rem', borderRadius: '9999px', fontWeight: 700 }}>
+                    {article.category}
+                  </span>
                   <span className="blog-card-readtime">{article.readTime}</span>
                 </div>
 
@@ -141,3 +161,4 @@ function BlogPage() {
 }
 
 export default BlogPage
+

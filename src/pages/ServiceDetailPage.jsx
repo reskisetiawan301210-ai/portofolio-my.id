@@ -34,9 +34,9 @@ function ServiceDetailPage() {
   }
 
   return (
-    <main className="detail-page-wrap">
+    <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title={`${service.title} – Layanan Reski Setiawan`}
+        title={`${service.title} – Layanan AURA GLOBAL | Reski Setiawan`}
         description={service.shortDesc}
         path={`/layanan/${service.slug}`}
       />
@@ -44,10 +44,16 @@ function ServiceDetailPage() {
       <div className="container">
         {/* Navigation Bar */}
         <div className="detail-nav-bar">
-          <Link to="/#services" className="back-btn">
-            <span>←</span>
-            <span>Kembali ke Layanan</span>
+          <Link to="/layanan" className="back-btn" aria-label="Kembali ke Katalog Layanan">
+            <span aria-hidden="true">←</span>
+            <span>Kembali ke Katalog Layanan</span>
           </Link>
+          <div className="detail-status-pill">
+            <span className="status-dot status-dot-pulse"></span>
+            <span className="pill-accent-orange" style={{ padding: '0.15rem 0.6rem', borderRadius: '9999px', fontWeight: 700 }}>
+              AURA GLOBAL Studio
+            </span>
+          </div>
         </div>
 
         {/* Section Header dengan pola /JUDUL */}
@@ -61,6 +67,7 @@ function ServiceDetailPage() {
 
         {/* Header Block */}
         <div className="detail-header-block">
+          <div className="reading-accent-bar" />
           <Reveal effect="fade-up" delay={100}>
             <div className="detail-badges-row">
               <span className="detail-pill-tag">LAYANAN {service.tag}</span>
@@ -168,8 +175,8 @@ function ServiceDetailPage() {
             <p className="detail-cta-desc">
               Mari diskusikan kebutuhan website bisnis Anda untuk mendapatkan penawaran dan alur kerja yang tepat.
             </p>
-            <Link to="/#contact" className="external-live-btn" style={{ padding: '0.85rem 2.25rem' }}>
-              <span>Mari Bicara</span>
+            <Link to="/kontak" className="external-live-btn" style={{ padding: '0.85rem 2.25rem' }}>
+              <span>Konsultasi Proyek</span>
               <span>↗</span>
             </Link>
           </div>
