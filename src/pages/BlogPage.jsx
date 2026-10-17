@@ -23,6 +23,19 @@ function getCategoryPillClass(category) {
   }
 }
 
+function formatArticleDate(dateStr) {
+  if (!dateStr) return ''
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des']
+  const parts = dateStr.split('-')
+  if (parts.length === 3) {
+    const day = parseInt(parts[2], 10)
+    const month = months[parseInt(parts[1], 10) - 1]
+    const year = parts[0]
+    return `${day} ${month} ${year}`
+  }
+  return dateStr
+}
+
 function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('Semua')
 
@@ -65,7 +78,7 @@ function BlogPage() {
     <main className="blog-page-wrap page-enter">
       <SEO
         title="Blog &amp; Studi Kasus – Reski Setiawan"
-        description="Artikel dan studi kasus teknis Reski Setiawan: profil siswa SMKN 1 Talaga PPLG, solo dev LifeHub AI, arsitektur NEXUS AI OFFICE, dan AURA GLOBAL."
+        description="Artikel dan studi kasus teknis Reski Setiawan: profil perjalanan software engineering, solo dev LifeHub AI, arsitektur NEXUS AI OFFICE, dan AURA GLOBAL."
         path="/blog"
         image="/images/og-image.png"
       />
@@ -100,7 +113,7 @@ function BlogPage() {
           </h1>
           <p className="blog-header-subtitle">
             Catatan mendalam seputar perancangan produk digital mandiri, arsitektur sistem kecerdasan buatan,
-            eksplorasi web studio, dan pengalaman belajar kejuruan di SMKN 1 Talaga jurusan PPLG.
+            eksplorasi web studio, dan pengalaman belajar rekayasa perangkat lunak.
           </p>
         </header>
 
@@ -132,24 +145,40 @@ function BlogPage() {
               <Link
                 to={`/blog/${article.slug}`}
                 className="blog-card"
-                aria-label={`Baca artikel: ${article.title}`}
+                aria-label={`Buka artikel: ${article.title}`}
               >
-                <div className="blog-card-top-row">
-                  <span className={`blog-card-tag ${getCategoryPillClass(article.category)}`} style={{ padding: '0.2rem 0.6rem', borderRadius: '9999px', fontWeight: 700 }}>
-                    {article.category}
-                  </span>
-                  <span className="blog-card-readtime">{article.readTime}</span>
+                <div className="blog-card-media">
+                  <img
+                    src={article.coverImage}
+                    alt={article.title}
+                    className="blog-card-img"
+                    loading="lazy"
+                    width="640"
+                    height="360"
+                  />
                 </div>
 
-                <h2 className="blog-card-title">{article.title}</h2>
-                <p className="blog-card-excerpt">{article.excerpt}</p>
-
-                <div className="blog-card-footer">
-                  <div className="blog-card-author">
-                    <span className="blog-card-author-name">{article.author.name}</span>
-                    <span className="blog-card-author-meta">{article.author.school}</span>
+                <div className="blog-card-body">
+                  <div className="blog-card-top-row">
+                    <span className={`blog-card-tag ${getCategoryPillClass(article.category)}`}>
+                      {article.category}
+                    </span>
+                    <span className="blog-card-readtime">{article.readTime}</span>
                   </div>
-                  <span className="blog-card-arrow" aria-hidden="true">↗</span>
+
+                  <h2 className="blog-card-title">{article.title}</h2>
+
+                  <div className="blog-card-footer">
+                    <span className="blog-card-date-meta">
+                      {formatArticleDate(article.publishedDate)} · {article.readTime} baca
+                    </span>
+                    <span className="blog-card-arrow" aria-hidden="true">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               </Link>
             </Reveal>

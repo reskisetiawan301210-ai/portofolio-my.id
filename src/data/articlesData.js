@@ -20,9 +20,9 @@ export const articlesData = [
   {
     id: 1,
     slug: 'profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer',
-    title: 'Profil Reski Setiawan: Siswa Kelas 10 SMKN 1 Talaga PPLG, Solo Dev LifeHub AI & Founder AURA GLOBAL',
+    title: 'Tentang Saya: Perjalanan di Dunia Software Development',
     excerpt:
-      'Mengenal sosok Reski Setiawan: siswa aktif kelas 10 SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG), solo developer di balik LifeHub AI dan NEXUS AI OFFICE, serta pendiri studio web AURA GLOBAL.',
+      'Mengenal sosok Reski Setiawan: solo developer di balik LifeHub AI dan NEXUS AI OFFICE, serta pendiri studio web AURA GLOBAL, berfokus pada rekayasa produk digital modern.',
     category: 'Profil & Karir',
     publishedDate: '2026-10-15',
     lastModified: '2026-10-17',
@@ -30,7 +30,6 @@ export const articlesData = [
     author: {
       name: 'Reski Setiawan',
       role: 'Software Engineer & Web Developer',
-      school: 'SMKN 1 Talaga (Kelas 10 PPLG)',
       location: 'Jawa Barat, Indonesia',
     },
     keywords: [
@@ -45,7 +44,7 @@ export const articlesData = [
       'SMKN 1 Talaga PPLG',
       'Siswa PPLG Majalengka',
     ],
-    coverImage: '/images/og-image.png',
+    coverImage: '/images/articles/profil-developer.webp',
     content: `
 ## Siapa Itu Reski Setiawan?
 
@@ -100,9 +99,9 @@ Bagi saya, teknologi adalah sarana memecahkan masalah nyata. Melalui portofolio 
   {
     id: 2,
     slug: 'membangun-lifehub-ai-personal-workspace-pwa',
-    title: 'Membangun LifeHub AI: Merancang Personal Productivity Workspace dengan Supabase & PWA sebagai Solo Developer',
+    title: 'Membangun LifeHub AI: Dari Konsep hingga Pengembangan Produk',
     excerpt:
-      'Studi kasus teknis pembangunan LifeHub AI (https://lifehub-ai.my.id): bagaimana Reski Setiawan merancang dashboard produktivitas, integrasi Supabase Auth, mode tamu tanpa login, dan kapabilitas offline Progressive Web App.',
+      'Studi kasus teknis pembangunan LifeHub AI: perancangan dashboard produktivitas mandiri, integrasi Supabase Auth, mode tamu tanpa hambatan, dan kapabilitas offline Progressive Web App.',
     category: 'Studi Kasus Produk',
     publishedDate: '2026-10-14',
     lastModified: '2026-10-17',
@@ -110,7 +109,6 @@ Bagi saya, teknologi adalah sarana memecahkan masalah nyata. Melalui portofolio 
     author: {
       name: 'Reski Setiawan',
       role: 'Solo Developer of LifeHub AI',
-      school: 'SMKN 1 Talaga',
       location: 'Jawa Barat, Indonesia',
     },
     keywords: [
@@ -122,7 +120,7 @@ Bagi saya, teknologi adalah sarana memecahkan masalah nyata. Melalui portofolio 
       'Solo Developer Indonesia',
       'Progressive Web App Supabase',
     ],
-    coverImage: '/images/projects/lifehub-ai.webp',
+    coverImage: '/images/articles/lifehub-ai.webp',
     content: `
 ## Latar Belakang: Mengapa Saya Membangun LifeHub AI?
 
@@ -172,9 +170,9 @@ Ke depan, saya sedang mengeksplorasi penambahan asisten cerdas berbasis AI di Li
   {
     id: 3,
     slug: 'arsitektur-nexus-ai-office-kantor-ai-multi-agent',
-    title: 'NEXUS AI OFFICE (Kantor AI): Eksplorasi Arsitektur Kolaborasi Multi-Agent AI dalam Satu Shared Workspace',
+    title: 'NEXUS AI OFFICE: Eksplorasi Konsep Kantor Berbasis AI Agent',
     excerpt:
-      'Bedah konsep sistem NEXUS AI OFFICE oleh Reski Setiawan: bagaimana arsitektur multi-agent otonom dapat saling berkoordinasi memecahkan masalah kompleks dalam satu ruang kerja digital bersama.',
+      'Eksplorasi arsitektur sistem cerdas: bagaimana multi-agent AI otonom saling berkoordinasi menyelesaikan alur kerja kompleks dalam satu ruang kerja digital terpadu.',
     category: 'Riset & Eksplorasi AI',
     publishedDate: '2026-10-13',
     lastModified: '2026-10-17',
@@ -182,7 +180,6 @@ Ke depan, saya sedang mengeksplorasi penambahan asisten cerdas berbasis AI di Li
     author: {
       name: 'Reski Setiawan',
       role: 'System Concept Architect',
-      school: 'SMKN 1 Talaga',
       location: 'Jawa Barat, Indonesia',
     },
     keywords: [
@@ -194,7 +191,7 @@ Ke depan, saya sedang mengeksplorasi penambahan asisten cerdas berbasis AI di Li
       'Arsitektur AI Agent',
       'Orkestrasi AI Indonesia',
     ],
-    coverImage: '/images/og-image.png',
+    coverImage: '/images/articles/nexus-ai-office.webp',
     content: `
 ## Mengapa Konsep "Kantor AI" Diperlukan?
 
@@ -240,9 +237,9 @@ Saya sangat antusias melihat bagaimana konsep ruang kerja cerdas ini akan mendef
   {
     id: 4,
     slug: 'mendirikan-aura-global-jasa-website-majalengka',
-    title: 'Perjalanan Mendirikan AURA GLOBAL: Jasa Pembuatan Website Profesional untuk Bisnis & UMKM',
+    title: 'Membangun AURA GLOBAL: Mengembangkan Layanan Website untuk Bisnis',
     excerpt:
-      'Kisah Reski Setiawan mendirikan AURA GLOBAL (https://auraglobal.my.id): studio web di Majalengka yang fokus menghadirkan website bisnis kredibel, cepat diakses, terhubung ke WhatsApp, dan ramah kantong UMKM.',
+      'Perjalanan membangun studio web di Majalengka: menghadirkan website bisnis kredibel, cepat diakses, terhubung ke alur pemesanan instan, dan ramah anggaran UMKM.',
     category: 'Bisnis & Web Studio',
     publishedDate: '2026-10-12',
     lastModified: '2026-10-17',
@@ -250,7 +247,6 @@ Saya sangat antusias melihat bagaimana konsep ruang kerja cerdas ini akan mendef
     author: {
       name: 'Reski Setiawan',
       role: 'Founder of AURA GLOBAL',
-      school: 'SMKN 1 Talaga',
       location: 'Majalengka, Jawa Barat',
     },
     keywords: [
@@ -262,7 +258,7 @@ Saya sangat antusias melihat bagaimana konsep ruang kerja cerdas ini akan mendef
       'Web Developer Majalengka',
       'Pembuatan Website Bisnis Majalengka',
     ],
-    coverImage: '/images/projects/aura-global.webp',
+    coverImage: '/images/articles/aura-global.webp',
     content: `
 ## Bermula dari Kebutuhan Digitalisasi Lokal
 
@@ -310,9 +306,9 @@ Melalui AURA GLOBAL, saya membuktikan bahwa keahlian rekayasa web yang saya pela
   {
     id: 5,
     slug: 'pendidikan-pplg-smkn-1-talaga-belajar-coding',
-    title: 'Pengalaman Belajar di PPLG SMKN 1 Talaga: Fondasi Rekayasa Perangkat Lunak bagi Calon Software Engineer',
+    title: 'Belajar PPLG: Membangun Fondasi Software Development',
     excerpt:
-      'Bagaimana suasana pembelajaran di jurusan PPLG (Pengembangan Perangkat Lunak dan Gim) SMKN 1 Talaga? Simak refleksi Reski Setiawan tentang kurikulum vokasi, disiplin algoritma, dan sinergi belajar otodidak.',
+      'Suasana pembelajaran di jurusan PPLG (Pengembangan Perangkat Lunak dan Gim) SMKN 1 Talaga: kurikulum kejuruan, disiplin algoritma, dan sinergi pembelajaran otodidak.',
     category: 'Pendidikan Vokasi',
     publishedDate: '2026-10-11',
     lastModified: '2026-10-17',
@@ -320,7 +316,6 @@ Melalui AURA GLOBAL, saya membuktikan bahwa keahlian rekayasa web yang saya pela
     author: {
       name: 'Reski Setiawan',
       role: 'Siswa Kelas 10 PPLG',
-      school: 'SMKN 1 Talaga',
       location: 'Jawa Barat, Indonesia',
     },
     keywords: [
@@ -332,7 +327,7 @@ Melalui AURA GLOBAL, saya membuktikan bahwa keahlian rekayasa web yang saya pela
       'Pengembangan Perangkat Lunak dan Gim',
       'Reski Setiawan Siswa PPLG',
     ],
-    coverImage: '/images/og-image.png',
+    coverImage: '/images/articles/pplg-smk-learning.webp',
     content: `
 ## Memilih Jalur Vokasi di SMKN 1 Talaga
 
@@ -371,9 +366,9 @@ Bagi rekan-rekan sesama siswa SMK jurusan PPLG atau siapa pun yang baru memulai 
   {
     id: 6,
     slug: 'optimasi-seo-teknis-google-ai-overviews',
-    title: 'Panduan SEO Teknis & Knowledge Graph 2026: Agar Website dan Entitas Dikenali oleh Google AI',
+    title: 'SEO Teknis dan Knowledge Graph: Membantu Mesin Pencari Memahami Website',
     excerpt:
-      'Evolusi Search Engine Optimization menuju Generative Engine Optimization (GEO): bagaimana Reski Setiawan mengimplementasikan Schema.org JSON-LD, sitemap XML lengkap, dan semantic web agar entitas profil terindeks akurat di Google AI.',
+      'Evolusi Search Engine Optimization menuju Generative Engine Optimization (GEO): implementasi Schema.org JSON-LD, sitemap XML lengkap, dan semantic web agar entitas profil terindeks akurat di Google AI.',
     category: 'SEO & Rekayasa Web',
     publishedDate: '2026-10-10',
     lastModified: '2026-10-17',
@@ -381,7 +376,6 @@ Bagi rekan-rekan sesama siswa SMK jurusan PPLG atau siapa pun yang baru memulai 
     author: {
       name: 'Reski Setiawan',
       role: 'Web Developer & SEO Specialist',
-      school: 'SMKN 1 Talaga',
       location: 'Jawa Barat, Indonesia',
     },
     keywords: [
@@ -394,7 +388,7 @@ Bagi rekan-rekan sesama siswa SMK jurusan PPLG atau siapa pun yang baru memulai 
       'Reski Setiawan SEO',
       'Technical SEO 2026',
     ],
-    coverImage: '/images/og-image.png',
+    coverImage: '/images/articles/seo-knowledge-graph.webp',
     content: `
 ## Pergeseran Paradigma: Dari Kata Kunci ke Entitas Semantik
 

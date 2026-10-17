@@ -5,6 +5,19 @@ import Reveal from '../../components/common/Reveal'
 import { articlesData } from '../../data/articlesData'
 import './BlogTeaser.css'
 
+function formatArticleDate(dateStr) {
+  if (!dateStr) return ''
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des']
+  const parts = dateStr.split('-')
+  if (parts.length === 3) {
+    const day = parseInt(parts[2], 10)
+    const month = months[parseInt(parts[1], 10) - 1]
+    const year = parts[0]
+    return `${day} ${month} ${year}`
+  }
+  return dateStr
+}
+
 function BlogTeaser() {
   const featuredArticles = articlesData.slice(0, 3)
 
@@ -16,7 +29,7 @@ function BlogTeaser() {
             title="STUDI KASUS &amp; ARTIKEL"
             watermark="INSIGHTS"
             meta="Eksplorasi Teknologi &amp; Catatan Rekayasa"
-            subtitle="Dokumentasi perjalanan solo dev membangun LifeHub AI, arsitektur NEXUS AI OFFICE, AURA GLOBAL, serta pembelajaran di SMKN 1 Talaga jurusan PPLG."
+            subtitle="Dokumentasi perjalanan solo dev membangun LifeHub AI, arsitektur NEXUS AI OFFICE, AURA GLOBAL, serta pembelajaran rekayasa perangkat lunak."
           />
         </Reveal>
 
@@ -26,19 +39,38 @@ function BlogTeaser() {
               <Link
                 to={`/blog/${article.slug}`}
                 className="blog-teaser-card"
-                aria-label={`Baca artikel: ${article.title}`}
+                aria-label={`Buka artikel: ${article.title}`}
               >
-                <div className="blog-teaser-top">
-                  <span className="blog-teaser-tag">{article.category}</span>
-                  <span className="blog-teaser-time">{article.readTime}</span>
+                <div className="blog-teaser-media">
+                  <img
+                    src={article.coverImage}
+                    alt={article.title}
+                    className="blog-teaser-img"
+                    loading="lazy"
+                    width="640"
+                    height="360"
+                  />
                 </div>
 
-                <h3 className="blog-teaser-title">{article.title}</h3>
-                <p className="blog-teaser-excerpt">{article.excerpt}</p>
+                <div className="blog-teaser-body">
+                  <div className="blog-teaser-top">
+                    <span className="blog-teaser-tag">{article.category}</span>
+                    <span className="blog-teaser-time">{article.readTime}</span>
+                  </div>
 
-                <div className="blog-teaser-footer">
-                  <span className="blog-teaser-author">Reski Setiawan</span>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Baca ↗</span>
+                  <h3 className="blog-teaser-title">{article.title}</h3>
+
+                  <div className="blog-teaser-footer">
+                    <span className="blog-teaser-date">
+                      {formatArticleDate(article.publishedDate)} · {article.readTime} baca
+                    </span>
+                    <span className="blog-teaser-arrow" aria-hidden="true">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               </Link>
             </Reveal>

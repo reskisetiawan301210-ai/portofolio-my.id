@@ -134,6 +134,25 @@
   color: var(--text-muted, #949ba8);
 }
 
+/* Hero Media Cover Banner */
+.article-hero-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  background: #0f172a;
+  border: 1px solid var(--border-light, #e5e7eb);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.article-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Entity Snapshot Box (Khusus agar Google AI memverifikasi fakta langsung) */
 .article-entity-box {
   margin-bottom: 2.5rem;

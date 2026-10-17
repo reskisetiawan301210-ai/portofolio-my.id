@@ -200,6 +200,19 @@ function ArticleDetailPage() {
           </div>
         </header>
 
+        {/* Article Cover Image Banner */}
+        {article.coverImage && (
+          <div className="article-hero-media">
+            <img
+              src={article.coverImage}
+              alt={article.title}
+              className="article-hero-img"
+              width="1280"
+              height="720"
+            />
+          </div>
+        )}
+
         {/* Entity Snapshot (Knowledge Graph Hook untuk Google AI) */}
         <aside className="article-entity-box" aria-label="Fakta entitas Reski Setiawan">
           <div className="entity-box-title">

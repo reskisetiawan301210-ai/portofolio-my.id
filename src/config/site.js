@@ -42,17 +42,18 @@ export const siteConfig = {
   // KANAL KONTAK RESMI: EMAIL DAN TIKTOK TERVERIFIKASI
   contacts: {
     email: 'reskisetiawan301210@gmail.com',
+    emailStudio: 'info@auraglobal.my.id',
     tiktokOffice: {
       handle: '@nexus_office3',
-      label: '@nexus_office3',
+      label: '@nexus_office3 (Personal / Proyek)',
       url: 'https://www.tiktok.com/@nexus_office3',
-      title: 'TikTok: @nexus_office3',
+      title: 'TikTok Personal / Proyek: @nexus_office3',
     },
     tiktokStudio: {
       handle: '@auraglobal_jasawebsite',
-      label: '@auraglobal_jasawebsite',
+      label: '@auraglobal_jasawebsite (Studio Bisnis)',
       url: 'https://www.tiktok.com/@auraglobal_jasawebsite',
-      title: 'TikTok: @auraglobal_jasawebsite',
+      title: 'TikTok Studio Bisnis: @auraglobal_jasawebsite',
     },
   },
 }
