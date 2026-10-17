@@ -319,8 +319,8 @@ export const projectsData = [
     techList: ['Arsitektur Konsep', 'JavaScript', 'Vite', 'Tailwind CSS'],
     link: null,
     hasExternalLink: false,
-    image: null,
-    imageAlt: 'Ilustrasi konseptual arsitektur multi-agent shared workspace NEXUS AI OFFICE',
+    image: '/images/projects/nexus-ai-office.webp',
+    imageAlt: 'Tangkapan layar antarmuka konsep workspace kolaboratif multi-agent NEXUS AI OFFICE',
     isConcept: true,
   },
 ]

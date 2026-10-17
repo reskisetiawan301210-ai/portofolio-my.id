@@ -11,10 +11,11 @@ function BrowserPreviewFrame({
   aspectRatio = '16/10',
   minHeight = '220px',
   className = '',
+  children,
 }) {
   const [hasError, setHasError] = useState(false)
 
-  const showImage = Boolean(imageSrc) && !hasError && !isConcept
+  const showImage = Boolean(imageSrc) && !hasError
 
   return (
     <div
@@ -32,8 +33,8 @@ function BrowserPreviewFrame({
 
       {/* Screen Canvas / Media Body */}
       <div className="browser-screen-canvas">
-        {isConcept ? (
-          <NexusConceptVisual />
+        {children ? (
+          children
         ) : showImage ? (
           <div className="browser-screen-media">
             <img
@@ -46,6 +47,8 @@ function BrowserPreviewFrame({
               onError={() => setHasError(true)}
             />
           </div>
+        ) : isConcept ? (
+          <NexusConceptVisual />
         ) : (
           /* Fallback bersih bila gambar belum tersedia atau gagal dimuat */
           <div className="browser-fallback-canvas">

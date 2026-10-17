@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import SEO from '../components/common/SEO'
 import Reveal from '../components/common/Reveal'
 import BrowserPreviewFrame from '../components/ui/BrowserPreviewFrame'
-import NexusConceptVisual from '../components/ui/NexusConceptVisual'
 import { projectsData } from '../data/portfolioData'
 import siteConfig from '../config/site'
 import './DetailPages.css'
@@ -88,21 +87,12 @@ function ProjectsPage() {
                 <div>
                   <BrowserPreviewFrame
                     title={project.title}
-                    url={project.link || (project.isConcept ? 'nexus.internal.concept' : 'https://auraglobal.my.id/')}
+                    imageSrc={project.image}
+                    alt={project.imageAlt}
                     isConcept={project.isConcept}
-                    initials={project.slug === 'aura-global' ? 'AG' : project.slug === 'lifehub-ai' ? 'LH' : 'NX'}
-                  >
-                    {project.isConcept ? (
-                      <NexusConceptVisual />
-                    ) : project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.imageAlt}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        loading="lazy"
-                      />
-                    ) : null}
-                  </BrowserPreviewFrame>
+                    aspectRatio="16/10"
+                    minHeight="240px"
+                  />
                 </div>
 
                 {/* Details */}

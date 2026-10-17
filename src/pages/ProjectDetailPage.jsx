@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom'
 import SEO from '../components/common/SEO'
 import SectionHeader from '../components/common/SectionHeader'
 import BrowserPreviewFrame from '../components/ui/BrowserPreviewFrame'
-import NexusConceptVisual from '../components/ui/NexusConceptVisual'
 import Reveal from '../components/common/Reveal'
 import { projectsData } from '../data/portfolioData'
 import siteConfig from '../config/site'
@@ -149,11 +148,7 @@ function ProjectDetailPage() {
                   aspectRatio="16/9"
                   minHeight="280px"
                   initials={project.slug === 'aura-global' ? 'AG' : project.slug === 'lifehub-ai' ? 'LH' : 'NX'}
-                >
-                  {project.isConcept ? (
-                    <NexusConceptVisual />
-                  ) : null}
-                </BrowserPreviewFrame>
+                />
               </div>
             </Reveal>
 

@@ -22,7 +22,7 @@ function Experience() {
     },
     'nexus-ai-office': {
       title: 'NEXUS AI OFFICE',
-      image: null,
+      image: '/images/projects/nexus-ai-office.webp',
       badge: 'SISTEM KONSEP',
     },
   }
