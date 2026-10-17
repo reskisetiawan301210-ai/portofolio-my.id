@@ -11,9 +11,9 @@ function AboutPage() {
   const aboutSchema = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'Tentang Reski Setiawan – Software Engineer, Siswa SMKN 1 Talaga PPLG & Solo Dev',
+    name: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
     description:
-      'Profil lengkap Reski Setiawan: siswa kelas 10 SMKN 1 Talaga jurusan PPLG, solo developer LifeHub AI, kreator konsep NEXUS AI OFFICE, dan pendiri AURA GLOBAL Web Studio.',
+      'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik studio web AURA GLOBAL, LifeHub AI, dan konsep NEXUS AI OFFICE.',
     url: `${siteConfig.siteUrl}/tentang`,
     mainEntity: {
       '@type': 'Person',
@@ -34,13 +34,20 @@ function AboutPage() {
         url: 'https://auraglobal.my.id/',
       },
     },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Tentang Saya', item: `${siteConfig.siteUrl}/tentang` },
+      ],
+    },
   }
 
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title="Tentang Saya – Profil Reski Setiawan | Siswa SMKN 1 Talaga PPLG"
-        description="Profil personal Reski Setiawan: siswa kelas 10 SMKN 1 Talaga PPLG, solo developer LifeHub AI, perancang konsep NEXUS AI OFFICE, dan pendiri AURA GLOBAL."
+        title="Tentang Saya – Reski Setiawan | Software Engineer & Web Developer"
+        description="Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik studio web AURA GLOBAL, LifeHub AI, dan konsep NEXUS AI OFFICE."
         path="/tentang"
         image="/images/og-image.png"
       />

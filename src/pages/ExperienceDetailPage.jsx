@@ -4,6 +4,7 @@ import SEO from '../components/common/SEO'
 import SectionHeader from '../components/common/SectionHeader'
 import Reveal from '../components/common/Reveal'
 import { experienceData } from '../data/portfolioData'
+import siteConfig from '../config/site'
 import './DetailPages.css'
 
 function ExperienceDetailPage() {
@@ -33,12 +34,43 @@ function ExperienceDetailPage() {
     )
   }
 
+  const expSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${exp.institution} – ${exp.role}`,
+    description: exp.oneLiner,
+    url: `${siteConfig.siteUrl}/pengalaman/${exp.slug}`,
+    author: {
+      '@type': 'Person',
+      name: siteConfig.name,
+      jobTitle: siteConfig.role,
+      url: siteConfig.siteUrl,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: siteConfig.name,
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Pengalaman & Inisiatif', item: `${siteConfig.siteUrl}/perjalanan` },
+        { '@type': 'ListItem', position: 3, name: exp.institution, item: `${siteConfig.siteUrl}/pengalaman/${exp.slug}` },
+      ],
+    },
+  }
+
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title={`${exp.institution} – Pengalaman & Inisiatif | Reski Setiawan`}
         description={exp.oneLiner}
         path={`/pengalaman/${exp.slug}`}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(expSchema) }}
       />
 
       <div className="container">

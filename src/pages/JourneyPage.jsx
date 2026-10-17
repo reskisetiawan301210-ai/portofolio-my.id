@@ -24,6 +24,13 @@ function JourneyPage() {
       name: siteConfig.name,
     },
     url: `${siteConfig.siteUrl}/perjalanan`,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Perjalanan Belajar', item: `${siteConfig.siteUrl}/perjalanan` },
+      ],
+    },
   }
 
   const milestones = [
@@ -92,7 +99,7 @@ function JourneyPage() {
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title="Perjalanan Saya: Mempelajari Pemrograman &amp; Rekayasa Perangkat Lunak – Reski Setiawan"
+        title="Perjalanan Rekayasa &amp; Belajar Coding – Reski Setiawan"
         description="Narasi jujur perjalanan belajar Reski Setiawan: langkah awal belajar coding, menempuh studi di SMKN 1 Talaga PPLG, hingga membangun LifeHub AI dan AURA GLOBAL."
         path="/perjalanan"
         image="/images/og-image.png"

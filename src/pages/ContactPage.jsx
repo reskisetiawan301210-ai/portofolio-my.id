@@ -23,6 +23,13 @@ function ContactPage() {
         siteConfig.contacts.tiktokStudio.url,
       ],
     },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Kontak', item: `${siteConfig.siteUrl}/kontak` },
+      ],
+    },
   }
 
   const channels = [
@@ -69,7 +76,7 @@ function ContactPage() {
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Kontak Resmi – Reski Setiawan"
-        description="Hubungi Reski Setiawan (Software Engineer &amp; Siswa SMKN 1 Talaga PPLG) melalui email reskisetiawan301210@gmail.com dan kanal TikTok resmi."
+        description="Hubungi saya, Reski Setiawan, melalui email resmi dan media sosial untuk diskusi proyek, konsultasi pembuatan website, atau kolaborasi digital."
         path="/kontak"
         image="/images/og-image.png"
       />

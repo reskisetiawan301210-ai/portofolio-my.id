@@ -29,7 +29,7 @@ export const siteConfig = {
   grade: 'Siswa Kelas 10',
   title: 'Reski Setiawan – Software Engineer & Web Developer',
   description:
-    'Portofolio resmi Reski Setiawan, siswa SMKN 1 Talaga PPLG, software engineer, solo dev LifeHub AI, arsitek NEXUS AI OFFICE, dan founder AURA GLOBAL.',
+    'Portofolio resmi Reski Setiawan, Software Engineer & Web Developer. Menghadirkan solusi web bisnis modern, platform LifeHub AI, dan konsep NEXUS AI OFFICE.',
   location: 'Majalengka, Jawa Barat, Indonesia',
   siteUrl: SITE_URL,
   ogImage: '/images/og-image.png',

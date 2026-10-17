@@ -4,6 +4,7 @@ import SEO from '../components/common/SEO'
 import SectionHeader from '../components/common/SectionHeader'
 import Reveal from '../components/common/Reveal'
 import { servicesData } from '../data/portfolioData'
+import siteConfig from '../config/site'
 import './DetailPages.css'
 
 function ServiceDetailPage() {
@@ -33,12 +34,44 @@ function ServiceDetailPage() {
     )
   }
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: service.shortDesc,
+    url: `${siteConfig.siteUrl}/layanan/${service.slug}`,
+    provider: {
+      '@type': 'Person',
+      name: siteConfig.name,
+      jobTitle: siteConfig.role,
+      url: siteConfig.siteUrl,
+    },
+    isRelatedTo: {
+      '@type': 'Organization',
+      name: 'AURA GLOBAL',
+      url: 'https://auraglobal.my.id/',
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Layanan', item: `${siteConfig.siteUrl}/layanan` },
+        { '@type': 'ListItem', position: 3, name: service.title, item: `${siteConfig.siteUrl}/layanan/${service.slug}` },
+      ],
+    },
+  }
+
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title={`${service.title} – Layanan AURA GLOBAL | Reski Setiawan`}
+        title={`${service.title} – Layanan Reski Setiawan`}
         description={service.shortDesc}
         path={`/layanan/${service.slug}`}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
       <div className="container">

@@ -38,12 +38,19 @@ function ProjectDetailPage() {
 
   const otherProjects = projectsData.filter((p) => p.slug !== project.slug)
 
+  const schemaType = project.isConcept
+    ? 'CreativeWork'
+    : project.slug === 'aura-global'
+      ? 'WebSite'
+      : 'SoftwareApplication'
+
   const projectSchema = {
     '@context': 'https://schema.org',
-    '@type': project.isConcept ? 'CreativeWork' : 'SoftwareApplication',
+    '@type': schemaType,
     name: project.title,
     description: project.oneLiner,
     url: `${siteConfig.siteUrl}/proyek/${project.slug}`,
+    image: project.image ? `${siteConfig.siteUrl}${project.image}` : `${siteConfig.siteUrl}/images/og-image.png`,
     author: {
       '@type': 'Person',
       name: siteConfig.name,
@@ -54,14 +61,24 @@ function ProjectDetailPage() {
       '@type': 'Person',
       name: siteConfig.name,
     },
-    applicationCategory: project.category === 'Produk' ? 'ProductivityApplication' : 'WebApplication',
-    operatingSystem: 'Web Browser, Progressive Web App',
+    ...(schemaType === 'SoftwareApplication' && {
+      applicationCategory: 'ProductivityApplication',
+      operatingSystem: 'Web Browser, Progressive Web App',
+    }),
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Karya', item: `${siteConfig.siteUrl}/proyek` },
+        { '@type': 'ListItem', position: 3, name: project.title, item: `${siteConfig.siteUrl}/proyek/${project.slug}` },
+      ],
+    },
   }
 
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title={`${project.title} – Dokumentasi & Rekayasa Proyek | Reski Setiawan`}
+        title={`${project.title} – Proyek Digital | Reski Setiawan`}
         description={project.oneLiner}
         path={`/proyek/${project.slug}`}
         image={project.image || '/images/og-image.png'}

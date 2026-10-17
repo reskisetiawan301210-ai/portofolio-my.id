@@ -70,6 +70,14 @@ function ArticleDetailPage() {
     keywords: article.keywords.join(', '),
     articleSection: article.category,
     inLanguage: 'id-ID',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteConfig.siteUrl}/blog` },
+        { '@type': 'ListItem', position: 3, name: article.title, item: `${siteConfig.siteUrl}/blog/${article.slug}` },
+      ],
+    },
   }
 
   // Helper untuk merender markdown sederhana menjadi JSX

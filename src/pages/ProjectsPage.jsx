@@ -13,7 +13,7 @@ function ProjectsPage() {
     '@type': 'CollectionPage',
     name: 'Karya & Proyek Resmi Reski Setiawan',
     description:
-      'Katalog proyek rekayasa web dan kecerdasan buatan karya Reski Setiawan: LifeHub AI, AURA GLOBAL Web Studio, dan NEXUS AI OFFICE.',
+      'Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, studio website AURA GLOBAL, dan eksplorasi konsep NEXUS AI OFFICE.',
     url: `${siteConfig.siteUrl}/proyek`,
     mainEntity: {
       '@type': 'ItemList',
@@ -26,13 +26,20 @@ function ProjectsPage() {
         description: p.summary,
       })),
     },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Karya & Proyek', item: `${siteConfig.siteUrl}/proyek` },
+      ],
+    },
   }
 
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Karya &amp; Proyek Digital – Reski Setiawan"
-        description="Katalog proyek karya Reski Setiawan (siswa SMKN 1 Talaga PPLG): LifeHub AI Workspace, AURA GLOBAL Web Studio, dan konsep NEXUS AI OFFICE."
+        description="Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, studio website AURA GLOBAL, dan eksplorasi konsep NEXUS AI OFFICE."
         path="/proyek"
         image="/images/og-image.png"
       />

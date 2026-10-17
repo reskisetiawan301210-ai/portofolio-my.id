@@ -107,6 +107,13 @@ function CertificatesPage() {
         about: item.description,
       },
     })),
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Sertifikat & Kredensial', item: `${siteConfig.siteUrl}/sertifikat` },
+      ],
+    },
   }
 
   return (
@@ -292,6 +299,8 @@ function CertificatesPage() {
                   src={activeCert.imageJpg}
                   alt={activeCert.alt}
                   className="cert-lightbox-image"
+                  width="1080"
+                  height="720"
                 />
               </picture>
 

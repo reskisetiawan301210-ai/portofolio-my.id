@@ -72,6 +72,13 @@ function BlogPage() {
         description: art.excerpt,
       })),
     },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Blog & Studi Kasus', item: `${siteConfig.siteUrl}/blog` },
+      ],
+    },
   }
 
   return (

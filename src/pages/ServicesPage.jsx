@@ -33,13 +33,20 @@ function ServicesPage() {
         },
       })),
     },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Layanan', item: `${siteConfig.siteUrl}/layanan` },
+      ],
+    },
   }
 
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title="Layanan Pembuatan Website &amp; Web Engineering – AURA GLOBAL | Reski Setiawan"
-        description="Layanan jasa pembuatan website profesional untuk UMKM, profil perusahaan, dan toko online oleh Reski Setiawan melalui studio web AURA GLOBAL."
+        title="Layanan Pembuatan Website &amp; Web Dev – Reski Setiawan"
+        description="Layanan pembuatan website profesional untuk UMKM, profil bisnis, dan optimasi web yang saya kelola melalui studio web AURA GLOBAL."
         path="/layanan"
         image="/images/og-image.png"
       />

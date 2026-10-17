@@ -4,6 +4,7 @@ import SEO from '../components/common/SEO'
 import SectionHeader from '../components/common/SectionHeader'
 import Reveal from '../components/common/Reveal'
 import { focusAreasData } from '../data/portfolioData'
+import siteConfig from '../config/site'
 import './DetailPages.css'
 
 function FocusAreaDetailPage() {
@@ -33,12 +34,43 @@ function FocusAreaDetailPage() {
     )
   }
 
+  const areaSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: area.title,
+    description: area.oneLiner,
+    url: `${siteConfig.siteUrl}/area-fokus/${area.slug}`,
+    author: {
+      '@type': 'Person',
+      name: siteConfig.name,
+      jobTitle: siteConfig.role,
+      url: siteConfig.siteUrl,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: siteConfig.name,
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Area Fokus', item: `${siteConfig.siteUrl}/#certificates` },
+        { '@type': 'ListItem', position: 3, name: area.title, item: `${siteConfig.siteUrl}/area-fokus/${area.slug}` },
+      ],
+    },
+  }
+
   return (
-    <main className="detail-page-wrap">
+    <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title={`${area.title} – Jalur Belajar Reski Setiawan`}
         description={area.oneLiner}
         path={`/area-fokus/${area.slug}`}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(areaSchema) }}
       />
 
       <div className="container">

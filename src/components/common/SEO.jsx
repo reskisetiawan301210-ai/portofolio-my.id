@@ -78,11 +78,10 @@ function SEO({
           description: 'Platform personal workspace produktivitas harian terintegrasi Supabase dan PWA.',
         },
         {
-          '@type': 'SoftwareApplication',
+          '@type': 'CreativeWork',
           name: 'NEXUS AI OFFICE',
           alternateName: 'NEXUS Kantor AI',
-          applicationCategory: 'Multi-Agent AI System Concept',
-          description: 'Eksplorasi konsep sistem ruang kerja bersama kolaborasi multi-agent AI.',
+          description: 'Eksplorasi konsep arsitektur sistem ruang kerja bersama kolaborasi multi-agent AI.',
         },
       ],
       address: {

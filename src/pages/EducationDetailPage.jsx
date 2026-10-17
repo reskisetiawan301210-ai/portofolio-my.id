@@ -10,9 +10,9 @@ function EducationDetailPage() {
   const educationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Pendidikan Saya dan Perjalanan Mempelajari Software Development',
+    headline: 'Pendidikan & Studi Rekayasa Perangkat Lunak – Reski Setiawan',
     description:
-      'Refleksi personal Reski Setiawan: menempuh pendidikan vokasi di SMKN 1 Talaga jurusan PPLG, memadukan kurikulum sekolah dengan eksplorasi mandiri, dan menghubungkannya dengan proyek nyata.',
+      'Dokumentasi jalur pendidikan vokasi Reski Setiawan di SMKN 1 Talaga jurusan PPLG, kurikulum pemrograman web, dan pengembangan keterampilan rekayasa software.',
     author: {
       '@type': 'Person',
       name: siteConfig.name,
@@ -25,13 +25,20 @@ function EducationDetailPage() {
     },
     url: `${siteConfig.siteUrl}/pendidikan`,
     mainEntityOfPage: `${siteConfig.siteUrl}/pendidikan`,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Pendidikan', item: `${siteConfig.siteUrl}/pendidikan` },
+      ],
+    },
   }
 
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title="Pendidikan Saya dan Perjalanan Mempelajari Software Development – Reski Setiawan"
-        description="Refleksi personal Reski Setiawan, siswa kelas 10 PPLG SMKN 1 Talaga: pembelajaran vokasi, eksplorasi software engineering, dan implementasi proyek nyata."
+        title="Pendidikan & Studi Rekayasa Perangkat Lunak – Reski Setiawan"
+        description="Dokumentasi jalur pendidikan vokasi Reski Setiawan di SMKN 1 Talaga jurusan PPLG, kurikulum pemrograman web, dan pengembangan keterampilan rekayasa software."
         path="/pendidikan"
         image="/images/og-image.png"
       />
