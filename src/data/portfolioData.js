@@ -10,12 +10,13 @@ export const aboutData = {
   name: 'Reski Setiawan',
   role: 'Software Engineer & Web Developer',
   location: 'Jawa Barat, Indonesia',
-  p1: 'Halo, saya Reski Setiawan, software engineer dan web developer dari Jawa Barat. Saya suka membangun produk digital yang benar-benar dipakai. Lewat AURA GLOBAL, saya membuat website untuk bisnis dan UMKM. Di LifeHub AI, saya mengembangkan platform workspace personal. Lewat NEXUS AI OFFICE, saya mengeksplorasi sistem AI agent yang bisa bekerja sama dalam satu shared workspace.',
-  p2: 'Selain web, saya tertarik pada AI, robotics, dan cybersecurity. Saya belajar dan bereksperimen dengan bahasa seperti C++ dan Python untuk robotics, sambil terus memperdalam pengembangan web dengan PHP, Laravel, dan React. Saat ini saya duduk di kelas 10 RPL di SMKN 1 Talaga dan mengerjakan proyek-proyek ini di luar jam belajar.',
+  p1: 'Halo, saya Reski Setiawan, siswa kelas 10 SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG), software engineer, dan web developer dari Jawa Barat. Saya adalah solo developer di balik LifeHub AI (platform personal workspace produktif) dan perancang konsep NEXUS AI OFFICE (NEXUS Kantor AI). Selain itu, saya mendirikan AURA GLOBAL, studio pembuatan website profesional yang membantu UMKM dan bisnis lokal memiliki kehadiran digital kredibel.',
+  p2: 'Selain web modern (React, Vite, Tailwind CSS, JavaScript, PHP, Laravel), saya aktif mengeksplorasi kecerdasan buatan, sistem multi-agent, robotics, dan cybersecurity. Saya belajar bereksperimen dengan C++ dan Python untuk mikrokontroler, sembari terus membangun produk digital mandiri di samping kegiatan belajar di sekolah vokasi.',
   currentFocus: [
-    'Membuat website bisnis yang rapi dan SEO-friendly untuk UMKM lewat AURA GLOBAL',
-    'Mengembangkan fitur workspace personal dan PWA di LifeHub AI',
-    'Mengeksplorasi konsep AI agent yang berkolaborasi di NEXUS AI OFFICE',
+    'Solo developer di balik platform LifeHub AI (https://lifehub-ai.my.id/) berbasis PWA & Supabase',
+    'Merancang arsitektur konsep shared workspace di NEXUS AI OFFICE (NEXUS Kantor AI)',
+    'Mengembangkan website bisnis & UMKM ramah anggaran lewat AURA GLOBAL (https://auraglobal.my.id/)',
+    'Menempuh pendidikan vokasi kelas 10 jurusan PPLG / RPL di SMKN 1 Talaga, Jawa Barat',
   ],
 }
 

@@ -55,8 +55,9 @@ function Footer() {
           <a href="/#services" className="footer-nav-item">Layanan [04]</a>
           <a href="/#experience" className="footer-nav-item">Pengalaman [03]</a>
           <a href="/sertifikat" className="footer-nav-item footer-nav-highlight">Sertifikat [08] ↗</a>
-          <a href="/#about" className="footer-nav-item">Tentang</a>
-          <a href="/#contact" className="footer-nav-item">Kontak</a>
+          <a href="/blog" className="footer-nav-item footer-nav-highlight">Blog [06] ↗</a>
+          <a href="/tentang" className="footer-nav-item">Tentang</a>
+          <a href="/kontak" className="footer-nav-item">Kontak</a>
         </div>
 
         {/* Social Links Row in Footer */}

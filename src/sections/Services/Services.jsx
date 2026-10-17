@@ -106,6 +106,21 @@ function Services() {
             )
           })}
         </div>
+
+        {/* Link ke Direktori Layanan Lengkap */}
+        <Reveal effect="fade-up" delay={200}>
+          <div style={{ marginTop: '3rem', textAlign: 'center' }}>
+            <Link
+              to="/layanan"
+              className="secondary-cta-btn"
+              style={{ display: 'inline-flex', padding: '0.8rem 2rem' }}
+              aria-label="Buka direktori lengkap layanan web"
+            >
+              <span>Buka Direktori Lengkap Layanan Web</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

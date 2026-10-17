@@ -43,22 +43,72 @@ function SEO({
       url: siteConfig.siteUrl,
       image: `${siteConfig.siteUrl}/images/og-image.png`,
       email: siteConfig.contacts.email,
+      description: siteConfig.description,
+      affiliation: {
+        '@type': 'EducationalOrganization',
+        name: 'SMKN 1 Talaga',
+        department: 'Pengembangan Perangkat Lunak dan Gim (PPLG)',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Talaga',
+          addressRegion: 'Jawa Barat',
+          addressCountry: 'ID',
+        },
+      },
+      alumniOf: {
+        '@type': 'EducationalOrganization',
+        name: 'SMKN 1 Talaga',
+      },
+      founder: [
+        {
+          '@type': 'Organization',
+          name: 'AURA GLOBAL',
+          alternateName: 'AURA GLOBAL Digital Web Studio',
+          url: 'https://auraglobal.my.id/',
+          description: 'Studio jasa pembuatan website profesional untuk UMKM dan profil bisnis.',
+        },
+      ],
+      creator: [
+        {
+          '@type': 'SoftwareApplication',
+          name: 'LifeHub AI',
+          applicationCategory: 'ProductivityApplication',
+          operatingSystem: 'Web, Progressive Web App',
+          url: 'https://lifehub-ai.my.id/',
+          description: 'Platform personal workspace produktivitas harian terintegrasi Supabase dan PWA.',
+        },
+        {
+          '@type': 'SoftwareApplication',
+          name: 'NEXUS AI OFFICE',
+          alternateName: 'NEXUS Kantor AI',
+          applicationCategory: 'Multi-Agent AI System Concept',
+          description: 'Eksplorasi konsep sistem ruang kerja bersama kolaborasi multi-agent AI.',
+        },
+      ],
       address: {
         '@type': 'PostalAddress',
+        addressLocality: 'Majalengka',
         addressRegion: 'Jawa Barat',
         addressCountry: 'ID',
       },
       sameAs: verifiedSameAs,
       knowsAbout: [
+        'PPLG',
+        'Rekayasa Perangkat Lunak',
         'Web Development',
         'Frontend Architecture',
         'React',
         'Tailwind CSS',
         'Vite',
         'JavaScript',
-        'Python',
-        'Cybersecurity',
+        'PHP',
+        'Laravel',
+        'Supabase',
+        'Progressive Web App (PWA)',
         'Artificial Intelligence',
+        'Multi-Agent Systems',
+        'Cybersecurity',
+        'Robotics & IoT',
       ],
     }
 
@@ -78,7 +128,7 @@ function SEO({
       '@type': 'ProfilePage',
       '@id': `${siteConfig.siteUrl}/#profilepage`,
       url: siteConfig.siteUrl,
-      name: 'Profil Reski Setiawan – Software Engineer & Web Developer',
+      name: 'Profil Reski Setiawan – Siswa SMKN 1 Talaga PPLG, Software Engineer & Solo Dev',
       isPartOf: {
         '@id': `${siteConfig.siteUrl}/#website`,
       },
@@ -97,9 +147,9 @@ function SEO({
       },
       areaServed: 'Indonesia',
       description:
-        'Layanan pembuatan website bisnis, antarmuka responsif performa tinggi, dan konsultasi arsitektur web modern.',
+        'Layanan pembuatan website bisnis, antarmuka responsif performa tinggi, dan konsultasi arsitektur web modern melalui AURA GLOBAL.',
       serviceType: [
-        'Pembuatan Website Bisnis',
+        'Pembuatan Website Bisnis & UMKM',
         'Pengembangan Frontend Web Modern',
         'Optimasi SEO & Performa Web',
       ],
@@ -111,42 +161,42 @@ function SEO({
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Layanan apa saja yang disediakan oleh Reski Setiawan?',
+          name: 'Siapa itu Reski Setiawan?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Reski Setiawan menyediakan pembuatan website bisnis modern, landing page performa tinggi, perancangan antarmuka responsif, serta optimasi SEO dan Core Web Vitals.',
+            text: 'Reski Setiawan adalah siswa aktif kelas 10 di SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG) asal Jawa Barat. Ia berkarya sebagai software engineer dan solo developer di balik LifeHub AI, perancang konsep NEXUS AI OFFICE (NEXUS Kantor AI), dan pendiri studio web AURA GLOBAL.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Teknologi apa yang digunakan dalam pengembangan aplikasi?',
+          name: 'Di mana Reski Setiawan bersekolah dan apa jurusannya?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Teknologi utama yang digunakan mencakup JavaScript modern, React, Tailwind CSS, Vite, HTML5 semantik, arsitektur Progressive Web App (PWA), serta integrasi backend terstruktur seperti Supabase.',
+            text: 'Reski Setiawan bersekolah di SMKN 1 Talaga, Majalengka, Jawa Barat, menempuh pendidikan vokasi pada program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak) kelas 10.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Apa saja proyek unggulan yang telah dibangun oleh Reski Setiawan?',
+          name: 'Apa saja produk digital yang dibangun oleh Reski Setiawan?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Proyek unggulan terverifikasi meliputi AURA GLOBAL (web studio solusi bisnis digital), LifeHub AI (personal productivity workspace), dan eksplorasi arsitektur NEXUS AI OFFICE.',
+            text: 'Reski Setiawan adalah solo developer platform LifeHub AI (https://lifehub-ai.my.id/), perancang konsep ruang kerja kecerdasan buatan NEXUS AI OFFICE (NEXUS Kantor AI), dan pendiri studio web AURA GLOBAL (https://auraglobal.my.id/).',
           },
         },
         {
           '@type': 'Question',
-          name: 'Bagaimana cara menghubungi atau berkonsultasi dengan Reski Setiawan?',
+          name: 'Apa itu AURA GLOBAL dan apa hubungannya dengan Reski Setiawan?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Anda dapat menghubungi melalui email resmi reskisetiawan301210@gmail.com atau melalui kanal resmi TikTok di @nexus_office3 dan @auraglobal_jasawebsite.',
+            text: 'AURA GLOBAL adalah studio penyedia jasa pembuatan website profesional untuk UMKM, profil perusahaan, dan toko online yang didirikan dan dikembangkan langsung oleh Reski Setiawan dari Majalengka, Jawa Barat.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Apakah Reski Setiawan memiliki sertifikasi resmi di bidang teknologi?',
+          name: 'Apa teknologi yang dikuasai oleh Reski Setiawan?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ya, Reski Setiawan memiliki 8 sertifikasi resmi dari institusi terakreditasi: Dicoding (Dasar AI), Fortinet (NSE 3 & FortiGate 7.6), Google (Digital Marketing), Cisco (Cybersecurity), SoloLearn (Python 3), freeCodeCamp (Responsive Web Design), dan IBM (Python Data Science & AI).',
+            text: 'Reski Setiawan menguasai JavaScript, React, Tailwind CSS, Vite, HTML5 semantik, PHP, Laravel, Supabase, arsitektur Progressive Web App (PWA), serta dasar-dasar C++ dan Python untuk eksplorasi AI, cybersecurity, dan robotics.',
           },
         },
       ],

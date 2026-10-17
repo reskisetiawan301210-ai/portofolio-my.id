@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import SectionHeader from '../../components/common/SectionHeader'
 import Reveal from '../../components/common/Reveal'
 import { aboutData } from '../../data/portfolioData'
@@ -8,7 +9,7 @@ function About() {
   const highlights = [
     {
       label: 'STATUS & PENDIDIKAN',
-      value: 'Siswa Kelas 10 RPL · SMKN 1 Talaga',
+      value: 'Siswa Kelas 10 PPLG · SMKN 1 Talaga',
       delay: 200,
     },
     {
@@ -18,7 +19,7 @@ function About() {
     },
     {
       label: 'DOMISILI',
-      value: 'Jawa Barat, Indonesia',
+      value: 'Majalengka, Jawa Barat, Indonesia',
       delay: 440,
     },
   ]
@@ -64,6 +65,17 @@ function About() {
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                <div style={{ marginTop: '1.75rem' }}>
+                  <Link
+                    to="/tentang"
+                    className="hero-cta-btn"
+                    style={{ display: 'inline-flex', padding: '0.65rem 1.4rem', fontSize: '0.85rem' }}
+                  >
+                    <span>Baca Profil &amp; Latar Belakang Lengkap</span>
+                    <span className="arrow">→</span>
+                  </Link>
                 </div>
               </div>
             </Reveal>

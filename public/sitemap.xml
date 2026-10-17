@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- SITEMAP PORTOFOLIO RESKI SETIAWAN (https://reskisetiawan-dev.my.id) -->
+<!-- Generated for Deep Semantic Indexing, Google AI Overviews & Knowledge Graph -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <!-- Beranda Utama -->
+
+  <!-- 1. HALAMAN UTAMA -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://reskisetiawan-dev.my.id/images/og-image.png</image:loc>
@@ -14,10 +16,46 @@
     </image:image>
   </url>
 
-  <!-- Halaman Dedikasi Kredensial & Sertifikat -->
+  <!-- 2. HALAMAN TENTANG (BIOGRAFI LENGKAP & SMKN 1 TALAGA PPLG) -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/tentang</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/og-image.png</image:loc>
+      <image:title>Tentang Reski Setiawan – Siswa SMKN 1 Talaga PPLG &amp; Solo Developer</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3. HALAMAN KATALOG KARYA & PROYEK -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/proyek</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/projects/lifehub-ai.webp</image:loc>
+      <image:title>LifeHub AI Personal Workspace - Reski Setiawan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/projects/aura-global.webp</image:loc>
+      <image:title>AURA GLOBAL Web Studio - Reski Setiawan</image:title>
+    </image:image>
+  </url>
+
+  <!-- 4. HALAMAN DIREKTORI LAYANAN WEB -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/layanan</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 5. HALAMAN DEDIKASI KREDENSIAL & SERTIFIKAT -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/sertifikat</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -28,98 +66,198 @@
       <image:loc>https://reskisetiawan-dev.my.id/images/certificates/fortinet-nse3-cybersecurity.webp</image:loc>
       <image:title>Sertifikat NSE 3 Certified in Cybersecurity - Fortinet</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/certificates/fortinet-fortigate-operator.webp</image:loc>
+      <image:title>Sertifikat FortiGate 7.6 Operator - Fortinet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/certificates/google-digital-marketing.webp</image:loc>
+      <image:title>Sertifikat Fundamentals of Digital Marketing - Google</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/certificates/cisco-intro-cybersecurity.webp</image:loc>
+      <image:title>Sertifikat Introduction to Cybersecurity - Cisco</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/certificates/sololearn-python-3.webp</image:loc>
+      <image:title>Sertifikat Python 3 - SoloLearn</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/certificates/freecodecamp-responsive-web-design.webp</image:loc>
+      <image:title>Sertifikat Responsive Web Design - freeCodeCamp</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/certificates/ibm-python-data-science-ai.webp</image:loc>
+      <image:title>Sertifikat Python for Data Science and AI - IBM</image:title>
+    </image:image>
   </url>
 
-  <!-- Halaman Pendidikan -->
+  <!-- 6. HALAMAN INDEX BLOG & STUDI KASUS -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 7. HALAMAN KONTAK RESMI -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/kontak</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 8. HALAMAN DETAIL PENDIDIKAN SMKN 1 TALAGA -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/pendidikan</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Rute Detail Layanan -->
+  <!-- ========================================================
+       ARTIKEL-ARTIKEL MENDALAM & STUDI KASUS (BLOG)
+       ======================================================== -->
+
+  <!-- Artikel 1: Profil & SMKN 1 Talaga PPLG -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Artikel 2: LifeHub AI Personal Workspace -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/membangun-lifehub-ai-personal-workspace-pwa</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Artikel 3: Arsitektur NEXUS AI OFFICE (Kantor AI) -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/arsitektur-nexus-ai-office-kantor-ai-multi-agent</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Artikel 4: Mendirikan AURA GLOBAL Web Studio -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/mendirikan-aura-global-jasa-website-majalengka</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Artikel 5: Pembelajaran PPLG SMKN 1 Talaga -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/pendidikan-pplg-smkn-1-talaga-belajar-coding</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Artikel 6: SEO Teknis Google AI Overviews -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/optimasi-seo-teknis-google-ai-overviews</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ========================================================
+       DETAIL RUTE PROYEK RESMI
+       ======================================================== -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/proyek/aura-global</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/proyek/lifehub-ai</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/proyek/nexus-ai-office</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- ========================================================
+       DETAIL RUTE LAYANAN
+       ======================================================== -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/layanan/website-bisnis-umkm</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://reskisetiawan-dev.my.id/layanan/redesain-kustomisasi-web</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://reskisetiawan-dev.my.id/layanan/seo-teknis-metadata-lokal</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://reskisetiawan-dev.my.id/layanan/katalog-produk-menu-digital</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Rute Detail Proyek Terverifikasi -->
-  <url>
-    <loc>https://reskisetiawan-dev.my.id/proyek/aura-global</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://reskisetiawan-dev.my.id/proyek/lifehub-ai</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://reskisetiawan-dev.my.id/proyek/nexus-ai-office</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Rute Detail Pengalaman & Inisiatif -->
+  <!-- ========================================================
+       DETAIL RUTE PENGALAMAN & INISIATIF
+       ======================================================== -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/pengalaman/aura-global</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://reskisetiawan-dev.my.id/pengalaman/lifehub-ai</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://reskisetiawan-dev.my.id/pengalaman/nexus-ai-office</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Rute Detail Area Fokus & Jalur Belajar -->
+  <!-- ========================================================
+       DETAIL RUTE AREA FOKUS & JALUR BELAJAR
+       ======================================================== -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/area-fokus/kecerdasan-buatan-agent</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://reskisetiawan-dev.my.id/area-fokus/keamanan-siber-web</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://reskisetiawan-dev.my.id/area-fokus/robotika-sistem-tertanam</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

@@ -7,6 +7,7 @@ import Experience from '../sections/Experience/Experience'
 import Education from '../sections/Education/Education'
 import Projects from '../sections/Projects/Projects'
 import Certificates from '../sections/Certificates/Certificates'
+import BlogTeaser from '../sections/BlogTeaser/BlogTeaser'
 import Contact from '../sections/Contact/Contact'
 import TechStackStrip from '../components/ui/TechStackStrip'
 import ErrorBoundary from '../components/common/ErrorBoundary'
@@ -60,6 +61,11 @@ function HomePage() {
       {/* 7. Area Fokus / Learning Path Section */}
       <ErrorBoundary>
         <Certificates />
+      </ErrorBoundary>
+
+      {/* 7b. Blog & Studi Kasus Teaser Section */}
+      <ErrorBoundary>
+        <BlogTeaser />
       </ErrorBoundary>
 
       {/* 8. Kontak / Call to Action Section */}

@@ -13,6 +13,12 @@ const ExperienceDetailPage = React.lazy(() => import('./pages/ExperienceDetailPa
 const EducationDetailPage = React.lazy(() => import('./pages/EducationDetailPage'))
 const FocusAreaDetailPage = React.lazy(() => import('./pages/FocusAreaDetailPage'))
 const CertificatesPage = React.lazy(() => import('./pages/CertificatesPage'))
+const AboutPage = React.lazy(() => import('./pages/AboutPage'))
+const ProjectsPage = React.lazy(() => import('./pages/ProjectsPage'))
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'))
+const BlogPage = React.lazy(() => import('./pages/BlogPage'))
+const ArticleDetailPage = React.lazy(() => import('./pages/ArticleDetailPage'))
+const ContactPage = React.lazy(() => import('./pages/ContactPage'))
 const NotFoundPage = React.lazy(() => import('./pages/NotFoundPage'))
 
 function RouteLoadingFallback() {
@@ -67,6 +73,14 @@ function App() {
 
             {/* Detail Area Fokus / Jalur Belajar */}
             <Route path="/area-fokus/:slug" element={<FocusAreaDetailPage />} />
+
+            {/* Rute Mandiri Halaman Utama */}
+            <Route path="/tentang" element={<AboutPage />} />
+            <Route path="/proyek" element={<ProjectsPage />} />
+            <Route path="/layanan" element={<ServicesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<ArticleDetailPage />} />
+            <Route path="/kontak" element={<ContactPage />} />
 
             {/* Halaman Dedikasi Kredensial & Sertifikat */}
             <Route path="/sertifikat" element={<CertificatesPage />} />

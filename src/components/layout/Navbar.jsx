@@ -31,12 +31,13 @@ function Navbar() {
     }
   }, [])
 
-  // Menu navigasi dengan badge counter persis referensi (Karya [03], Layanan [04], Pengalaman [03], Sertifikat [08])
+  // Menu navigasi dengan badge counter persis referensi (Karya [03], Layanan [04], Pengalaman [03], Sertifikat [08], Blog [06])
   const navLinks = [
     { name: 'Karya', counter: '03', id: 'projects' },
     { name: 'Layanan', counter: '04', id: 'services' },
     { name: 'Pengalaman', counter: '03', id: 'experience' },
     { name: 'Sertifikat', counter: '08', path: '/sertifikat' },
+    { name: 'Blog', counter: '06', path: '/blog' },
     { name: 'Tentang', id: 'about' },
     { name: 'Kontak', id: 'contact' },
   ]

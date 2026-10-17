@@ -24,12 +24,20 @@ export const isProductionDomainConfigured = () => {
 export const siteConfig = {
   name: 'Reski Setiawan',
   role: 'Software Engineer & Web Developer',
+  school: 'SMKN 1 Talaga',
+  program: 'Pengembangan Perangkat Lunak dan Gim (PPLG / RPL)',
+  grade: 'Siswa Kelas 10',
   title: 'Reski Setiawan – Software Engineer & Web Developer',
   description:
-    'Portofolio resmi Reski Setiawan, Software Engineer dan Web Developer. Solusi web bisnis modern, platform aplikasi terstruktur, dan riset AI terverifikasi.',
-  location: 'Jawa Barat, Indonesia',
+    'Portofolio resmi Reski Setiawan, siswa SMKN 1 Talaga PPLG, software engineer, solo dev LifeHub AI, arsitek NEXUS AI OFFICE, dan founder AURA GLOBAL.',
+  location: 'Majalengka, Jawa Barat, Indonesia',
   siteUrl: SITE_URL,
   ogImage: '/images/og-image.png',
+  entities: {
+    lifehub: 'https://lifehub-ai.my.id/',
+    auraglobal: 'https://auraglobal.my.id/',
+    nexus: 'NEXUS AI OFFICE (NEXUS Kantor AI)',
+  },
 
   // KANAL KONTAK RESMI: EMAIL DAN TIKTOK TERVERIFIKASI
   contacts: {

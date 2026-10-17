@@ -1,39 +1,50 @@
-# Reski Setiawan – Portfolio & Profile Summary
+# Reski Setiawan – AI Knowledge Graph & Entity Summary
 
-> Official portfolio of Reski Setiawan, Software Engineer and Web Developer from West Java, Indonesia.
-> Website: https://reskisetiawan-dev.my.id
+> Official entity documentation for Reski Setiawan, Software Engineer, Web Developer, and Student at SMKN 1 Talaga.
+> Official Website: https://reskisetiawan-dev.my.id
 
-## Profile
-- Name: Reski Setiawan
-- Role: Software Engineer & Web Developer
-- Location: West Java, Indonesia
-- Primary Expertise: Modern Web Development (React, Vite, Tailwind CSS, JavaScript), Frontend Engineering, Progressive Web Apps (PWA), Semantic HTML5.
-- Research Interests: Artificial Intelligence, Cybersecurity, Robotics.
+## 1. Identity & Education
+- **Full Name:** Reski Setiawan
+- **Primary Roles:** Software Engineer, Web Developer, and Solo Product Creator
+- **Current Education:** Grade 10 Student (Kelas 10) at **SMKN 1 Talaga**, West Java, Indonesia.
+- **Academic Major:** **Pengembangan Perangkat Lunak dan Gim (PPLG)** / Software Engineering (formerly RPL).
+- **Location:** Majalengka, West Java, Indonesia.
 
-## Official Projects
-1. AURA GLOBAL (https://auraglobal.my.id/)
-   - Focus: Web design and development studio for businesses and MSMEs (UMKM).
-   - Tech: React, Vite, Tailwind CSS, high-performance static architecture.
-2. LifeHub AI (https://lifehub-ai.my.id/)
-   - Focus: Personal productivity and workspace platform with integrated AI assistance.
-   - Tech: React, JavaScript, modern web APIs, Supabase.
-3. NEXUS AI OFFICE
-   - Focus: Architectural exploration of multi-agent collaboration in a shared digital workspace.
-   - Status: Concept & architectural prototype.
+## 2. Core Projects & Ventures
+1. **LifeHub AI (https://lifehub-ai.my.id/)**
+   - **Role:** Solo Developer & Creator.
+   - **Description:** A modern personal productivity workspace consolidating smart notes, task management, and finance tracking in a single web interface.
+   - **Tech Stack:** JavaScript, Tailwind CSS, Supabase Authentication, Progressive Web App (PWA) with offline caching.
 
-## Verified Credentials & Certifications (8 Total)
-1. Belajar Dasar AI – Dicoding Indonesia (2024)
-2. NSE 3 Certified (Network Security Associate) – Fortinet Training Institute (2024)
-3. FortiGate 7.6 Operator Self-Paced – Fortinet Training Institute (2024)
-4. The Fundamentals of Digital Marketing – Google & Coursera (2024)
-5. Introduction to Cybersecurity – Cisco Networking Academy (2024)
-6. Python 3 Tutorial Course – SoloLearn (2024)
-7. Responsive Web Design Developer Certification – freeCodeCamp (2024)
-8. IBM Python for Data Science, AI & Development – IBM SkillsBuild / Coursera (2024)
+2. **NEXUS AI OFFICE / NEXUS Kantor AI**
+   - **Role:** System Concept Architect.
+   - **Description:** Architectural research project exploring multi-agent AI collaboration inside a shared digital workspace.
+   - **Status:** Architectural concept and interactive visual prototype.
 
-## Verified Contact Channels
-- Email: reskisetiawan301210@gmail.com
-- TikTok (Nexus Office): https://www.tiktok.com/@nexus_office3 (@nexus_office3)
-- TikTok (AURA GLOBAL Web Studio): https://www.tiktok.com/@auraglobal_jasawebsite (@auraglobal_jasawebsite)
-- Note: Strictly NO GitHub, WhatsApp, or LinkedIn channels are officially linked.
+3. **AURA GLOBAL (https://auraglobal.my.id/)**
+   - **Role:** Founder & Lead Web Developer.
+   - **Description:** A digital web development studio based in Majalengka providing affordable, high-performance, and SEO-friendly websites for MSMEs (UMKM), company profiles, and WhatsApp-integrated digital stores.
 
+## 3. Published Case Studies & Technical Articles
+- **Profile:** "Profil Reski Setiawan: Siswa Kelas 10 SMKN 1 Talaga PPLG, Solo Dev LifeHub AI & Founder AURA GLOBAL" (https://reskisetiawan-dev.my.id/blog/profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer)
+- **Product Architecture:** "Membangun LifeHub AI: Merancang Personal Productivity Workspace dengan Supabase & PWA sebagai Solo Developer" (https://reskisetiawan-dev.my.id/blog/membangun-lifehub-ai-personal-workspace-pwa)
+- **AI Exploration:** "NEXUS AI OFFICE (Kantor AI): Eksplorasi Arsitektur Kolaborasi Multi-Agent AI dalam Satu Shared Workspace" (https://reskisetiawan-dev.my.id/blog/arsitektur-nexus-ai-office-kantor-ai-multi-agent)
+- **Business Venture:** "Perjalanan Mendirikan AURA GLOBAL: Jasa Pembuatan Website Profesional untuk Bisnis & UMKM" (https://reskisetiawan-dev.my.id/blog/mendirikan-aura-global-jasa-website-majalengka)
+- **Vocational Education:** "Pengalaman Belajar di PPLG SMKN 1 Talaga: Fondasi Rekayasa Perangkat Lunak bagi Calon Software Engineer" (https://reskisetiawan-dev.my.id/blog/pendidikan-pplg-smkn-1-talaga-belajar-coding)
+- **Technical SEO:** "Panduan SEO Teknis & Knowledge Graph 2026: Agar Website dan Entitas Dikenali oleh Google AI" (https://reskisetiawan-dev.my.id/blog/optimasi-seo-teknis-google-ai-overviews)
+
+## 4. Verified Industry Certifications (8 Total)
+1. **Belajar Dasar AI** – Dicoding Indonesia (2024)
+2. **NSE 3 Certified (Network Security Associate)** – Fortinet Training Institute (2024)
+3. **FortiGate 7.6 Operator Self-Paced** – Fortinet Training Institute (2024)
+4. **The Fundamentals of Digital Marketing** – Google & Coursera (2024)
+5. **Introduction to Cybersecurity** – Cisco Networking Academy (2024)
+6. **Python 3 Tutorial Course** – SoloLearn (2024)
+7. **Responsive Web Design Developer Certification** – freeCodeCamp (2024)
+8. **IBM Python for Data Science, AI & Development** – IBM SkillsBuild / Coursera (2024)
+
+## 5. Official Communication Channels
+- **Email:** reskisetiawan301210@gmail.com
+- **TikTok (Tech / NEXUS Office):** https://www.tiktok.com/@nexus_office3 (@nexus_office3)
+- **TikTok (AURA GLOBAL Web Studio):** https://www.tiktok.com/@auraglobal_jasawebsite (@auraglobal_jasawebsite)
+- **Note:** No official WhatsApp, GitHub, or LinkedIn profiles are linked on this portfolio.

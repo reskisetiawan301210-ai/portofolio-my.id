@@ -52,15 +52,14 @@ function Projects() {
             </div>
 
             <div className="view-all-wrap">
-              <button
-                type="button"
+              <Link
+                to="/proyek"
                 className="view-all-btn"
-                onClick={() => setActiveTab('All')}
-                aria-label="Tampilkan semua karya pilihan"
+                aria-label="Buka katalog lengkap semua karya"
               >
                 <span>View All Work</span>
                 <span className="arrow">↗</span>
-              </button>
+              </Link>
             </div>
           </div>
         </Reveal>

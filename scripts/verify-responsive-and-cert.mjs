@@ -10,7 +10,7 @@ async function run() {
   let browser
   try {
     browser = await chromium.launch({ channel: 'chrome', headless: true })
-  } catch (err) {
+  } catch {
     console.log('Chrome tidak tersedia, mencoba msedge...')
     browser = await chromium.launch({ channel: 'msedge', headless: true })
   }
