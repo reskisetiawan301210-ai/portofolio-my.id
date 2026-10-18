@@ -1,11 +1,10 @@
 /**
  * commentsService.js - Layanan Penyimpanan & Sinkronisasi Komentar Buku Tamu
  * 
- * Mendukung berbagai pilihan Database Cloud 100% GRATIS SELAMANYA:
- * 1. Google Firebase Realtime Database (VITE_FIREBASE_DB_URL) - 100% Gratis Google Spark Plan tanpa kartu kredit.
- * 2. Google Sheets / Apps Script API (VITE_GUESTBOOK_API_URL) - 100% Gratis di Google Drive Anda.
- * 3. Supabase REST API (VITE_SUPABASE_URL & VITE_SUPABASE_ANON_KEY).
- * 4. LocalStorage & BroadcastChannel (fallback instan offline / testing).
+ * Menggunakan Google Firebase Realtime Database (100% Free Google Spark Plan, Tanpa Kartu Kredit)
+ * Project ID: portofolio-e1e8f
+ * 
+ * Mendukung sinkronisasi real-time antar semua perangkat & pengunjung.
  */
 
 const STORAGE_KEY = 'rs_portfolio_guestbook_real_v1'
@@ -14,30 +13,39 @@ const LIKES_KEY = 'rs_portfolio_guestbook_likes_real_v1'
 // Tidak ada komentar dummy/bohongan - hanya komentar asli dari pengunjung
 export const SEED_COMMENTS = []
 
-// 1. Deteksi Firebase Realtime DB (Google Cloud - 100% Free Forever)
-const rawFirebaseUrl = import.meta.env.VITE_FIREBASE_DB_URL || ''
-const cleanFirebaseUrl = rawFirebaseUrl.replace(/\/+$/, '')
-const isFirebaseConfigured = Boolean(
-  cleanFirebaseUrl &&
-    cleanFirebaseUrl.startsWith('https://') &&
-    cleanFirebaseUrl.includes('firebaseio.com')
-)
+// Kandidat URL Firebase Realtime Database untuk project portofolio-e1e8f
+const FIREBASE_CANDIDATES = [
+  import.meta.env.VITE_FIREBASE_DB_URL,
+  'https://portofolio-e1e8f-default-rtdb.asia-southeast1.firebasedatabase.app',
+  'https://portofolio-e1e8f-default-rtdb.firebaseio.com',
+]
+  .filter(Boolean)
+  .map((u) => u.replace(/\/+$/, ''))
 
-// 2. Deteksi Google Sheets Apps Script / Webhook API (100% Free)
-const customApiUrl = import.meta.env.VITE_GUESTBOOK_API_URL || ''
-const isCustomApiConfigured = Boolean(
-  customApiUrl && customApiUrl.startsWith('https://')
-)
+let cachedWorkingFirebaseUrl = null
 
-// 3. Deteksi Supabase (jika ada)
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || ''
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || ''
-const isSupabaseConfigured = Boolean(
-  supabaseUrl &&
-    supabaseAnonKey &&
-    supabaseUrl.startsWith('https://') &&
-    !supabaseUrl.includes('example.supabase.co')
-)
+/**
+ * Mencari URL database Firebase yang aktif dan merespons 200 OK
+ */
+async function getWorkingFirebaseUrl() {
+  if (cachedWorkingFirebaseUrl) return cachedWorkingFirebaseUrl
+
+  for (const url of FIREBASE_CANDIDATES) {
+    try {
+      const res = await fetch(`${url}/comments.json?shallow=true`, { method: 'GET' })
+      if (res.ok) {
+        cachedWorkingFirebaseUrl = url
+        return url
+      }
+    } catch {
+      // lanjut coba kandidat berikutnya
+    }
+  }
+
+  // Fallback default
+  cachedWorkingFirebaseUrl = FIREBASE_CANDIDATES[0] || 'https://portofolio-e1e8f-default-rtdb.firebaseio.com'
+  return cachedWorkingFirebaseUrl
+}
 
 /**
  * Format timestamp menjadi teks relatif ramah pengguna dalam Bahasa Indonesia
@@ -65,13 +73,13 @@ export function formatRelativeTime(dateString) {
 }
 
 /**
- * Mengambil daftar komentar dari Database Cloud (Firebase / Sheets / Supabase) atau LocalStorage
+ * Mengambil daftar komentar dari Google Firebase Realtime Database
  */
 export async function getComments() {
-  // Pilihan A: Google Firebase Realtime Database (100% Free Google)
-  if (isFirebaseConfigured) {
-    try {
-      const response = await fetch(`${cleanFirebaseUrl}/comments.json`)
+  try {
+    const firebaseUrl = await getWorkingFirebaseUrl()
+    if (firebaseUrl) {
+      const response = await fetch(`${firebaseUrl}/comments.json`)
       if (response.ok) {
         const data = await response.json()
         if (data && typeof data === 'object') {
@@ -85,61 +93,13 @@ export async function getComments() {
             createdAt: val.createdAt || new Date().toISOString(),
             likes: Number(val.likes || 0),
           }))
-          // Urutkan dari yang paling baru
           return list.reverse()
         }
         return []
       }
-    } catch (err) {
-      console.warn('Gagal memuat dari Firebase, menggunakan fallback lokal:', err)
     }
-  }
-
-  // Pilihan B: Google Sheets / Custom Apps Script API (100% Free)
-  if (isCustomApiConfigured) {
-    try {
-      const response = await fetch(customApiUrl)
-      if (response.ok) {
-        const data = await response.json()
-        if (Array.isArray(data)) {
-          return data
-        }
-      }
-    } catch (err) {
-      console.warn('Gagal memuat dari Google Sheets API, menggunakan fallback lokal:', err)
-    }
-  }
-
-  // Pilihan C: Supabase REST API
-  if (isSupabaseConfigured) {
-    try {
-      const response = await fetch(
-        `${supabaseUrl}/rest/v1/guestbook?select=*&order=created_at.desc&limit=50`,
-        {
-          headers: {
-            apikey: supabaseAnonKey,
-            Authorization: `Bearer ${supabaseAnonKey}`,
-          },
-        }
-      )
-      if (response.ok) {
-        const remoteData = await response.json()
-        if (Array.isArray(remoteData)) {
-          return remoteData.map((item) => ({
-            id: String(item.id),
-            name: item.name,
-            role: item.role || 'Pengunjung',
-            avatar: item.avatar || '🤖',
-            badge: item.badge || 'Komunitas',
-            message: item.message,
-            createdAt: item.created_at || new Date().toISOString(),
-            likes: Number(item.likes || 0),
-          }))
-        }
-      }
-    } catch (err) {
-      console.warn('Gagal memuat dari Supabase, menggunakan fallback lokal:', err)
-    }
+  } catch (err) {
+    console.warn('Gagal memuat komentar dari Firebase Cloud, menggunakan fallback lokal:', err)
   }
 
   // Fallback: Ambil dari LocalStorage perangkat
@@ -160,7 +120,7 @@ export async function getComments() {
 }
 
 /**
- * Menambahkan komentar baru ke Database Cloud dan LocalStorage
+ * Menambahkan komentar baru ke Google Firebase Cloud
  */
 export async function addComment({ name, role, avatar, message }) {
   const cleanName = (name || '').trim().slice(0, 60)
@@ -190,10 +150,11 @@ export async function addComment({ name, role, avatar, message }) {
     likes: 1,
   }
 
-  // Simpan ke Google Firebase Realtime Database (jika aktif)
-  if (isFirebaseConfigured) {
-    try {
-      const res = await fetch(`${cleanFirebaseUrl}/comments.json`, {
+  // Simpan ke Google Firebase Realtime Database
+  try {
+    const firebaseUrl = await getWorkingFirebaseUrl()
+    if (firebaseUrl) {
+      const res = await fetch(`${firebaseUrl}/comments.json`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newComment),
@@ -204,61 +165,15 @@ export async function addComment({ name, role, avatar, message }) {
           newComment.id = data.name
         }
       }
-    } catch (err) {
-      console.warn('Gagal menyimpan ke Firebase:', err)
     }
+  } catch (err) {
+    console.warn('Gagal menyimpan komentar ke Firebase Cloud:', err)
   }
 
-  // Simpan ke Google Sheets / Apps Script (jika aktif)
-  if (isCustomApiConfigured) {
-    try {
-      await fetch(customApiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newComment),
-        mode: 'no-cors',
-      })
-    } catch (err) {
-      console.warn('Gagal menyimpan ke Google Sheets API:', err)
-    }
-  }
-
-  // Simpan ke Supabase (jika aktif)
-  if (isSupabaseConfigured) {
-    try {
-      const response = await fetch(`${supabaseUrl}/rest/v1/guestbook`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          apikey: supabaseAnonKey,
-          Authorization: `Bearer ${supabaseAnonKey}`,
-          Prefer: 'return=representation',
-        },
-        body: JSON.stringify({
-          name: newComment.name,
-          role: newComment.role,
-          avatar: newComment.avatar,
-          badge: newComment.badge,
-          message: newComment.message,
-          likes: newComment.likes,
-        }),
-      })
-
-      if (response.ok) {
-        const created = await response.json()
-        if (created && created[0]) {
-          newComment.id = String(created[0].id)
-        }
-      }
-    } catch (err) {
-      console.warn('Gagal menyimpan ke Supabase:', err)
-    }
-  }
-
-  // Simpan juga ke LocalStorage untuk feedback instan lokal
+  // Simpan juga ke LocalStorage untuk fallback instan lokal
   try {
     const current = await getComments()
-    const updated = [newComment, ...current]
+    const updated = [newComment, ...current.filter((c) => c.id !== newComment.id)]
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updated.slice(0, 100)))
 
     if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
@@ -307,17 +222,18 @@ export async function likeComment(commentId, currentLikes = 0) {
 
   const updatedLikes = currentLikes + 1
 
-  // Update like di Firebase
-  if (isFirebaseConfigured) {
-    try {
-      await fetch(`${cleanFirebaseUrl}/comments/${commentId}/likes.json`, {
+  // Update like di Firebase Cloud
+  try {
+    const firebaseUrl = await getWorkingFirebaseUrl()
+    if (firebaseUrl) {
+      await fetch(`${firebaseUrl}/comments/${commentId}/likes.json`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedLikes),
       })
-    } catch {
-      // Fallback
     }
+  } catch {
+    // Fallback
   }
 
   // Update like di LocalStorage
