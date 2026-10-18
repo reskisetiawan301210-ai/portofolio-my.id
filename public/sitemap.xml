@@ -15,6 +15,11 @@
       <image:title>Reski Setiawan – Software Engineer &amp; Web Developer</image:title>
       <image:caption>Portofolio resmi Reski Setiawan, Software Engineer &amp; Web Developer dari Jawa Barat</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/hero/robot-hero.webp</image:loc>
+      <image:title>Maskot Robot Futuristik Hero Portofolio Reski Setiawan</image:title>
+      <image:caption>Visual maskot robot teknologi pada hero section portofolio resmi Reski Setiawan</image:caption>
+    </image:image>
   </url>
 
   <!-- 2. HALAMAN TENTANG (BIOGRAFI LENGKAP & LATAR BELAKANG) -->
