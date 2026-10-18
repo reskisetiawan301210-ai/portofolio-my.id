@@ -126,12 +126,15 @@ function Guestbook() {
   const handleLike = async (commentId) => {
     if (likedIds[commentId]) return
 
+    const target = comments.find((c) => c.id === commentId)
+    const currentLikes = target ? Number(target.likes || 0) : 0
+
     setLikedIds((prev) => ({ ...prev, [commentId]: true }))
     setComments((prev) =>
       prev.map((c) => (c.id === commentId ? { ...c, likes: (c.likes || 0) + 1 } : c))
     )
 
-    await likeComment(commentId)
+    await likeComment(commentId, currentLikes)
   }
 
   // 4. Filter & Urutkan komentar

@@ -1,10 +1,11 @@
 /**
  * commentsService.js - Layanan Penyimpanan & Sinkronisasi Komentar Buku Tamu
  * 
- * Mendukung penyimpanan multi-tier:
- * 1. Supabase REST API (jika VITE_SUPABASE_URL & VITE_SUPABASE_ANON_KEY terpasang).
- * 2. LocalStorage & BroadcastChannel (fallback instan tanpa dependensi server).
- * 3. Seed data komunitas untuk memastikan buku tamu selalu hidup dan informatif.
+ * Mendukung berbagai pilihan Database Cloud 100% GRATIS SELAMANYA:
+ * 1. Google Firebase Realtime Database (VITE_FIREBASE_DB_URL) - 100% Gratis Google Spark Plan tanpa kartu kredit.
+ * 2. Google Sheets / Apps Script API (VITE_GUESTBOOK_API_URL) - 100% Gratis di Google Drive Anda.
+ * 3. Supabase REST API (VITE_SUPABASE_URL & VITE_SUPABASE_ANON_KEY).
+ * 4. LocalStorage & BroadcastChannel (fallback instan offline / testing).
  */
 
 const STORAGE_KEY = 'rs_portfolio_guestbook_real_v1'
@@ -13,7 +14,22 @@ const LIKES_KEY = 'rs_portfolio_guestbook_likes_real_v1'
 // Tidak ada komentar dummy/bohongan - hanya komentar asli dari pengunjung
 export const SEED_COMMENTS = []
 
-// Deteksi kredensial Supabase dari Environment Variables
+// 1. Deteksi Firebase Realtime DB (Google Cloud - 100% Free Forever)
+const rawFirebaseUrl = import.meta.env.VITE_FIREBASE_DB_URL || ''
+const cleanFirebaseUrl = rawFirebaseUrl.replace(/\/+$/, '')
+const isFirebaseConfigured = Boolean(
+  cleanFirebaseUrl &&
+    cleanFirebaseUrl.startsWith('https://') &&
+    cleanFirebaseUrl.includes('firebaseio.com')
+)
+
+// 2. Deteksi Google Sheets Apps Script / Webhook API (100% Free)
+const customApiUrl = import.meta.env.VITE_GUESTBOOK_API_URL || ''
+const isCustomApiConfigured = Boolean(
+  customApiUrl && customApiUrl.startsWith('https://')
+)
+
+// 3. Deteksi Supabase (jika ada)
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || ''
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || ''
 const isSupabaseConfigured = Boolean(
@@ -49,10 +65,52 @@ export function formatRelativeTime(dateString) {
 }
 
 /**
- * Mengambil daftar komentar dari Supabase atau LocalStorage
+ * Mengambil daftar komentar dari Database Cloud (Firebase / Sheets / Supabase) atau LocalStorage
  */
 export async function getComments() {
-  // Jika Supabase aktif, ambil dari tabel 'guestbook'
+  // Pilihan A: Google Firebase Realtime Database (100% Free Google)
+  if (isFirebaseConfigured) {
+    try {
+      const response = await fetch(`${cleanFirebaseUrl}/comments.json`)
+      if (response.ok) {
+        const data = await response.json()
+        if (data && typeof data === 'object') {
+          const list = Object.entries(data).map(([key, val]) => ({
+            id: key,
+            name: val.name || 'Pengunjung',
+            role: val.role || 'Pengunjung',
+            avatar: val.avatar || '🤖',
+            badge: val.badge || 'Komunitas',
+            message: val.message || '',
+            createdAt: val.createdAt || new Date().toISOString(),
+            likes: Number(val.likes || 0),
+          }))
+          // Urutkan dari yang paling baru
+          return list.reverse()
+        }
+        return []
+      }
+    } catch (err) {
+      console.warn('Gagal memuat dari Firebase, menggunakan fallback lokal:', err)
+    }
+  }
+
+  // Pilihan B: Google Sheets / Custom Apps Script API (100% Free)
+  if (isCustomApiConfigured) {
+    try {
+      const response = await fetch(customApiUrl)
+      if (response.ok) {
+        const data = await response.json()
+        if (Array.isArray(data)) {
+          return data
+        }
+      }
+    } catch (err) {
+      console.warn('Gagal memuat dari Google Sheets API, menggunakan fallback lokal:', err)
+    }
+  }
+
+  // Pilihan C: Supabase REST API
   if (isSupabaseConfigured) {
     try {
       const response = await fetch(
@@ -66,9 +124,8 @@ export async function getComments() {
       )
       if (response.ok) {
         const remoteData = await response.json()
-        if (Array.isArray(remoteData) && remoteData.length > 0) {
-          // Format data dari Supabase ke format standar
-          const mapped = remoteData.map((item) => ({
+        if (Array.isArray(remoteData)) {
+          return remoteData.map((item) => ({
             id: String(item.id),
             name: item.name,
             role: item.role || 'Pengunjung',
@@ -78,15 +135,14 @@ export async function getComments() {
             createdAt: item.created_at || new Date().toISOString(),
             likes: Number(item.likes || 0),
           }))
-          return mapped
         }
       }
     } catch (err) {
-      console.warn('Gagal memuat komentar dari Supabase, beralih ke local fallback:', err)
+      console.warn('Gagal memuat dari Supabase, menggunakan fallback lokal:', err)
     }
   }
 
-  // Fallback: Ambil dari LocalStorage (hanya komentar nyata)
+  // Fallback: Ambil dari LocalStorage perangkat
   try {
     const localRaw = localStorage.getItem(STORAGE_KEY)
     if (localRaw) {
@@ -104,7 +160,7 @@ export async function getComments() {
 }
 
 /**
- * Menambahkan komentar baru
+ * Menambahkan komentar baru ke Database Cloud dan LocalStorage
  */
 export async function addComment({ name, role, avatar, message }) {
   const cleanName = (name || '').trim().slice(0, 60)
@@ -134,7 +190,40 @@ export async function addComment({ name, role, avatar, message }) {
     likes: 1,
   }
 
-  // Jika Supabase aktif, kirim ke database
+  // Simpan ke Google Firebase Realtime Database (jika aktif)
+  if (isFirebaseConfigured) {
+    try {
+      const res = await fetch(`${cleanFirebaseUrl}/comments.json`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newComment),
+      })
+      if (res.ok) {
+        const data = await res.json()
+        if (data && data.name) {
+          newComment.id = data.name
+        }
+      }
+    } catch (err) {
+      console.warn('Gagal menyimpan ke Firebase:', err)
+    }
+  }
+
+  // Simpan ke Google Sheets / Apps Script (jika aktif)
+  if (isCustomApiConfigured) {
+    try {
+      await fetch(customApiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newComment),
+        mode: 'no-cors',
+      })
+    } catch (err) {
+      console.warn('Gagal menyimpan ke Google Sheets API:', err)
+    }
+  }
+
+  // Simpan ke Supabase (jika aktif)
   if (isSupabaseConfigured) {
     try {
       const response = await fetch(`${supabaseUrl}/rest/v1/guestbook`, {
@@ -162,24 +251,23 @@ export async function addComment({ name, role, avatar, message }) {
         }
       }
     } catch (err) {
-      console.warn('Gagal menyimpan komentar ke Supabase, tetap menyimpan ke local:', err)
+      console.warn('Gagal menyimpan ke Supabase:', err)
     }
   }
 
-  // Selalu simpan juga ke LocalStorage untuk instan feedback dan persistensi
+  // Simpan juga ke LocalStorage untuk feedback instan lokal
   try {
     const current = await getComments()
     const updated = [newComment, ...current]
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updated.slice(0, 100)))
 
-    // Siarkan ke tab lain jika browser mendukung BroadcastChannel
     if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
       try {
         const channel = new BroadcastChannel('rs_portfolio_guestbook')
         channel.postMessage({ type: 'NEW_COMMENT', comment: newComment })
         channel.close()
       } catch {
-        // Abaikan jika tidak didukung
+        // Abaikan
       }
     }
   } catch (e) {
@@ -204,12 +292,11 @@ export function hasUserLiked(commentId) {
 /**
  * Memberikan Like pada komentar
  */
-export async function likeComment(commentId) {
+export async function likeComment(commentId, currentLikes = 0) {
   if (hasUserLiked(commentId)) {
     return false
   }
 
-  // Tandai di localStorage agar tidak spam like
   try {
     const likes = JSON.parse(localStorage.getItem(LIKES_KEY) || '[]')
     likes.push(commentId)
@@ -218,24 +305,22 @@ export async function likeComment(commentId) {
     console.error('Error menyimpan like:', e)
   }
 
-  // Update counter di Supabase jika aktif
-  if (isSupabaseConfigured && !commentId.startsWith('seed-')) {
+  const updatedLikes = currentLikes + 1
+
+  // Update like di Firebase
+  if (isFirebaseConfigured) {
     try {
-      await fetch(`${supabaseUrl}/rest/v1/rpc/increment_comment_likes`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          apikey: supabaseAnonKey,
-          Authorization: `Bearer ${supabaseAnonKey}`,
-        },
-        body: JSON.stringify({ comment_id: Number(commentId) }),
+      await fetch(`${cleanFirebaseUrl}/comments/${commentId}/likes.json`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedLikes),
       })
     } catch {
       // Fallback
     }
   }
 
-  // Update di LocalStorage
+  // Update like di LocalStorage
   try {
     const current = await getComments()
     const updated = current.map((c) => {
@@ -251,45 +336,3 @@ export async function likeComment(commentId) {
 
   return true
 }
-
-export const SUPABASE_SETUP_SQL = `
--- ========================================================
--- SQL Skrip Supabase untuk Buku Tamu Portofolio Reski Setiawan
--- Salin dan jalankan di SQL Editor di dashboard Supabase Anda:
--- ========================================================
-
-CREATE TABLE IF NOT EXISTS public.guestbook (
-  id BIGINT GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc'::text, NOW()) NOT NULL,
-  name TEXT NOT NULL,
-  role TEXT DEFAULT 'Pengunjung',
-  avatar TEXT DEFAULT '🤖',
-  badge TEXT DEFAULT 'Komunitas',
-  message TEXT NOT NULL,
-  likes INT DEFAULT 0
-);
-
--- Aktifkan Row Level Security (RLS)
-ALTER TABLE public.guestbook ENABLE ROW LEVEL SECURITY;
-
--- Izinkan semua pengunjung membaca komentar
-CREATE POLICY "Public read comments" 
-ON public.guestbook FOR SELECT 
-USING (true);
-
--- Izinkan pengunjung mengirim komentar
-CREATE POLICY "Public insert comments" 
-ON public.guestbook FOR INSERT 
-WITH CHECK (true);
-
--- Fungsi opsional untuk menambah like
-CREATE OR REPLACE FUNCTION increment_comment_likes(comment_id BIGINT)
-RETURNS VOID AS $$
-BEGIN
-  UPDATE public.guestbook
-  SET likes = COALESCE(likes, 0) + 1
-  WHERE id = comment_id;
-END;
-$$ LANGUAGE plpgsql SECURITY DEFINER;
-`
-
