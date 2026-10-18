@@ -1,51 +1,21 @@
 /**
- * commentsService.js - Layanan Penyimpanan & Sinkronisasi Komentar Buku Tamu
+ * commentsService.js - Layanan Sinkronisasi Komentar Buku Tamu Portofolio
  * 
- * Menggunakan Google Firebase Realtime Database (100% Free Google Spark Plan, Tanpa Kartu Kredit)
- * Project ID: portofolio-e1e8f
- * 
- * Mendukung sinkronisasi real-time antar semua perangkat & pengunjung.
+ * Terhubung langsung ke Google Firebase Realtime Database (Region Singapore):
+ * https://portofolio-e1e8f-default-rtdb.asia-southeast1.firebasedatabase.app
  */
 
 const STORAGE_KEY = 'rs_portfolio_guestbook_real_v1'
 const LIKES_KEY = 'rs_portfolio_guestbook_likes_real_v1'
 
-// Tidak ada komentar dummy/bohongan - hanya komentar asli dari pengunjung
+// URL Firebase Realtime Database resmi dari pengguna (Asia Southeast 1 - Singapore)
+export const FIREBASE_DB_URL =
+  (import.meta.env.VITE_FIREBASE_DB_URL ||
+    'https://portofolio-e1e8f-default-rtdb.asia-southeast1.firebasedatabase.app'
+  ).replace(/\/+$/, '')
+
+// Daftar awal kosong murni (hanya menampilkan komentar asli dari pengunjung)
 export const SEED_COMMENTS = []
-
-// Kandidat URL Firebase Realtime Database untuk project portofolio-e1e8f
-const FIREBASE_CANDIDATES = [
-  import.meta.env.VITE_FIREBASE_DB_URL,
-  'https://portofolio-e1e8f-default-rtdb.asia-southeast1.firebasedatabase.app',
-  'https://portofolio-e1e8f-default-rtdb.firebaseio.com',
-]
-  .filter(Boolean)
-  .map((u) => u.replace(/\/+$/, ''))
-
-let cachedWorkingFirebaseUrl = null
-
-/**
- * Mencari URL database Firebase yang aktif dan merespons 200 OK
- */
-async function getWorkingFirebaseUrl() {
-  if (cachedWorkingFirebaseUrl) return cachedWorkingFirebaseUrl
-
-  for (const url of FIREBASE_CANDIDATES) {
-    try {
-      const res = await fetch(`${url}/comments.json?shallow=true`, { method: 'GET' })
-      if (res.ok) {
-        cachedWorkingFirebaseUrl = url
-        return url
-      }
-    } catch {
-      // lanjut coba kandidat berikutnya
-    }
-  }
-
-  // Fallback default
-  cachedWorkingFirebaseUrl = FIREBASE_CANDIDATES[0] || 'https://portofolio-e1e8f-default-rtdb.firebaseio.com'
-  return cachedWorkingFirebaseUrl
-}
 
 /**
  * Format timestamp menjadi teks relatif ramah pengguna dalam Bahasa Indonesia
@@ -73,36 +43,34 @@ export function formatRelativeTime(dateString) {
 }
 
 /**
- * Mengambil daftar komentar dari Google Firebase Realtime Database
+ * Mengambil seluruh komentar dari Firebase Realtime Database
  */
 export async function getComments() {
   try {
-    const firebaseUrl = await getWorkingFirebaseUrl()
-    if (firebaseUrl) {
-      const response = await fetch(`${firebaseUrl}/comments.json`)
-      if (response.ok) {
-        const data = await response.json()
-        if (data && typeof data === 'object') {
-          const list = Object.entries(data).map(([key, val]) => ({
-            id: key,
-            name: val.name || 'Pengunjung',
-            role: val.role || 'Pengunjung',
-            avatar: val.avatar || '🤖',
-            badge: val.badge || 'Komunitas',
-            message: val.message || '',
-            createdAt: val.createdAt || new Date().toISOString(),
-            likes: Number(val.likes || 0),
-          }))
-          return list.reverse()
-        }
-        return []
+    const response = await fetch(`${FIREBASE_DB_URL}/comments.json`)
+    if (response.ok) {
+      const data = await response.json()
+      if (data && typeof data === 'object') {
+        const list = Object.entries(data).map(([key, val]) => ({
+          id: key,
+          name: val.name || 'Pengunjung',
+          role: val.role || 'Pengunjung',
+          avatar: val.avatar || '🤖',
+          badge: val.badge || 'Komunitas',
+          message: val.message || '',
+          createdAt: val.createdAt || new Date().toISOString(),
+          likes: Number(val.likes || 0),
+        }))
+        // Urutkan dari yang terbaru (paling akhir di-push ke Firebase)
+        return list.reverse()
       }
+      return []
     }
   } catch (err) {
-    console.warn('Gagal memuat komentar dari Firebase Cloud, menggunakan fallback lokal:', err)
+    console.warn('Gagal membaca komentar dari Firebase Realtime Database:', err)
   }
 
-  // Fallback: Ambil dari LocalStorage perangkat
+  // Fallback: Ambil dari LocalStorage perangkat jika offline
   try {
     const localRaw = localStorage.getItem(STORAGE_KEY)
     if (localRaw) {
@@ -115,12 +83,11 @@ export async function getComments() {
     console.error('Error membaca localStorage komentar:', e)
   }
 
-  // Jika belum ada komentar, kembalikan array kosong murni
   return []
 }
 
 /**
- * Menambahkan komentar baru ke Google Firebase Cloud
+ * Menambahkan komentar baru ke Firebase Realtime Database
  */
 export async function addComment({ name, role, avatar, message }) {
   const cleanName = (name || '').trim().slice(0, 60)
@@ -136,7 +103,6 @@ export async function addComment({ name, role, avatar, message }) {
   }
 
   const newComment = {
-    id: 'user-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7),
     name: cleanName,
     role: cleanRole,
     avatar: cleanAvatar,
@@ -150,43 +116,49 @@ export async function addComment({ name, role, avatar, message }) {
     likes: 1,
   }
 
-  // Simpan ke Google Firebase Realtime Database
+  // Kirim data ke Firebase Realtime Database via REST API
   try {
-    const firebaseUrl = await getWorkingFirebaseUrl()
-    if (firebaseUrl) {
-      const res = await fetch(`${firebaseUrl}/comments.json`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newComment),
-      })
-      if (res.ok) {
-        const data = await res.json()
-        if (data && data.name) {
-          newComment.id = data.name
-        }
+    const res = await fetch(`${FIREBASE_DB_URL}/comments.json`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newComment),
+    })
+
+    if (res.ok) {
+      const data = await res.json()
+      if (data && data.name) {
+        newComment.id = data.name
       }
+    } else {
+      console.warn('Respons Firebase tidak OK saat POST:', res.status, res.statusText)
     }
   } catch (err) {
-    console.warn('Gagal menyimpan komentar ke Firebase Cloud:', err)
+    console.warn('Gagal mengirim komentar ke Firebase Cloud:', err)
   }
 
-  // Simpan juga ke LocalStorage untuk fallback instan lokal
+  // Fallback ID jika koneksi bermasalah
+  if (!newComment.id) {
+    newComment.id = 'user-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7)
+  }
+
+  // Simpan ke LocalStorage agar instan tampil di browser pengguna
   try {
     const current = await getComments()
     const updated = [newComment, ...current.filter((c) => c.id !== newComment.id)]
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updated.slice(0, 100)))
 
+    // Siarkan ke tab browser lain yang terbuka
     if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
       try {
         const channel = new BroadcastChannel('rs_portfolio_guestbook')
         channel.postMessage({ type: 'NEW_COMMENT', comment: newComment })
         channel.close()
       } catch {
-        // Abaikan
+        // Abaikan jika tidak didukung browser
       }
     }
   } catch (e) {
-    console.error('Error menyimpan komentar lokal:', e)
+    console.error('Error menyimpan komentar ke cache lokal:', e)
   }
 
   return newComment
@@ -205,49 +177,47 @@ export function hasUserLiked(commentId) {
 }
 
 /**
- * Memberikan Like pada komentar
+ * Memberikan Like pada komentar dan memperbarui ke Firebase Realtime Database
  */
 export async function likeComment(commentId, currentLikes = 0) {
   if (hasUserLiked(commentId)) {
     return false
   }
 
+  // Tandai lokal agar tidak spam like
   try {
     const likes = JSON.parse(localStorage.getItem(LIKES_KEY) || '[]')
     likes.push(commentId)
     localStorage.setItem(LIKES_KEY, JSON.stringify(likes))
   } catch (e) {
-    console.error('Error menyimpan like:', e)
+    console.error('Error menyimpan status like lokal:', e)
   }
 
-  const updatedLikes = currentLikes + 1
+  const updatedLikes = Number(currentLikes || 0) + 1
 
-  // Update like di Firebase Cloud
+  // Update counter like ke Firebase Realtime Database
   try {
-    const firebaseUrl = await getWorkingFirebaseUrl()
-    if (firebaseUrl) {
-      await fetch(`${firebaseUrl}/comments/${commentId}/likes.json`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatedLikes),
-      })
-    }
-  } catch {
-    // Fallback
+    await fetch(`${FIREBASE_DB_URL}/comments/${commentId}/likes.json`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updatedLikes),
+    })
+  } catch (err) {
+    console.warn('Gagal memperbarui like ke Firebase:', err)
   }
 
-  // Update like di LocalStorage
+  // Update counter di LocalStorage
   try {
     const current = await getComments()
     const updated = current.map((c) => {
       if (c.id === commentId) {
-        return { ...c, likes: (c.likes || 0) + 1 }
+        return { ...c, likes: updatedLikes }
       }
       return c
     })
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updated))
   } catch (e) {
-    console.error('Error update like di localStorage:', e)
+    console.error('Error menyimpan counter like lokal:', e)
   }
 
   return true

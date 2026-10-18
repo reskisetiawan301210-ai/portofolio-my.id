@@ -1,0 +1,40 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "comments": {
+      ".read": true,
+      "$commentId": {
+        ".write": "!data.exists() || (data.exists() && newData.exists() && newData.child('likes').val() >= data.child('likes').val())",
+        ".validate": "newData.hasChildren(['name', 'message', 'createdAt', 'likes'])",
+        "name": {
+          ".validate": "newData.isString() && newData.val().length >= 2 && newData.val().length <= 60"
+        },
+        "role": {
+          ".validate": "newData.isString() && newData.val().length <= 60"
+        },
+        "avatar": {
+          ".validate": "newData.isString() && newData.val().length <= 10"
+        },
+        "badge": {
+          ".validate": "newData.isString() && newData.val().length <= 30"
+        },
+        "message": {
+          ".validate": "newData.isString() && newData.val().length >= 5 && newData.val().length <= 600"
+        },
+        "createdAt": {
+          ".validate": "newData.isString() && newData.val().length <= 40"
+        },
+        "likes": {
+          ".validate": "newData.isNumber() && newData.val() >= 0"
+        },
+        "id": {
+          ".validate": "newData.isString() && newData.val().length <= 60"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    }
+  }
+}
