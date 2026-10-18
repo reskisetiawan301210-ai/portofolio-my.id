@@ -7,67 +7,11 @@
  * 3. Seed data komunitas untuk memastikan buku tamu selalu hidup dan informatif.
  */
 
-const STORAGE_KEY = 'rs_portfolio_guestbook_v1'
-const LIKES_KEY = 'rs_portfolio_guestbook_likes_v1'
+const STORAGE_KEY = 'rs_portfolio_guestbook_real_v1'
+const LIKES_KEY = 'rs_portfolio_guestbook_likes_real_v1'
 
-// Data seed awal komentar komunitas & rekan
-export const SEED_COMMENTS = [
-  {
-    id: 'seed-1',
-    name: 'Fajar Maulana',
-    role: 'Siswa SMKN 1 Talaga (PPLG)',
-    avatar: '🤖',
-    badge: 'Teman Sekolah',
-    message:
-      'Keren banget portofolionya Ki! Maskot robotnya berasa futuristik dan clean banget. Semangat terus buat pengembangan LifeHub AI dan tugas-tugas kejuruan!',
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 3).toISOString(), // 3 jam lalu
-    likes: 8,
-  },
-  {
-    id: 'seed-2',
-    name: 'Hendra Pratama',
-    role: 'Owner Kedai Kopi Majalengka / Klien Web',
-    avatar: '☕',
-    badge: 'Klien UMKM',
-    message:
-      'Website dari studio AURA GLOBAL mantap banget, loadingnya kenceng dan tampilan rapi di HP pengunjung. Senang bisa kerja sama bareng Reski!',
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 18).toISOString(), // 18 jam lalu
-    likes: 12,
-  },
-  {
-    id: 'seed-3',
-    name: 'Dimas Rizky',
-    role: 'Front-End Enthusiast',
-    avatar: '💻',
-    badge: 'Komunitas Dev',
-    message:
-      'Suka banget sama micro-interaction di hero dan penulisan studi kasusnya yang detail. Jarang-jarang siswa kelas 10 SMK sudah punya portofolio se-arsitektural ini.',
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 36).toISOString(), // kemarin
-    likes: 6,
-  },
-  {
-    id: 'seed-4',
-    name: 'Siti Aisyah',
-    role: 'Siswa PPLG SMKN 1 Talaga',
-    avatar: '🌟',
-    badge: 'Teman Angkatan',
-    message:
-      'Bangga banget sekelas sama solo developer yang konsisten eksplorasi teknologi AI dan web. Sukses selalu buat project-project berikutnya Ki!',
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 72).toISOString(), // 3 hari lalu
-    likes: 10,
-  },
-  {
-    id: 'seed-5',
-    name: 'Irfan Hakim',
-    role: 'Digital Strategist',
-    avatar: '🚀',
-    badge: 'Visitor',
-    message:
-      'Struktur JSON-LD dan arsitektur SEO-nya sangat rapi. Konsep NEXUS AI OFFICE juga menarik buat diteliti lebih lanjut. Good job!',
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 120).toISOString(), // 5 hari lalu
-    likes: 5,
-  },
-]
+// Tidak ada komentar dummy/bohongan - hanya komentar asli dari pengunjung
+export const SEED_COMMENTS = []
 
 // Deteksi kredensial Supabase dari Environment Variables
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || ''
@@ -142,21 +86,21 @@ export async function getComments() {
     }
   }
 
-  // Fallback: Ambil dari LocalStorage digabung dengan Seed
+  // Fallback: Ambil dari LocalStorage (hanya komentar nyata)
   try {
     const localRaw = localStorage.getItem(STORAGE_KEY)
     if (localRaw) {
       const parsed = JSON.parse(localRaw)
       if (Array.isArray(parsed) && parsed.length > 0) {
-        return parsed
+        return parsed.filter((c) => !c.id || !String(c.id).startsWith('seed-'))
       }
     }
   } catch (e) {
     console.error('Error membaca localStorage komentar:', e)
   }
 
-  // Default ke Seed Comments
-  return [...SEED_COMMENTS]
+  // Jika belum ada komentar, kembalikan array kosong murni
+  return []
 }
 
 /**

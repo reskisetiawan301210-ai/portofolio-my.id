@@ -340,8 +340,24 @@ function Guestbook() {
               <span>Memuat buku tamu...</span>
             </div>
           ) : displayedComments.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '3rem 0', color: '#94a3b8' }}>
-              <span>Belum ada komentar. Jadilah yang pertama berkomentar di atas!</span>
+            <div
+              style={{
+                textAlign: 'center',
+                padding: '3.5rem 1.5rem',
+                background: '#ffffff',
+                border: '1.5px dashed var(--border-light, #e2e8f0)',
+                borderRadius: '20px',
+                color: 'var(--text-secondary, #64748b)',
+                marginTop: '0.5rem',
+              }}
+            >
+              <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>💬</div>
+              <h4 style={{ fontSize: '1.15rem', fontWeight: 850, color: 'var(--text-primary, #0f1115)', margin: '0 0 0.4rem' }}>
+                Belum Ada Komentar
+              </h4>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-muted, #94a3b8)', margin: 0, maxWidth: '46ch', marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.6 }}>
+                Belum ada komentar yang masuk. Jadilah pengunjung pertama yang meninggalkan pesan atau sapaan untuk Reski pada formulir di atas!
+              </p>
             </div>
           ) : (
             <div className="guestbook-list">
