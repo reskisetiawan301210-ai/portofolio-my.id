@@ -9,6 +9,7 @@ import Projects from '../sections/Projects/Projects'
 import Certificates from '../sections/Certificates/Certificates'
 import BlogTeaser from '../sections/BlogTeaser/BlogTeaser'
 import Contact from '../sections/Contact/Contact'
+import Guestbook from '../sections/Guestbook/Guestbook'
 import TechStackStrip from '../components/ui/TechStackStrip'
 import ErrorBoundary from '../components/common/ErrorBoundary'
 
@@ -71,6 +72,11 @@ function HomePage() {
       {/* 8. Kontak / Call to Action Section */}
       <ErrorBoundary>
         <Contact />
+      </ErrorBoundary>
+
+      {/* 9. Buku Tamu & Komentar Pengunjung */}
+      <ErrorBoundary>
+        <Guestbook />
       </ErrorBoundary>
     </>
   )

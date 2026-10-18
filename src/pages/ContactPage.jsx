@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/common/SEO'
 import Reveal from '../components/common/Reveal'
@@ -71,6 +71,46 @@ function ContactPage() {
       ),
     },
   ]
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    category: 'Jasa Pembuatan Website Bisnis / UMKM',
+    message: '',
+  })
+  const [copied, setCopied] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const generateMailtoUrl = () => {
+    const subject = encodeURIComponent(`[Inquery Portofolio - ${formData.category}] dari ${formData.name || 'Pengunjung'}`)
+    const body = encodeURIComponent(
+      `Halo Reski Setiawan,\n\nSaya ingin menghubungi Anda melalui website portofolio:\n\n` +
+      `Nama: ${formData.name || '-'}\n` +
+      `Email Pengirim: ${formData.email || '-'}\n` +
+      `Kategori: ${formData.category}\n\n` +
+      `Pesan:\n${formData.message || '-'}\n\n` +
+      `---\nDikirim dari Form Kontak Portofolio (https://reskisetiawan-dev.my.id/kontak)`
+    )
+    return `mailto:${siteConfig.contacts.email}?subject=${subject}&body=${body}`
+  }
+
+  const handleCopyMessage = () => {
+    const textToCopy = `Halo Reski Setiawan,\n\nNama: ${formData.name || '-'}\nEmail: ${formData.email || '-'}\nKategori: ${formData.category}\n\nPesan:\n${formData.message || '-'}`
+    navigator.clipboard.writeText(textToCopy)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 3000)
+  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    setSubmitted(true)
+    window.location.href = generateMailtoUrl()
+  }
 
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
@@ -155,6 +195,211 @@ function ContactPage() {
             </Reveal>
           ))}
         </div>
+
+        {/* Form Kirim Pesan Cepat */}
+        <Reveal effect="fade-up" delay={140}>
+          <div
+            className="detail-card"
+            style={{
+              padding: 'clamp(1.5rem, 4vw, 2.5rem)',
+              marginBottom: '3rem',
+              borderRadius: '24px',
+            }}
+          >
+            <div style={{ marginBottom: '1.5rem' }}>
+              <span
+                style={{
+                  fontSize: '0.75rem',
+                  fontWeight: 750,
+                  color: 'var(--accent-emerald, #059669)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  display: 'inline-block',
+                  marginBottom: '0.35rem',
+                }}
+              >
+                ✦ FORMULIR PESAN LANGSUNG
+              </span>
+              <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
+                Kirim Pesan ke Reski Setiawan
+              </h2>
+              <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginTop: '0.35rem', marginBottom: 0 }}>
+                Tulis pesan atau kebutuhan proyek Anda. Formulir ini akan menyiapkan draf email yang siap dikirim langsung ke <code style={{ background: '#f1f5f9', padding: '0.15rem 0.4rem', borderRadius: '4px', fontSize: '0.825rem' }}>reskisetiawan301210@gmail.com</code>.
+              </p>
+            </div>
+
+            {submitted && (
+              <div
+                style={{
+                  background: '#ecfdf5',
+                  border: '1px solid #a7f3d0',
+                  color: '#065f46',
+                  padding: '0.85rem 1.25rem',
+                  borderRadius: '12px',
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  marginBottom: '1.5rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                <span>✓</span>
+                <span>Aplikasi email Anda telah dibuka. Jika aplikasi belum terbuka otomatis, Anda juga dapat menyalin pesan dengan tombol di bawah.</span>
+              </div>
+            )}
+
+            <form onSubmit={handleFormSubmit}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                  <label htmlFor="cp-name" style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#1e293b' }}>
+                    Nama Anda <span style={{ color: '#ef4444' }}>*</span>
+                  </label>
+                  <input
+                    id="cp-name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Misal: Budi Santoso"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    style={{
+                      padding: '0.8rem 1rem',
+                      background: '#f8fafc',
+                      border: '1.5px solid #e2e8f0',
+                      borderRadius: '10px',
+                      fontSize: '0.9rem',
+                      color: '#0f1115',
+                      outline: 'none',
+                    }}
+                  />
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                  <label htmlFor="cp-email" style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#1e293b' }}>
+                    Email Anda <span style={{ color: '#ef4444' }}>*</span>
+                  </label>
+                  <input
+                    id="cp-email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="nama@email.com"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    style={{
+                      padding: '0.8rem 1rem',
+                      background: '#f8fafc',
+                      border: '1.5px solid #e2e8f0',
+                      borderRadius: '10px',
+                      fontSize: '0.9rem',
+                      color: '#0f1115',
+                      outline: 'none',
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '1.25rem' }}>
+                <label htmlFor="cp-category" style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#1e293b' }}>
+                  Topik / Keperluan Diskusi
+                </label>
+                <select
+                  id="cp-category"
+                  name="category"
+                  value={formData.category}
+                  onChange={handleInputChange}
+                  style={{
+                    padding: '0.8rem 1rem',
+                    background: '#f8fafc',
+                    border: '1.5px solid #e2e8f0',
+                    borderRadius: '10px',
+                    fontSize: '0.9rem',
+                    color: '#0f1115',
+                    outline: 'none',
+                    cursor: 'pointer',
+                  }}
+                >
+                  <option value="Jasa Pembuatan Website Bisnis / UMKM">Jasa Pembuatan Website Bisnis / UMKM (Aura Global)</option>
+                  <option value="Diskusi Kolaborasi Proyek">Diskusi Kolaborasi Proyek &amp; Solo Development</option>
+                  <option value="Pertanyaan Seputar Rekayasa Web / AI">Pertanyaan Seputar Rekayasa Web, LifeHub AI, &amp; Nexus</option>
+                  <option value="Komunikasi Lainnya">Komunikasi / Pertanyaan Umum Lainnya</option>
+                </select>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '1.5rem' }}>
+                <label htmlFor="cp-message" style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#1e293b' }}>
+                  Pesan atau Uraian Kebutuhan <span style={{ color: '#ef4444' }}>*</span>
+                </label>
+                <textarea
+                  id="cp-message"
+                  name="message"
+                  required
+                  rows={4}
+                  placeholder="Ceritakan gambaran website, pertanyaan teknis, atau ide proyek yang ingin Anda bicarakan..."
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  style={{
+                    padding: '0.8rem 1rem',
+                    background: '#f8fafc',
+                    border: '1.5px solid #e2e8f0',
+                    borderRadius: '10px',
+                    fontSize: '0.9rem',
+                    color: '#0f1115',
+                    outline: 'none',
+                    lineHeight: 1.6,
+                    resize: 'vertical',
+                  }}
+                />
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+                <button
+                  type="submit"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    padding: '0.85rem 1.85rem',
+                    background: '#0f1115',
+                    color: '#ffffff',
+                    border: 'none',
+                    borderRadius: '9999px',
+                    fontSize: '0.9375rem',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 14px rgba(0,0,0,0.15)',
+                    transition: 'transform 0.2s ease, background 0.2s ease',
+                  }}
+                >
+                  <span>Buka Draft Email</span>
+                  <span>↗</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleCopyMessage}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    padding: '0.85rem 1.5rem',
+                    background: '#ffffff',
+                    color: '#334155',
+                    border: '1.5px solid #e2e8f0',
+                    borderRadius: '9999px',
+                    fontSize: '0.875rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                  }}
+                >
+                  <span>{copied ? '✓ Tersalin ke Clipboard' : '📋 Salin Format Pesan'}</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </Reveal>
 
         {/* Info Box */}
         <aside className="article-entity-box">

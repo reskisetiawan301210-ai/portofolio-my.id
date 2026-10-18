@@ -4,7 +4,7 @@ import { useActiveSection } from '../../hooks/useActiveSection'
 import siteConfig from '../../config/site'
 import './Navbar.css'
 
-const SECTION_IDS = ['hero', 'about', 'services', 'experience', 'education', 'projects', 'certificates', 'contact']
+const SECTION_IDS = ['hero', 'about', 'services', 'experience', 'education', 'projects', 'certificates', 'contact', 'guestbook']
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)

@@ -68,6 +68,7 @@ function Footer() {
     { label: 'Blog', to: '/blog' },
     { label: 'Tentang', to: '/tentang' },
     { label: 'Kontak', to: '/kontak' },
+    { label: 'Buku Tamu', to: '/#guestbook' },
   ]
 
   return (
