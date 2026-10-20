@@ -17,8 +17,16 @@ function AboutPage() {
     url: `${siteConfig.siteUrl}/tentang`,
     mainEntity: {
       '@type': 'Person',
+      '@id': `${siteConfig.siteUrl}/#person`,
       name: 'Reski Setiawan',
+      alternateName: 'PixelForgeDev',
       jobTitle: 'Software Engineer & Web Developer',
+      image: `${siteConfig.siteUrl}/images/og-image.png`,
+      sameAs: [
+        siteConfig.contacts.instagram.url,
+        siteConfig.contacts.tiktokOffice.url,
+        siteConfig.contacts.tiktokStudio.url,
+      ],
       alumniOf: {
         '@type': 'EducationalOrganization',
         name: 'SMKN 1 Talaga',

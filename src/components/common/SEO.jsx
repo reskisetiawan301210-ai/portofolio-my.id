@@ -31,6 +31,7 @@ function SEO({
   let structuredData = null
   if (isHomePage) {
     const verifiedSameAs = [
+      siteConfig.contacts.instagram?.url,
       siteConfig.contacts.tiktokOffice?.url,
       siteConfig.contacts.tiktokStudio?.url,
     ].filter(Boolean)
@@ -39,6 +40,7 @@ function SEO({
       '@type': 'Person',
       '@id': `${siteConfig.siteUrl}/#person`,
       name: siteConfig.name,
+      alternateName: ['PixelForgeDev'],
       jobTitle: siteConfig.role,
       url: siteConfig.siteUrl,
       image: `${siteConfig.siteUrl}/images/og-image.png`,
@@ -91,6 +93,56 @@ function SEO({
         addressCountry: 'ID',
       },
       sameAs: verifiedSameAs,
+      hasCredential: [
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'Belajar Dasar AI',
+          credentialCategory: 'certificate',
+          recognizedBy: { '@type': 'Organization', name: 'Dicoding Indonesia' },
+        },
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'NSE 3 Certified in Cybersecurity',
+          credentialCategory: 'certificate',
+          recognizedBy: { '@type': 'Organization', name: 'Fortinet Training Institute' },
+        },
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'FortiGate 7.6 Operator Self-Paced',
+          credentialCategory: 'certificate',
+          recognizedBy: { '@type': 'Organization', name: 'Fortinet Training Institute' },
+        },
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'The Fundamentals of Digital Marketing',
+          credentialCategory: 'certificate',
+          recognizedBy: { '@type': 'Organization', name: 'Google & Coursera' },
+        },
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'Introduction to Cybersecurity',
+          credentialCategory: 'certificate',
+          recognizedBy: { '@type': 'Organization', name: 'Cisco Networking Academy' },
+        },
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'Python 3 Tutorial Course',
+          credentialCategory: 'certificate',
+          recognizedBy: { '@type': 'Organization', name: 'SoloLearn' },
+        },
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'Responsive Web Design Certification',
+          credentialCategory: 'certificate',
+          recognizedBy: { '@type': 'Organization', name: 'freeCodeCamp' },
+        },
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'IBM Python for Data Science, AI & Development',
+          credentialCategory: 'certificate',
+          recognizedBy: { '@type': 'Organization', name: 'IBM SkillsBuild / Coursera' },
+        },
+      ],
       knowsAbout: [
         'PPLG',
         'Rekayasa Perangkat Lunak',

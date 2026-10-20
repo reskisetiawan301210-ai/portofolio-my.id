@@ -30,7 +30,7 @@ function About() {
         {/* Title reveals first */}
         <Reveal effect="fade-up" delay={0}>
           <SectionHeader
-            title="TENTANG"
+            title="TENTANG RESKI SETIAWAN"
             watermark="PROFIL"
             meta="Software Engineer &amp; Web Developer"
           />

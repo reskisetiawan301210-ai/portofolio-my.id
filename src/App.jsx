@@ -77,6 +77,7 @@ function App() {
 
             {/* Rute Mandiri Halaman Utama */}
             <Route path="/tentang" element={<AboutPage />} />
+            <Route path="/profil" element={<AboutPage />} />
             <Route path="/perjalanan" element={<JourneyPage />} />
             <Route path="/pengalaman" element={<JourneyPage />} />
             <Route path="/proyek" element={<ProjectsPage />} />

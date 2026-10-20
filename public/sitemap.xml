@@ -25,13 +25,26 @@
   <!-- 2. HALAMAN TENTANG (BIOGRAFI LENGKAP & LATAR BELAKANG) -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/tentang</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://reskisetiawan-dev.my.id/images/og-image.png</image:loc>
       <image:title>Tentang Saya – Reski Setiawan | Software Engineer &amp; Web Developer</image:title>
       <image:caption>Profil personal dan latar belakang rekayasa web Reski Setiawan</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 2b. HALAMAN PROFIL ENTITAS RESKI SETIAWAN -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/profil</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/og-image.png</image:loc>
+      <image:title>Profil Reski Setiawan – Software Engineer &amp; Web Developer</image:title>
+      <image:caption>Profil lengkap dan disambiguasi entitas resmi Reski Setiawan</image:caption>
     </image:image>
   </url>
 
@@ -228,13 +241,52 @@
   <!-- Artikel 6: SEO Teknis & Google AI Overviews -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/blog/optimasi-seo-teknis-google-ai-overviews</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
       <image:loc>https://reskisetiawan-dev.my.id/images/articles/seo-knowledge-graph.webp</image:loc>
       <image:title>Optimasi SEO Teknis &amp; Pemahaman Entitas untuk Mesin Pencari Modern</image:title>
       <image:caption>Esai teknis penerapan Semantic HTML5, Schema.org JSON-LD, dan performa web</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Artikel 7: Siapa Reski Setiawan? -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/siapa-reski-setiawan-profil-software-engineer-web-developer</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/articles/profil-developer.webp</image:loc>
+      <image:title>Siapa Reski Setiawan? Profil Software Engineer Muda dan Web Developer Asal Jawa Barat</image:title>
+      <image:caption>Profil resmi dan disambiguasi identitas Reski Setiawan, siswa SMKN 1 Talaga PPLG dan pembuat LifeHub AI</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Artikel 8: FAQ Reski Setiawan -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/faq-reski-setiawan-pendidikan-proyek-keahlian</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/articles/pplg-smk-learning.webp</image:loc>
+      <image:title>FAQ Reski Setiawan: Pertanyaan Populer Seputar Profil, Pendidikan, dan Proyek</image:title>
+      <image:caption>Daftar tanya jawab resmi seputar profil, sekolah, sertifikasi, dan karya Reski Setiawan</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Artikel 9: Peran Solo Developer LifeHub AI -->
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/blog/cara-reski-setiawan-merancang-lifehub-ai-solo-developer</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/articles/lifehub-ai.webp</image:loc>
+      <image:title>Mengenal Peran Solo Developer: Cara Reski Setiawan Merancang LifeHub AI dari Nol</image:title>
+      <image:caption>Catatan teknis perancangan platform produktivitas LifeHub AI oleh Reski Setiawan</image:caption>
     </image:image>
   </url>
 

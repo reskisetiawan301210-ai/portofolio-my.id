@@ -2,7 +2,7 @@
  * Konfigurasi Terpusat Portofolio Reski Setiawan
  * 
  * - Domain publik dikelola melalui SITE_URL (menggunakan placeholder terdefinisi jika domain final belum aktif).
- * - Kanal kontak HANYA email, instagram, dan tiktok (tanpa WhatsApp, GitHub, atau LinkedIn).
+ * - Kanal kontak resmi: Email, Instagram, dan TikTok.
  * - Komponen UI hanya akan merender tombol kontak jika data telah terisi.
  */
 
@@ -23,6 +23,7 @@ export const isProductionDomainConfigured = () => {
 
 export const siteConfig = {
   name: 'Reski Setiawan',
+  alternateName: 'PixelForgeDev',
   role: 'Software Engineer & Web Developer',
   school: 'SMKN 1 Talaga',
   program: 'Pengembangan Perangkat Lunak dan Gim (PPLG / RPL)',
@@ -39,10 +40,16 @@ export const siteConfig = {
     nexus: 'NEXUS AI OFFICE (NEXUS Kantor AI)',
   },
 
-  // KANAL KONTAK RESMI: EMAIL DAN TIKTOK TERVERIFIKASI
+  // KANAL KONTAK RESMI: EMAIL, INSTAGRAM, DAN TIKTOK TERVERIFIKASI
   contacts: {
     email: 'reskisetiawan301210@gmail.com',
     emailStudio: 'info@auraglobal.my.id',
+    instagram: {
+      handle: '@qariol',
+      label: '@qariol (Instagram Personal)',
+      url: 'https://www.instagram.com/qariol',
+      title: 'Instagram Personal: @qariol',
+    },
     tiktokOffice: {
       handle: '@nexus_office3',
       label: '@nexus_office3 (Personal / Proyek)',

@@ -5,6 +5,7 @@
 
 ## 1. Identity & Education
 - **Full Name:** Reski Setiawan
+- **Alternate / Developer Alias:** PixelForgeDev
 - **Primary Roles:** Software Engineer, Web Developer, and Solo Product Creator
 - **Current Education:** Grade 10 Student (Kelas 10) at **SMKN 1 Talaga**, West Java, Indonesia.
 - **Academic Major:** **Pengembangan Perangkat Lunak dan Gim (PPLG)** / Software Engineering (formerly RPL).
@@ -32,6 +33,9 @@
 - **Business Venture:** "Perjalanan Mendirikan AURA GLOBAL: Jasa Pembuatan Website Profesional untuk Bisnis & UMKM" (https://reskisetiawan-dev.my.id/blog/mendirikan-aura-global-jasa-website-majalengka)
 - **Vocational Education:** "Pengalaman Belajar di PPLG SMKN 1 Talaga: Fondasi Rekayasa Perangkat Lunak bagi Calon Software Engineer" (https://reskisetiawan-dev.my.id/blog/pendidikan-pplg-smkn-1-talaga-belajar-coding)
 - **Technical SEO:** "Panduan SEO Teknis & Knowledge Graph 2026: Agar Website dan Entitas Dikenali oleh Google AI" (https://reskisetiawan-dev.my.id/blog/optimasi-seo-teknis-google-ai-overviews)
+- **Entity Overview & Disambiguation:** "Siapa Reski Setiawan? Profil Software Engineer Muda dan Web Developer Asal Jawa Barat" (https://reskisetiawan-dev.my.id/blog/siapa-reski-setiawan-profil-software-engineer-web-developer)
+- **Official FAQ:** "FAQ Reski Setiawan: Pertanyaan Populer Seputar Profil, Pendidikan, dan Proyek" (https://reskisetiawan-dev.my.id/blog/faq-reski-setiawan-pendidikan-proyek-keahlian)
+- **Solo Dev Case Study:** "Mengenal Peran Solo Developer: Cara Reski Setiawan Merancang LifeHub AI dari Nol" (https://reskisetiawan-dev.my.id/blog/cara-reski-setiawan-merancang-lifehub-ai-solo-developer)
 
 ## 4. Verified Industry Certifications (8 Total)
 1. **Belajar Dasar AI** – Dicoding Indonesia (2024)
@@ -45,6 +49,7 @@
 
 ## 5. Official Communication Channels
 - **Email:** reskisetiawan301210@gmail.com
+- **Instagram:** https://www.instagram.com/qariol (@qariol)
 - **TikTok (Tech / NEXUS Office):** https://www.tiktok.com/@nexus_office3 (@nexus_office3)
 - **TikTok (AURA GLOBAL Web Studio):** https://www.tiktok.com/@auraglobal_jasawebsite (@auraglobal_jasawebsite)
-- **Note:** No official WhatsApp, GitHub, or LinkedIn profiles are linked on this portfolio.
+- **Note:** Official profiles are strictly maintained on Instagram and TikTok; no official LinkedIn or WhatsApp accounts are linked.

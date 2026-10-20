@@ -102,7 +102,7 @@ function generatePages() {
   const baseTemplate = fs.readFileSync(indexPath, 'utf-8')
   let count = 0
 
-  // 1. TENTANG SAYA (/tentang)
+  // 1. TENTANG SAYA (/tentang & /profil)
   const aboutSchema = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
@@ -111,8 +111,17 @@ function generatePages() {
     url: `${SITE_URL}/tentang`,
     mainEntity: {
       '@type': 'Person',
+      '@id': `${SITE_URL}/#person`,
       name: siteConfig.name,
+      alternateName: 'PixelForgeDev',
       jobTitle: siteConfig.role,
+      url: SITE_URL,
+      image: `${SITE_URL}/images/og-image.png`,
+      sameAs: [
+        siteConfig.contacts.instagram.url,
+        siteConfig.contacts.tiktokOffice.url,
+        siteConfig.contacts.tiktokStudio.url,
+      ],
       alumniOf: { '@type': 'EducationalOrganization', name: 'SMKN 1 Talaga' },
       founder: { '@type': 'Organization', name: 'AURA GLOBAL', url: 'https://auraglobal.my.id/' },
     },
@@ -149,13 +158,32 @@ function generatePages() {
     contentHtml: aboutContent,
   })
 
+  writeRoute('/profil', {
+    title: 'Profil Reski Setiawan – Software Engineer & Web Developer',
+    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik studio web AURA GLOBAL, LifeHub AI, dan konsep NEXUS AI OFFICE.',
+    path: '/profil',
+    schema: {
+      ...aboutSchema,
+      name: 'Profil Reski Setiawan – Software Engineer & Web Developer',
+      url: `${SITE_URL}/profil`,
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Beranda', item: SITE_URL },
+          { '@type': 'ListItem', position: 2, name: 'Profil', item: `${SITE_URL}/profil` },
+        ],
+      },
+    },
+    contentHtml: aboutContent,
+  })
+
   // 2. PENDIDIKAN (/pendidikan)
   const eduSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Pendidikan & Studi Rekayasa Perangkat Lunak – Reski Setiawan',
     description: 'Dokumentasi jalur pendidikan vokasi Reski Setiawan di SMKN 1 Talaga jurusan PPLG, kurikulum pemrograman web, dan pengembangan keterampilan rekayasa software.',
-    author: { '@type': 'Person', name: siteConfig.name },
+    author: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
     url: `${SITE_URL}/pendidikan`,
     breadcrumb: {
       '@type': 'BreadcrumbList',
@@ -198,7 +226,7 @@ function generatePages() {
     '@type': 'Article',
     headline: 'Perjalanan Rekayasa & Belajar Coding – Reski Setiawan',
     description: 'Narasi jujur perjalanan belajar Reski Setiawan: langkah awal belajar coding, menempuh studi di SMKN 1 Talaga PPLG, hingga membangun LifeHub AI dan AURA GLOBAL.',
-    author: { '@type': 'Person', name: siteConfig.name },
+    author: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
     url: `${SITE_URL}/perjalanan`,
     breadcrumb: {
       '@type': 'BreadcrumbList',
@@ -293,8 +321,8 @@ function generatePages() {
       description: p.oneLiner,
       url: `${SITE_URL}/proyek/${p.slug}`,
       image: p.image ? `${SITE_URL}${p.image}` : `${SITE_URL}/images/og-image.png`,
-      author: { '@type': 'Person', name: siteConfig.name },
-      creator: { '@type': 'Person', name: siteConfig.name },
+      author: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
+      creator: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
       breadcrumb: {
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -340,7 +368,7 @@ function generatePages() {
     name: 'Layanan Pembuatan Website & Web Dev – Reski Setiawan',
     description: 'Layanan pembuatan website profesional untuk UMKM, profil bisnis, dan optimasi web yang saya kelola melalui studio web AURA GLOBAL.',
     url: `${SITE_URL}/layanan`,
-    provider: { '@type': 'Person', name: siteConfig.name },
+    provider: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Katalog Layanan Web Reski Setiawan',
@@ -395,7 +423,7 @@ function generatePages() {
       name: s.title,
       description: s.shortDesc,
       url: `${SITE_URL}/layanan/${s.slug}`,
-      provider: { '@type': 'Person', name: siteConfig.name },
+      provider: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
       isRelatedTo: { '@type': 'Organization', name: 'AURA GLOBAL', url: 'https://auraglobal.my.id/' },
       breadcrumb: {
         '@type': 'BreadcrumbList',
@@ -563,11 +591,22 @@ function generatePages() {
       dateModified: a.lastModified,
       author: {
         '@type': 'Person',
+        '@id': `${SITE_URL}/#person`,
         name: a.author.name,
         jobTitle: a.author.role,
         url: SITE_URL,
+        sameAs: [
+          siteConfig.contacts.instagram.url,
+          siteConfig.contacts.tiktokOffice.url,
+          siteConfig.contacts.tiktokStudio.url,
+        ],
       },
-      publisher: { '@type': 'Person', name: siteConfig.name, url: SITE_URL },
+      publisher: {
+        '@type': 'Person',
+        '@id': `${SITE_URL}/#person`,
+        name: siteConfig.name,
+        url: SITE_URL,
+      },
       keywords: a.keywords.join(', '),
       articleSection: a.category,
       inLanguage: 'id-ID',
@@ -624,7 +663,7 @@ function generatePages() {
       headline: `${exp.institution} – ${exp.role}`,
       description: exp.oneLiner,
       url: `${SITE_URL}/pengalaman/${exp.slug}`,
-      author: { '@type': 'Person', name: siteConfig.name },
+      author: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
       breadcrumb: {
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -668,7 +707,7 @@ function generatePages() {
       headline: area.title,
       description: area.oneLiner,
       url: `${SITE_URL}/area-fokus/${area.slug}`,
-      author: { '@type': 'Person', name: siteConfig.name },
+      author: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
       breadcrumb: {
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -709,8 +748,14 @@ function generatePages() {
     url: `${SITE_URL}/kontak`,
     mainEntity: {
       '@type': 'Person',
+      '@id': `${SITE_URL}/#person`,
       name: siteConfig.name,
       email: siteConfig.contacts.email,
+      sameAs: [
+        siteConfig.contacts.instagram.url,
+        siteConfig.contacts.tiktokOffice.url,
+        siteConfig.contacts.tiktokStudio.url,
+      ],
     },
     breadcrumb: {
       '@type': 'BreadcrumbList',
@@ -735,6 +780,7 @@ function generatePages() {
           </header>
           <article class="detail-main-col">
             <p><strong>Email Utama:</strong> <a href="mailto:${siteConfig.contacts.email}">${siteConfig.contacts.email}</a></p>
+            <p><strong>Instagram:</strong> <a href="${siteConfig.contacts.instagram.url}">${siteConfig.contacts.instagram.handle}</a></p>
             <p><strong>TikTok Personal/Proyek:</strong> <a href="${siteConfig.contacts.tiktokOffice.url}">${siteConfig.contacts.tiktokOffice.handle}</a></p>
             <p><strong>TikTok Studio Bisnis:</strong> <a href="${siteConfig.contacts.tiktokStudio.url}">${siteConfig.contacts.tiktokStudio.handle}</a></p>
             <p><strong>Lokasi:</strong> ${siteConfig.location}</p>

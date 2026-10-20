@@ -49,9 +49,15 @@ function ArticleDetailPage() {
     dateModified: article.lastModified,
     author: {
       '@type': 'Person',
+      '@id': `${siteConfig.siteUrl}/#person`,
       name: article.author.name,
       jobTitle: article.author.role,
       url: siteConfig.siteUrl,
+      sameAs: [
+        siteConfig.contacts.instagram.url,
+        siteConfig.contacts.tiktokOffice.url,
+        siteConfig.contacts.tiktokStudio.url,
+      ],
       affiliation: {
         '@type': 'EducationalOrganization',
         name: 'SMKN 1 Talaga',
@@ -64,6 +70,7 @@ function ArticleDetailPage() {
     },
     publisher: {
       '@type': 'Person',
+      '@id': `${siteConfig.siteUrl}/#person`,
       name: siteConfig.name,
       url: siteConfig.siteUrl,
     },

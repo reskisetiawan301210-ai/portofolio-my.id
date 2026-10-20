@@ -437,6 +437,206 @@ Selain \`robots.txt\` dan \`sitemap.xml\`, saya membuat file \`llms.txt\` di aka
 SEO di masa kini bukan tentang trik atau manipulasi kata kunci. Kunci utama agar website dan profil Anda diakui oleh Google AI adalah **keaslian informasi, struktur data semantik yang presisi, performa muat halaman yang optimal, dan konsistensi hubungan antar entitas**.
     `,
   },
+  {
+    id: 7,
+    slug: 'siapa-reski-setiawan-profil-software-engineer-web-developer',
+    title: 'Siapa Reski Setiawan? Profil Software Engineer Muda dan Web Developer Asal Jawa Barat',
+    excerpt:
+      'Menjawab pertanyaan "Siapa Reski Setiawan?": profil lengkap software engineer dan web developer asal Jawa Barat, siswa PPLG SMKN 1 Talaga, pembuat LifeHub AI, dan founder AURA GLOBAL.',
+    category: 'Profil & Karir',
+    publishedDate: '2026-10-20',
+    lastModified: '2026-10-20',
+    readTime: '6 menit',
+    author: {
+      name: 'Reski Setiawan',
+      role: 'Software Engineer & Web Developer',
+      location: 'Jawa Barat, Indonesia',
+    },
+    keywords: [
+      'Siapa Reski Setiawan',
+      'Reski Setiawan',
+      'Reski Setiawan Profil',
+      'Reski Setiawan Software Engineer',
+      'Reski Setiawan Web Developer',
+      'Reski Setiawan SMKN 1 Talaga',
+      'Reski Setiawan PPLG',
+      'Reski Setiawan LifeHub AI',
+      'Reski Setiawan AURA GLOBAL',
+      'PixelForgeDev',
+    ],
+    coverImage: '/images/articles/profil-developer.webp',
+    content: `
+## Siapa Sebenarnya Reski Setiawan?
+
+**Reski Setiawan** adalah seorang Software Engineer dan Web Developer muda berkebangsaan Indonesia yang berdomisili di Jawa Barat. Saat ini, Reski Setiawan tercatat sebagai siswa aktif kelas 10 di **SMKN 1 Talaga** pada Program Keahlian **Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak)**.
+
+Sebagai pengembang mandiri (*solo developer*), Reski Setiawan memfokuskan karyanya pada pengembangan web modern berbasis arsitektur performa tinggi, aplikasi produktif berbasis Progressive Web Apps (PWA), serta integrasi antarmuka kecerdasan buatan.
+
+---
+
+## Disambiguasi: Mengenal Reski Setiawan Software Engineer
+
+Di mesin pencari, nama *"Reski Setiawan"* dapat merujuk ke beberapa individu dengan latar belakang profesi yang berbeda di berbagai kota di Indonesia. Untuk menegaskan identitas entitas resmi:
+
+- **Nama Resmi:** Reski Setiawan (juga dikenal dengan nama alias pengembang *PixelForgeDev*).
+- **Profesi Utama:** Software Engineer, Web Developer, dan Inisiator Produk Digital.
+- **Institusi Pendidikan:** SMKN 1 Talaga, Kabupaten Majalengka, Jawa Barat (Konsentrasi PPLG / RPL).
+- **Website & Portofolio Resmi:** [https://reskisetiawan-dev.my.id](https://reskisetiawan-dev.my.id)
+- **Kanal Media Sosial Terverifikasi:** Instagram [@qariol](https://www.instagram.com/qariol) dan TikTok [@nexus_office3](https://www.tiktok.com/@nexus_office3).
+
+Identitas ini membedakan Reski Setiawan dari praktisi lain yang memiliki kemiripan nama di platform publik.
+
+---
+
+## Proyek dan Karya Nyata Reski Setiawan
+
+Reski Setiawan telah merancang dan membangun sejumlah inisiatif teknologi nyata:
+
+1. **LifeHub AI (https://lifehub-ai.my.id/)**  
+   Platform personal workspace produktif yang menggabungkan task management, smart notes, dan micro-financial tracker dengan mode tamu tanpa batas dan kemampuan offline PWA.
+
+2. **NEXUS AI OFFICE (NEXUS Kantor AI)**  
+   Eksplorasi arsitektur sistem kerja cerdas yang memodelkan kolaborasi agen kecerdasan buatan (multi-agent orchestration) dalam menyelesaikan alur kerja digital.
+
+3. **AURA GLOBAL (https://auraglobal.my.id/)**  
+   Studio layanan pembuatan website profil bisnis dan landing page profesional yang dirancang ramah anggaran bagi pelaku UMKM.
+
+---
+
+## Keahlian Teknis dan Kredensial Resmi
+
+Dalam membangun solusi perangkat lunak, Reski Setiawan menguasai ekosistem pengembangan modern:
+- **Frontend & Web:** HTML5 Semantik, CSS3 modern, JavaScript (ES6+), React 19, Vite, Tailwind CSS.
+- **Backend & Database:** PHP, Laravel, Supabase, Firebase Realtime Database.
+- **Kredensial Industri:** Memiliki sertifikasi resmi dari lembaga global ternama seperti **Dicoding Indonesia** (Dasar AI), **Fortinet Training Institute** (NSE 3 Cybersecurity & FortiGate 7.6 Operator), **Cisco Networking Academy** (Cybersecurity), **Google & Coursera** (Digital Marketing), **IBM SkillsBuild** (Python for Data Science, AI & Development), dan **freeCodeCamp** (Responsive Web Design).
+
+Dengan fondasi teknis yang kuat dan karya yang terverifikasi, Reski Setiawan terus aktif memajukan inovasi perangkat lunak sejak jenjang pendidikan vokasi.
+    `,
+  },
+  {
+    id: 8,
+    slug: 'faq-reski-setiawan-pendidikan-proyek-keahlian',
+    title: 'FAQ Reski Setiawan: Pertanyaan Populer Seputar Profil, Pendidikan, dan Proyek',
+    excerpt:
+      'Daftar tanya jawab resmi mengenai Reski Setiawan: status pendidikan di SMKN 1 Talaga, karya LifeHub AI, studio AURA GLOBAL, serta sertifikasi keahlian teknologi.',
+    category: 'Profil & Karir',
+    publishedDate: '2026-10-20',
+    lastModified: '2026-10-20',
+    readTime: '5 menit',
+    author: {
+      name: 'Reski Setiawan',
+      role: 'Software Engineer & Web Developer',
+      location: 'Jawa Barat, Indonesia',
+    },
+    keywords: [
+      'FAQ Reski Setiawan',
+      'Tanya Jawab Reski Setiawan',
+      'Reski Setiawan Sekolah Di Mana',
+      'Reski Setiawan SMKN 1 Talaga',
+      'Reski Setiawan PPLG',
+      'LifeHub AI Reski Setiawan',
+      'Sertifikat Reski Setiawan',
+    ],
+    coverImage: '/images/articles/pplg-smk-learning.webp',
+    content: `
+## Tanya Jawab Resmi Seputar Reski Setiawan
+
+Berikut adalah jawaban atas pertanyaan-pertanyaan yang paling sering diajukan mengenai profil, latar belakang, dan karya **Reski Setiawan**:
+
+---
+
+## Apa Profesi dan Fokus Utama Reski Setiawan?
+
+**Reski Setiawan** adalah seorang Software Engineer dan Web Developer. Fokus keahliannya mencakup rekayasa aplikasi web modern menggunakan React, JavaScript, PHP, dan Laravel, arsitektur Progressive Web Apps (PWA), optimasi SEO berbasis entitas (Entity SEO / Generative Engine Optimization), serta integrasi kecerdasan buatan.
+
+---
+
+## Di Mana Reski Setiawan Bersekolah dan Apa Jurusannya?
+
+Reski Setiawan saat ini menempuh pendidikan vokasi di **SMKN 1 Talaga**, Kabupaten Majalengka, Jawa Barat. Ia mengambil Program Keahlian **Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak)** sebagai siswa kelas 10.
+
+---
+
+## Apa Saja Produk Digital yang Telah Dibuat oleh Reski Setiawan?
+
+Reski Setiawan telah mempublikasikan beberapa platform dan layanan digital mandiri:
+- **LifeHub AI:** Aplikasi ruang kerja produktivitas mandiri yang dapat diakses di [https://lifehub-ai.my.id/](https://lifehub-ai.my.id/).
+- **AURA GLOBAL:** Studio layanan pembuatan website profil bisnis dan UMKM di [https://auraglobal.my.id/](https://auraglobal.my.id/).
+- **NEXUS AI OFFICE:** Konsep dan rancangan ruang kerja kolaboratif berbasis agen AI.
+
+---
+
+## Sertifikasi Resmi Apa Saja yang Dimiliki Reski Setiawan?
+
+Reski Setiawan telah menyelesaikan dan memegang sertifikasi kredensial terverifikasi dari:
+1. **Dicoding Indonesia:** Belajar Dasar AI.
+2. **Fortinet Training Institute:** NSE 3 Certified in Cybersecurity dan FortiGate 7.6 Operator.
+3. **Cisco Networking Academy:** Introduction to Cybersecurity.
+4. **Google & Coursera:** The Fundamentals of Digital Marketing.
+5. **IBM SkillsBuild:** Python for Data Science, AI & Development.
+6. **freeCodeCamp:** Responsive Web Design Certification.
+7. **SoloLearn:** Python 3 Tutorial Course.
+
+---
+
+## Bagaimana Cara Mengakses Portofolio dan Menghubungi Reski Setiawan?
+
+Portofolio resmi Reski Setiawan dapat diakses langsung melalui domain utama **[https://reskisetiawan-dev.my.id](https://reskisetiawan-dev.my.id)**. Untuk komunikasi, diskusi proyek, atau kolaborasi teknis, Reski Setiawan dapat dihubungi melalui email \`reskisetiawan301210@gmail.com\` serta media sosial Instagram [@qariol](https://www.instagram.com/qariol).
+    `,
+  },
+  {
+    id: 9,
+    slug: 'cara-reski-setiawan-merancang-lifehub-ai-solo-developer',
+    title: 'Mengenal Peran Solo Developer: Cara Reski Setiawan Merancang LifeHub AI dari Nol',
+    excerpt:
+      'Catatan teknis Reski Setiawan dalam merancang, memprogram, dan meluncurkan platform LifeHub AI secara mandiri sebagai siswa vokasi PPLG SMKN 1 Talaga.',
+    category: 'Studi Kasus Produk',
+    publishedDate: '2026-10-20',
+    lastModified: '2026-10-20',
+    readTime: '6 menit',
+    author: {
+      name: 'Reski Setiawan',
+      role: 'Software Engineer & Web Developer',
+      location: 'Jawa Barat, Indonesia',
+    },
+    keywords: [
+      'LifeHub AI Reski Setiawan',
+      'Solo Developer Reski Setiawan',
+      'Pengembangan LifeHub AI',
+      'Supabase PWA',
+      'Reski Setiawan Karya',
+      'Arsitektur Web Modern',
+    ],
+    coverImage: '/images/articles/lifehub-ai.webp',
+    content: `
+## Latar Belakang Pengembangan LifeHub AI
+
+Sebagai seorang siswa jurusan Pengembangan Perangkat Lunak dan Gim (PPLG) di SMKN 1 Talaga, **Reski Setiawan** mempraktikkan teori rekayasa perangkat lunak langsung ke dalam produk riil. Lahirlah **LifeHub AI** ([https://lifehub-ai.my.id/](https://lifehub-ai.my.id/)), sebuah platform produktivitas all-in-one yang dibangun secara mandiri (*solo developer*).
+
+Tujuan utama Reski Setiawan dalam membangun LifeHub AI adalah menciptakan platform kerja harian yang cepat, ringan, bebas distraksi, dan dapat diakses dari perangkat apa pun tanpa hambatan registrasi yang kaku.
+
+---
+
+## Arsitektur Teknis yang Dipilih oleh Reski Setiawan
+
+Dalam proses perancangannya, Reski Setiawan mengimplementasikan standar arsitektur perangkat lunak modern:
+
+1. **Progressive Web App (PWA) Standalone:**  
+   LifeHub AI dapat diinstal langsung ke perangkat seluler layaknya aplikasi native tanpa membebani penyimpanan perangkat, didukung oleh service worker untuk caching offline.
+
+2. **Guest Mode Tanpa Friksi:**  
+   Pengguna dapat langsung mengelola catatan dan daftar tugas sejak detik pertama membuka website tanpa harus mendaftarkan akun di awal.
+
+3. **Backend & Cloud Database:**  
+   Penyimpanan cloud terintegrasi dengan backend modern (Supabase) untuk sinkronisasi data yang aman dan terenkripsi saat pengguna ingin mencadangkan datanya.
+
+---
+
+## Pembelajaran Utama bagi Pengembang Mandiri
+
+Melalui pembangunan LifeHub AI, Reski Setiawan membuktikan bahwa siswa vokasi tingkat awal mampu mengeksekusi siklus hidup pengembangan perangkat lunak (*software development life cycle*) secara utuh: mulai dari riset kebutuhan pengguna, perancangan antarmuka, penulisan logika kode, hingga tahap deployment dan pemeliharaan server produksi.
+    `,
+  },
 ]
 
 export default articlesData
