@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SectionHeader from '../../components/common/SectionHeader'
 import Reveal from '../../components/common/Reveal'
+import { useLanguage } from '../../context/LanguageContext'
 import './FAQ.css'
 
 const FAQ_ITEMS = [
@@ -37,6 +38,7 @@ const FAQ_ITEMS = [
 ]
 
 function FAQ() {
+  const { t } = useLanguage()
   const [openIndex, setOpenIndex] = useState(0) // Default open first question
 
   const toggleItem = (idx) => {
@@ -48,10 +50,10 @@ function FAQ() {
       <div className="container faq-container">
         <Reveal effect="fade-up" delay={0}>
           <SectionHeader
-            title="PERTANYAAN UMUM"
-            watermark="FAQ"
-            meta="Disambiguasi &amp; Tanya Jawab Resmi"
-            subtitle="Pertanyaan dan jawaban penting mengenai identitas, latar belakang keahlian, dan inisiatif teknologi yang dibangun oleh Reski Setiawan."
+            title={t('faq_title')}
+            watermark={t('faq_watermark')}
+            meta={t('faq_meta')}
+            subtitle={t('faq_subtitle')}
           />
         </Reveal>
 

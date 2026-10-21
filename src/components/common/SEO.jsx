@@ -33,7 +33,6 @@ function SEO({
     const verifiedSameAs = [
       siteConfig.contacts.instagram?.url,
       siteConfig.contacts.tiktokOffice?.url,
-      siteConfig.contacts.tiktokStudio?.url,
     ].filter(Boolean)
 
     const personSchema = {

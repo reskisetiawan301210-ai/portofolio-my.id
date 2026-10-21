@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SectionHeader from '../../components/common/SectionHeader'
 import Reveal from '../../components/common/Reveal'
+import { useLanguage } from '../../context/LanguageContext'
 import { experienceData } from '../../data/portfolioData'
 import './Experience.css'
 
 function Experience() {
+  const { t } = useLanguage()
   const [hoveredExp, setHoveredExp] = useState(null)
 
   // Mapping visual preview aset untuk setiap pengalaman saat di-hover (Ref: Frame 00:10)
@@ -23,7 +25,7 @@ function Experience() {
     'nexus-ai-office': {
       title: 'NEXUS AI OFFICE',
       image: '/images/projects/nexus-ai-office.webp',
-      badge: 'SISTEM KONSEP',
+      badge: 'DALAM PENGEMBANGAN (20+ FITUR)',
     },
     'iot-smart-systems': {
       title: 'IoT & Microcontroller Systems',
@@ -41,9 +43,9 @@ function Experience() {
           <div className="experience-header-row">
             <Reveal effect="fade-up" delay={0}>
               <SectionHeader
-                title="PENGALAMAN"
-                watermark="EXPERIENCE"
-                meta="Inisiatif Bisnis &amp; Rekayasa Produk"
+                title={t('exp_title')}
+                watermark={t('exp_watermark')}
+                meta={t('exp_meta')}
                 dark={true}
               />
             </Reveal>
@@ -51,7 +53,7 @@ function Experience() {
             <Reveal effect="fade-up" delay={100}>
               <div className="experience-counter-badge">
                 <span className="counter-dot"></span>
-                <span>3 Inisiatif &amp; Proyek Aktif</span>
+                <span>{t('exp_counter')}</span>
               </div>
             </Reveal>
           </div>

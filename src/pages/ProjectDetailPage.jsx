@@ -402,25 +402,31 @@ function ProjectDetailPage() {
                   <div className="detail-card">
                     <h2 className="detail-card-title">
                       <span className="pill-accent-purple" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>03</span>
-                      <span>Tantangan Teknis &amp; Arah Pengembangan</span>
+                      <span>Tahap Pengembangan Aktif: Peta Jalan 20+ Fitur Cerdas</span>
                     </h2>
                     <div className="detail-prose">
                       <p>
-                        Dalam eksplorasi ini, beberapa tantangan teknis utama yang sedang saya pelajari adalah:
+                        Saat ini <strong>NEXUS AI OFFICE</strong> berada dalam <strong>tahap pengembangan aktif</strong>. Saya sedang merancang dan mematangkan arsitektur sistem yang dipersiapkan untuk memuat <strong>lebih dari 20 fitur cerdas</strong> yang fungsional dan berdampak nyata bagi produktivitas, di antaranya:
                       </p>
                       <ul className="detail-list">
                         <li className="detail-list-item">
                           <span className="detail-list-bullet">✦</span>
-                          <span><strong>Manajemen Konsumsi Token &amp; Latensi:</strong> Menghubungkan beberapa model bahasa secara berantai berpotensi memicu biaya API yang tinggi dan jeda respons yang lama jika prompt tidak dirancang ringkas.</span>
+                          <span><strong>20+ Fitur Terintegrasi:</strong> Eksekusi prompt simultan, sintesis ringkasan multi-dokumen, automasi koding cerdas, auto-debugging kode, validasi fakta otomatis, hingga visualisasi alur logika interaktif.</span>
                         </li>
                         <li className="detail-list-item">
                           <span className="detail-list-bullet">✦</span>
-                          <span><strong>Mitigasi Halusinasi Data Antar-Agen:</strong> Jika agen pertama menghasilkan asumsi yang keliru, kekeliruan tersebut bisa merambat ke agen berikutnya. Diperlukan mekanisme verifikasi berbasis aturan (rule-based validation).</span>
+                          <span><strong>Manajemen Konsumsi Token &amp; Latensi:</strong> Optimasi pipeline prompt chaining agar hemat kuota token dan cepat merespons kebutuhan pengguna.</span>
+                        </li>
+                        <li className="detail-list-item">
+                          <span className="detail-list-bullet">✦</span>
+                          <span><strong>Verifikasi Bebas Halusinasi:</strong> Sistem validasi silang (cross-agent verification) untuk meminimalisir kesalahan output sebelum disajikan kepada pengguna.</span>
                         </li>
                       </ul>
-                      <p style={{ marginTop: '1rem' }}>
-                        Arah pengembangan selanjutnya adalah membuat prototipe minimal (Proof of Concept) menggunakan skrip lokal untuk menguji komunikasi dua agen sederhana.
-                      </p>
+                      <div className="detail-callout callout-purple" style={{ marginTop: '1.25rem' }}>
+                        <p>
+                          <strong>Komitmen Kualitas:</strong> Setiap fitur diuji secara bertahap untuk memastikan platform ini bukan sekadar konsep tampilan visual, melainkan ruang kerja multi-agent yang benar-benar siap pakai.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </Reveal>

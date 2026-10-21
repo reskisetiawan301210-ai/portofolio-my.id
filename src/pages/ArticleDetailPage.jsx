@@ -56,7 +56,6 @@ function ArticleDetailPage() {
       sameAs: [
         siteConfig.contacts.instagram.url,
         siteConfig.contacts.tiktokOffice.url,
-        siteConfig.contacts.tiktokStudio.url,
       ],
       affiliation: {
         '@type': 'EducationalOrganization',

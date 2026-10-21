@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useLanguage } from '../../context/LanguageContext'
 import siteConfig from '../../config/site'
 import './Hero.css'
 
 function Hero() {
+  const { t } = useLanguage()
   const [isLoaded, setIsLoaded] = useState(false)
   const heroRef = useRef(null)
   const robotWrapRef = useRef(null)
@@ -128,18 +130,8 @@ function Hero() {
     },
     {
       key: 'tiktok-office',
-      label: siteConfig.contacts.tiktokOffice.handle,
-      href: siteConfig.contacts.tiktokOffice.url,
-      icon: (
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
-          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.46 6.27 6.27 0 0 0 1.88-4.46V8.78a8.28 8.28 0 0 0 5.15 1.79V7.12a4.84 4.84 0 0 1-1.3-.43z"/>
-        </svg>
-      ),
-    },
-    {
-      key: 'tiktok-studio',
-      label: siteConfig.contacts.tiktokStudio.handle,
-      href: siteConfig.contacts.tiktokStudio.url,
+      label: siteConfig.contacts?.tiktokOffice?.handle || '@nexus_office3',
+      href: siteConfig.contacts?.tiktokOffice?.url || 'https://www.tiktok.com/@nexus_office3',
       icon: (
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
           <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.46 6.27 6.27 0 0 0 1.88-4.46V8.78a8.28 8.28 0 0 0 5.15 1.79V7.12a4.84 4.84 0 0 1-1.3-.43z"/>
@@ -265,13 +257,13 @@ function Hero() {
         <div className="hero-ui-grid">
           {/* Left Column: Heading, Bio Paragraph, CTA Button */}
           <div className="hero-ui-left">
-            <h2 className="hero-role-title">Software Engineer &amp; Web Developer</h2>
+            <h2 className="hero-role-title">{t('hero_role')}</h2>
             <p className="hero-bio-desc">
-              Halo, saya Reski Setiawan. Saya mengembangkan produk digital fungsional, website bisnis modern, dan mengeksplorasi kecerdasan buatan melalui pembelajaran mandiri dan kurikulum vokasi PPLG di SMKN 1 Talaga.
+              {t('hero_lead')}
             </p>
             <div className="hero-cta-wrap">
               <a href="#contact" className="hero-collab-btn" aria-label="Hubungi Reski Setiawan untuk berkolaborasi">
-                <span>Mari Berkolaborasi</span>
+                <span>{t('hero_collab')}</span>
                 <span className="btn-arrow" aria-hidden="true">↗</span>
               </a>
             </div>
@@ -313,7 +305,7 @@ function Hero() {
           </div>
 
           <div className="hero-slogan-wrap">
-            <span className="slogan-text">Build — Create — Innovate</span>
+            <span className="slogan-text">{t('hero_slogan')}</span>
             <span className="slogan-line"></span>
           </div>
         </div>

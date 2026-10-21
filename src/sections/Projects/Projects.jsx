@@ -3,17 +3,19 @@ import { Link } from 'react-router-dom'
 import SectionHeader from '../../components/common/SectionHeader'
 import BrowserPreviewFrame from '../../components/ui/BrowserPreviewFrame'
 import Reveal from '../../components/common/Reveal'
+import { useLanguage } from '../../context/LanguageContext'
 import { projectsData } from '../../data/portfolioData'
 import './Projects.css'
 
 function Projects() {
+  const { t } = useLanguage()
   const [activeTab, setActiveTab] = useState('All')
 
-  // Tabs filter persis seperti referensi (All / Real Project / Exploration)
+  // Tabs filter dinamis dengan terjemahan
   const filterTabs = [
-    { label: 'All', key: 'All' },
-    { label: 'Real Project', key: 'Real' },
-    { label: 'Exploration', key: 'Concept' },
+    { label: t('projects_all'), key: 'All' },
+    { label: t('projects_real'), key: 'Real' },
+    { label: t('projects_concept'), key: 'Concept' },
   ]
 
   const displayedProjects = (projectsData || []).filter((p) => {
@@ -29,9 +31,9 @@ function Projects() {
         {/* Header: /SELECTED WORK with PORTFOLIO Watermark (Ref: Frame 00:02) */}
         <Reveal effect="fade-up" delay={0}>
           <SectionHeader
-            title="SELECTED WORK"
-            watermark="PORTFOLIO"
-            meta="Karya &amp; Produk Terverifikasi"
+            title={t('projects_title')}
+            watermark={t('projects_watermark')}
+            meta={t('projects_meta')}
           />
         </Reveal>
 
@@ -57,7 +59,7 @@ function Projects() {
                 className="view-all-btn"
                 aria-label="Buka katalog lengkap semua karya"
               >
-                <span>View All Work</span>
+                <span>{t('projects_view_all')}</span>
                 <span className="arrow">↗</span>
               </Link>
             </div>

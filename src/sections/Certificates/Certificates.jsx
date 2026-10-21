@@ -2,19 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SectionHeader from '../../components/common/SectionHeader'
 import Reveal from '../../components/common/Reveal'
+import { useLanguage } from '../../context/LanguageContext'
 import { focusAreasData } from '../../data/portfolioData'
 import './Certificates.css'
 
 function Certificates() {
+  const { t } = useLanguage()
+
   return (
     <section className="certificates-section" id="certificates">
       <div className="container">
         <Reveal effect="fade-up" delay={0}>
           <SectionHeader
-            title="AREA FOKUS"
-            watermark="EKSPLORASI"
-            meta="Eksplorasi &amp; Jalur Pembelajaran Teknis"
-            subtitle="Mendalami pemahaman teknis pada domain rekayasa modern. Ditampilkan secara jujur sebagai area minat dan studi berkelanjutan."
+            title={t('focus_title')}
+            watermark={t('focus_watermark')}
+            meta={t('focus_meta')}
+            subtitle={t('focus_subtitle')}
           />
         </Reveal>
 
@@ -76,7 +79,7 @@ function Certificates() {
                 <span className="cert-badge-pulse-dot" aria-hidden="true"></span>
                 <span>ARSIP KREDENSIAL RESMI</span>
               </div>
-              <h3 className="cert-banner-title">8 Kredensial &amp; Sertifikasi Terverifikasi</h3>
+              <h3 className="cert-banner-title">{t('focus_credentials_title')}</h3>
               <p className="cert-banner-desc">
                 Dicoding (Dasar AI), Fortinet (NSE 3 &amp; FortiGate 7.6), Google (Digital Marketing), Cisco (Cybersecurity), SoloLearn (Python), freeCodeCamp (Web Design), dan IBM (Python Data Science).
               </p>
@@ -86,7 +89,7 @@ function Certificates() {
               className="cert-banner-btn"
               aria-label="Buka galeri lengkap 8 sertifikat terverifikasi Reski Setiawan"
             >
-              <span>Lihat Semua Sertifikat</span>
+              <span>{t('focus_credentials_btn')}</span>
               <span className="arrow-icon">↗</span>
             </Link>
           </div>

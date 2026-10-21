@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import ScrollToTop from './components/common/ScrollToTop'
 import ErrorBoundary from './components/common/ErrorBoundary'
+import { LanguageProvider } from './context/LanguageContext'
 import HomePage from './pages/HomePage'
 
 // Code-splitting per rute via React.lazy untuk optimasi performa dan Core Web Vitals
@@ -44,19 +45,20 @@ function RouteLoadingFallback() {
 
 function App() {
   return (
-    <Router>
-      <div className="portfolio-app">
-        {/* Reset scroll position to top on navigation */}
-        <ScrollToTop />
+    <LanguageProvider>
+      <Router>
+        <div className="portfolio-app">
+          {/* Reset scroll position to top on navigation */}
+          <ScrollToTop />
 
-        {/* Global Navbar */}
-        <ErrorBoundary>
-          <Navbar />
-        </ErrorBoundary>
+          {/* Global Navbar */}
+          <ErrorBoundary>
+            <Navbar />
+          </ErrorBoundary>
 
-        {/* Routes Switcher */}
-        <Suspense fallback={<RouteLoadingFallback />}>
-          <Routes>
+          {/* Routes Switcher */}
+          <Suspense fallback={<RouteLoadingFallback />}>
+            <Routes>
             {/* Beranda Utama */}
             <Route path="/" element={<HomePage />} />
 
@@ -100,6 +102,7 @@ function App() {
         </ErrorBoundary>
       </div>
     </Router>
+  </LanguageProvider>
   )
 }
 

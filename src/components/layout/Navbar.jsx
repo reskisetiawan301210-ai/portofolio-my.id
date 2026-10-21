@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useActiveSection } from '../../hooks/useActiveSection'
+import { useLanguage } from '../../context/LanguageContext'
 import siteConfig from '../../config/site'
 import './Navbar.css'
 
-const SECTION_IDS = ['hero', 'about', 'services', 'experience', 'education', 'projects', 'certificates', 'contact', 'guestbook']
+const SECTION_IDS = ['hero', 'about', 'services', 'experience', 'education', 'projects', 'certificates', 'faq', 'contact', 'guestbook']
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
+
+  const { lang, setLang, t } = useLanguage()
 
   const location = useLocation()
   const navigate = useNavigate()
@@ -31,15 +34,16 @@ function Navbar() {
     }
   }, [])
 
-  // Menu navigasi dengan badge counter persis referensi (Karya [03], Layanan [04], Pengalaman [03], Sertifikat [08], Blog [06])
+  // Menu navigasi dengan badge counter dan terjemahan dinamis
   const navLinks = [
-    { name: 'Karya', counter: '03', id: 'projects' },
-    { name: 'Layanan', counter: '04', id: 'services' },
-    { name: 'Pengalaman', counter: '03', id: 'experience' },
-    { name: 'Sertifikat', counter: '08', path: '/sertifikat' },
-    { name: 'Blog', counter: '06', path: '/blog' },
-    { name: 'Tentang', id: 'about' },
-    { name: 'Kontak', id: 'contact' },
+    { name: t('nav_work'), counter: '04', id: 'projects' },
+    { name: t('nav_services'), counter: '04', id: 'services' },
+    { name: t('nav_experience'), counter: '03', id: 'experience' },
+    { name: t('nav_focus'), counter: '03', id: 'certificates' },
+    { name: t('nav_blog'), counter: '09', path: '/blog' },
+    { name: t('nav_about'), id: 'about' },
+    { name: t('nav_faq'), id: 'faq' },
+    { name: t('nav_contact'), id: 'contact' },
   ]
 
   const closeMenu = () => setMobileMenuOpen(false)
@@ -114,8 +118,31 @@ function Navbar() {
           </ul>
         </nav>
 
-        {/* Sisi Kanan: Tombol CTA Kapsul Hitam & Hamburger */}
+        {/* Sisi Kanan: Language Switcher (ID / EN), Tombol CTA Kapsul Hitam & Hamburger */}
         <div className="navbar-actions">
+          {/* Language Switcher Pill: ID / EN */}
+          <div className="lang-switcher-pill" role="group" aria-label="Pilih Bahasa / Language Selector">
+            <button
+              type="button"
+              className={`lang-btn ${lang === 'ID' ? 'active' : ''}`}
+              onClick={() => setLang('ID')}
+              aria-label="Pilih Bahasa Indonesia"
+              title="Bahasa Indonesia"
+            >
+              ID
+            </button>
+            <span className="lang-divider" aria-hidden="true">/</span>
+            <button
+              type="button"
+              className={`lang-btn ${lang === 'EN' ? 'active' : ''}`}
+              onClick={() => setLang('EN')}
+              aria-label="Switch to English"
+              title="English"
+            >
+              EN
+            </button>
+          </div>
+
           <a
             href={`mailto:${siteConfig.contacts.email}`}
             target="_blank"
@@ -123,7 +150,7 @@ function Navbar() {
             className="nav-cta-btn"
             aria-label={`Kirim email ke ${siteConfig.contacts.email}`}
           >
-            <span>Let's Talk</span>
+            <span>{t('nav_talk')}</span>
             <span className="arrow-icon">↗</span>
           </a>
 
@@ -146,7 +173,28 @@ function Navbar() {
         <div className="mobile-drawer-header">
           <div className="mobile-status-badge">
             <span className="status-dot status-dot-pulse"></span>
-            <span>Available for Project</span>
+            <span>{t('nav_available')}</span>
+          </div>
+
+          {/* Language Switcher Pill di Mobile */}
+          <div className="lang-switcher-pill" role="group" aria-label="Pilih Bahasa / Language Selector">
+            <button
+              type="button"
+              className={`lang-btn ${lang === 'ID' ? 'active' : ''}`}
+              onClick={() => setLang('ID')}
+              aria-label="Bahasa Indonesia"
+            >
+              ID
+            </button>
+            <span className="lang-divider" aria-hidden="true">/</span>
+            <button
+              type="button"
+              className={`lang-btn ${lang === 'EN' ? 'active' : ''}`}
+              onClick={() => setLang('EN')}
+              aria-label="English"
+            >
+              EN
+            </button>
           </div>
         </div>
 
@@ -214,16 +262,18 @@ function Navbar() {
             </a>
 
             <a
-              href={siteConfig.contacts.tiktokStudio.url}
+              href={siteConfig.contacts?.instagram?.url || 'https://www.instagram.com/qariol'}
               target="_blank"
               rel="noopener noreferrer"
               className="mobile-contact-item"
               onClick={closeMenu}
             >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.46 6.27 6.27 0 0 0 1.88-4.46V8.78a8.28 8.28 0 0 0 5.15 1.79V7.12a4.84 4.84 0 0 1-1.3-.43z"/>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
-              <span>{siteConfig.contacts.tiktokStudio.handle}</span>
+              <span>{siteConfig.contacts?.instagram?.handle || '@qariol'}</span>
             </a>
           </div>
         </div>
