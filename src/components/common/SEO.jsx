@@ -46,6 +46,25 @@ function SEO({
       image: `${siteConfig.siteUrl}/images/og-image.png`,
       email: siteConfig.contacts.email,
       description: siteConfig.description,
+      disambiguatingDescription:
+        'Software engineer, web developer, and student at SMKN 1 Talaga (PPLG) from West Java, Indonesia, solo creator of LifeHub AI and founder of AURA GLOBAL, distinguishing from other individuals named Reski Setiawan.',
+      subjectOf: [
+        {
+          '@type': 'Article',
+          headline: 'Siapa Reski Setiawan? Profil Software Engineer Muda dan Web Developer Asal Jawa Barat',
+          url: `${siteConfig.siteUrl}/blog/siapa-reski-setiawan-profil-software-engineer-web-developer`,
+        },
+        {
+          '@type': 'Article',
+          headline: 'FAQ Reski Setiawan: Pertanyaan Populer Seputar Profil, Pendidikan, dan Proyek',
+          url: `${siteConfig.siteUrl}/blog/faq-reski-setiawan-pendidikan-proyek-keahlian`,
+        },
+        {
+          '@type': 'Article',
+          headline: 'Tentang Saya: Perjalanan di Dunia Software Development',
+          url: `${siteConfig.siteUrl}/blog/profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer`,
+        },
+      ],
       affiliation: {
         '@type': 'EducationalOrganization',
         name: 'SMKN 1 Talaga',
@@ -144,21 +163,46 @@ function SEO({
         },
       ],
       knowsAbout: [
+        {
+          '@type': 'DefinedTerm',
+          name: 'Software Engineering',
+          sameAs: 'https://www.wikidata.org/wiki/Q8078',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Web Development',
+          sameAs: 'https://www.wikidata.org/wiki/Q11059',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'React',
+          sameAs: 'https://www.wikidata.org/wiki/Q19399674',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Artificial Intelligence',
+          sameAs: 'https://www.wikidata.org/wiki/Q11660',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Progressive Web App',
+          sameAs: 'https://www.wikidata.org/wiki/Q25110830',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Cybersecurity',
+          sameAs: 'https://www.wikidata.org/wiki/Q3510521',
+        },
         'PPLG',
         'Rekayasa Perangkat Lunak',
-        'Web Development',
         'Frontend Architecture',
-        'React',
         'Tailwind CSS',
         'Vite',
         'JavaScript',
         'PHP',
         'Laravel',
         'Supabase',
-        'Progressive Web App (PWA)',
-        'Artificial Intelligence',
         'Multi-Agent Systems',
-        'Cybersecurity',
         'Robotics & IoT',
       ],
     }

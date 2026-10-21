@@ -8,6 +8,7 @@ import Education from '../sections/Education/Education'
 import Projects from '../sections/Projects/Projects'
 import Certificates from '../sections/Certificates/Certificates'
 import BlogTeaser from '../sections/BlogTeaser/BlogTeaser'
+import FAQ from '../sections/FAQ/FAQ'
 import Contact from '../sections/Contact/Contact'
 import Guestbook from '../sections/Guestbook/Guestbook'
 import TechStackStrip from '../components/ui/TechStackStrip'
@@ -67,6 +68,11 @@ function HomePage() {
       {/* 7b. Blog & Studi Kasus Teaser Section */}
       <ErrorBoundary>
         <BlogTeaser />
+      </ErrorBoundary>
+
+      {/* 7c. Tanya Jawab Resmi / FAQ Disambiguasi Entitas */}
+      <ErrorBoundary>
+        <FAQ />
       </ErrorBoundary>
 
       {/* 8. Kontak / Call to Action Section */}
