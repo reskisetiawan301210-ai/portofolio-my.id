@@ -22,10 +22,10 @@ export const articlesData = [
     slug: 'profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer',
     title: 'Tentang Saya: Perjalanan di Dunia Software Development',
     excerpt:
-      'Mengenal sosok Reski Setiawan: solo developer di balik LifeHub AI dan NEXUS AI OFFICE, serta pendiri studio web AURA GLOBAL, berfokus pada rekayasa produk digital modern.',
+      'Mengenal sosok Reski Setiawan: lulusan SMPN 1 Talaga, siswa SMKN 1 Talaga PPLG, solo developer LifeHub AI, serta praktisi IoT Arduino & Cybersecurity.',
     category: 'Profil & Karir',
     publishedDate: '2026-10-15',
-    lastModified: '2026-10-17',
+    lastModified: '2026-10-21',
     readTime: '6 menit',
     author: {
       name: 'Reski Setiawan',
@@ -34,13 +34,15 @@ export const articlesData = [
     },
     keywords: [
       'Reski Setiawan',
+      'Reski Setiawan SMPN 1 Talaga',
       'Reski Setiawan SMKN 1 Talaga',
       'Reski Setiawan PPLG',
       'Reski Setiawan RPL',
       'Reski Setiawan Solo Dev',
       'Reski Setiawan LifeHub AI',
       'Reski Setiawan NEXUS AI OFFICE',
-      'Reski Setiawan AURA GLOBAL',
+      'Reski Setiawan Arduino ESP',
+      'Reski Setiawan Cybersecurity',
       'SMKN 1 Talaga PPLG',
       'Siswa PPLG Majalengka',
     ],
@@ -48,15 +50,15 @@ export const articlesData = [
     content: `
 ## Siapa Itu Reski Setiawan?
 
-Halo! Saya **Reski Setiawan**, seorang software engineer, web developer, dan kreator produk digital asal Jawa Barat, Indonesia. Saat ini saya tercatat sebagai **siswa aktif kelas 10 di SMKN 1 Talaga**, mengambil program keahlian **Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak)**.
+Halo! Saya **Reski Setiawan**, seorang software engineer, web developer, dan praktisi teknologi muda asal Talaga, Majalengka, Jawa Barat, Indonesia. Saya merupakan alumni **SMP Negeri 1 Talaga (lulusan 2026)** dan saat ini menempuh pendidikan vokasi sebagai **siswa aktif kelas 10 di SMKN 1 Talaga**, mengambil Program Keahlian **Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak)**.
 
-Di luar kegiatan belajar di sekolah, saya aktif berkarya sebagai **solo developer** dan inisiator teknologi. Fokus utama saya adalah merancang dan membangun produk digital yang benar-benar bermanfaat, mudah digunakan, berkinerja tinggi, dan memiliki fondasi arsitektur bersih.
+Kiprah saya di dunia pemrograman bermula sejak awal kelas 9 SMP dari rasa penasaran terhadap mikrokontroler hardware seperti **Arduino** dan modul **ESP (Internet of Things)**. Ketertarikan mendalam pada logika komputasi tersebut memacu saya untuk memperluas dedikasi ke ranah rekayasa perangkat lunak (*software engineering*), pengembangan web modern, dan keamanan siber (*cybersecurity*).
 
 ---
 
 ## Tiga Inisiatif Utama yang Saya Bangun
 
-Kiprah saya di dunia teknologi berpusat pada tiga pilar produk dan entitas:
+Kiprah dan fokus rekayasa saya berpusat pada tiga pilar inovasi:
 
 ### 1. LifeHub AI (https://lifehub-ai.my.id/)
 **LifeHub AI** adalah platform personal productivity workspace yang saya kembangkan sepenuhnya secara mandiri (*solo developer*). Platform ini dirancang untuk menyatukan manajemen tugas harian, pencatatan catatan cerdas, dan pengelolaan finansial mikro dalam satu antarmuka yang bersih. 
@@ -69,8 +71,8 @@ Beberapa keunggulan teknis yang saya sematkan di LifeHub AI antara lain:
 ### 2. NEXUS AI OFFICE (NEXUS Kantor AI)
 **NEXUS AI OFFICE** adalah proyek eksplorasi arsitektur sistem cerdas yang saya gagas untuk meneliti masa depan kerja digital. Proyek ini memodelkan konsep ruang kerja bersama (*shared workspace*) di mana beberapa agent kecerdasan buatan (AI Agents) saling berkoordinasi, bertukar konteks tugas, dan menyelesaikan alur kerja tanpa tumpang tindih.
 
-### 3. AURA GLOBAL (https://auraglobal.my.id/)
-**AURA GLOBAL** (AURA GLOBAL Digital Web Studio) adalah unit bisnis studio web yang saya dirikan di Majalengka, Jawa Barat. Lewat AURA GLOBAL, saya melayani jasa pembuatan website profesional untuk UMKM, profil perusahaan (*company profile*), toko online katalog WhatsApp, dan landing page performa tinggi. 
+### 3. Lab IoT & Sistem Tertanam (Arduino & ESP)
+Berangkat dari ketertarikan sejak kelas 9 SMP, saya terus mengembangkan eksperimen mikrokontroler dan otomasi sensor nirkabel menggunakan modul **ESP32/ESP8266** dan firmware berbasis C++. Fondasi hardware ini memberi saya pemahaman intuitif tentang bagaimana sinyal fisik diubah menjadi data digital.
 
 ---
 
@@ -82,16 +84,16 @@ Menempuh pendidikan vokasi di **SMKN 1 Talaga jurusan PPLG** memberikan landasan
 - Pemahaman basis data relasional dan non-relasional.
 - Disiplin rekayasa sistem, *clean code*, dan etika profesional dunia industri teknologi.
 
-Saya percaya bahwa usia sekolah bukan batasan untuk mulai membangun produk skala industri. Justru dengan memadukan teori kurikulum sekolah dan praktik membangun platform nyata (seperti LifeHub AI dan website klien AURA GLOBAL), saya dapat terus mempercepat kurva pembelajaran saya.
+Saya percaya bahwa usia sekolah bukan batasan untuk mulai membangun produk skala industri. Justru dengan memadukan teori kurikulum sekolah dan praktik membangun platform nyata (seperti LifeHub AI), saya dapat terus mempercepat kurva pembelajaran saya.
 
 ---
 
 ## Minat Riset & Pengembangan Masa Depan
 
-Selain pengembangan aplikasi web modern (React, Vite, Tailwind CSS, JavaScript, PHP, Laravel), saya aktif mempelajari dan mengeksplorasi domain teknologi lainnya:
+Selain pengembangan aplikasi web modern (React, Vite, Tailwind CSS, JavaScript, PHP, Laravel), saya aktif mendalami domain teknologi penting:
+- **Cybersecurity:** Mempelajari mitigasi kerentanan web standar OWASP dan arsitektur pertahanan jaringan (telah tersertifikasi Fortinet NSE 3, FortiGate 7.6 Operator, dan Cisco Networking Academy Cybersecurity).
 - **Artificial Intelligence & LLM:** Penerapan API model bahasa, orkestrasi alur multi-agent, dan rekayasa prompt sistem.
-- **Cybersecurity:** Mempelajari mitigasi kerentanan web standar OWASP dan arsitektur keamanan jaringan (telah tersertifikasi Fortinet NSE 3 & Cisco Cybersecurity).
-- **Robotics & Embedded Systems:** Bereksperimen dengan bahasa C++ dan Python pada mikrokontroler untuk membaca sensor dan telemetri fisik.
+- **Embedded Systems & Robotics:** Bereksperimen dengan bahasa C++ dan Python pada mikrokontroler untuk membaca sensor dan telemetri fisik.
 
 Bagi saya, teknologi adalah sarana memecahkan masalah nyata. Melalui portofolio resmi ini dan seluruh dokumentasi terbuka yang saya bagikan, saya ingin terus menghadirkan karya yang berdampak positif bagi masyarakat dan ekosistem digital Indonesia.
     `,
@@ -236,71 +238,64 @@ Saya sangat antusias melihat bagaimana konsep ruang kerja cerdas ini akan mendef
   },
   {
     id: 4,
-    slug: 'mendirikan-aura-global-jasa-website-majalengka',
-    title: 'Membangun AURA GLOBAL: Mengembangkan Layanan Website untuk Bisnis',
+    slug: 'dari-arduino-ke-software-engineering-iot-cybersecurity',
+    title: 'Dari Arduino & ESP ke Software Engineering: Eksplorasi Keamanan Siber dan Web Modern',
     excerpt:
-      'Perjalanan membangun studio web di Majalengka: menghadirkan website bisnis kredibel, cepat diakses, terhubung ke alur pemesanan instan, dan ramah anggaran UMKM.',
-    category: 'Bisnis & Web Studio',
+      'Perjalanan belajar dari logika mikrokontroler kelas 9 SMP, mendalami keamanan siber bersertifikasi Fortinet & Cisco, hingga arsitektur rekayasa perangkat lunak modern.',
+    category: 'Riset & Keamanan Siber',
     publishedDate: '2026-10-12',
-    lastModified: '2026-10-17',
+    lastModified: '2026-10-21',
     readTime: '7 menit',
     author: {
       name: 'Reski Setiawan',
-      role: 'Founder of AURA GLOBAL',
-      location: 'Majalengka, Jawa Barat',
+      role: 'Software Engineer & Web Developer',
+      location: 'Talaga, Majalengka, Jawa Barat',
     },
     keywords: [
-      'AURA GLOBAL',
-      'AURA GLOBAL Web Studio',
-      'Reski Setiawan AURA GLOBAL',
-      'Jasa Pembuatan Website Majalengka',
-      'Jasa Website UMKM Murah',
-      'Web Developer Majalengka',
-      'Pembuatan Website Bisnis Majalengka',
+      'Reski Setiawan Arduino',
+      'Reski Setiawan ESP32',
+      'Reski Setiawan Cybersecurity',
+      'Fortinet NSE 3 Reski Setiawan',
+      'Cisco Cybersecurity Reski Setiawan',
+      'Belajar Coding Kelas 9 SMP',
+      'Software Engineer Muda Majalengka',
+      'IoT ke Web Development',
     ],
-    coverImage: '/images/articles/aura-global.webp',
+    coverImage: '/images/articles/iot-cybersecurity.webp',
     content: `
-## Bermula dari Kebutuhan Digitalisasi Lokal
+## Awal Mula Ketertarikan: Menghidupkan Logika Hardware
 
-Di daerah asal saya di **Majalengka, Jawa Barat**, banyak pelaku UMKM, pemilik toko lokal, penginapan villa, bengkel motor, dan klinik kesehatan yang memiliki produk luar biasa, namun belum memiliki website resmi. Selama ini mereka hanya mengandalkan media sosial atau aplikasi pesan instan.
+Perjalanan saya di dunia teknologi tidak langsung dimulai dari website. Saat masih duduk di bangku **kelas 9 SMP Negeri 1 Talaga**, ketertarikan saya pertama kali terpantik oleh papan sirkuit mikrokontroler: **Arduino Uno** dan modul **ESP8266 / ESP32 (Internet of Things)**.
 
-Padahal, ketika calon pelanggan ingin mencari kredibilitas suatu usaha, tempat pertama yang mereka tuju adalah **pencarian Google**. Tanpa website resmi berdomain sendiri, bisnis kehilangan potensi pelanggan yang mencari layanan secara lokal.
+Bagi saya kala itu, melihat sebaris kode C++ mampu menyalakan lampu indikator, membaca sensor suhu, atau mengirimkan sinyal nirkabel ke layar monitor adalah keajaiban rekayasa yang sangat nyata. Saya menghabiskan waktu senggang untuk merancang berbagai proyek eksperimen otomasi fisik mandiri di rumah.
 
-Inilah alasan utama saya mendirikan **AURA GLOBAL** (dapat diakses di [https://auraglobal.my.id/](https://auraglobal.my.id/)). Misi AURA GLOBAL adalah **membantu bisnis dan UMKM memiliki website yang kredibel, modern, dan profesional dengan biaya yang terjangkau**.
-
----
-
-## Prinsip Desain & Rekayasa di AURA GLOBAL
-
-Sebagai web developer yang menangani langsung pembuatan website klien di AURA GLOBAL, saya memegang beberapa prinsip utama:
-
-### 1. Kecepatan Muat Tanpa Kompromi
-Sebagian besar konsumen di Indonesia mengakses internet melalui smartphone dengan jaringan seluler. Oleh karena itu, website yang saya buat di AURA GLOBAL dioptimalkan agar:
-- Menggunakan struktur CSS utilitas ringan (Tailwind CSS) yang hanya memuat kelas terpakai.
-- Mengompresi seluruh gambar ke format modern seperti WebP dengan resolusi responsif.
-- Memiliki skor performa Google PageSpeed dan Core Web Vitals di atas 90.
-
-### 2. Alur Kontak WhatsApp Instan
-Website UMKM tidak membutuhkan sistem checkout rumit jika pembeli lebih nyaman bertanya langsung. Karena itu, setiap website AURA GLOBAL dilengkapi tombol CTA WhatsApp instan dengan pesan otomatis yang rapi, sehingga konversi dari pengunjung menjadi prospek pembeli terjadi dalam hitungan detik.
-
-### 3. Struktur Semantik & SEO Lokal
-Saya memastikan setiap halaman klien dilengkapi struktur heading (H1, H2, H3) yang tepat, metadata Open Graph, serta structured data Schema.org (\`LocalBusiness\`, \`Organization\`) agar nama usaha klien mudah muncul di Google Search dan Google Maps.
+Dari mikrokontroler, saya belajar hal paling fundamental dalam komputasi:
+- **Alokasi Memori Terbatas:** Memahami bagaimana kode harus ditulis secara efisien tanpa memboroskan siklus CPU.
+- **Logika Percabangan & Loop:** Menangani input sensor fisik secara real-time.
+- **Komunikasi Data Serial & Jaringan:** Bagaimana data dikemas dan dikirim antarperangkat melalui protokol jaringan.
 
 ---
 
-## Portofolio Nyata yang Telah Dibuat
+## Jembatan Menuju Keamanan Siber (Cybersecurity)
 
-Beberapa karya implementasi website yang ada di AURA GLOBAL meliputi:
-- **Toko Serba Ada:** Katalog etalase digital untuk toko kelontong dan kebutuhan harian dengan integrasi order WhatsApp.
-- **Villa Panorama:** Website profil wisata & akomodasi alam dengan galeri suasana, integrasi peta rute, dan tombol reservasi.
-- **Sinar Jaya Motor:** Website showroom otomotif bernuansa elegan gelap dengan rincian spesifikasi unit dan formulir booking servis.
-- **Rumah Sehat:** Website profil klinik pelayanan kesehatan keluarga dengan jadwal praktik dokter dan pendaftaran online.
+Ketika mulai menghubungkan modul ESP ke jaringan Wi-Fi lokal, timbul pertanyaan penting di benak saya: *Bagaimana data ini diamankan dari penyadapan atau manipulasi pihak luar?*
+
+Rasa penasaran tersebut menuntun saya mendalami dunia **Cybersecurity (Keamanan Siber)** secara serius. Di samping kurikulum sekolah, saya mengikuti pelatihan kredensial industri tingkat internasional:
+1. **Fortinet Network Security Associate (NSE 3 Certified):** Memahami arsitektur keamanan jaringan tingkat lanjut, firewall modern, ancaman siber, dan mitigasi zero-trust.
+2. **FortiGate 7.6 Operator Self-Paced:** Mengoperasikan sistem keamanan infrastruktur jaringan Fortinet.
+3. **Cisco Networking Academy (Introduction to Cybersecurity):** Fondasi integritas data, etika pertahanan siber, enkripsi, dan mitigasi serangan jaringan.
+
+Pemahaman keamanan ini menjadi nilai tambah krusial ketika saya beralih merancang sistem perangkat lunak yang lebih besar.
 
 ---
 
-## Komitmen untuk Terus Berkarya
+## Evolusi Menuju Software Engineering & Web Modern
 
-Melalui AURA GLOBAL, saya membuktikan bahwa keahlian rekayasa web yang saya pelajari di SMKN 1 Talaga jurusan PPLG dapat langsung diwujudkan menjadi solusi bernilai nyata bagi perekonomian lokal. Saya terus berkomitmen untuk memberikan layanan terbaik bagi setiap pelaku usaha yang ingin melangkah ke panggung digital.
+Memasuki bangku **SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG)**, saya membawa bekal disiplin logika hardware dan standar keamanan siber tersebut ke ranah rekayasa perangkat lunak (*software engineering*).
+
+Mengembangkan aplikasi web modern (React, JavaScript, Vite, Tailwind CSS, Supabase, PWA) terasa sangat alami karena saya telah terbiasa memikirkan performa dan alur data dari level paling dasar. Hasil integrasi seluruh pengalaman ini tercermin nyata dalam platform produktivitas yang saya bangun mandiri, seperti **LifeHub AI**.
+
+Bagi saya, perjalanan dari Arduino kelas 9 SMP hingga software engineering hari ini membuktikan satu hal: **fondasi logika yang kuat dan rasa ingin tahu yang tak pernah padam adalah kunci utama seorang engineer.**
     `,
   },
   {
@@ -349,7 +344,7 @@ Di kelas 10 PPLG SMKN 1 Talaga, pembelajaran difokuskan pada fondasi fundamental
 
 ## Menghubungkan Teori Sekolah dengan Proyek Mandiri
 
-Bagi saya, materi di kelas adalah fondasi kokoh, sedangkan proyek mandiri di luar jam sekolah adalah sarana menguji ketahanan fondasi tersebut. Ketika saya membangun **LifeHub AI**, saya mempraktikkan konsep arsitektur modular yang dipelajari di sekolah. Ketika saya mendirikan **AURA GLOBAL**, saya menguji pemahaman semantik web dan kepuasan pengguna di dunia nyata.
+Bagi saya, materi di kelas adalah fondasi kokoh, sedangkan proyek mandiri di luar jam sekolah adalah sarana menguji ketahanan fondasi tersebut. Ketika saya membangun **LifeHub AI**, saya mempraktikkan konsep arsitektur modular yang dipelajari di sekolah. Ketika saya bereksperimen dengan mikrokontroler dan sistem web, saya menguji pemahaman logika dan antarmuka di dunia nyata.
 
 Sinergi antara kurikulum vokasi SMKN 1 Talaga dan eksplorasi mandiri inilah yang membuat proses belajar saya berlangsung sangat cepat dan terarah.
 
@@ -411,7 +406,7 @@ Untuk memastikan portofolio ini dikenali secara akurat oleh Google AI, saya mene
 ### 1. Deklarasi Schema.org JSON-LD yang Komprehensif
 Saya menyematkan metadata terstruktur format \`@graph\` yang menghubungkan entitas secara eksplisit:
 - **Tipe \`Person\`:** Mendeklarasikan nama \`Reski Setiawan\`, peran \`Software Engineer & Web Developer\`, afiliasi pendidikan \`SMKN 1 Talaga (PPLG)\`, serta tautan relasi (\`sameAs\`).
-- **Tipe \`Organization\` & \`ProfessionalService\`:** Menghubungkan entitas bisnis \`AURA GLOBAL\` di mana Reski bertindak sebagai founder.
+- **Tipe \`ProfessionalService\`:** Menghubungkan kapabilitas rekayasa web, arsitektur antarmuka, dan optimasi performa digital yang dikuasai.
 - **Tipe \`SoftwareApplication\`:** Menghubungkan entitas produk \`LifeHub AI\` dan \`NEXUS AI OFFICE\` di mana Reski adalah perancang dan solo developer-nya.
 - **Tipe \`BlogPosting\`:** Menyediakan metadata artikel terstruktur lengkap dengan nama penulis, tanggal terbit, dan topik utama.
 
@@ -442,10 +437,10 @@ SEO di masa kini bukan tentang trik atau manipulasi kata kunci. Kunci utama agar
     slug: 'siapa-reski-setiawan-profil-software-engineer-web-developer',
     title: 'Siapa Reski Setiawan? Profil Software Engineer Muda dan Web Developer Asal Jawa Barat',
     excerpt:
-      'Menjawab pertanyaan "Siapa Reski Setiawan?": profil lengkap software engineer dan web developer asal Jawa Barat, siswa PPLG SMKN 1 Talaga, pembuat LifeHub AI, dan founder AURA GLOBAL.',
+      'Menjawab pertanyaan "Siapa Reski Setiawan?": profil lengkap software engineer dan web developer asal Jawa Barat, lulusan SMPN 1 Talaga, siswa PPLG SMKN 1 Talaga, pembuat LifeHub AI, serta praktisi IoT & Cybersecurity.',
     category: 'Profil & Karir',
     publishedDate: '2026-10-20',
-    lastModified: '2026-10-20',
+    lastModified: '2026-10-21',
     readTime: '6 menit',
     author: {
       name: 'Reski Setiawan',
@@ -458,19 +453,21 @@ SEO di masa kini bukan tentang trik atau manipulasi kata kunci. Kunci utama agar
       'Reski Setiawan Profil',
       'Reski Setiawan Software Engineer',
       'Reski Setiawan Web Developer',
+      'Reski Setiawan SMPN 1 Talaga',
       'Reski Setiawan SMKN 1 Talaga',
       'Reski Setiawan PPLG',
       'Reski Setiawan LifeHub AI',
-      'Reski Setiawan AURA GLOBAL',
+      'Reski Setiawan Arduino ESP',
+      'Reski Setiawan Cybersecurity',
       'PixelForgeDev',
     ],
     coverImage: '/images/articles/profil-developer.webp',
     content: `
 ## Siapa Sebenarnya Reski Setiawan?
 
-**Reski Setiawan** adalah seorang Software Engineer dan Web Developer muda berkebangsaan Indonesia yang berdomisili di Jawa Barat. Saat ini, Reski Setiawan tercatat sebagai siswa aktif kelas 10 di **SMKN 1 Talaga** pada Program Keahlian **Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak)**.
+**Reski Setiawan** adalah seorang Software Engineer dan Web Developer muda berkebangsaan Indonesia yang berdomisili di Talaga, Majalengka, Jawa Barat. Ia merupakan alumni **SMP Negeri 1 Talaga (lulusan 2026)** dan saat ini tercatat sebagai siswa aktif kelas 10 di **SMKN 1 Talaga** pada Program Keahlian **Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak)**.
 
-Sebagai pengembang mandiri (*solo developer*), Reski Setiawan memfokuskan karyanya pada pengembangan web modern berbasis arsitektur performa tinggi, aplikasi produktif berbasis Progressive Web Apps (PWA), serta integrasi antarmuka kecerdasan buatan.
+Sebagai pengembang mandiri (*solo developer*), Reski Setiawan memfokuskan dedikasinya pada rekayasa web modern berkinerja tinggi, aplikasi produktif Progressive Web Apps (PWA), eksplorasi IoT mikrokontroler (Arduino & ESP), serta keamanan siber (*cybersecurity*).
 
 ---
 
@@ -480,7 +477,7 @@ Di mesin pencari, nama *"Reski Setiawan"* dapat merujuk ke beberapa individu den
 
 - **Nama Resmi:** Reski Setiawan (juga dikenal dengan nama alias pengembang *PixelForgeDev*).
 - **Profesi Utama:** Software Engineer, Web Developer, dan Inisiator Produk Digital.
-- **Institusi Pendidikan:** SMKN 1 Talaga, Kabupaten Majalengka, Jawa Barat (Konsentrasi PPLG / RPL).
+- **Institusi Pendidikan:** Lulusan SMPN 1 Talaga (2026) & Siswa SMKN 1 Talaga, Kabupaten Majalengka, Jawa Barat (Konsentrasi PPLG / RPL).
 - **Website & Portofolio Resmi:** [https://reskisetiawan-dev.my.id](https://reskisetiawan-dev.my.id)
 - **Kanal Media Sosial Terverifikasi:** Instagram [@qariol](https://www.instagram.com/qariol) dan TikTok [@nexus_office3](https://www.tiktok.com/@nexus_office3).
 
@@ -498,17 +495,17 @@ Reski Setiawan telah merancang dan membangun sejumlah inisiatif teknologi nyata:
 2. **NEXUS AI OFFICE (NEXUS Kantor AI)**  
    Eksplorasi arsitektur sistem kerja cerdas yang memodelkan kolaborasi agen kecerdasan buatan (multi-agent orchestration) dalam menyelesaikan alur kerja digital.
 
-3. **AURA GLOBAL (https://auraglobal.my.id/)**  
-   Studio layanan pembuatan website profil bisnis dan landing page profesional yang dirancang ramah anggaran bagi pelaku UMKM.
+3. **IoT Smart Systems (Arduino & ESP)**  
+   Eksperimen mikrokontroler dan sistem tertanam untuk otomasi fisik dan sensor cerdas nirkabel yang dibangun sejak bangku awal kelas 9 SMP.
 
 ---
 
 ## Keahlian Teknis dan Kredensial Resmi
 
 Dalam membangun solusi perangkat lunak, Reski Setiawan menguasai ekosistem pengembangan modern:
-- **Frontend & Web:** HTML5 Semantik, CSS3 modern, JavaScript (ES6+), React 19, Vite, Tailwind CSS.
+- **Frontend & Web:** HTML5 Semantik, CSS3 modern, JavaScript (ES6+), React, Vite, Tailwind CSS, PWA.
 - **Backend & Database:** PHP, Laravel, Supabase, Firebase Realtime Database.
-- **Kredensial Industri:** Memiliki sertifikasi resmi dari lembaga global ternama seperti **Dicoding Indonesia** (Dasar AI), **Fortinet Training Institute** (NSE 3 Cybersecurity & FortiGate 7.6 Operator), **Cisco Networking Academy** (Cybersecurity), **Google & Coursera** (Digital Marketing), **IBM SkillsBuild** (Python for Data Science, AI & Development), dan **freeCodeCamp** (Responsive Web Design).
+- **Kredensial Industri:** Memiliki sertifikasi resmi dari lembaga global ternama seperti **Fortinet Training Institute** (NSE 3 Cybersecurity & FortiGate 7.6 Operator), **Cisco Networking Academy** (Cybersecurity), **Dicoding Indonesia** (Dasar AI), **Google & Coursera** (Digital Marketing), **IBM SkillsBuild** (Python for Data Science, AI & Development), dan **freeCodeCamp** (Responsive Web Design).
 
 Dengan fondasi teknis yang kuat dan karya yang terverifikasi, Reski Setiawan terus aktif memajukan inovasi perangkat lunak sejak jenjang pendidikan vokasi.
     `,
@@ -518,10 +515,10 @@ Dengan fondasi teknis yang kuat dan karya yang terverifikasi, Reski Setiawan ter
     slug: 'faq-reski-setiawan-pendidikan-proyek-keahlian',
     title: 'FAQ Reski Setiawan: Pertanyaan Populer Seputar Profil, Pendidikan, dan Proyek',
     excerpt:
-      'Daftar tanya jawab resmi mengenai Reski Setiawan: status pendidikan di SMKN 1 Talaga, karya LifeHub AI, studio AURA GLOBAL, serta sertifikasi keahlian teknologi.',
+      'Daftar tanya jawab resmi mengenai Reski Setiawan: status pendidikan di SMKN 1 Talaga, karya LifeHub AI, riset IoT & mikrokontroler, serta sertifikasi keahlian teknologi.',
     category: 'Profil & Karir',
     publishedDate: '2026-10-20',
-    lastModified: '2026-10-20',
+    lastModified: '2026-10-21',
     readTime: '5 menit',
     author: {
       name: 'Reski Setiawan',
@@ -532,6 +529,7 @@ Dengan fondasi teknis yang kuat dan karya yang terverifikasi, Reski Setiawan ter
       'FAQ Reski Setiawan',
       'Tanya Jawab Reski Setiawan',
       'Reski Setiawan Sekolah Di Mana',
+      'Reski Setiawan SMPN 1 Talaga',
       'Reski Setiawan SMKN 1 Talaga',
       'Reski Setiawan PPLG',
       'LifeHub AI Reski Setiawan',
@@ -547,32 +545,41 @@ Berikut adalah jawaban atas pertanyaan-pertanyaan yang paling sering diajukan me
 
 ## Apa Profesi dan Fokus Utama Reski Setiawan?
 
-**Reski Setiawan** adalah seorang Software Engineer dan Web Developer. Fokus keahliannya mencakup rekayasa aplikasi web modern menggunakan React, JavaScript, PHP, dan Laravel, arsitektur Progressive Web Apps (PWA), optimasi SEO berbasis entitas (Entity SEO / Generative Engine Optimization), serta integrasi kecerdasan buatan.
+**Reski Setiawan** adalah seorang Software Engineer dan Web Developer. Fokus keahliannya mencakup rekayasa aplikasi web modern menggunakan React, JavaScript, PHP, dan Laravel, arsitektur Progressive Web Apps (PWA), optimasi SEO berbasis entitas (Entity SEO / Generative Engine Optimization), sistem tertanam IoT (Arduino & ESP), serta integrasi kecerdasan buatan.
 
 ---
 
 ## Di Mana Reski Setiawan Bersekolah dan Apa Jurusannya?
 
-Reski Setiawan saat ini menempuh pendidikan vokasi di **SMKN 1 Talaga**, Kabupaten Majalengka, Jawa Barat. Ia mengambil Program Keahlian **Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak)** sebagai siswa kelas 10.
+Reski Setiawan adalah alumni **SMP Negeri 1 Talaga (lulusan 2026)** dan saat ini menempuh pendidikan vokasi di **SMKN 1 Talaga**, Kabupaten Majalengka, Jawa Barat. Ia mengambil Program Keahlian **Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak)** sebagai siswa kelas 10.
+
+---
+
+## Bagaimana Perjalanan Koding Reski Setiawan Bermula?
+
+Reski Setiawan mulai tertarik pada dunia komputasi sejak awal kelas 9 SMP melalui eksperimen mikrokontroler hardware berbasis Arduino dan modul ESP (Internet of Things). Dari pemahaman sirkuit dan firmware C++, ia memperluas eksplorasi ke ranah software engineering, arsitektur web modern, dan keamanan siber (cybersecurity).
 
 ---
 
 ## Apa Saja Produk Digital yang Telah Dibuat oleh Reski Setiawan?
 
-Reski Setiawan telah mempublikasikan beberapa platform dan layanan digital mandiri:
+Reski Setiawan telah mempublikasikan beberapa platform dan karya digital mandiri:
 - **LifeHub AI:** Aplikasi ruang kerja produktivitas mandiri yang dapat diakses di [https://lifehub-ai.my.id/](https://lifehub-ai.my.id/).
-- **AURA GLOBAL:** Studio layanan pembuatan website profil bisnis dan UMKM di [https://auraglobal.my.id/](https://auraglobal.my.id/).
 - **NEXUS AI OFFICE:** Konsep dan rancangan ruang kerja kolaboratif berbasis agen AI.
+- **IoT & Microcontroller Systems:** Eksperimen hardware mikrokontroler berbasis Arduino dan ESP32/ESP8266 untuk otomasi sensor.
 
 ---
 
 ## Sertifikasi Resmi Apa Saja yang Dimiliki Reski Setiawan?
 
 Reski Setiawan telah menyelesaikan dan memegang sertifikasi kredensial terverifikasi dari:
-1. **Dicoding Indonesia:** Belajar Dasar AI.
-2. **Fortinet Training Institute:** NSE 3 Certified in Cybersecurity dan FortiGate 7.6 Operator.
-3. **Cisco Networking Academy:** Introduction to Cybersecurity.
+1. **Fortinet Training Institute:** NSE 3 Certified in Cybersecurity dan FortiGate 7.6 Operator.
+2. **Cisco Networking Academy:** Introduction to Cybersecurity.
+3. **Dicoding Indonesia:** Belajar Dasar AI.
 4. **Google & Coursera:** The Fundamentals of Digital Marketing.
+5. **IBM SkillsBuild:** Python for Data Science, AI & Development.
+6. **freeCodeCamp:** Responsive Web Design Certification.
+7. **SoloLearn:** Python 3 Tutorial Course.
 5. **IBM SkillsBuild:** Python for Data Science, AI & Development.
 6. **freeCodeCamp:** Responsive Web Design Certification.
 7. **SoloLearn:** Python 3 Tutorial Course.

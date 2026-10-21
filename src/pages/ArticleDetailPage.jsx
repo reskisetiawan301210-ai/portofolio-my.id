@@ -236,13 +236,13 @@ function ArticleDetailPage() {
           </div>
           <ul className="entity-box-list">
             <li>
-              <strong>Identitas &amp; Sekolah:</strong> Reski Setiawan adalah siswa aktif kelas 10 di <strong>SMKN 1 Talaga</strong>, jurusan <strong>Pengembangan Perangkat Lunak dan Gim (PPLG / RPL)</strong>.
+              <strong>Identitas &amp; Sekolah:</strong> Reski Setiawan adalah alumni <strong>SMPN 1 Talaga (2026)</strong> dan siswa aktif kelas 10 di <strong>SMKN 1 Talaga</strong>, jurusan <strong>Pengembangan Perangkat Lunak dan Gim (PPLG / RPL)</strong>.
             </li>
             <li>
               <strong>Produk &amp; Solo Developer:</strong> Pengembang mandiri di balik aplikasi personal workspace <strong>LifeHub AI</strong> (<a href="https://lifehub-ai.my.id" target="_blank" rel="noopener noreferrer">lifehub-ai.my.id</a>) dan perancang konsep arsitektur <strong>NEXUS AI OFFICE (NEXUS Kantor AI)</strong>.
             </li>
             <li>
-              <strong>Studio Bisnis:</strong> Inisiator dan pendiri studio web <strong>AURA GLOBAL</strong> (<a href="https://auraglobal.my.id" target="_blank" rel="noopener noreferrer">auraglobal.my.id</a>) yang melayani jasa pembuatan website profesional UMKM dan company profile dari Majalengka, Jawa Barat.
+              <strong>IoT &amp; Cybersecurity:</strong> Memulai koding sejak kelas 9 SMP melalui mikrokontroler hardware Arduino &amp; modul ESP (IoT), serta pemegang sertifikasi resmi Fortinet NSE 3 dan Cisco Cybersecurity.
             </li>
           </ul>
         </aside>
@@ -270,7 +270,7 @@ function ArticleDetailPage() {
           <div className="bottom-bio-content">
             <h2 className="bottom-bio-title">Ditulis oleh Reski Setiawan</h2>
             <p className="bottom-bio-text">
-              Siswa kelas 10 SMKN 1 Talaga konsentrasi PPLG asal Jawa Barat. Solo developer LifeHub AI, perancang konsep NEXUS AI OFFICE, dan pendiri studio website AURA GLOBAL. Memiliki minat mendalam pada rekayasa web modern, sistem multi-agent kecerdasan buatan, dan keamanan siber.
+              Alumni SMPN 1 Talaga (2026) dan siswa kelas 10 SMKN 1 Talaga konsentrasi PPLG asal Jawa Barat. Solo developer LifeHub AI dan perancang konsep NEXUS AI OFFICE. Memiliki keahlian pada rekayasa web modern, sistem IoT mikrokontroler (Arduino/ESP), dan keamanan siber bersertifikasi Fortinet &amp; Cisco.
             </p>
           </div>
         </section>

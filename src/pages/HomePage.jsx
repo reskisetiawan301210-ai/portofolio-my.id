@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import SEO from '../components/common/SEO'
 import Hero from '../sections/Hero/Hero'
 import About from '../sections/About/About'

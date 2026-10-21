@@ -49,7 +49,7 @@ function BlogPage() {
     '@type': 'CollectionPage',
     name: 'Kumpulan Artikel & Studi Kasus Reski Setiawan',
     description:
-      'Dokumentasi perjalanan rekayasa software, studi kasus LifeHub AI, arsitektur NEXUS AI OFFICE, AURA GLOBAL, dan kurikulum PPLG SMKN 1 Talaga.',
+      'Dokumentasi perjalanan rekayasa software, studi kasus LifeHub AI, arsitektur NEXUS AI OFFICE, IoT mikrokontroler, keamanan siber, dan kurikulum PPLG SMKN 1 Talaga.',
     url: `${siteConfig.siteUrl}/blog`,
     author: {
       '@type': 'Person',
@@ -85,7 +85,7 @@ function BlogPage() {
     <main className="blog-page-wrap page-enter">
       <SEO
         title="Blog &amp; Studi Kasus – Reski Setiawan"
-        description="Artikel dan studi kasus teknis Reski Setiawan: profil perjalanan software engineering, solo dev LifeHub AI, arsitektur NEXUS AI OFFICE, dan AURA GLOBAL."
+        description="Artikel dan studi kasus teknis Reski Setiawan: profil perjalanan software engineering, solo dev LifeHub AI, arsitektur NEXUS AI OFFICE, IoT Arduino/ESP, dan Cybersecurity."
         path="/blog"
         image="/images/og-image.png"
       />

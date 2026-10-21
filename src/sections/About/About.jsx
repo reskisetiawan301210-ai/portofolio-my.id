@@ -14,7 +14,7 @@ function About() {
     },
     {
       label: 'PROYEK UTAMA',
-      value: 'AURA GLOBAL, LifeHub AI & NEXUS AI OFFICE',
+      value: 'LifeHub AI, NEXUS AI & Lab IoT',
       delay: 320,
     },
     {

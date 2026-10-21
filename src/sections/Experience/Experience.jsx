@@ -13,7 +13,7 @@ function Experience() {
     'aura-global': {
       title: 'AURA GLOBAL Web Studio',
       image: '/images/projects/aura-global.webp',
-      badge: 'STUDIO WEB',
+      badge: 'BISNIS AKTIF',
     },
     'lifehub-ai': {
       title: 'LifeHub AI Workspace',
@@ -24,6 +24,11 @@ function Experience() {
       title: 'NEXUS AI OFFICE',
       image: '/images/projects/nexus-ai-office.webp',
       badge: 'SISTEM KONSEP',
+    },
+    'iot-smart-systems': {
+      title: 'IoT & Microcontroller Systems',
+      image: '/images/focus/robotics-hardware.webp',
+      badge: 'RISET & HARDWARE',
     },
   }
 

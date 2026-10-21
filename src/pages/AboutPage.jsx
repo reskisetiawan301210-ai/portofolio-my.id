@@ -13,7 +13,7 @@ function AboutPage() {
     '@type': 'AboutPage',
     name: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
     description:
-      'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik studio web AURA GLOBAL, LifeHub AI, dan konsep NEXUS AI OFFICE.',
+      'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan cybersecurity.',
     url: `${siteConfig.siteUrl}/tentang`,
     mainEntity: {
       '@type': 'Person',
@@ -25,21 +25,15 @@ function AboutPage() {
       sameAs: [
         siteConfig.contacts.instagram.url,
         siteConfig.contacts.tiktokOffice.url,
-        siteConfig.contacts.tiktokStudio.url,
       ],
       alumniOf: {
         '@type': 'EducationalOrganization',
-        name: 'SMKN 1 Talaga',
-        department: 'Pengembangan Perangkat Lunak dan Gim (PPLG)',
+        name: 'SMP Negeri 1 Talaga',
       },
       affiliation: {
         '@type': 'EducationalOrganization',
         name: 'SMKN 1 Talaga',
-      },
-      founder: {
-        '@type': 'Organization',
-        name: 'AURA GLOBAL',
-        url: 'https://auraglobal.my.id/',
+        department: 'Pengembangan Perangkat Lunak dan Gim (PPLG)',
       },
     },
     breadcrumb: {
@@ -55,7 +49,7 @@ function AboutPage() {
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Tentang Saya – Reski Setiawan | Software Engineer & Web Developer"
-        description="Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik studio web AURA GLOBAL, LifeHub AI, dan konsep NEXUS AI OFFICE."
+        description="Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan cybersecurity."
         path="/tentang"
         image="/images/og-image.png"
       />
@@ -97,13 +91,13 @@ function AboutPage() {
               <span className="detail-pill-tag">/ BIOGRAFI PERSONAL</span>
               <span className="detail-pill-status pill-accent-emerald">SMKN 1 TALAGA</span>
               <span className="detail-pill-status pill-accent-blue">WEB DEVELOPER</span>
-              <span className="detail-pill-status pill-accent-orange">FOUNDER AURA GLOBAL</span>
+              <span className="detail-pill-status pill-accent-orange">IOT &amp; CYBERSECURITY</span>
             </div>
             <div className="detail-title-row">
               <h1 className="detail-title">Tentang Reski Setiawan</h1>
             </div>
             <p className="detail-lead">
-              Halo, saya <strong>Reski Setiawan</strong>. Saya sedang mengembangkan kemampuan di bidang software development dan web development melalui pembelajaran mandiri, kurikulum kejuruan di <strong>SMKN 1 Talaga</strong>, serta proyek-proyek digital nyata yang saya bangun sendiri.
+              Halo, saya <strong>Reski Setiawan</strong>. Saya adalah software engineer dan web developer muda dari Jawa Barat yang fokus pada rekayasa web modern, sistem berbasis AI, eksplorasi IoT mikrokontroler (Arduino &amp; ESP), dan keamanan siber.
             </p>
           </Reveal>
         </header>
@@ -159,10 +153,10 @@ function AboutPage() {
 
                     <div style={{ padding: '1.25rem', borderRadius: '12px', background: 'var(--bg-secondary)', border: '1px solid var(--border-light)' }}>
                       <h3 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
-                        2. <Link to="/layanan" style={{ color: 'var(--accent-orange)', textDecoration: 'none' }}>AURA GLOBAL Web Studio ↗</Link>
+                        2. <Link to="/proyek/iot-embedded-automation" style={{ color: 'var(--accent-orange)', textDecoration: 'none' }}>Lab IoT &amp; Embedded Systems ↗</Link>
                       </h3>
                       <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
-                        Unit web studio yang saya dirikan untuk membantu pelaku usaha mikro, kecil, dan menengah (UMKM) serta bisnis lokal memiliki website profil usaha yang kredibel, berkecepatan tinggi, dan berstruktur semantik W3C standar.
+                        Eksplorasi mikrokontroler berbasis Arduino dan modul ESP (Internet of Things) sejak awal kelas 9 SMP untuk otomasi fisik, sensor telemetri nirkabel, dan fondasi logika firmware C++.
                       </p>
                     </div>
 
@@ -204,7 +198,7 @@ function AboutPage() {
                     </li>
                     <li className="detail-list-item">
                       <span className="detail-list-bullet">▪</span>
-                      <span><strong>Membangun untuk Dipakai:</strong> Setiap konsep baru yang saya pelajari langsung saya aplikasikan pada fitur nyata di LifeHub AI atau landing page klien AURA GLOBAL.</span>
+                      <span><strong>Membangun untuk Dipakai:</strong> Setiap konsep baru yang saya pelajari langsung saya aplikasikan pada fitur nyata di LifeHub AI atau proyek eksperimen IoT.</span>
                     </li>
                   </ul>
                 </div>
@@ -216,11 +210,11 @@ function AboutPage() {
               <div className="detail-card">
                 <h2 className="detail-card-title">
                   <span className="pill-accent-purple" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>04</span>
-                  <span>Arah Pengembangan Diri &amp; Cita-Cita</span>
+                  <span>Arah Pengembangan Diri &amp; Komitmen</span>
                 </h2>
                 <div className="detail-prose">
                   <p>
-                    Saya memandang perjalanan di dunia rekayasa perangkat lunak sebagai maraton jarak jauh. Oleh karena itu, arah pengembangan diri saya ke depan difokuskan pada:
+                    Saya memandang perjalanan di dunia rekayasa perangkat lunak sebagai maraton jangka panjang. Oleh karena itu, arah pengembangan diri saya ke depan difokuskan pada:
                   </p>
                   <ul className="detail-list">
                     <li className="detail-list-item">
@@ -229,7 +223,7 @@ function AboutPage() {
                     </li>
                     <li className="detail-list-item">
                       <span className="detail-list-bullet">✦</span>
-                      <span><strong>Eksplorasi AI &amp; Otomasi Sistem:</strong> Terus mempelajari bagaimana model kecerdasan buatan dapat diintegrasikan secara aman dan efisien untuk membantu produktivitas manusia.</span>
+                      <span><strong>Eksplorasi AI &amp; Keamanan Siber:</strong> Terus mempelajari bagaimana model kecerdasan buatan dapat diintegrasikan secara aman dan efisien dengan standar keamanan zero-trust.</span>
                     </li>
                     <li className="detail-list-item">
                       <span className="detail-list-bullet">✦</span>
@@ -288,7 +282,7 @@ function AboutPage() {
               <div className="detail-side-card">
                 <span className="side-card-label">Perjalanan Belajar</span>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '0.5rem' }}>
-                  Simak kronologi dari baris kode pertama hingga merilis produk LifeHub AI dan AURA GLOBAL.
+                  Simak kronologi dari baris kode pertama hingga merilis produk LifeHub AI dan riset teknologi.
                 </p>
                 <Link to="/perjalanan" className="secondary-cta-btn" style={{ justifyContent: 'center' }}>
                   Buka Perjalanan Saya ↗

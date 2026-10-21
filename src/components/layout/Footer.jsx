@@ -142,21 +142,6 @@ function Footer() {
                 </div>
               </a>
 
-              {/* Email Studio Bisnis */}
-              <a
-                href={`mailto:${siteConfig.contacts.emailStudio}`}
-                className="footer-contact-item"
-                aria-label={`Kirim email ke ${siteConfig.contacts.emailStudio}`}
-              >
-                <span className="footer-contact-icon">
-                  <GmailIcon />
-                </span>
-                <div className="footer-contact-text">
-                  <span className="footer-contact-label">Email Studio AURA GLOBAL</span>
-                  <span className="footer-contact-val">{siteConfig.contacts.emailStudio}</span>
-                </div>
-              </a>
-
               {/* Instagram Personal */}
               {siteConfig.contacts.instagram && (
                 <a
@@ -178,40 +163,24 @@ function Footer() {
               )}
 
               {/* TikTok Personal / Proyek */}
-              <a
-                href={siteConfig.contacts.tiktokOffice.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-contact-item"
-                aria-label="Buka TikTok NEXUS AI OFFICE"
-              >
-                <span className="footer-contact-icon">
-                  <TikTokIcon />
-                </span>
-                <div className="footer-contact-text">
-                  <span className="footer-contact-label">TikTok Personal / Proyek</span>
-                  <span className="footer-contact-val">{siteConfig.contacts.tiktokOffice.handle}</span>
-                </div>
-                <span className="footer-contact-arrow" aria-hidden="true">↗</span>
-              </a>
-
-              {/* TikTok Studio Bisnis */}
-              <a
-                href={siteConfig.contacts.tiktokStudio.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-contact-item"
-                aria-label="Buka TikTok AURA GLOBAL Jasa Website"
-              >
-                <span className="footer-contact-icon">
-                  <TikTokIcon />
-                </span>
-                <div className="footer-contact-text">
-                  <span className="footer-contact-label">TikTok Bisnis / Studio</span>
-                  <span className="footer-contact-val">{siteConfig.contacts.tiktokStudio.handle}</span>
-                </div>
-                <span className="footer-contact-arrow" aria-hidden="true">↗</span>
-              </a>
+              {siteConfig.contacts.tiktokOffice && (
+                <a
+                  href={siteConfig.contacts.tiktokOffice.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-contact-item"
+                  aria-label="Buka TikTok NEXUS AI OFFICE"
+                >
+                  <span className="footer-contact-icon">
+                    <TikTokIcon />
+                  </span>
+                  <div className="footer-contact-text">
+                    <span className="footer-contact-label">TikTok Personal / Proyek</span>
+                    <span className="footer-contact-val">{siteConfig.contacts.tiktokOffice.handle}</span>
+                  </div>
+                  <span className="footer-contact-arrow" aria-hidden="true">↗</span>
+                </a>
+              )}
             </div>
           </div>
         </div>

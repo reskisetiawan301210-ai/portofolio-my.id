@@ -239,12 +239,12 @@ function EducationDetailPage() {
 
                     <div style={{ padding: '1.25rem', borderRadius: '12px', background: 'var(--bg-secondary)', border: '1px solid var(--border-light)' }}>
                       <h4 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
-                        <Link to="/layanan" style={{ color: 'var(--accent-orange)', textDecoration: 'none' }}>
-                          AURA GLOBAL Web Studio ↗
+                        <Link to="/proyek/iot-embedded-automation" style={{ color: 'var(--accent-orange)', textDecoration: 'none' }}>
+                          Lab IoT &amp; Hardware Embedded Systems ↗
                         </Link>
                       </h4>
                       <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
-                        Untuk menguji pemahaman semantik web dan kepuasan pengguna bisnis di dunia nyata, saya mendirikan unit studio web AURA GLOBAL yang membantu UMKM lokal memiliki landing page yang cepat, responsif, dan mudah dibaca Google.
+                        Berakar dari ketertarikan sejak kelas 9 SMP, saya menguji pemahaman logika sirkuit dan firmware C++ melalui modul ESP32/ESP8266 dan mikrokontroler Arduino untuk otomasi sensor.
                       </p>
                     </div>
                   </div>
@@ -325,8 +325,8 @@ function EducationDetailPage() {
                   <Link to="/proyek/nexus-ai-office" className="tech-pill pill-accent-purple" style={{ textDecoration: 'none', display: 'block' }}>
                     ✦ NEXUS AI OFFICE (Multi-Agent Concept)
                   </Link>
-                  <Link to="/layanan" className="tech-pill pill-accent-orange" style={{ textDecoration: 'none', display: 'block' }}>
-                    ✦ AURA GLOBAL (Web Studio Bisnis)
+                  <Link to="/proyek/iot-embedded-automation" className="tech-pill pill-accent-orange" style={{ textDecoration: 'none', display: 'block' }}>
+                    ✦ IoT &amp; Embedded Systems (Arduino &amp; ESP)
                   </Link>
                 </div>
               </div>

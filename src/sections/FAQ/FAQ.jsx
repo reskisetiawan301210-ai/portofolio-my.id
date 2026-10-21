@@ -7,27 +7,32 @@ const FAQ_ITEMS = [
   {
     question: 'Siapa itu Reski Setiawan?',
     answer:
-      'Reski Setiawan adalah seorang software engineer dan web developer muda asal Jawa Barat, Indonesia. Saat ini ia menempuh pendidikan vokasi di SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG / RPL). Di dunia teknologi, Reski aktif sebagai solo developer di balik platform LifeHub AI dan pendiri studio web AURA GLOBAL.',
+      'Reski Setiawan adalah seorang software engineer dan web developer muda asal Talaga, Majalengka, Jawa Barat. Ia merupakan lulusan SMPN 1 Talaga (2026) dan saat ini menempuh pendidikan di SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG / RPL). Di dunia teknologi, Reski aktif sebagai solo developer di balik platform LifeHub AI, perancang konsep NEXUS AI OFFICE, serta mendalami bidang IoT (Arduino & ESP) dan keamanan siber (Cybersecurity).',
   },
   {
     question: 'Apa yang membedakan Reski Setiawan dari individu lain dengan nama serupa?',
     answer:
-      'Reski Setiawan (juga dikenal dengan alias pengembang PixelForgeDev) secara spesifik adalah praktisi teknologi rekayasa web modern (React, Laravel, PWA, Supabase) dan riset arsitektur multi-agent AI asal Jawa Barat. Seluruh rekam jejak resmi, karya perangkat lunak, dan sertifikasinya dikelola mandiri melalui website resmi https://reskisetiawan-dev.my.id.',
+      'Reski Setiawan (juga dikenal dengan alias pengembang PixelForgeDev) secara spesifik adalah praktisi teknologi rekayasa web modern (React, PWA, Supabase), eksplorasi IoT mikrokontroler, dan riset arsitektur multi-agent AI asal Jawa Barat. Seluruh rekam jejak resmi, karya perangkat lunak, dan sertifikasinya dikelola mandiri melalui website resmi https://reskisetiawan-dev.my.id.',
+  },
+  {
+    question: 'Bagaimana perjalanan awal Reski Setiawan di dunia pemrograman?',
+    answer:
+      'Reski mulai tertarik dan mendalami dunia koding sejak awal kelas 9 SMP melalui eksperimen mikrokontroler dan perangkat keras seperti Arduino dan modul ESP (Internet of Things). Dari pemahaman logika sistem tersebut, ia memperluas fokus ke rekayasa perangkat lunak, web development modern, dan cybersecurity.',
   },
   {
     question: 'Proyek dan karya apa saja yang telah dibangun oleh Reski Setiawan?',
     answer:
-      'Karya utama yang dikembangkan secara mandiri meliputi LifeHub AI (personal productivity workspace dengan PWA dan Supabase di https://lifehub-ai.my.id/), konsep sistem cerdas multi-agent NEXUS AI OFFICE, serta studio jasa pembuatan website AURA GLOBAL (https://auraglobal.my.id/) yang membantu digitalisasi UMKM.',
+      'Karya utama yang dikembangkan secara mandiri meliputi LifeHub AI (personal productivity workspace dengan PWA dan Supabase di https://lifehub-ai.my.id/), konsep sistem cerdas multi-agent NEXUS AI OFFICE, serta berbagai proyek eksperimen sistem cerdas terhubung (IoT).',
   },
   {
     question: 'Sertifikasi industri apa saja yang dimiliki oleh Reski Setiawan?',
     answer:
-      'Reski Setiawan memegang 8 kredensial industri terverifikasi dari Dicoding Indonesia (Belajar Dasar AI), Fortinet (NSE 3 Cybersecurity & FortiGate 7.6 Operator), Cisco Networking Academy (Cybersecurity), Google & Coursera (Digital Marketing), IBM SkillsBuild (Python for Data Science & AI), dan freeCodeCamp (Responsive Web Design).',
+      'Reski Setiawan memegang 8 kredensial industri terverifikasi dari Fortinet (NSE 3 Cybersecurity & FortiGate 7.6 Operator), Cisco Networking Academy (Introduction to Cybersecurity), Dicoding Indonesia (Belajar Dasar AI), Google & Coursera (Digital Marketing), IBM SkillsBuild (Python for Data Science & AI), dan freeCodeCamp (Responsive Web Design).',
   },
   {
     question: 'Bagaimana cara menghubungi atau bekerja sama dengan Reski Setiawan?',
     answer:
-      'Anda dapat menghubungi Reski Setiawan melalui email resmi reskisetiawan301210@gmail.com, Instagram personal @qariol, atau melalui formulir kontak dan buku tamu interaktif di halaman beranda website ini.',
+      'Anda dapat menghubungi Reski Setiawan melalui email resmi reskisetiawan301210@gmail.com, Instagram personal @qariol, TikTok @nexus_office3, atau melalui formulir kontak dan buku tamu interaktif di halaman beranda website ini.',
   },
 ]
 

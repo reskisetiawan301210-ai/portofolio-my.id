@@ -47,7 +47,7 @@ function SEO({
       email: siteConfig.contacts.email,
       description: siteConfig.description,
       disambiguatingDescription:
-        'Software engineer, web developer, and student at SMKN 1 Talaga (PPLG) from West Java, Indonesia, solo creator of LifeHub AI and founder of AURA GLOBAL, distinguishing from other individuals named Reski Setiawan.',
+        'Software engineer, web developer, alumnus of SMPN 1 Talaga (2026), and student at SMKN 1 Talaga (PPLG) from West Java, Indonesia. Passionate about IoT (Arduino & ESP), cybersecurity (Fortinet & Cisco certified), and creator of LifeHub AI, distinguishing from other individuals named Reski Setiawan.',
       subjectOf: [
         {
           '@type': 'Article',
@@ -78,17 +78,14 @@ function SEO({
       },
       alumniOf: {
         '@type': 'EducationalOrganization',
-        name: 'SMKN 1 Talaga',
-      },
-      founder: [
-        {
-          '@type': 'Organization',
-          name: 'AURA GLOBAL',
-          alternateName: 'AURA GLOBAL Digital Web Studio',
-          url: 'https://auraglobal.my.id/',
-          description: 'Studio jasa pembuatan website profesional untuk UMKM dan profil bisnis.',
+        name: 'SMP Negeri 1 Talaga',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Talaga',
+          addressRegion: 'Jawa Barat',
+          addressCountry: 'ID',
         },
-      ],
+      },
       creator: [
         {
           '@type': 'SoftwareApplication',
@@ -193,6 +190,16 @@ function SEO({
           name: 'Cybersecurity',
           sameAs: 'https://www.wikidata.org/wiki/Q3510521',
         },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Arduino',
+          sameAs: 'https://www.wikidata.org/wiki/Q175957',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Internet of Things',
+          sameAs: 'https://www.wikidata.org/wiki/Q250462',
+        },
         'PPLG',
         'Rekayasa Perangkat Lunak',
         'Frontend Architecture',
@@ -204,6 +211,7 @@ function SEO({
         'Supabase',
         'Multi-Agent Systems',
         'Robotics & IoT',
+        'Microcontroller ESP32 & ESP8266',
       ],
     }
 
@@ -223,7 +231,7 @@ function SEO({
       '@type': 'ProfilePage',
       '@id': `${siteConfig.siteUrl}/#profilepage`,
       url: siteConfig.siteUrl,
-      name: 'Profil Reski Setiawan – Siswa SMKN 1 Talaga PPLG, Software Engineer & Solo Dev',
+      name: 'Profil Reski Setiawan – Software Engineer & Web Developer',
       isPartOf: {
         '@id': `${siteConfig.siteUrl}/#website`,
       },
@@ -235,18 +243,19 @@ function SEO({
     const professionalServiceSchema = {
       '@type': 'ProfessionalService',
       '@id': `${siteConfig.siteUrl}/#service`,
-      name: 'Reski Setiawan – Web Development & Engineering',
+      name: 'Reski Setiawan – Web Development & Software Engineering',
       url: siteConfig.siteUrl,
       provider: {
         '@id': `${siteConfig.siteUrl}/#person`,
       },
       areaServed: 'Indonesia',
       description:
-        'Layanan pembuatan website bisnis, antarmuka responsif performa tinggi, dan konsultasi arsitektur web modern melalui AURA GLOBAL.',
+        'Layanan rekayasa web modern, pembuatan website berkinerja tinggi, Progressive Web Apps (PWA), integrasi AI, dan solusi digital terstruktur.',
       serviceType: [
-        'Pembuatan Website Bisnis & UMKM',
-        'Pengembangan Frontend Web Modern',
-        'Optimasi SEO & Performa Web',
+        'Pengembangan Website Modern & Responsif',
+        'Arsitektur Frontend React & PWA',
+        'Optimasi SEO Teknis & Knowledge Graph',
+        'Integrasi AI & Automasi Sistem',
       ],
     }
 
@@ -259,39 +268,39 @@ function SEO({
           name: 'Siapa itu Reski Setiawan?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Reski Setiawan adalah siswa aktif kelas 10 di SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG) asal Jawa Barat. Ia berkarya sebagai software engineer dan solo developer di balik LifeHub AI, perancang konsep NEXUS AI OFFICE (NEXUS Kantor AI), dan pendiri studio web AURA GLOBAL.',
+            text: 'Reski Setiawan adalah seorang software engineer dan web developer muda asal Talaga, Majalengka, Jawa Barat. Lulusan SMPN 1 Talaga (2026) dan saat ini menempuh pendidikan di SMKN 1 Talaga jurusan PPLG. Di dunia teknologi, ia aktif mengembangkan platform LifeHub AI, konsep NEXUS AI OFFICE, serta mendalami cybersecurity dan IoT (Arduino & ESP).',
           },
         },
         {
           '@type': 'Question',
-          name: 'Di mana Reski Setiawan bersekolah dan apa jurusannya?',
+          name: 'Di mana Reski Setiawan bersekolah dan apa latar belakangnya?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Reski Setiawan bersekolah di SMKN 1 Talaga, Majalengka, Jawa Barat, menempuh pendidikan vokasi pada program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak) kelas 10.',
+            text: 'Reski Setiawan adalah alumni SMP Negeri 1 Talaga (lulusan 2026) dan saat ini menempuh pendidikan vokasi di SMKN 1 Talaga kelas 10 jurusan Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak).',
           },
         },
         {
           '@type': 'Question',
-          name: 'Apa saja produk digital yang dibangun oleh Reski Setiawan?',
+          name: 'Bagaimana perjalanan awal Reski Setiawan di dunia koding?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Reski Setiawan adalah solo developer platform LifeHub AI (https://lifehub-ai.my.id/), perancang konsep ruang kerja kecerdasan buatan NEXUS AI OFFICE (NEXUS Kantor AI), dan pendiri studio web AURA GLOBAL (https://auraglobal.my.id/).',
+            text: 'Reski mulai menyukai dunia koding sejak awal kelas 9 SMP melalui eksplorasi perangkat keras dan mikrokontroler seperti Arduino dan modul ESP (Internet of Things). Dari logika komputasi tersebut, ia memperluas fokus ke rekayasa perangkat lunak (software engineering), web development modern, dan keamanan siber (cybersecurity).',
           },
         },
         {
           '@type': 'Question',
-          name: 'Apa itu AURA GLOBAL dan apa hubungannya dengan Reski Setiawan?',
+          name: 'Apa saja proyek digital yang dibangun oleh Reski Setiawan?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'AURA GLOBAL adalah studio penyedia jasa pembuatan website profesional untuk UMKM, profil perusahaan, dan toko online yang didirikan dan dikembangkan langsung oleh Reski Setiawan dari Majalengka, Jawa Barat.',
+            text: 'Karya utama yang dikembangkan meliputi platform personal productivity workspace LifeHub AI (https://lifehub-ai.my.id/) berbasis PWA & Supabase, konsep arsitektur kolaboratif multi-agent NEXUS AI OFFICE, serta serangkaian proyek IoT mikrokontroler.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Apa teknologi yang dikuasai oleh Reski Setiawan?',
+          name: 'Apa teknologi dan sertifikasi yang dimiliki oleh Reski Setiawan?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Reski Setiawan menguasai JavaScript, React, Tailwind CSS, Vite, HTML5 semantik, PHP, Laravel, Supabase, arsitektur Progressive Web App (PWA), serta dasar-dasar C++ dan Python untuk eksplorasi AI, cybersecurity, dan robotics.',
+            text: 'Reski Setiawan menguasai JavaScript, React, Tailwind CSS, Vite, HTML5 semantik, PHP, Laravel, Supabase, arsitektur PWA, serta C++ dan Python untuk IoT dan AI. Ia juga tersertifikasi resmi dalam bidang keamanan siber (Fortinet NSE 3 & Cisco Networking Academy Cybersecurity).',
           },
         },
       ],

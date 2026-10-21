@@ -11,9 +11,9 @@ function ServicesPage() {
   const servicesSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Layanan Pembuatan Website & Engineering – Reski Setiawan (AURA GLOBAL)',
+    name: 'Layanan Pembuatan Website & Engineering – Reski Setiawan',
     description:
-      'Layanan pembuatan website profesional untuk UMKM, profil perusahaan, toko online WhatsApp, dan optimasi SEO dari Reski Setiawan / AURA GLOBAL.',
+      'Layanan pembuatan website profesional untuk portofolio, bisnis, profil usaha, dan optimasi SEO oleh Reski Setiawan.',
     url: `${siteConfig.siteUrl}/layanan`,
     provider: {
       '@type': 'Person',
@@ -46,7 +46,7 @@ function ServicesPage() {
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Layanan Pembuatan Website &amp; Web Dev – Reski Setiawan"
-        description="Layanan pembuatan website profesional untuk UMKM, profil bisnis, dan optimasi web yang saya kelola melalui studio web AURA GLOBAL."
+        description="Layanan pembuatan website profesional untuk portofolio, bisnis, profil usaha, dan optimasi web modern oleh Reski Setiawan."
         path="/layanan"
         image="/images/og-image.png"
       />
@@ -66,7 +66,7 @@ function ServicesPage() {
           <div className="detail-status-pill">
             <span className="status-dot status-dot-pulse"></span>
             <span className="pill-accent-orange" style={{ padding: '0.15rem 0.6rem', borderRadius: '9999px', fontWeight: 700 }}>
-              Tersedia di AURA GLOBAL Web Studio
+              Layanan Rekayasa Web Mandiri
             </span>
           </div>
         </div>
@@ -85,8 +85,8 @@ function ServicesPage() {
           <div className="reading-accent-bar" />
           <Reveal effect="fade-up" delay={80}>
             <div className="detail-badges-row">
-              <span className="detail-pill-tag">/ AURA GLOBAL WEB STUDIO</span>
-              <span className="detail-pill-status pill-accent-orange">SOLUSI UMKM</span>
+              <span className="detail-pill-tag">/ LAYANAN PENGEMBANGAN WEB</span>
+              <span className="detail-pill-status pill-accent-orange">SOLUSI DIGITAL</span>
               <span className="detail-pill-status pill-accent-emerald">PERFORMA CEPAT</span>
               <span className="detail-pill-status pill-accent-blue">SEMANTIK W3C</span>
             </div>
@@ -94,7 +94,7 @@ function ServicesPage() {
               <h1 className="detail-title">Layanan Pembuatan Website &amp; Rekayasa Antarmuka</h1>
             </div>
             <p className="detail-lead">
-              Melalui <strong>AURA GLOBAL</strong>, saya membantu pelaku usaha, UMKM, dan profesional memiliki website yang cepat dibuka di ponsel, berstruktur semantik rapi, dan memudahkan calon pelanggan menghubungi bisnis Anda.
+              Saya membantu pelaku usaha, organisasi, dan profesional memiliki website modern yang cepat dibuka di ponsel, berstruktur semantik rapi, dan mudah ditemukan calon klien.
             </p>
           </Reveal>
         </header>
@@ -105,11 +105,11 @@ function ServicesPage() {
             <div className="detail-card">
               <h2 className="detail-card-title">
                 <span className="pill-accent-orange" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>★</span>
-                <span>Mengapa Memilih Layanan Web AURA GLOBAL?</span>
+                <span>Mengapa Memilih Layanan Web Ini?</span>
               </h2>
               <div className="detail-prose">
                 <p>
-                  Saya mendirikan AURA GLOBAL karena melihat banyak pemilik usaha lokal menghadapi dilema: menggunakan jasa agensi besar yang biayanya puluhan juta rupiah dengan alur berbelit-belit, atau memakai website builder instan yang menghasilkan tampilan lambat dan sulit ditemukan di Google.
+                  Saya berfokus pada efisiensi dan transparansi teknis: menggunakan kode bersih modern tanpa beban plugin berlebihan agar menghasilkan website yang cepat dimuat, responsif di ponsel, dan mudah dibaca oleh mesin pencari Google.
                 </p>
                 <p>
                   Pendekatan yang saya tawarkan berfokus pada efisiensi dan transparansi teknis:
@@ -187,25 +187,15 @@ function ServicesPage() {
           ))}
         </div>
 
-        {/* CTA Block ke AURA GLOBAL & Kontak */}
+        {/* CTA Block ke Kontak */}
         <Reveal effect="fade-up" delay={400}>
           <section className="detail-cta-block">
-            <h2 className="detail-cta-title">Siap Memiliki Website Bisnis yang Profesional?</h2>
+            <h2 className="detail-cta-title">Siap Memiliki Website yang Profesional &amp; Berkinerja Tinggi?</h2>
             <p className="detail-cta-desc">
-              Mari diskusikan kebutuhan usaha Anda bersama saya melalui studio AURA GLOBAL. Penawaran ramah anggaran dengan hasil kerja yang rapi dan terukur.
+              Mari diskusikan kebutuhan website Anda bersama saya. Penawaran efisien dengan hasil kerja yang rapi, terstruktur, dan terukur.
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <a
-                href="https://auraglobal.my.id/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="external-live-btn"
-                style={{ padding: '0.85rem 2.25rem' }}
-              >
-                <span>Buka Situs Resmi AURA GLOBAL</span>
-                <span>↗</span>
-              </a>
-              <Link to="/kontak" className="secondary-cta-btn" style={{ padding: '0.85rem 2.25rem' }}>
+              <Link to="/kontak" className="external-live-btn" style={{ padding: '0.85rem 2.25rem' }}>
                 <span>Hubungi Saya Langsung</span>
                 <span>→</span>
               </Link>

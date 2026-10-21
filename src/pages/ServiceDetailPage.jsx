@@ -46,11 +46,6 @@ function ServiceDetailPage() {
       jobTitle: siteConfig.role,
       url: siteConfig.siteUrl,
     },
-    isRelatedTo: {
-      '@type': 'Organization',
-      name: 'AURA GLOBAL',
-      url: 'https://auraglobal.my.id/',
-    },
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -84,7 +79,7 @@ function ServiceDetailPage() {
           <div className="detail-status-pill">
             <span className="status-dot status-dot-pulse"></span>
             <span className="pill-accent-orange" style={{ padding: '0.15rem 0.6rem', borderRadius: '9999px', fontWeight: 700 }}>
-              AURA GLOBAL Studio
+              Layanan Web Engineering
             </span>
           </div>
         </div>
@@ -194,7 +189,7 @@ function ServiceDetailPage() {
               <div className="detail-side-card">
                 <span className="side-card-label">JENIS LAYANAN</span>
                 <p className="detail-prose" style={{ fontSize: '0.875rem' }}>
-                  Layanan Resmi AURA GLOBAL
+                  Layanan Rekayasa Web Mandiri
                 </p>
               </div>
             </Reveal>

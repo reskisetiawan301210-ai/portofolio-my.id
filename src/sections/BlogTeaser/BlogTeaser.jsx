@@ -29,7 +29,7 @@ function BlogTeaser() {
             title="STUDI KASUS &amp; ARTIKEL"
             watermark="INSIGHTS"
             meta="Eksplorasi Teknologi &amp; Catatan Rekayasa"
-            subtitle="Dokumentasi perjalanan solo dev membangun LifeHub AI, arsitektur NEXUS AI OFFICE, AURA GLOBAL, serta pembelajaran rekayasa perangkat lunak."
+            subtitle="Dokumentasi perjalanan solo dev membangun LifeHub AI, arsitektur NEXUS AI OFFICE, eksperimen IoT, serta pembelajaran rekayasa perangkat lunak."
           />
         </Reveal>
 

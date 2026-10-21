@@ -40,9 +40,7 @@ function ProjectDetailPage() {
 
   const schemaType = project.isConcept
     ? 'CreativeWork'
-    : project.slug === 'aura-global'
-      ? 'WebSite'
-      : 'SoftwareApplication'
+    : 'SoftwareApplication'
 
   const projectSchema = {
     '@context': 'https://schema.org',
@@ -119,8 +117,8 @@ function ProjectDetailPage() {
           <Reveal effect="fade-up" delay={80}>
             <div className="detail-badges-row">
               <span className="detail-pill-tag">/ KARYA #{project.tag}</span>
-              <span className={`detail-pill-status ${project.slug === 'aura-global' ? 'pill-accent-orange' : project.slug === 'lifehub-ai' ? 'pill-accent-blue' : 'pill-accent-purple'}`}>
-                {project.category} · {project.isConcept ? 'EKSPOLORASI KONSEPTUAL' : 'PRODUK AKTIF'}
+              <span className={`detail-pill-status ${project.slug === 'aura-global' ? 'pill-accent-emerald' : project.slug === 'iot-embedded-automation' ? 'pill-accent-orange' : project.slug === 'lifehub-ai' ? 'pill-accent-blue' : 'pill-accent-purple'}`}>
+                {project.category} · {project.isConcept ? 'EKSPOLORASI KONSEPTUAL' : 'PROYEK LIVE & RISET'}
               </span>
             </div>
             <div className="detail-title-row">
@@ -157,17 +155,87 @@ function ProjectDetailPage() {
               <div className="detail-media-preview" style={{ marginBottom: '1.5rem' }}>
                 <BrowserPreviewFrame
                   title={project.title}
-                  url={project.link || (project.isConcept ? 'nexus.internal.concept' : 'https://auraglobal.my.id/')}
+                  url={project.link || (project.isConcept ? 'nexus.internal.concept' : 'iot.internal.hardware')}
                   imageSrc={project.image}
                   alt={project.imageAlt}
                   isConcept={project.isConcept}
                   loading="eager"
                   aspectRatio="16/9"
                   minHeight="280px"
-                  initials={project.slug === 'aura-global' ? 'AG' : project.slug === 'lifehub-ai' ? 'LH' : 'NX'}
+                  initials={project.slug === 'aura-global' ? 'AG' : project.slug === 'iot-embedded-automation' ? 'IOT' : project.slug === 'lifehub-ai' ? 'LH' : 'NX'}
                 />
               </div>
             </Reveal>
+
+            {/* ========================================================= */}
+            {/* KONTEN KHUSUS: AURA GLOBAL WEB STUDIO */}
+            {/* ========================================================= */}
+            {project.slug === 'aura-global' && (
+              <>
+                <Reveal effect="fade-up" delay={200}>
+                  <div className="detail-card">
+                    <h2 className="detail-card-title">
+                      <span className="pill-accent-emerald" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>01</span>
+                      <span>Latar Belakang &amp; Gagasan Studio</span>
+                    </h2>
+                    <div className="detail-prose">
+                      <p>
+                        Banyak pelaku usaha, UMKM, maupun profesional memerlukan kehadiran web yang cepat, responsif, dan mudah ditemukan di Google. Namun mereka sering terbentur biaya tinggi atau website yang lambat dimuat.
+                      </p>
+                      <p>
+                        Dari kebutuhan nyata itulah saya merancang <strong>AURA GLOBAL Web Studio</strong>: sebuah platform layanan pengembangan website modern yang mengedepankan kecepatan muat halaman, estetika antarmuka bersih, dan optimasi SEO teknis sejak hari pertama.
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+
+                <Reveal effect="fade-up" delay={260}>
+                  <div className="detail-card">
+                    <h2 className="detail-card-title">
+                      <span className="pill-accent-emerald" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>02</span>
+                      <span>Fitur &amp; Kemampuan Teknis yang Diterapkan</span>
+                    </h2>
+                    <div className="detail-prose">
+                      <ul className="detail-list">
+                        <li className="detail-list-item">
+                          <span className="detail-list-bullet">▪</span>
+                          <span><strong>Performa Tinggi (PageSpeed 95+):</strong> Menggunakan Vite dan gambar format WebP modern untuk waktu muat instan di perangkat seluler.</span>
+                        </li>
+                        <li className="detail-list-item">
+                          <span className="detail-list-bullet">▪</span>
+                          <span><strong>Desain Responsif Adaptif:</strong> Antarmuka yang mulus diakses di smartphone, tablet, maupun layar desktop besar.</span>
+                        </li>
+                        <li className="detail-list-item">
+                          <span className="detail-list-bullet">▪</span>
+                          <span><strong>Fondasi SEO &amp; Schema Metadata:</strong> Integrasi schema.org dan Open Graph agar siap diindeks mesin pencari secara optimal.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Reveal>
+
+                <Reveal effect="fade-up" delay={320}>
+                  <div className="detail-card">
+                    <h2 className="detail-card-title">
+                      <span className="pill-accent-emerald" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>03</span>
+                      <span>Tech Stack yang Digunakan</span>
+                    </h2>
+                    <div className="detail-prose">
+                      <ul className="detail-list">
+                        <li className="detail-list-item">
+                          <span className="detail-list-bullet">✦</span>
+                          <span><strong>Frontend:</strong> React, Tailwind CSS, dan Vite.</span>
+                        </li>
+                        <li className="detail-list-item">
+                          <span className="detail-list-bullet">✦</span>
+                          <span><strong>Penerbitan:</strong> Cloudflare Pages / Vercel Edge Network.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Reveal>
+              </>
+            )}
 
             {/* ========================================================= */}
             {/* KONTEN KHUSUS: LIFEHUB AI WORKSPACE */}
@@ -360,22 +428,22 @@ function ProjectDetailPage() {
             )}
 
             {/* ========================================================= */}
-            {/* KONTEN KHUSUS: AURA GLOBAL WEB STUDIO */}
+            {/* KONTEN KHUSUS: IOT & HARDWARE EMBEDDED SYSTEMS */}
             {/* ========================================================= */}
-            {project.slug === 'aura-global' && (
+            {project.slug === 'iot-embedded-automation' && (
               <>
                 <Reveal effect="fade-up" delay={200}>
                   <div className="detail-card">
                     <h2 className="detail-card-title">
                       <span className="pill-accent-orange" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>01</span>
-                      <span>Inisiatif Bisnis Layanan Pembuatan Website</span>
+                      <span>Awal Mula Ketertarikan: Eksperimen Mikrokontroler</span>
                     </h2>
                     <div className="detail-prose">
                       <p>
-                        <strong>AURA GLOBAL</strong> adalah unit studio web independen yang saya dirikan untuk menyediakan solusi pembuatan website profesional bagi pelaku usaha mikro, kecil, dan menengah (UMKM) serta profil bisnis lokal di Majalengka dan sekitarnya.
+                        Ketertarikan saya pada dunia komputasi bermula sejak awal kelas 9 SMP melalui eksplorasi perangkat keras dan mikrokontroler: <strong>Arduino Uno</strong> dan modul <strong>ESP8266 / ESP32 (Internet of Things)</strong>.
                       </p>
                       <p>
-                        Banyak pelaku usaha yang ingin memperluas jangkauan pemasarannya ke internet, namun sering terkendala biaya agensi yang tinggi atau platform instan yang menghasilkan tampilan berat dan lambat dibuka di ponsel pelanggan. Lewat AURA GLOBAL, saya menawarkan layanan yang transparan, terjangkau, dan mengutamakan kecepatan akses.
+                        Bagi saya, melihat sebaris kode logika mampu menyalakan lampu indikator, membaca sensor suhu/gerak secara real-time, atau mengirimkan data nirkabel ke sistem lokal adalah keajaiban rekayasa yang membentuk pola pikir komputasi saya sejak usia dini.
                       </p>
                     </div>
                   </div>
@@ -385,33 +453,33 @@ function ProjectDetailPage() {
                   <div className="detail-card">
                     <h2 className="detail-card-title">
                       <span className="pill-accent-orange" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>02</span>
-                      <span>Kebutuhan Bisnis yang Ingin Saya Bantu</span>
+                      <span>Eksplorasi &amp; Komponen yang Digunakan</span>
                     </h2>
                     <div className="detail-prose">
                       <p>
-                        Fokus utama AURA GLOBAL adalah menjawab kebutuhan praktis pelaku usaha:
+                        Fokus eksperimen mandiri yang saya bangun meliputi:
                       </p>
                       <ul className="detail-list">
                         <li className="detail-list-item">
                           <span className="detail-list-bullet">▪</span>
-                          <span><strong>Kredibilitas Profil Usaha:</strong> Menyediakan landing page resmi dengan domain sendiri sehingga bisnis terlihat tepercaya dan profesional di mata calon pembeli.</span>
+                          <span><strong>Mikrokontroler Arduino Uno &amp; Nano:</strong> Memprogram logika input-output digital/analog menggunakan bahasa C++.</span>
                         </li>
                         <li className="detail-list-item">
                           <span className="detail-list-bullet">▪</span>
-                          <span><strong>Kecepatan Akses di Jaringan Seluler:</strong> Menggunakan struktur HTML5 semantik dan Tailwind CSS tanpa plugin yang tidak perlu, sehingga website terbuka dalam hitungan detik di ponsel.</span>
+                          <span><strong>Modul Nirkabel ESP8266 &amp; ESP32:</strong> Menghubungkan modul hardware ke jaringan Wi-Fi lokal untuk pengiriman data telemetri.</span>
                         </li>
                         <li className="detail-list-item">
                           <span className="detail-list-bullet">▪</span>
-                          <span><strong>Keterbacaan Mesin Pencari (SEO Dasar):</strong> Menata tag meta judul, deskripsi, Open Graph, dan sitemap XML agar profil bisnis mudah terindeks saat dicari di Google.</span>
+                          <span><strong>Integrasi Sensor Fisik:</strong> Membaca sensor suhu, kelembapan, ultrasonik, dan aktuator relay.</span>
                         </li>
                         <li className="detail-list-item">
                           <span className="detail-list-bullet">▪</span>
-                          <span><strong>Kemudahan Kontak WhatsApp:</strong> Memasang tombol aksi langsung menuju WhatsApp pemilik usaha tanpa alur formulir yang berbelit-belit.</span>
+                          <span><strong>Disiplin Efisiensi Memori:</strong> Belajar mengoptimalkan siklus prosesor dan alokasi memori terbatas pada mikrokontroler.</span>
                         </li>
                       </ul>
                       <div className="detail-callout callout-orange">
                         <p>
-                          <strong>Etika &amp; Fakta Bisnis:</strong> Saya menjalankan studio ini secara mandiri dengan kejujuran teknis. Tidak ada testimoni fiktif atau klaim omzet berlebihan; portofolio dan layanan dapat dilihat langsung di situs resmi.
+                          <strong>Jembatan ke Software Engineering:</strong> Fondasi logika mikrokontroler ini menjadi modal berharga ketika saya beralih mendalami arsitektur web modern, rekayasa perangkat lunak, dan keamanan siber di sekolah kejuruan.
                         </p>
                       </div>
                     </div>
@@ -422,35 +490,12 @@ function ProjectDetailPage() {
                   <div className="detail-card">
                     <h2 className="detail-card-title">
                       <span className="pill-accent-orange" style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.85rem' }}>03</span>
-                      <span>Layanan yang Tersedia di AURA GLOBAL</span>
+                      <span>Keterhubungan dengan Keamanan Siber</span>
                     </h2>
                     <div className="detail-prose">
                       <p>
-                        Paket solusi yang saya tawarkan mencakup:
+                        Saat modul ESP mulai terhubung ke jaringan internet, timbul rasa ingin tahu mengenai bagaimana data tersebut diamankan dari penyadapan atau serangan pihak luar. Rasa penasaran tersebut memicu saya mendalami <strong>Cybersecurity</strong> hingga meraih sertifikasi resmi <strong>Fortinet NSE 3</strong> dan <strong>Cisco Networking Academy</strong>.
                       </p>
-                      <ul className="detail-list">
-                        <li className="detail-list-item">
-                          <span className="detail-list-bullet">✦</span>
-                          <span><strong>Website Profil Bisnis &amp; UMKM:</strong> Halaman landing page lengkap dengan profil usaha, jam operasional, dan galeri produk.</span>
-                        </li>
-                        <li className="detail-list-item">
-                          <span className="detail-list-bullet">✦</span>
-                          <span><strong>Redesain &amp; Modernisasi Web:</strong> Merapikan tata letak website lama agar lebih segar, proporsional, dan nyaman dibaca.</span>
-                        </li>
-                        <li className="detail-list-item">
-                          <span className="detail-list-bullet">✦</span>
-                          <span><strong>Struktur Semantik &amp; SEO Dasar:</strong> Memperbaiki hierarki heading dan metadata Open Graph.</span>
-                        </li>
-                        <li className="detail-list-item">
-                          <span className="detail-list-bullet">✦</span>
-                          <span><strong>Katalog Produk Digital:</strong> Etalase daftar menu atau barang dagangan yang rapi dan mudah diakses dari smartphone.</span>
-                        </li>
-                      </ul>
-                      <div style={{ marginTop: '1.25rem' }}>
-                        <Link to="/layanan" className="secondary-cta-btn">
-                          Lihat Rincian Layanan Lengkap ↗
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </Reveal>
@@ -538,13 +583,13 @@ function ProjectDetailPage() {
                 <div className="more-work-img-box">
                   <BrowserPreviewFrame
                     title={item.title}
-                    url={item.link || (item.isConcept ? 'nexus.internal.concept' : 'https://auraglobal.my.id/')}
+                    url={item.link || (item.isConcept ? 'nexus.internal.concept' : 'iot.internal.hardware')}
                     imageSrc={item.image}
                     alt={item.imageAlt}
                     isConcept={item.isConcept}
                     aspectRatio="16/10"
                     minHeight="170px"
-                    initials={item.slug === 'aura-global' ? 'AG' : item.slug === 'lifehub-ai' ? 'LH' : 'NX'}
+                    initials={item.slug === 'iot-embedded-automation' ? 'IOT' : item.slug === 'lifehub-ai' ? 'LH' : 'NX'}
                   />
                 </div>
                 <div className="more-work-info">

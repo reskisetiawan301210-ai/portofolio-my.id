@@ -55,9 +55,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://reskisetiawan-dev.my.id/images/projects/aura-global.webp</image:loc>
-      <image:title>AURA GLOBAL Web Studio - Jasa Pembuatan Website</image:title>
-      <image:caption>Tangkapan layar antarmuka beranda AURA GLOBAL Web Studio karya Reski Setiawan</image:caption>
+      <image:loc>https://reskisetiawan-dev.my.id/images/projects/iot-systems.webp</image:loc>
+      <image:title>IoT Smart Embedded Systems - Arduino &amp; ESP</image:title>
+      <image:caption>Visualisasi proyek mikrokontroler Arduino dan modul ESP Internet of Things karya Reski Setiawan</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://reskisetiawan-dev.my.id/images/projects/lifehub-ai.webp</image:loc>
@@ -74,13 +74,13 @@
   <!-- 4. HALAMAN DIREKTORI LAYANAN WEB -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/layanan</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
-      <image:loc>https://reskisetiawan-dev.my.id/images/projects/aura-global.webp</image:loc>
+      <image:loc>https://reskisetiawan-dev.my.id/images/projects/iot-systems.webp</image:loc>
       <image:title>Layanan Pembuatan Website &amp; Web Dev – Reski Setiawan</image:title>
-      <image:caption>Layanan studio pembuatan website bisnis dan UMKM oleh Reski Setiawan melalui AURA GLOBAL</image:caption>
+      <image:caption>Layanan rekayasa website dan pengembangan frontend oleh Reski Setiawan</image:caption>
     </image:image>
   </url>
 
@@ -212,16 +212,16 @@
     </image:image>
   </url>
 
-  <!-- Artikel 4: Mendirikan AURA GLOBAL Web Studio -->
+  <!-- Artikel 4: Dari Arduino & ESP ke Software Engineering -->
   <url>
-    <loc>https://reskisetiawan-dev.my.id/blog/mendirikan-aura-global-jasa-website-majalengka</loc>
-    <lastmod>2026-10-18</lastmod>
+    <loc>https://reskisetiawan-dev.my.id/blog/dari-arduino-ke-software-engineering-iot-cybersecurity</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
-      <image:loc>https://reskisetiawan-dev.my.id/images/articles/aura-global.webp</image:loc>
-      <image:title>Mendirikan AURA GLOBAL: Membantu UMKM Membangun Kehadiran Digital</image:title>
-      <image:caption>Pengalaman Reski Setiawan mendirikan dan mengelola studio web AURA GLOBAL</image:caption>
+      <image:loc>https://reskisetiawan-dev.my.id/images/articles/iot-cybersecurity.webp</image:loc>
+      <image:title>Dari Arduino &amp; ESP ke Software Engineering: Eksplorasi Keamanan Siber</image:title>
+      <image:caption>Perjalanan Reski Setiawan dari mikrokontroler kelas 9 SMP hingga software engineering dan cybersecurity</image:caption>
     </image:image>
   </url>
 
@@ -295,13 +295,13 @@
        ======================================================== -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/proyek/aura-global</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
+    <priority>0.90</priority>
     <image:image>
       <image:loc>https://reskisetiawan-dev.my.id/images/projects/aura-global.webp</image:loc>
-      <image:title>AURA GLOBAL Web Studio - Jasa Website UMKM &amp; Bisnis</image:title>
-      <image:caption>Tangkapan layar antarmuka situs AURA GLOBAL Web Studio karya Reski Setiawan</image:caption>
+      <image:title>AURA GLOBAL Web Studio - Platform Layanan Web Modern</image:title>
+      <image:caption>Tangkapan layar beranda AURA GLOBAL Web Studio karya Reski Setiawan</image:caption>
     </image:image>
   </url>
   <url>
@@ -324,6 +324,17 @@
       <image:loc>https://reskisetiawan-dev.my.id/images/projects/nexus-ai-office.webp</image:loc>
       <image:title>NEXUS AI OFFICE - Arsitektur Konsep Multi-Agent Shared Workspace</image:title>
       <image:caption>Tangkapan layar antarmuka konsep ruang kerja multi-agent NEXUS AI OFFICE oleh Reski Setiawan</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/proyek/iot-embedded-automation</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/focus/robotics-hardware.webp</image:loc>
+      <image:title>IoT Smart Embedded Systems - Arduino &amp; ESP</image:title>
+      <image:caption>Visualisasi proyek mikrokontroler Arduino dan modul ESP Internet of Things karya Reski Setiawan</image:caption>
     </image:image>
   </url>
 
@@ -360,9 +371,9 @@
        ======================================================== -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/pengalaman/aura-global</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://reskisetiawan-dev.my.id/pengalaman/lifehub-ai</loc>
@@ -373,6 +384,12 @@
   <url>
     <loc>https://reskisetiawan-dev.my.id/pengalaman/nexus-ai-office</loc>
     <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://reskisetiawan-dev.my.id/pengalaman/iot-smart-systems</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

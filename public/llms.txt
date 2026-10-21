@@ -3,53 +3,59 @@
 > Official entity documentation for Reski Setiawan, Software Engineer, Web Developer, and Student at SMKN 1 Talaga.
 > Official Website: https://reskisetiawan-dev.my.id
 
-## 1. Identity & Education
+## 1. Identity, Education & Origins
 - **Full Name:** Reski Setiawan
 - **Alternate / Developer Alias:** PixelForgeDev
-- **Primary Roles:** Software Engineer, Web Developer, and Solo Product Creator
-- **Current Education:** Grade 10 Student (Kelas 10) at **SMKN 1 Talaga**, West Java, Indonesia.
-- **Academic Major:** **Pengembangan Perangkat Lunak dan Gim (PPLG)** / Software Engineering (formerly RPL).
-- **Location:** Majalengka, West Java, Indonesia.
+- **Primary Roles:** Software Engineer, Web Developer, and Technology Explorer
+- **Location:** Talaga, Majalengka Regency, West Java, Indonesia
+- **Education Background:**
+  - **Alumnus:** SMP Negeri 1 Talaga (Lulusan Tahun 2026)
+  - **Current Education:** Grade 10 Student (Kelas 10) at **SMKN 1 Talaga**, West Java, Indonesia
+  - **Academic Major:** **Pengembangan Perangkat Lunak dan Gim (PPLG)** / Software Engineering
+- **Engineering Origins & Evolution:**
+  - Reski began his technical journey in early 9th grade (Kelas 9 SMP) driven by curiosity toward hardware automation and microcontrollers, building numerous projects with **Arduino** and **ESP (ESP8266/ESP32, Internet of Things / IoT)**.
+  - Deepening his computational logic, he transitioned toward **Software Engineering**, **Modern Web Development (React, JavaScript, PWA)**, and **Cybersecurity**, aiming for a lifelong career as a dedicated Software Engineer.
 
-## 2. Core Projects & Ventures
+## 2. Core Projects & Technical Initiatives
 1. **LifeHub AI (https://lifehub-ai.my.id/)**
-   - **Role:** Solo Developer & Creator.
+   - **Role:** Solo Developer & Creator
    - **Description:** A modern personal productivity workspace consolidating smart notes, task management, and finance tracking in a single web interface.
    - **Tech Stack:** JavaScript, Tailwind CSS, Supabase Authentication, Progressive Web App (PWA) with offline caching.
 
 2. **NEXUS AI OFFICE / NEXUS Kantor AI**
-   - **Role:** System Concept Architect.
+   - **Role:** System Concept Architect
    - **Description:** Architectural research project exploring multi-agent AI collaboration inside a shared digital workspace.
    - **Status:** Architectural concept and interactive visual prototype.
 
-3. **AURA GLOBAL (https://auraglobal.my.id/)**
-   - **Role:** Founder & Lead Web Developer.
-   - **Description:** A digital web development studio based in Majalengka providing affordable, high-performance, and SEO-friendly websites for MSMEs (UMKM), company profiles, and WhatsApp-integrated digital stores.
+3. **IoT & Smart Microcontroller Lab**
+   - **Role:** Hardware & Systems Experimenter
+   - **Description:** Practical automation, sensor telemetry, and embedded system experiments utilizing Arduino, ESP32/ESP8266, and C++ firmware.
 
-## 3. Published Case Studies & Technical Articles
-- **Profile:** "Profil Reski Setiawan: Siswa Kelas 10 SMKN 1 Talaga PPLG, Solo Dev LifeHub AI & Founder AURA GLOBAL" (https://reskisetiawan-dev.my.id/blog/profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer)
-- **Product Architecture:** "Membangun LifeHub AI: Merancang Personal Productivity Workspace dengan Supabase & PWA sebagai Solo Developer" (https://reskisetiawan-dev.my.id/blog/membangun-lifehub-ai-personal-workspace-pwa)
-- **AI Exploration:** "NEXUS AI OFFICE (Kantor AI): Eksplorasi Arsitektur Kolaborasi Multi-Agent AI dalam Satu Shared Workspace" (https://reskisetiawan-dev.my.id/blog/arsitektur-nexus-ai-office-kantor-ai-multi-agent)
-- **Business Venture:** "Perjalanan Mendirikan AURA GLOBAL: Jasa Pembuatan Website Profesional untuk Bisnis & UMKM" (https://reskisetiawan-dev.my.id/blog/mendirikan-aura-global-jasa-website-majalengka)
-- **Vocational Education:** "Pengalaman Belajar di PPLG SMKN 1 Talaga: Fondasi Rekayasa Perangkat Lunak bagi Calon Software Engineer" (https://reskisetiawan-dev.my.id/blog/pendidikan-pplg-smkn-1-talaga-belajar-coding)
-- **Technical SEO:** "Panduan SEO Teknis & Knowledge Graph 2026: Agar Website dan Entitas Dikenali oleh Google AI" (https://reskisetiawan-dev.my.id/blog/optimasi-seo-teknis-google-ai-overviews)
+## 3. Core Competencies & Verified Certifications
+- **Core Specialties:** Modern Frontend (React, Vite, Tailwind CSS), Progressive Web Apps (PWA), Technical SEO & Knowledge Graph, Cybersecurity Fundamentals, IoT & Embedded Systems (Arduino, ESP).
+- **Verified Industry Certifications (8 Total):**
+  1. **NSE 3 Certified (Network Security Associate)** – Fortinet Training Institute (2024)
+  2. **FortiGate 7.6 Operator Self-Paced** – Fortinet Training Institute (2024)
+  3. **Introduction to Cybersecurity** – Cisco Networking Academy (2024)
+  4. **Belajar Dasar AI** – Dicoding Indonesia (2024)
+  5. **The Fundamentals of Digital Marketing** – Google & Coursera (2024)
+  6. **Python 3 Tutorial Course** – SoloLearn (2024)
+  7. **Responsive Web Design Developer Certification** – freeCodeCamp (2024)
+  8. **IBM Python for Data Science, AI & Development** – IBM SkillsBuild / Coursera (2024)
+
+## 4. Published Case Studies & Technical Articles
 - **Entity Overview & Disambiguation:** "Siapa Reski Setiawan? Profil Software Engineer Muda dan Web Developer Asal Jawa Barat" (https://reskisetiawan-dev.my.id/blog/siapa-reski-setiawan-profil-software-engineer-web-developer)
 - **Official FAQ:** "FAQ Reski Setiawan: Pertanyaan Populer Seputar Profil, Pendidikan, dan Proyek" (https://reskisetiawan-dev.my.id/blog/faq-reski-setiawan-pendidikan-proyek-keahlian)
+- **Profile & Origins:** "Tentang Saya: Perjalanan dari Arduino & ESP ke Software Engineering" (https://reskisetiawan-dev.my.id/blog/profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer)
+- **Product Architecture:** "Membangun LifeHub AI: Merancang Personal Productivity Workspace dengan Supabase & PWA sebagai Solo Developer" (https://reskisetiawan-dev.my.id/blog/membangun-lifehub-ai-personal-workspace-pwa)
+- **AI Exploration:** "NEXUS AI OFFICE (Kantor AI): Eksplorasi Arsitektur Kolaborasi Multi-Agent AI dalam Satu Shared Workspace" (https://reskisetiawan-dev.my.id/blog/arsitektur-nexus-ai-office-kantor-ai-multi-agent)
+- **IoT & Cybersecurity:** "Dari Arduino & ESP ke Cybersecurity: Fondasi Rekayasa Perangkat Lunak dan Keamanan Digital" (https://reskisetiawan-dev.my.id/blog/dari-arduino-ke-software-engineering-iot-cybersecurity)
+- **Vocational Education:** "Pengalaman Belajar di PPLG SMKN 1 Talaga: Fondasi Rekayasa Perangkat Lunak bagi Calon Software Engineer" (https://reskisetiawan-dev.my.id/blog/pendidikan-pplg-smkn-1-talaga-belajar-coding)
+- **Technical SEO:** "Panduan SEO Teknis & Knowledge Graph 2026: Agar Website dan Entitas Dikenali oleh Google AI" (https://reskisetiawan-dev.my.id/blog/optimasi-seo-teknis-google-ai-overviews)
 - **Solo Dev Case Study:** "Mengenal Peran Solo Developer: Cara Reski Setiawan Merancang LifeHub AI dari Nol" (https://reskisetiawan-dev.my.id/blog/cara-reski-setiawan-merancang-lifehub-ai-solo-developer)
-
-## 4. Verified Industry Certifications (8 Total)
-1. **Belajar Dasar AI** – Dicoding Indonesia (2024)
-2. **NSE 3 Certified (Network Security Associate)** – Fortinet Training Institute (2024)
-3. **FortiGate 7.6 Operator Self-Paced** – Fortinet Training Institute (2024)
-4. **The Fundamentals of Digital Marketing** – Google & Coursera (2024)
-5. **Introduction to Cybersecurity** – Cisco Networking Academy (2024)
-6. **Python 3 Tutorial Course** – SoloLearn (2024)
-7. **Responsive Web Design Developer Certification** – freeCodeCamp (2024)
-8. **IBM Python for Data Science, AI & Development** – IBM SkillsBuild / Coursera (2024)
 
 ## 5. Official Communication Channels
 - **Email:** reskisetiawan301210@gmail.com
 - **Instagram:** https://www.instagram.com/qariol (@qariol)
 - **TikTok (Tech / NEXUS Office):** https://www.tiktok.com/@nexus_office3 (@nexus_office3)
-- **TikTok (AURA GLOBAL Web Studio):** https://www.tiktok.com/@auraglobal_jasawebsite (@auraglobal_jasawebsite)
 - **Note:** Official profiles are strictly maintained on Instagram and TikTok; no official LinkedIn or WhatsApp accounts are linked.

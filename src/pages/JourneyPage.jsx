@@ -12,7 +12,7 @@ function JourneyPage() {
     '@type': 'Article',
     headline: 'Perjalanan Saya: Mempelajari Pemrograman & Membangun Produk Digital Mandiri',
     description:
-      'Catatan perjalanan Reski Setiawan dari baris kode pertama, menempuh pendidikan vokasi PPLG di SMKN 1 Talaga, hingga merilis produk digital LifeHub AI dan studio web AURA GLOBAL.',
+      'Catatan perjalanan Reski Setiawan dari baris kode pertama sejak kelas 9 SMP melalui Arduino & ESP, menempuh pendidikan vokasi PPLG di SMKN 1 Talaga, hingga merilis produk digital LifeHub AI.',
     author: {
       '@type': 'Person',
       name: siteConfig.name,
@@ -38,12 +38,12 @@ function JourneyPage() {
       step: '01',
       badge: 'LANGKAH AWAL',
       accentClass: 'pill-accent-blue',
-      title: 'Menemukan Minat & Mempelajari Fondasi Web',
-      desc: 'Perjalanan saya dimulai dari rasa ingin tahu yang sederhana: bagaimana sebuah website bekerja di balik layar? Saya mulai mempelajari dasar-dasar web melalui dokumentasi terbuka dan tutorial mandiri—menulis Semantic HTML5, menyusun tata letak dengan CSS, serta memahami manipulasi DOM dengan JavaScript.',
+      title: 'Eksplorasi Awal: Mikrokontroler Arduino & ESP (Kelas 9 SMP)',
+      desc: 'Perjalanan saya bermula sejak awal kelas 9 SMP melalui eksplorasi perangkat keras dan mikrokontroler: Arduino Uno dan modul ESP (IoT). Dari melihat sebaris kode C++ mampu menggerakkan sensor fisik dan mengirim data nirkabel, rasa ingin tahu saya berkembang pesat ke ranah software engineering.',
       highlights: [
-        'Belajar logika dasar pemrograman dan alur percabangan (if-else)',
-        'Membangun halaman-halaman web statis sederhana untuk melatih ketelitian',
-        'Menyelesaikan sertifikasi dasar di platform freeCodeCamp dan SoloLearn',
+        'Bereksperimen dengan modul ESP8266/ESP32 dan pemrograman firmware C++',
+        'Memahami alur data serial, logika percabangan, dan alokasi memori hardware',
+        'Menyelesaikan sertifikasi dasar dan fondasi algoritma pemrograman',
       ],
     },
     {
@@ -72,14 +72,14 @@ function JourneyPage() {
     },
     {
       step: '04',
-      badge: 'UNIT BISNIS',
+      badge: 'KEAMANAN SIBER',
       accentClass: 'pill-accent-orange',
-      title: 'Mendirikan AURA GLOBAL Web Studio untuk UMKM',
-      desc: 'Melihat banyak pelaku usaha lokal dan UMKM di sekitar Jawa Barat yang belum memiliki kehadiran digital yang rapi, saya mendirikan AURA GLOBAL. Lewat studio ini, saya menawarkan jasa pembuatan website profil usaha yang cepat dimuat, berstruktur semantik bersih, dan ramah anggaran bagi pemilik usaha kecil.',
+      title: 'Mendalami Keamanan Siber (Cybersecurity) & Jaringan',
+      desc: 'Menyadari pentingnya aspek pertahanan sistem saat perangkat terhubung ke internet, saya mendalami arsitektur cybersecurity secara intensif. Saya mengikuti pelatihan resmi internasional hingga meraih kredensial Fortinet NSE 3, FortiGate 7.6 Operator, dan Cisco Networking Academy Cybersecurity.',
       highlights: [
-        'Menerapkan standar Core Web Vitals dan optimasi gambar modern (.webp)',
-        'Menyusun struktur semantik W3C yang siap dirayapi oleh mesin pencari Google',
-        'Menyediakan tautan resmi dan etalase layanan di https://auraglobal.my.id/',
+        'Memahami arsitektur keamanan jaringan bertingkat dan mitigasi zero-trust',
+        'Sertifikasi Fortinet NSE 3 Certified in Cybersecurity & FortiGate 7.6 Operator',
+        'Sertifikasi Cisco Networking Academy: Introduction to Cybersecurity',
       ],
     },
     {
@@ -100,7 +100,7 @@ function JourneyPage() {
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Perjalanan Rekayasa &amp; Belajar Coding – Reski Setiawan"
-        description="Narasi jujur perjalanan belajar Reski Setiawan: langkah awal belajar coding, menempuh studi di SMKN 1 Talaga PPLG, hingga membangun LifeHub AI dan AURA GLOBAL."
+        description="Narasi jujur perjalanan belajar Reski Setiawan: langkah awal belajar coding sejak kelas 9 SMP melalui Arduino & ESP, menempuh studi di SMKN 1 Talaga PPLG, hingga membangun LifeHub AI."
         path="/perjalanan"
         image="/images/og-image.png"
       />

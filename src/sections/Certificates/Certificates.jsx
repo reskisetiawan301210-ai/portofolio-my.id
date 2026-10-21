@@ -28,13 +28,28 @@ function Certificates() {
               >
                 <div className="certificate-preview-wrap">
                   <div className="certificate-zoom-wrap">
-                    <div className="focus-card-visual">
-                      <div className="focus-visual-badge">
-                        <span className="focus-badge-tag">{item.tag}</span>
-                        <span className="focus-badge-icon">✦</span>
+                    {item.image ? (
+                      <div className="focus-card-media-wrap">
+                        <img
+                          src={item.image}
+                          alt={item.imageAlt || item.title}
+                          className="focus-card-img"
+                          loading="lazy"
+                        />
+                        <div className="focus-media-badge-overlay">
+                          <span className="focus-badge-tag">{item.tag}</span>
+                          <span className="focus-badge-icon">✦</span>
+                        </div>
                       </div>
-                      <div className="focus-visual-title">{item.title}</div>
-                    </div>
+                    ) : (
+                      <div className="focus-card-visual">
+                        <div className="focus-visual-badge">
+                          <span className="focus-badge-tag">{item.tag}</span>
+                          <span className="focus-badge-icon">✦</span>
+                        </div>
+                        <div className="focus-visual-title">{item.title}</div>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="certificate-info">

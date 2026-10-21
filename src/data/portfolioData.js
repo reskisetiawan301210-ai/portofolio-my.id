@@ -10,12 +10,12 @@ export const aboutData = {
   name: 'Reski Setiawan',
   role: 'Software Engineer & Web Developer',
   location: 'Jawa Barat, Indonesia',
-  p1: 'Halo, saya Reski Setiawan, siswa kelas 10 SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG), software engineer, dan web developer dari Jawa Barat. Saya adalah solo developer di balik LifeHub AI (platform personal workspace produktif) dan perancang konsep NEXUS AI OFFICE (NEXUS Kantor AI). Selain itu, saya mendirikan AURA GLOBAL, studio pembuatan website profesional yang membantu UMKM dan bisnis lokal memiliki kehadiran digital kredibel.',
-  p2: 'Selain web modern (React, Vite, Tailwind CSS, JavaScript, PHP, Laravel), saya aktif mengeksplorasi kecerdasan buatan, sistem multi-agent, robotics, dan cybersecurity. Saya belajar bereksperimen dengan C++ dan Python untuk mikrokontroler, sembari terus membangun produk digital mandiri di samping kegiatan belajar di sekolah vokasi.',
+  p1: 'Halo, saya Reski Setiawan, seorang software engineer dan web developer muda asal Talaga, Majalengka, Jawa Barat. Saya merupakan alumni SMP Negeri 1 Talaga (lulusan 2026) dan saat ini menempuh pendidikan vokasi di SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak). Saya adalah solo developer di balik LifeHub AI (platform personal workspace produktif) dan perancang konsep arsitektur NEXUS AI OFFICE (NEXUS Kantor AI).',
+  p2: 'Perjalanan koding saya bermula sejak awal kelas 9 SMP melalui kecintaan pada eksperimen perangkat keras dan mikrokontroler (Arduino serta modul ESP / IoT). Logika komputasi tersebut memacu saya untuk memperdalam software engineering, arsitektur web modern (React, Vite, Tailwind CSS, JavaScript), serta keamanan siber (cybersecurity) dengan sertifikasi resmi Fortinet NSE 3 dan Cisco Networking Academy.',
   currentFocus: [
     'Solo developer di balik platform LifeHub AI (https://lifehub-ai.my.id/) berbasis PWA & Supabase',
     'Merancang arsitektur konsep shared workspace di NEXUS AI OFFICE (NEXUS Kantor AI)',
-    'Mengembangkan website bisnis & UMKM ramah anggaran lewat AURA GLOBAL (https://auraglobal.my.id/)',
+    'Mendalami software engineering modern, keamanan siber, dan web architecture',
     'Menempuh pendidikan vokasi kelas 10 jurusan PPLG / RPL di SMKN 1 Talaga, Jawa Barat',
   ],
 }
@@ -43,29 +43,29 @@ export const techStackData = [
   { name: 'Python', category: 'Robotics & Eksplorasi', role: 'Eksplorasi skrip dan pengolahan data' },
 ]
 
-// 4 LAYANAN NYATA AURA GLOBAL
+// 4 LAYANAN WEB REKAYASA & PENGEMBANGAN
 export const servicesData = [
   {
     id: 1,
     slug: 'website-bisnis-umkm',
     tag: '01',
-    title: 'Website Profil Bisnis & UMKM',
+    title: 'Website Profil Bisnis & Portfolio',
     shortDesc:
-      'Membangun website profil usaha dan landing page yang cepat dimuat, responsif di ponsel, serta terstruktur secara semantik untuk memperkenalkan bisnis kepada calon pelanggan.',
+      'Membangun website profil dan landing page yang cepat dimuat, responsif di ponsel, serta terstruktur secara semantik untuk memperkenalkan bisnis kepada calon klien.',
     clientBenefit:
-      'Bisnis Anda memiliki kehadiran online profesional yang teratur dan memudahkan calon pelanggan menemukan informasi usaha.',
+      'Bisnis atau profil Anda memiliki kehadiran online profesional yang teratur dan memudahkan calon klien menemukan informasi resmi.',
     summary:
-      'Layanan pembuatan website yang saya hadirkan untuk membantu UMKM dan pelaku usaha lokal membangun kehadiran digital kredibel dengan struktur semantik bersih.',
+      'Layanan rekayasa website yang saya hadirkan untuk membantu bisnis, organisasi, dan portofolio membangun kehadiran digital kredibel dengan struktur semantik bersih.',
     provenRole:
       'Saya merancang tata letak antarmuka, menulis kode semantik HTML/CSS/JS, dan mengoptimalkan performa muat halaman di berbagai perangkat.',
     scope: [
-      'Pembuatan landing page profil usaha atau profil perusahaan',
+      'Pembuatan landing page profil bisnis atau portfolio representatif',
       'Desain responsif yang optimal diakses dari ponsel maupun desktop',
       'Penyusunan struktur semantik standar W3C yang siap dibaca mesin pencari',
       'Aset visual ringan demi kecepatan akses di jaringan seluler',
     ],
     tech: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Semantic SEO'],
-    status: 'Tersedia di AURA GLOBAL',
+    status: 'Layanan Rekayasa Web',
   },
   {
     id: 2,
@@ -87,7 +87,7 @@ export const servicesData = [
       'Pengujian kenyamanan tampilan di berbagai resolusi layar',
     ],
     tech: ['CSS3', 'Tailwind CSS', 'Responsive Layout'],
-    status: 'Tersedia di AURA GLOBAL',
+    status: 'Layanan Frontend & UI',
   },
   {
     id: 3,
@@ -109,7 +109,7 @@ export const servicesData = [
       'Pemeriksaan standar performa muat halaman dasar',
     ],
     tech: ['Technical SEO', 'HTML5 Semantik', 'Core Web Vitals'],
-    status: 'Tersedia di AURA GLOBAL',
+    status: 'Layanan Optimasi SEO',
   },
   {
     id: 4,
@@ -130,7 +130,7 @@ export const servicesData = [
       'Struktur tata letak ringan tanpa dependensi yang memperlambat akses',
     ],
     tech: ['JavaScript', 'HTML5', 'Tailwind CSS'],
-    status: 'Tersedia di AURA GLOBAL',
+    status: 'Layanan Pengembangan Aplikasi',
   },
 ]
 
@@ -139,24 +139,24 @@ export const experienceData = [
   {
     id: 1,
     slug: 'aura-global',
-    institution: 'AURA GLOBAL',
-    role: 'Inisiator & Pengembang Web Studio',
-    status: 'Aktif',
+    institution: 'AURA GLOBAL Web Studio',
+    role: 'Inisiatif Web Studio',
+    status: 'Bisnis Aktif',
     tag: '01',
     oneLiner:
-      'Saya membangun dan mengelola studio jasa pembuatan website untuk UMKM dan pelaku usaha lokal.',
+      'Inisiatif studio pembuatan website profesional yang saya bangun untuk melayani kebutuhan profil usaha dan landing page modern.',
     shortDesc:
-      'Saya membangun dan mengelola studio jasa pembuatan website untuk UMKM dan pelaku usaha lokal.',
+      'Inisiatif studio pembuatan website profesional yang saya bangun untuk melayani kebutuhan profil usaha dan landing page modern.',
     summary:
-      'AURA GLOBAL adalah unit studio web yang saya inisiasi untuk menyediakan solusi website bisnis bagi pelaku usaha lokal di Jawa Barat dan sekitarnya.',
+      'AURA GLOBAL Web Studio adalah inisiatif mandiri yang saya jalankan untuk membantu bisnis lokal, UMKM, dan personal branding membangun website profesional berkinerja tinggi.',
     provenRole:
-      'Sebagai pengembang utama, saya merancang antarmuka, menulis kode website studio dan klien, serta mengonfigurasi struktur semantik dan performa.',
+      'Saya merancang arsitektur website, menyusun strategi SEO teknis lokal, dan mengoptimalkan performa halaman hingga mencapai skor PageSpeed optimal.',
     scope: [
-      'Pengembangan website resmi studio AURA GLOBAL dengan Tailwind CSS',
-      'Penyusunan paket website profil bisnis dan katalog produk untuk UMKM',
-      'Implementasi struktur kode semantik standar W3C yang ringan',
+      'Pengembangan website responsif dengan React, Tailwind CSS, dan Vite',
+      'Optimasi SEO teknis, metadata Schema.org, dan integrasi Google Maps/Search Console',
+      'Pembuatan desain antarmuka modern yang disesuaikan dengan identitas usaha',
     ],
-    tech: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Semantic SEO'],
+    tech: ['React', 'Tailwind CSS', 'Vite', 'Technical SEO'],
     link: 'https://auraglobal.my.id/',
     hasExternalLink: true,
   },
@@ -237,34 +237,36 @@ export const educationData = {
   tech: ['Pemrograman Dasar', 'HTML/CSS/JS', 'Algoritma'],
 }
 
-// 3 KARYA PILIHAN
+// KARYA & PROYEK PILIHAN
 export const projectsData = [
   {
     id: 1,
     slug: 'aura-global',
     tag: '01',
-    category: 'Bisnis',
+    category: 'Website Agensi & Portofolio',
+    badge: 'Real Project',
+    featured: true,
     title: 'AURA GLOBAL Web Studio',
     oneLiner:
-      'Web studio jasa pembuatan website profil usaha untuk UMKM dengan struktur semantik bersih dan tampilan responsif.',
+      'Platform web studio modern untuk layanan pembuatan website bisnis, UMKM, dan profil profesional dengan performa optimal.',
     shortDesc:
-      'Web studio jasa pembuatan website profil usaha untuk UMKM dengan struktur semantik bersih dan tampilan responsif.',
+      'Platform web studio modern untuk layanan pembuatan website bisnis, UMKM, dan profil profesional dengan performa optimal.',
     summary:
-      'Melalui AURA GLOBAL, saya membantu UMKM dan pelaku usaha lokal membangun kehadiran digital yang kredibel, cepat diakses, dan berstruktur rapi.',
+      'AURA GLOBAL Web Studio adalah showcase layanan digital dan website agensi yang saya rancang dengan standar performa modern, tipografi bersih, dan arsitektur responsif.',
     provenRole:
-      'Saya merancang antarmuka situs studio, menulis kode web semantik, mengoptimalkan tata letak responsif, dan menyusun halaman yang ringan.',
+      'Saya merancang seluruh antarmuka web, menerapkan optimasi performa gambar WebP, menyusun struktur data terstruktur Schema.org, dan mengintegrasikan form pemesanan.',
     scope: [
-      'Landing page profil usaha dengan tata letak bersih dan cepat dimuat',
-      'Struktur semantik HTML5 standar W3C yang mudah dirayapi mesin pencari',
-      'Desain responsif penuh yang nyaman diakses dari ponsel maupun desktop',
+      'Perancangan antarmuka agensi digital yang responsif dan elegan',
+      'Optimasi performa muat halaman dengan skor Google PageSpeed 95+',
+      'Penerapan metadata Open Graph dan Schema.org untuk indexing optimal',
     ],
-    status: 'Bisnis Aktif',
-    tech: 'HTML5 · Tailwind CSS · JavaScript · Semantic SEO',
-    techList: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Semantic SEO'],
+    status: 'Platform Live',
+    tech: 'React · Tailwind CSS · Vite · SEO Metadata',
+    techList: ['React', 'Tailwind CSS', 'Vite', 'SEO Metadata', 'PWA Ready'],
     link: 'https://auraglobal.my.id/',
     hasExternalLink: true,
     image: '/images/projects/aura-global.webp',
-    imageAlt: 'Tangkapan layar bagian atas beranda AURA GLOBAL Web Studio',
+    imageAlt: 'Tangkapan layar beranda AURA GLOBAL Web Studio',
     isConcept: false,
   },
   {
@@ -272,6 +274,8 @@ export const projectsData = [
     slug: 'lifehub-ai',
     tag: '02',
     category: 'Produk',
+    badge: 'Real Project',
+    featured: true,
     title: 'LifeHub AI Workspace',
     oneLiner:
       'Platform ruang kerja pribadi yang menyatukan pencatatan keuangan, manajemen tugas, dan catatan dengan dukungan PWA.',
@@ -300,6 +304,8 @@ export const projectsData = [
     slug: 'nexus-ai-office',
     tag: '03',
     category: 'Konsep',
+    badge: 'Exploration',
+    featured: true,
     title: 'NEXUS AI OFFICE',
     oneLiner:
       'Konsep ruang kerja kolaborasi multi-agent AI di mana beberapa agent berkoordinasi dalam satu workspace bersama.',
@@ -323,6 +329,36 @@ export const projectsData = [
     imageAlt: 'Tangkapan layar antarmuka konsep workspace kolaboratif multi-agent NEXUS AI OFFICE',
     isConcept: true,
   },
+  {
+    id: 4,
+    slug: 'iot-embedded-automation',
+    tag: '04',
+    category: 'Hardware & IoT',
+    badge: 'Real Project',
+    featured: false,
+    title: 'IoT Embedded Systems (Arduino & ESP)',
+    oneLiner:
+      'Eksplorasi mikrokontroler hardware Arduino dan modul ESP (IoT) untuk otomasi fisik dan sistem telemetri data nirkabel.',
+    shortDesc:
+      'Eksplorasi mikrokontroler hardware Arduino dan modul ESP (IoT) untuk otomasi fisik dan sistem telemetri data nirkabel.',
+    summary:
+      'Rangkaian eksperimen sistem tertanam dan Internet of Things yang saya kembangkan sejak awal kelas 9 SMP, memadukan logika firmware C++ dan modul nirkabel ESP.',
+    provenRole:
+      'Saya merancang skema mikrokontroler, memprogram logika pembacaan sensor fisik, dan menguji komunikasi data lokal nirkabel.',
+    scope: [
+      'Pemrograman firmware mikrokontroler Arduino dan modul ESP32/ESP8266',
+      'Integrasi sensor fisik untuk pemantauan telemetri data',
+      'Fondasi logika komputasi awal yang memperkuat transisi ke rekayasa perangkat lunak',
+    ],
+    status: 'Riset & Eksperimen Mandiri',
+    tech: 'Arduino C++ · ESP32/ESP8266 · IoT Sensors · Microcontroller',
+    techList: ['Arduino C++', 'ESP32/ESP8266', 'IoT Sensors', 'Microcontroller'],
+    link: null,
+    hasExternalLink: false,
+    image: '/images/focus/robotics-hardware.webp',
+    imageAlt: 'Visualisasi proyek mikrokontroler Arduino dan modul ESP Internet of Things',
+    isConcept: false,
+  },
 ]
 
 // 3 AREA FOKUS STUDI (Area belajar, sudut pandang orang pertama)
@@ -333,6 +369,8 @@ export const focusAreasData = [
     tag: 'FOKUS 01',
     status: 'Area Belajar',
     title: 'Kecerdasan Buatan & Alur Kerja Agent',
+    image: '/images/focus/ai-workflows.webp',
+    imageAlt: 'Visualisasi riset kecerdasan buatan, machine learning, dan arsitektur alur kerja agent otonom',
     oneLiner:
       'Mempelajari dasar orkestrasi alur kerja multi-agent dan integrasi antarmuka model bahasa ke dalam aplikasi web.',
     shortDesc:
@@ -359,6 +397,8 @@ export const focusAreasData = [
     tag: 'FOKUS 02',
     status: 'Fondasi Teknis',
     title: 'Fondasi Keamanan Siber & Aplikasi Web',
+    image: '/images/focus/cybersecurity.webp',
+    imageAlt: 'Visualisasi keamanan siber, pertahanan jaringan digital, dan perlindungan aplikasi web',
     oneLiner:
       'Mempelajari prinsip keamanan web dasar, mitigasi kerentanan umum, dan praktik autentikasi aman.',
     shortDesc:
@@ -385,6 +425,8 @@ export const focusAreasData = [
     tag: 'FOKUS 03',
     status: 'Eksplorasi Minat',
     title: 'Robotika & Antarmuka Perangkat Keras',
+    image: '/images/focus/robotics-hardware.webp',
+    imageAlt: 'Visualisasi perangkat keras mikrokontroler Arduino, sensor elektronik, dan sistem tertanam',
     oneLiner:
       'Mempelajari dasar logika mikrokontroler, pembacaan sensor, dan visualisasi data ke antarmuka web.',
     shortDesc:

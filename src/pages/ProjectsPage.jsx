@@ -13,7 +13,7 @@ function ProjectsPage() {
     '@type': 'CollectionPage',
     name: 'Karya & Proyek Resmi Reski Setiawan',
     description:
-      'Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, studio website AURA GLOBAL, dan eksplorasi konsep NEXUS AI OFFICE.',
+      'Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, IoT embedded systems Arduino & ESP, dan eksplorasi konsep NEXUS AI OFFICE.',
     url: `${siteConfig.siteUrl}/proyek`,
     mainEntity: {
       '@type': 'ItemList',
@@ -39,7 +39,7 @@ function ProjectsPage() {
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Karya &amp; Proyek Digital – Reski Setiawan"
-        description="Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, studio website AURA GLOBAL, dan eksplorasi konsep NEXUS AI OFFICE."
+        description="Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, IoT embedded systems Arduino & ESP, dan eksplorasi konsep NEXUS AI OFFICE."
         path="/proyek"
         image="/images/og-image.png"
       />

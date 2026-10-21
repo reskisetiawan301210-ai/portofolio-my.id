@@ -14,12 +14,6 @@ if (!fs.existsSync(outputDir)) {
 
 const targets = [
   {
-    name: 'AURA GLOBAL Web Studio',
-    id: 'aura-global',
-    url: 'https://auraglobal.my.id/',
-    outputFile: path.join(outputDir, 'aura-global.webp'),
-  },
-  {
     name: 'LifeHub AI',
     id: 'lifehub-ai',
     url: 'https://lifehub-ai.my.id/',

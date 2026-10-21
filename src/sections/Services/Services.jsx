@@ -80,7 +80,7 @@ function Services() {
                           </div>
                           <div className="mockup-body">
                             <div className="mockup-hero-block">
-                              <span className="mockup-hero-title">AURA GLOBAL · {service.tag}</span>
+                              <span className="mockup-hero-title">WEB ENGINEERING · {service.tag}</span>
                               <p className="mockup-hero-text">{service.clientBenefit || service.provenRole}</p>
                             </div>
                             <div className="mockup-features-row">

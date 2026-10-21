@@ -103,6 +103,20 @@ function FocusAreaDetailPage() {
           </Reveal>
         </div>
 
+        {/* Hero Visual Media Banner */}
+        {area.image && (
+          <Reveal effect="fade-up" delay={140}>
+            <div style={{ marginBottom: '2rem', borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--border-light)', maxHeight: '380px' }}>
+              <img
+                src={area.image}
+                alt={area.imageAlt || area.title}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                loading="eager"
+              />
+            </div>
+          </Reveal>
+        )}
+
         {/* Main Content Grid */}
         <div className="detail-content-grid">
           {/* Main Column */}

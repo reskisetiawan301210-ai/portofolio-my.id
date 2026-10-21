@@ -107,7 +107,7 @@ function generatePages() {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     name: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
-    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik studio web AURA GLOBAL, LifeHub AI, dan konsep NEXUS AI OFFICE.',
+    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer muda di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan keamanan siber.',
     url: `${SITE_URL}/tentang`,
     mainEntity: {
       '@type': 'Person',
@@ -120,10 +120,8 @@ function generatePages() {
       sameAs: [
         siteConfig.contacts.instagram.url,
         siteConfig.contacts.tiktokOffice.url,
-        siteConfig.contacts.tiktokStudio.url,
       ],
-      alumniOf: { '@type': 'EducationalOrganization', name: 'SMKN 1 Talaga' },
-      founder: { '@type': 'Organization', name: 'AURA GLOBAL', url: 'https://auraglobal.my.id/' },
+      alumniOf: { '@type': 'EducationalOrganization', name: 'SMP Negeri 1 Talaga' },
     },
     breadcrumb: {
       '@type': 'BreadcrumbList',
@@ -139,12 +137,12 @@ function generatePages() {
       <div class="container">
         <header class="detail-header-block">
           <h1 class="detail-title">Tentang Reski Setiawan</h1>
-          <p class="detail-lead">Halo, saya <strong>Reski Setiawan</strong>. Saya adalah software engineer dan web developer dari Jawa Barat yang fokus merancang website bisnis modern dan produk digital yang fungsional.</p>
+          <p class="detail-lead">Halo, saya <strong>Reski Setiawan</strong>. Saya adalah software engineer dan web developer dari Jawa Barat yang fokus pada rekayasa web modern, sistem berbasis AI, dan solusi digital terstruktur.</p>
         </header>
         <article class="detail-main-col">
           <p>${escapeHtml(aboutData.p1)}</p>
           <p>${escapeHtml(aboutData.p2)}</p>
-          <p>Melalui inisiatif bisnis AURA GLOBAL, saya membantu pelaku usaha UMKM dan bisnis lokal memiliki website profesional yang cepat, ramah mesin pencari, dan responsif. Di bidang produk, saya mengembangkan LifeHub AI sebagai platform produktivitas personal, serta meriset konsep koordinasi multi-agent melalui NEXUS AI OFFICE.</p>
+          <p>Di bidang produk, saya mengembangkan LifeHub AI sebagai platform produktivitas personal terintegrasi PWA, serta meriset konsep koordinasi multi-agent melalui NEXUS AI OFFICE. Berakar dari eksperimen hardware mikrokontroler (Arduino &amp; ESP) sejak kelas 9 SMP, saya terus memperdalam keahlian di bidang software engineering dan keamanan siber.</p>
         </article>
       </div>
     </main>
@@ -152,7 +150,7 @@ function generatePages() {
 
   writeRoute('/tentang', {
     title: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
-    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik studio web AURA GLOBAL, LifeHub AI, dan konsep NEXUS AI OFFICE.',
+    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer muda di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan keamanan siber.',
     path: '/tentang',
     schema: aboutSchema,
     contentHtml: aboutContent,
@@ -160,7 +158,7 @@ function generatePages() {
 
   writeRoute('/profil', {
     title: 'Profil Reski Setiawan – Software Engineer & Web Developer',
-    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik studio web AURA GLOBAL, LifeHub AI, dan konsep NEXUS AI OFFICE.',
+    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer muda di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan keamanan siber.',
     path: '/profil',
     schema: {
       ...aboutSchema,
@@ -225,7 +223,7 @@ function generatePages() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Perjalanan Rekayasa & Belajar Coding – Reski Setiawan',
-    description: 'Narasi jujur perjalanan belajar Reski Setiawan: langkah awal belajar coding, menempuh studi di SMKN 1 Talaga PPLG, hingga membangun LifeHub AI dan AURA GLOBAL.',
+    description: 'Narasi jujur perjalanan belajar Reski Setiawan: langkah awal belajar coding sejak kelas 9 SMP melalui Arduino & ESP, menempuh studi di SMKN 1 Talaga PPLG, hingga membangun LifeHub AI.',
     author: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
     url: `${SITE_URL}/perjalanan`,
     breadcrumb: {
@@ -239,7 +237,7 @@ function generatePages() {
 
   writeRoute('/perjalanan', {
     title: 'Perjalanan Rekayasa & Belajar Coding – Reski Setiawan',
-    description: 'Narasi jujur perjalanan belajar Reski Setiawan: langkah awal belajar coding, menempuh studi di SMKN 1 Talaga PPLG, hingga membangun LifeHub AI dan AURA GLOBAL.',
+    description: 'Narasi jujur perjalanan belajar Reski Setiawan: langkah awal belajar coding sejak kelas 9 SMP melalui Arduino & ESP, menempuh studi di SMKN 1 Talaga PPLG, hingga membangun LifeHub AI.',
     path: '/perjalanan',
     schema: journeySchema,
     contentHtml: `
@@ -247,7 +245,7 @@ function generatePages() {
         <div class="container">
           <header class="detail-header-block">
             <h1 class="detail-title">Perjalanan Belajar & Rekayasa Produk Digital</h1>
-            <p class="detail-lead">Catatan perjalanan saya dari baris kode pertama, menempuh pendidikan vokasi di SMKN 1 Talaga, hingga membangun platform LifeHub AI dan studio web AURA GLOBAL.</p>
+            <p class="detail-lead">Catatan perjalanan saya dari baris kode pertama di mikrokontroler kelas 9 SMP, menempuh pendidikan vokasi di SMKN 1 Talaga, hingga membangun platform LifeHub AI dan riset kecerdasan buatan.</p>
           </header>
         </div>
       </main>
@@ -259,7 +257,7 @@ function generatePages() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Karya & Proyek Digital – Reski Setiawan',
-    description: 'Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, studio website AURA GLOBAL, dan eksplorasi konsep NEXUS AI OFFICE.',
+    description: 'Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, eksplorasi IoT mikrokontroler Arduino/ESP, dan konsep NEXUS AI OFFICE.',
     url: `${SITE_URL}/proyek`,
     mainEntity: {
       '@type': 'ItemList',
@@ -283,7 +281,7 @@ function generatePages() {
 
   writeRoute('/proyek', {
     title: 'Karya & Proyek Digital – Reski Setiawan',
-    description: 'Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, studio website AURA GLOBAL, dan eksplorasi konsep NEXUS AI OFFICE.',
+    description: 'Katalog karya dan proyek digital Reski Setiawan: platform LifeHub AI Workspace, eksplorasi IoT mikrokontroler Arduino/ESP, dan konsep NEXUS AI OFFICE.',
     path: '/proyek',
     schema: projectsSchema,
     contentHtml: `
@@ -313,7 +311,7 @@ function generatePages() {
 
   // 5. DETAIL SETIAP PROYEK (/proyek/:slug)
   for (const p of projectsData) {
-    const sType = p.isConcept ? 'CreativeWork' : p.slug === 'aura-global' ? 'WebSite' : 'SoftwareApplication'
+    const sType = p.isConcept ? 'CreativeWork' : 'SoftwareApplication'
     const pSchema = {
       '@context': 'https://schema.org',
       '@type': sType,
@@ -366,7 +364,7 @@ function generatePages() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Layanan Pembuatan Website & Web Dev – Reski Setiawan',
-    description: 'Layanan pembuatan website profesional untuk UMKM, profil bisnis, dan optimasi web yang saya kelola melalui studio web AURA GLOBAL.',
+    description: 'Layanan rekayasa web modern, performa tinggi, dan optimasi arsitektur digital oleh Reski Setiawan.',
     url: `${SITE_URL}/layanan`,
     provider: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
     hasOfferCatalog: {
@@ -388,7 +386,7 @@ function generatePages() {
 
   writeRoute('/layanan', {
     title: 'Layanan Pembuatan Website & Web Dev – Reski Setiawan',
-    description: 'Layanan pembuatan website profesional untuk UMKM, profil bisnis, dan optimasi web yang saya kelola melalui studio web AURA GLOBAL.',
+    description: 'Layanan rekayasa web modern, performa tinggi, dan optimasi arsitektur digital oleh Reski Setiawan.',
     path: '/layanan',
     schema: servicesSchema,
     contentHtml: `
@@ -396,7 +394,7 @@ function generatePages() {
         <div class="container">
           <header class="detail-header-block">
             <h1 class="detail-title">Layanan Pembuatan Website & Solusi Web</h1>
-            <p class="detail-lead">Layanan rekayasa web profesional melalui studio AURA GLOBAL untuk membantu UMKM dan bisnis memiliki website kredibel dan cepat diakses.</p>
+            <p class="detail-lead">Layanan rekayasa web modern dan performa tinggi untuk menghadirkan website kredibel, cepat diakses, dan berstruktur rapi.</p>
           </header>
           <div class="services-list">
             ${servicesData
@@ -424,7 +422,6 @@ function generatePages() {
       description: s.shortDesc,
       url: `${SITE_URL}/layanan/${s.slug}`,
       provider: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
-      isRelatedTo: { '@type': 'Organization', name: 'AURA GLOBAL', url: 'https://auraglobal.my.id/' },
       breadcrumb: {
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -526,7 +523,7 @@ function generatePages() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Kumpulan Artikel & Studi Kasus Reski Setiawan',
-    description: 'Dokumentasi perjalanan rekayasa software, studi kasus LifeHub AI, arsitektur NEXUS AI OFFICE, AURA GLOBAL, dan kurikulum PPLG SMKN 1 Talaga.',
+    description: 'Dokumentasi perjalanan rekayasa software, studi kasus LifeHub AI, arsitektur NEXUS AI OFFICE, IoT mikrokontroler, keamanan siber, dan kurikulum PPLG SMKN 1 Talaga.',
     url: `${SITE_URL}/blog`,
     mainEntity: {
       '@type': 'ItemList',
@@ -550,7 +547,7 @@ function generatePages() {
 
   writeRoute('/blog', {
     title: 'Blog & Studi Kasus – Reski Setiawan',
-    description: 'Artikel dan studi kasus teknis Reski Setiawan: profil perjalanan software engineering, solo dev LifeHub AI, arsitektur NEXUS AI OFFICE, dan AURA GLOBAL.',
+    description: 'Artikel dan studi kasus teknis Reski Setiawan: profil perjalanan software engineering, solo dev LifeHub AI, arsitektur NEXUS AI OFFICE, IoT Arduino/ESP, dan Cybersecurity.',
     path: '/blog',
     schema: blogListSchema,
     contentHtml: `
@@ -598,7 +595,6 @@ function generatePages() {
         sameAs: [
           siteConfig.contacts.instagram.url,
           siteConfig.contacts.tiktokOffice.url,
-          siteConfig.contacts.tiktokStudio.url,
         ],
       },
       publisher: {
@@ -754,7 +750,6 @@ function generatePages() {
       sameAs: [
         siteConfig.contacts.instagram.url,
         siteConfig.contacts.tiktokOffice.url,
-        siteConfig.contacts.tiktokStudio.url,
       ],
     },
     breadcrumb: {
@@ -776,13 +771,12 @@ function generatePages() {
         <div class="container">
           <header class="detail-header-block">
             <h1 class="detail-title">Kontak & Jalur Komunikasi Resmi</h1>
-            <p class="detail-lead">Saya terbuka untuk diskusi proyek web, konsultasi pembuatan website untuk UMKM, dan kolaborasi teknologi.</p>
+            <p class="detail-lead">Saya terbuka untuk diskusi proyek web, konsultasi pembuatan website, dan kolaborasi teknologi.</p>
           </header>
           <article class="detail-main-col">
             <p><strong>Email Utama:</strong> <a href="mailto:${siteConfig.contacts.email}">${siteConfig.contacts.email}</a></p>
             <p><strong>Instagram:</strong> <a href="${siteConfig.contacts.instagram.url}">${siteConfig.contacts.instagram.handle}</a></p>
-            <p><strong>TikTok Personal/Proyek:</strong> <a href="${siteConfig.contacts.tiktokOffice.url}">${siteConfig.contacts.tiktokOffice.handle}</a></p>
-            <p><strong>TikTok Studio Bisnis:</strong> <a href="${siteConfig.contacts.tiktokStudio.url}">${siteConfig.contacts.tiktokStudio.handle}</a></p>
+            <p><strong>TikTok (NEXUS Office & Tech):</strong> <a href="${siteConfig.contacts.tiktokOffice.url}">${siteConfig.contacts.tiktokOffice.handle}</a></p>
             <p><strong>Lokasi:</strong> ${siteConfig.location}</p>
           </article>
         </div>

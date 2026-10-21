@@ -12,15 +12,15 @@ function ContactPage() {
     '@type': 'ContactPage',
     name: 'Kontak Resmi Reski Setiawan',
     description:
-      'Kanal komunikasi resmi Reski Setiawan: email reskisetiawan301210@gmail.com, TikTok @nexus_office3, dan TikTok @auraglobal_jasawebsite.',
+      'Kanal komunikasi resmi Reski Setiawan: email reskisetiawan301210@gmail.com, Instagram @qariol, dan TikTok @nexus_office3.',
     url: `${siteConfig.siteUrl}/kontak`,
     mainEntity: {
       '@type': 'Person',
       name: siteConfig.name,
       email: siteConfig.contacts.email,
       sameAs: [
+        siteConfig.contacts.instagram.url,
         siteConfig.contacts.tiktokOffice.url,
-        siteConfig.contacts.tiktokStudio.url,
       ],
     },
     breadcrumb: {
@@ -66,18 +66,6 @@ function ContactPage() {
       label: siteConfig.contacts.tiktokOffice.handle,
       href: siteConfig.contacts.tiktokOffice.url,
       desc: 'Pembaruan eksplorasi teknologi AI, coding, dan keseharian solo developer.',
-      icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.46 6.27 6.27 0 0 0 1.88-4.46V8.78a8.28 8.28 0 0 0 5.15 1.79V7.12a4.84 4.84 0 0 1-1.3-.43z"/>
-        </svg>
-      ),
-    },
-    {
-      key: 'tiktok-studio',
-      type: 'TikTok Studio (AURA GLOBAL)',
-      label: siteConfig.contacts.tiktokStudio.handle,
-      href: siteConfig.contacts.tiktokStudio.url,
-      desc: 'Showcase desain website UMKM, tips digitalisasi, dan portofolio studio.',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.46 6.27 6.27 0 0 0 1.88-4.46V8.78a8.28 8.28 0 0 0 5.15 1.79V7.12a4.84 4.84 0 0 1-1.3-.43z"/>
@@ -334,7 +322,7 @@ function ContactPage() {
                     cursor: 'pointer',
                   }}
                 >
-                  <option value="Jasa Pembuatan Website Bisnis / UMKM">Jasa Pembuatan Website Bisnis / UMKM (Aura Global)</option>
+                  <option value="Jasa Pembuatan Website &amp; Web Engineering">Jasa Pembuatan Website &amp; Web Engineering</option>
                   <option value="Diskusi Kolaborasi Proyek">Diskusi Kolaborasi Proyek &amp; Solo Development</option>
                   <option value="Pertanyaan Seputar Rekayasa Web / AI">Pertanyaan Seputar Rekayasa Web, LifeHub AI, &amp; Nexus</option>
                   <option value="Komunikasi Lainnya">Komunikasi / Pertanyaan Umum Lainnya</option>
@@ -422,7 +410,7 @@ function ContactPage() {
             <span>Catatan Komunikasi</span>
           </div>
           <p style={{ fontSize: '0.875rem', color: '#334155', lineHeight: 1.65 }}>
-            Semua pertanyaan dan penawaran kerja sama ditanggapi langsung oleh <strong>Reski Setiawan</strong>. Untuk jasa pembuatan website profesional bagi bisnis atau UMKM, Anda juga dapat mengunjungi situs resmi studio di <a href="https://auraglobal.my.id/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-orange, #f97316)', fontWeight: 700 }}>auraglobal.my.id</a>.
+            Semua pertanyaan, diskusi teknis, dan penawaran kerja sama ditanggapi langsung oleh <strong>Reski Setiawan</strong> melalui email resmi atau Instagram personal.
           </p>
         </aside>
       </div>
