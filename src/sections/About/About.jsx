@@ -2,10 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SectionHeader from '../../components/common/SectionHeader'
 import Reveal from '../../components/common/Reveal'
+import { useLanguage } from '../../context/LanguageContext'
 import { aboutData } from '../../data/portfolioData'
 import './About.css'
 
 function About() {
+  const { t } = useLanguage()
   const highlights = [
     {
       label: 'STATUS & PENDIDIKAN',
@@ -30,9 +32,9 @@ function About() {
         {/* Title reveals first */}
         <Reveal effect="fade-up" delay={0}>
           <SectionHeader
-            title="TENTANG RESKI SETIAWAN"
-            watermark="PROFIL"
-            meta="Software Engineer &amp; Web Developer"
+            title={t('about_title')}
+            watermark={t('about_watermark')}
+            meta={t('about_meta')}
           />
         </Reveal>
 
@@ -73,7 +75,7 @@ function About() {
                     className="hero-cta-btn"
                     style={{ display: 'inline-flex', padding: '0.65rem 1.4rem', fontSize: '0.85rem' }}
                   >
-                    <span>Baca Profil &amp; Latar Belakang Lengkap</span>
+                    <span>{t('about_read_more')}</span>
                     <span className="arrow">→</span>
                   </Link>
                 </div>

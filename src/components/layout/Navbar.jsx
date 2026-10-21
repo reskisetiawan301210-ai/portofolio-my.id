@@ -34,13 +34,13 @@ function Navbar() {
     }
   }, [])
 
-  // Menu navigasi dengan badge counter dan terjemahan dinamis
+  // Menu navigasi tanpa nomor badge counter - hanya teks nama menu yang bersih & elegan
   const navLinks = [
-    { name: t('nav_work'), counter: '04', id: 'projects' },
-    { name: t('nav_services'), counter: '04', id: 'services' },
-    { name: t('nav_experience'), counter: '03', id: 'experience' },
-    { name: t('nav_focus'), counter: '03', id: 'certificates' },
-    { name: t('nav_blog'), counter: '09', path: '/blog' },
+    { name: t('nav_work'), id: 'projects' },
+    { name: t('nav_services'), id: 'services' },
+    { name: t('nav_experience'), id: 'experience' },
+    { name: t('nav_focus'), id: 'certificates' },
+    { name: t('nav_blog'), path: '/blog' },
     { name: t('nav_about'), id: 'about' },
     { name: t('nav_faq'), id: 'faq' },
     { name: t('nav_contact'), id: 'contact' },
@@ -93,7 +93,7 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Desktop Navigation Links dengan Counter Angka */}
+        {/* Desktop Navigation Links - Teks Bersih Sesuai Permintaan */}
         <nav className="navbar-nav desktop-nav">
           <ul className="nav-list">
             {navLinks.map((link) => {
@@ -101,16 +101,13 @@ function Navbar() {
                 ? location.pathname === link.path
                 : isHomePage && activeSection === link.id
               return (
-                <li key={link.name} className="nav-item">
+                <li key={link.id || link.path} className="nav-item">
                   <a
                     href={link.path || `/#${link.id}`}
                     onClick={(e) => handleNavClick(e, link)}
                     className={`nav-link ${isActive ? 'nav-link-active' : ''}`}
                   >
                     <span className="nav-link-name">{link.name}</span>
-                    {link.counter && (
-                      <span className="nav-link-counter">[{link.counter}]</span>
-                    )}
                   </a>
                 </li>
               )
@@ -125,7 +122,11 @@ function Navbar() {
             <button
               type="button"
               className={`lang-btn ${lang === 'ID' ? 'active' : ''}`}
-              onClick={() => setLang('ID')}
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                setLang('ID')
+              }}
               aria-label="Pilih Bahasa Indonesia"
               title="Bahasa Indonesia"
             >
@@ -135,7 +136,11 @@ function Navbar() {
             <button
               type="button"
               className={`lang-btn ${lang === 'EN' ? 'active' : ''}`}
-              onClick={() => setLang('EN')}
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                setLang('EN')
+              }}
               aria-label="Switch to English"
               title="English"
             >
@@ -181,7 +186,11 @@ function Navbar() {
             <button
               type="button"
               className={`lang-btn ${lang === 'ID' ? 'active' : ''}`}
-              onClick={() => setLang('ID')}
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                setLang('ID')
+              }}
               aria-label="Bahasa Indonesia"
             >
               ID
@@ -190,7 +199,11 @@ function Navbar() {
             <button
               type="button"
               className={`lang-btn ${lang === 'EN' ? 'active' : ''}`}
-              onClick={() => setLang('EN')}
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                setLang('EN')
+              }}
               aria-label="English"
             >
               EN
@@ -204,16 +217,13 @@ function Navbar() {
               ? location.pathname === link.path
               : isHomePage && activeSection === link.id
             return (
-              <li key={link.name} className="mobile-nav-item">
+              <li key={link.id || link.path} className="mobile-nav-item">
                 <a
                   href={link.path || `/#${link.id}`}
                   className={`mobile-nav-link ${isActive ? 'nav-link-active' : ''}`}
                   onClick={(e) => handleNavClick(e, link)}
                 >
                   <span>{link.name}</span>
-                  {link.counter && (
-                    <span className="nav-counter-mobile">[{link.counter}]</span>
-                  )}
                 </a>
               </li>
             )

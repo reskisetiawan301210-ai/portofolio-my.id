@@ -4,7 +4,7 @@ import Reveal from '../../components/common/Reveal'
 import { useLanguage } from '../../context/LanguageContext'
 import './FAQ.css'
 
-const FAQ_ITEMS = [
+const FAQ_ITEMS_ID = [
   {
     question: 'Siapa itu Reski Setiawan?',
     answer:
@@ -37,9 +37,44 @@ const FAQ_ITEMS = [
   },
 ]
 
+const FAQ_ITEMS_EN = [
+  {
+    question: 'Who is Reski Setiawan?',
+    answer:
+      'Reski Setiawan is an emerging software engineer and web developer from Talaga, Majalengka, West Java, Indonesia. He graduated from SMPN 1 Talaga (2026) and is currently studying Software and Game Development (PPLG) at SMKN 1 Talaga. In technology, Reski actively works as a solo developer behind the LifeHub AI platform, conceptualizes the NEXUS AI OFFICE architecture, and delves into IoT (Arduino & ESP) and cybersecurity.',
+  },
+  {
+    question: 'What distinguishes Reski Setiawan from others with the same name?',
+    answer:
+      'Reski Setiawan (also known as PixelForgeDev) specifically specializes in modern web engineering (React, PWA, Supabase), embedded microcontroller IoT systems, and multi-agent AI research from West Java. His official credentials, engineering portfolio, and software initiatives are independently published via https://reskisetiawan-dev.my.id.',
+  },
+  {
+    question: 'How did Reski Setiawan start his coding journey?',
+    answer:
+      'Reski began coding early in 9th grade through hands-on experiments with microcontrollers and hardware such as Arduino and ESP modules (Internet of Things). From mastering system logic and hardware, he expanded his focus into software engineering, modern web development, and cybersecurity.',
+  },
+  {
+    question: 'What key projects and software has Reski Setiawan built?',
+    answer:
+      'Notable independent projects include LifeHub AI (personal productivity workspace with PWA & Supabase at https://lifehub-ai.my.id/), the NEXUS AI OFFICE multi-agent intelligence architecture, and various connected embedded IoT systems.',
+  },
+  {
+    question: 'What industry certifications does Reski Setiawan hold?',
+    answer:
+      'Reski holds 8 verified credentials from Fortinet (NSE 3 Cybersecurity & FortiGate 7.6 Operator), Cisco Networking Academy (Introduction to Cybersecurity), Dicoding Indonesia (Basic AI), Google & Coursera (Digital Marketing), IBM SkillsBuild (Python for Data Science & AI), and freeCodeCamp (Responsive Web Design).',
+  },
+  {
+    question: 'How can you contact or collaborate with Reski Setiawan?',
+    answer:
+      'You can contact Reski Setiawan via official email at reskisetiawan301210@gmail.com, personal Instagram @qariol, TikTok @nexus_office3, or through the contact form and interactive guestbook on this website.',
+  },
+]
+
 function FAQ() {
-  const { t } = useLanguage()
+  const { lang, t } = useLanguage()
   const [openIndex, setOpenIndex] = useState(0) // Default open first question
+
+  const faqItems = lang === 'EN' ? FAQ_ITEMS_EN : FAQ_ITEMS_ID
 
   const toggleItem = (idx) => {
     setOpenIndex(openIndex === idx ? -1 : idx)
@@ -58,7 +93,7 @@ function FAQ() {
         </Reveal>
 
         <div className="faq-list">
-          {FAQ_ITEMS.map((item, index) => {
+          {faqItems.map((item, index) => {
             const isOpen = openIndex === index
             return (
               <Reveal key={index} effect="fade-up" delay={100 + index * 60}>
