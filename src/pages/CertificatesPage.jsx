@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useCallback, useRef } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/common/SEO'
 import Reveal from '../components/common/Reveal'
@@ -103,7 +103,14 @@ function CertificatesPage() {
           '@type': 'Organization',
           name: item.issuer,
         },
-        image: `${siteConfig.siteUrl}${item.image}`,
+        image: {
+          '@type': 'ImageObject',
+          url: `${siteConfig.siteUrl}${item.image}`,
+          contentUrl: `${siteConfig.siteUrl}${item.image}`,
+          caption: item.alt,
+          description: item.description,
+          author: { '@type': 'Person', name: siteConfig.name },
+        },
         about: item.description,
       },
     })),

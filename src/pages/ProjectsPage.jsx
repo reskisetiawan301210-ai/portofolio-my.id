@@ -24,6 +24,12 @@ function ProjectsPage() {
         url: `${siteConfig.siteUrl}/proyek/${p.slug}`,
         name: p.title,
         description: p.summary,
+        image: {
+          '@type': 'ImageObject',
+          url: `${siteConfig.siteUrl}${p.image}`,
+          contentUrl: `${siteConfig.siteUrl}${p.image}`,
+          caption: `${p.title} - Karya Reski Setiawan`,
+        },
       })),
     },
     breadcrumb: {

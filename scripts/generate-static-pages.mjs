@@ -102,6 +102,84 @@ function generatePages() {
   const baseTemplate = fs.readFileSync(indexPath, 'utf-8')
   let count = 0
 
+  // 0. BERANDA RESMI (/)
+  const homeContent = `
+    <main class="detail-page-wrap">
+      <div class="container">
+        <header class="detail-header-block" style="text-align: center; margin-bottom: 2.5rem;">
+          <h1 class="detail-title">Reski Setiawan – Software Engineer &amp; Web Developer</h1>
+          <p class="detail-lead" style="max-width: 800px; margin: 0 auto;">Portofolio resmi Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak, arsitektur web modern, dan sistem cerdas.</p>
+        </header>
+
+        <figure class="author-profile-figure" style="margin: 0 auto 3rem auto; text-align: center; max-width: 900px;">
+          <img src="${SITE_URL}/images/og-image.png" alt="Reski Setiawan – Software Engineer &amp; Web Developer" title="Reski Setiawan" width="1200" height="630" loading="eager" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
+          <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Reski Setiawan – Software Engineer &amp; Web Developer asal Majalengka, Jawa Barat</figcaption>
+        </figure>
+
+        <section class="home-semantic-projects" style="margin-bottom: 3.5rem;">
+          <h2>Karya &amp; Rekayasa Perangkat Lunak Pilihan</h2>
+          <div class="projects-list">
+            ${projectsData.map(p => `
+              <article class="project-item" style="margin-bottom: 2.5rem;">
+                ${p.image ? `
+                <figure class="project-media-figure" style="margin: 0 0 1rem 0;">
+                  <picture>
+                    <source srcset="${SITE_URL}${p.image}" type="image/webp">
+                    <img src="${SITE_URL}${p.image}" alt="${escapeHtml(p.imageAlt || `${p.title} – Karya Software Engineer Reski Setiawan`)}" title="${escapeHtml(p.title)} – Reski Setiawan" width="1200" height="675" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; display: block;" />
+                  </picture>
+                  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">${escapeHtml(p.title)}: ${escapeHtml(p.oneLiner)} oleh Reski Setiawan</figcaption>
+                </figure>
+                ` : ''}
+                <h3><a href="/proyek/${p.slug}">${escapeHtml(p.title)}</a></h3>
+                <p>${escapeHtml(p.summary)}</p>
+                <p>Teknologi: ${escapeHtml(p.tech)}</p>
+              </article>
+            `).join('')}
+          </div>
+        </section>
+
+        <section class="home-semantic-certs" style="margin-bottom: 3.5rem;">
+          <h2>Sertifikasi &amp; Kredensial Resmi Terverifikasi</h2>
+          <p>Kredensial dan sertifikat kompetensi resmi yang diraih oleh Reski Setiawan:</p>
+          <div class="certs-list">
+            ${certificatesData.map(c => `
+              <article class="cert-item" style="margin-bottom: 2.5rem;">
+                <h3>${escapeHtml(c.title)} – ${escapeHtml(c.issuer)}</h3>
+                <figure class="cert-card-media" style="margin: 0 0 1rem 0;">
+                  <picture>
+                    <source srcset="${SITE_URL}${c.image}" type="image/webp">
+                    <img src="${SITE_URL}${c.imageJpg || c.image}" alt="${escapeHtml(c.alt)}" title="${escapeHtml(c.title)} – ${escapeHtml(c.issuer)} – Reski Setiawan" width="1200" height="850" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; display: block;" />
+                  </picture>
+                  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Sertifikat ${escapeHtml(c.title)} diterbitkan oleh ${escapeHtml(c.issuer)} untuk Reski Setiawan</figcaption>
+                </figure>
+                <p>${escapeHtml(c.description)}</p>
+              </article>
+            `).join('')}
+          </div>
+        </section>
+
+        <section class="home-semantic-education" style="margin-bottom: 3.5rem;">
+          <h2>Pendidikan Resmi</h2>
+          <article>
+            <h3>SMKN 1 Talaga</h3>
+            <p>Siswa Aktif Kelas 10 – Pengembangan Perangkat Lunak dan Gim (PPLG) (2026 – Sekarang)</p>
+          </article>
+          <article>
+            <h3>SMP Negeri 1 Talaga</h3>
+            <p>Alumni (Lulusan 2026)</p>
+          </article>
+        </section>
+      </div>
+    </main>
+  `
+
+  writeRoute('/', {
+    title: 'Reski Setiawan – Software Engineer & Web Developer',
+    description: 'Website portofolio resmi Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak dan teknologi web.',
+    path: '/',
+    contentHtml: homeContent,
+  })
+
   // 1. TENTANG SAYA (/tentang & /profil)
   const aboutSchema = {
     '@context': 'https://schema.org',
@@ -139,6 +217,10 @@ function generatePages() {
           <h1 class="detail-title">Tentang Reski Setiawan</h1>
           <p class="detail-lead">Halo, saya <strong>Reski Setiawan</strong>. Saya adalah Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Saat ini, saya menempuh pendidikan kelas 10 di SMKN 1 Talaga pada program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG).</p>
         </header>
+        <figure class="author-profile-figure" style="margin: 0 0 2rem 0;">
+          <img src="${SITE_URL}/images/og-image.png" alt="Reski Setiawan – Software Engineer &amp; Web Developer" title="Reski Setiawan" width="1200" height="630" loading="eager" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
+          <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Reski Setiawan – Software Engineer &amp; Web Developer asal Majalengka, Jawa Barat</figcaption>
+        </figure>
         <article class="detail-main-col">
           <p>${escapeHtml(aboutData.p1)}</p>
           <p>${escapeHtml(aboutData.p2)}</p>
@@ -295,7 +377,13 @@ function generatePages() {
             ${projectsData
               .map(
                 (p) => `
-              <article class="project-item">
+              <article class="project-item" style="margin-bottom: 2.5rem;">
+                ${p.image ? `
+                <figure class="project-media-figure" style="margin: 0 0 1rem 0;">
+                  <img src="${SITE_URL}${p.image}" alt="${escapeHtml(p.imageAlt || `${p.title} - Karya Rekayasa Perangkat Lunak oleh Reski Setiawan`)}" title="${escapeHtml(p.title)} - Reski Setiawan" width="1200" height="675" loading="eager" style="width: 100%; height: auto; border-radius: 8px; display: block;" />
+                  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">${escapeHtml(p.title)}: ${escapeHtml(p.oneLiner)} oleh Reski Setiawan</figcaption>
+                </figure>
+                ` : ''}
                 <h2><a href="/proyek/${p.slug}">${escapeHtml(p.title)}</a></h2>
                 <p>${escapeHtml(p.summary)}</p>
                 <p>Teknologi: ${escapeHtml(p.tech)}</p>
@@ -318,7 +406,14 @@ function generatePages() {
       name: p.title,
       description: p.oneLiner,
       url: `${SITE_URL}/proyek/${p.slug}`,
-      image: p.image ? `${SITE_URL}${p.image}` : `${SITE_URL}/images/og-image.png`,
+      image: p.image
+        ? {
+            '@type': 'ImageObject',
+            url: `${SITE_URL}${p.image}`,
+            contentUrl: `${SITE_URL}${p.image}`,
+            caption: `${p.title} - Karya Rekayasa Perangkat Lunak oleh Reski Setiawan`,
+          }
+        : `${SITE_URL}/images/og-image.png`,
       author: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
       creator: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: siteConfig.name },
       breadcrumb: {
@@ -345,6 +440,12 @@ function generatePages() {
               <p class="detail-lead">${escapeHtml(p.oneLiner)}</p>
             </header>
             <article class="detail-main-col">
+              ${p.image ? `
+              <figure class="detail-hero-figure" style="margin: 0 0 2rem 0;">
+                <img src="${SITE_URL}${p.image}" alt="${escapeHtml(p.imageAlt || `${p.title} - Karya Proyek Reski Setiawan`)}" title="${escapeHtml(p.title)} - Reski Setiawan" width="1200" height="675" loading="eager" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
+                <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Pratinjau antarmuka ${escapeHtml(p.title)} karya Reski Setiawan</figcaption>
+              </figure>
+              ` : ''}
               <p>${escapeHtml(p.summary)}</p>
               <p>${escapeHtml(p.provenRole)}</p>
               <h3>Ruang Lingkup & Rekayasa:</h3>
@@ -473,7 +574,14 @@ function generatePages() {
         name: item.title,
         credentialCategory: item.category,
         recognizedBy: { '@type': 'Organization', name: item.issuer },
-        image: `${SITE_URL}${item.image}`,
+        image: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}${item.image}`,
+          contentUrl: `${SITE_URL}${item.image}`,
+          caption: `Sertifikat ${item.title} - ${item.issuer} - Reski Setiawan`,
+          description: item.description,
+          author: { '@type': 'Person', name: 'Reski Setiawan' },
+        },
         about: item.description,
       },
     })),
@@ -503,7 +611,14 @@ function generatePages() {
             ${certificatesData
               .map(
                 (c) => `
-              <article class="cert-item-card">
+              <article class="cert-item-card" style="margin-bottom: 2.5rem;">
+                <figure class="cert-card-media" style="margin: 0 0 1.25rem 0;">
+                  <picture>
+                    <source srcset="${SITE_URL}${c.image}" type="image/webp" />
+                    <img src="${SITE_URL}${c.imageJpg || c.image}" alt="${escapeHtml(c.alt || `Sertifikat ${c.title} - ${c.issuer} - Reski Setiawan`)}" title="${escapeHtml(c.title)} - Reski Setiawan" width="800" height="500" loading="eager" style="width: 100%; height: auto; border-radius: 8px; display: block;" />
+                  </picture>
+                  <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; text-align: left;">Sertifikat Resmi ${escapeHtml(c.title)} (${escapeHtml(c.issuer)}) milik Reski Setiawan</figcaption>
+                </figure>
                 <h2>${escapeHtml(c.title)}</h2>
                 <p><strong>Penerbit:</strong> ${escapeHtml(c.issuer)} (${escapeHtml(c.date)})</p>
                 <p>${escapeHtml(c.description)}</p>
@@ -631,6 +746,12 @@ function generatePages() {
               <p class="article-meta">Oleh <strong>${escapeHtml(a.author.name)}</strong> · ${escapeHtml(a.readTime)} · ${escapeHtml(a.category)}</p>
             </header>
             <div class="article-body">
+              ${a.coverImage ? `
+              <figure class="article-cover-figure" style="margin: 0 0 1.5rem 0;">
+                <img src="${SITE_URL}${a.coverImage}" alt="${escapeHtml(a.title)} - Artikel Reski Setiawan" width="1200" height="630" loading="eager" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
+                <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">${escapeHtml(a.title)}</figcaption>
+              </figure>
+              ` : ''}
               <p class="article-lead">${escapeHtml(a.excerpt)}</p>
               <div class="article-markdown-rendered">
                 ${a.content
@@ -727,6 +848,12 @@ function generatePages() {
               <p class="detail-lead">${escapeHtml(area.oneLiner)}</p>
             </header>
             <article class="detail-main-col">
+              ${area.image ? `
+              <figure class="detail-hero-figure" style="margin: 0 0 2rem 0;">
+                <img src="${SITE_URL}${area.image}" alt="${escapeHtml(area.imageAlt || `${area.title} - Reski Setiawan`)}" title="${escapeHtml(area.title)} - Reski Setiawan" width="1200" height="700" loading="eager" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
+                <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Eksplorasi ${escapeHtml(area.title)} oleh Reski Setiawan</figcaption>
+              </figure>
+              ` : ''}
               <p>${escapeHtml(area.summary)}</p>
             </article>
           </div>

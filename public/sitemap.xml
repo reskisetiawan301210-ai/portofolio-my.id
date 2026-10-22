@@ -55,8 +55,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://reskisetiawan-dev.my.id/images/projects/iot-systems.webp</image:loc>
-      <image:title>IoT Smart Embedded Systems - Arduino &amp; ESP</image:title>
+      <image:loc>https://reskisetiawan-dev.my.id/images/projects/aura-global.webp</image:loc>
+      <image:title>AURA GLOBAL Web Studio - Reski Setiawan</image:title>
+      <image:caption>Studio pembuatan website profesional untuk bisnis dan UMKM karya Reski Setiawan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reskisetiawan-dev.my.id/images/focus/robotics-hardware.webp</image:loc>
+      <image:title>IoT Smart Embedded Systems - Arduino &amp; ESP - Reski Setiawan</image:title>
       <image:caption>Visualisasi proyek mikrokontroler Arduino dan modul ESP Internet of Things karya Reski Setiawan</image:caption>
     </image:image>
     <image:image>
@@ -74,11 +79,11 @@
   <!-- 4. HALAMAN DIREKTORI LAYANAN WEB -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/layanan</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
-      <image:loc>https://reskisetiawan-dev.my.id/images/projects/iot-systems.webp</image:loc>
+      <image:loc>https://reskisetiawan-dev.my.id/images/projects/aura-global.webp</image:loc>
       <image:title>Layanan Pembuatan Website &amp; Web Dev – Reski Setiawan</image:title>
       <image:caption>Layanan rekayasa website dan pengembangan frontend oleh Reski Setiawan</image:caption>
     </image:image>

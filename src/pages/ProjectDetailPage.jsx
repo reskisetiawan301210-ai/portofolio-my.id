@@ -48,7 +48,12 @@ function ProjectDetailPage() {
     name: project.title,
     description: project.oneLiner,
     url: `${siteConfig.siteUrl}/proyek/${project.slug}`,
-    image: project.image ? `${siteConfig.siteUrl}${project.image}` : `${siteConfig.siteUrl}/images/og-image.png`,
+    image: project.image ? {
+      '@type': 'ImageObject',
+      url: `${siteConfig.siteUrl}${project.image}`,
+      contentUrl: `${siteConfig.siteUrl}${project.image}`,
+      caption: `${project.title} – Dokumentasi Proyek Digital Reski Setiawan`,
+    } : `${siteConfig.siteUrl}/images/og-image.png`,
     author: {
       '@type': 'Person',
       name: siteConfig.name,
