@@ -107,7 +107,7 @@ function generatePages() {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     name: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
-    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer muda di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan keamanan siber.',
+    description: 'Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak dan teknologi web.',
     url: `${SITE_URL}/tentang`,
     mainEntity: {
       '@type': 'Person',
@@ -137,7 +137,7 @@ function generatePages() {
       <div class="container">
         <header class="detail-header-block">
           <h1 class="detail-title">Tentang Reski Setiawan</h1>
-          <p class="detail-lead">Halo, saya <strong>Reski Setiawan</strong>. Saya adalah software engineer dan web developer dari Jawa Barat yang fokus pada rekayasa web modern, sistem berbasis AI, dan solusi digital terstruktur.</p>
+          <p class="detail-lead">Halo, saya <strong>Reski Setiawan</strong>. Saya adalah Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Saat ini, saya menempuh pendidikan kelas 10 di SMKN 1 Talaga pada program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG).</p>
         </header>
         <article class="detail-main-col">
           <p>${escapeHtml(aboutData.p1)}</p>
@@ -150,7 +150,7 @@ function generatePages() {
 
   writeRoute('/tentang', {
     title: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
-    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer muda di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan keamanan siber.',
+    description: 'Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak dan teknologi web.',
     path: '/tentang',
     schema: aboutSchema,
     contentHtml: aboutContent,
@@ -158,7 +158,7 @@ function generatePages() {
 
   writeRoute('/profil', {
     title: 'Profil Reski Setiawan – Software Engineer & Web Developer',
-    description: 'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer muda di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan keamanan siber.',
+    description: 'Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak dan teknologi web.',
     path: '/profil',
     schema: {
       ...aboutSchema,

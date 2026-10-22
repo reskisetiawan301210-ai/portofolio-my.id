@@ -20,7 +20,7 @@ export const translations = {
     
     // Hero
     hero_role: 'Software Engineer & Web Developer',
-    hero_lead: 'Halo, saya Reski Setiawan. Saya mengembangkan produk digital fungsional, website bisnis modern, dan mengeksplorasi kecerdasan buatan melalui pembelajaran mandiri dan kurikulum vokasi PPLG di SMKN 1 Talaga.',
+    hero_lead: 'Halo, saya Reski Setiawan, seorang Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Saya merancang aplikasi web modern dan mendalami rekayasa perangkat lunak melalui kurikulum kejuruan PPLG di SMKN 1 Talaga serta pembelajaran mandiri.',
     hero_collab: 'Mari Berkolaborasi',
     hero_badge_edu: 'Siswa Kelas 10 PPLG · SMKN 1 Talaga',
     hero_badge_smp: 'Alumni SMPN 1 Talaga (2026)',
@@ -103,7 +103,7 @@ export const translations = {
     
     // Hero
     hero_role: 'Software Engineer & Web Developer',
-    hero_lead: "Hello, I'm Reski Setiawan. I build functional digital products, modern business websites, and explore artificial intelligence through self-directed learning and vocational software engineering at SMKN 1 Talaga.",
+    hero_lead: "Hello, I'm Reski Setiawan, a Software Engineer and Web Developer from Majalengka, West Java. I build modern web applications and specialize in software engineering through vocational software development (PPLG) at SMKN 1 Talaga and self-directed practice.",
     hero_collab: "Let's Collaborate",
     hero_badge_edu: '10th Grade Software Engineering · SMKN 1 Talaga',
     hero_badge_smp: 'SMPN 1 Talaga Alumnus (2026)',

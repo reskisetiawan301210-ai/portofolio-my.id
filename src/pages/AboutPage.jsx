@@ -13,7 +13,7 @@ function AboutPage() {
     '@type': 'AboutPage',
     name: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
     description:
-      'Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan cybersecurity.',
+      'Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga.',
     url: `${siteConfig.siteUrl}/tentang`,
     mainEntity: {
       '@type': 'Person',
@@ -49,7 +49,7 @@ function AboutPage() {
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
         title="Tentang Saya – Reski Setiawan | Software Engineer & Web Developer"
-        description="Profil personal dan latar belakang Reski Setiawan, software engineer dan web developer di balik platform LifeHub AI, riset NEXUS AI OFFICE, IoT mikrokontroler, dan cybersecurity."
+        description="Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga."
         path="/tentang"
         image="/images/og-image.png"
       />
@@ -97,7 +97,7 @@ function AboutPage() {
               <h1 className="detail-title">Tentang Reski Setiawan</h1>
             </div>
             <p className="detail-lead">
-              Halo, saya <strong>Reski Setiawan</strong>. Saya adalah software engineer dan web developer muda dari Jawa Barat yang fokus pada rekayasa web modern, sistem berbasis AI, eksplorasi IoT mikrokontroler (Arduino &amp; ESP), dan keamanan siber.
+              Halo, saya <strong>Reski Setiawan</strong>. Saya adalah Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Saat ini, saya menempuh pendidikan kelas 10 di SMKN 1 Talaga pada program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG).
             </p>
           </Reveal>
         </header>

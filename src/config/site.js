@@ -30,7 +30,7 @@ export const siteConfig = {
   grade: 'Siswa Kelas 10',
   title: 'Reski Setiawan – Software Engineer & Web Developer',
   description:
-    'Portofolio resmi Reski Setiawan, Software Engineer & Web Developer asal Talaga, Majalengka, Jawa Barat. Menghadirkan solusi web berkinerja tinggi, platform LifeHub AI, dan konsep NEXUS AI OFFICE.',
+    'Website portofolio resmi Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak dan teknologi web.',
   location: 'Majalengka, Jawa Barat, Indonesia',
   siteUrl: SITE_URL,
   ogImage: '/images/og-image.png',

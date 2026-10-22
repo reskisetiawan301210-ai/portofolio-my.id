@@ -10,13 +10,13 @@ export const aboutData = {
   name: 'Reski Setiawan',
   role: 'Software Engineer & Web Developer',
   location: 'Jawa Barat, Indonesia',
-  p1: 'Halo, saya Reski Setiawan, seorang software engineer dan web developer muda asal Talaga, Majalengka, Jawa Barat. Saya merupakan alumni SMP Negeri 1 Talaga (lulusan 2026) dan saat ini menempuh pendidikan vokasi di SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG / Rekayasa Perangkat Lunak). Saya adalah solo developer di balik LifeHub AI (platform personal workspace produktif) dan perancang konsep arsitektur NEXUS AI OFFICE (NEXUS Kantor AI).',
-  p2: 'Perjalanan koding saya bermula sejak awal kelas 9 SMP melalui kecintaan pada eksperimen perangkat keras dan mikrokontroler (Arduino serta modul ESP / IoT). Logika komputasi tersebut memacu saya untuk memperdalam software engineering, arsitektur web modern (React, Vite, Tailwind CSS, JavaScript), serta keamanan siber (cybersecurity) dengan sertifikasi resmi Fortinet NSE 3 dan Cisco Networking Academy.',
+  p1: 'Halo, saya Reski Setiawan, seorang Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Saat ini, saya menempuh pendidikan di SMKN 1 Talaga kelas 10 program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG).',
+  p2: 'Fokus saya adalah rekayasa perangkat lunak dan pengembangan web modern, mulai dari antarmuka interaktif hingga logika sistem yang terstruktur. Saya aktif mengasah keterampilan teknis melalui pembelajaran mandiri, kurikulum kejuruan, dan praktik pengembangan perangkat lunak.',
   currentFocus: [
-    'Solo developer di balik platform LifeHub AI (https://lifehub-ai.my.id/) berbasis PWA & Supabase',
-    'Merancang arsitektur konsep shared workspace di NEXUS AI OFFICE (NEXUS Kantor AI)',
-    'Mendalami software engineering modern, keamanan siber, dan web architecture',
-    'Menempuh pendidikan vokasi kelas 10 jurusan PPLG / RPL di SMKN 1 Talaga, Jawa Barat',
+    'Rekayasa perangkat lunak dan pengembangan aplikasi web modern',
+    'Pengembangan dan pemeliharaan platform mandiri LifeHub AI',
+    'Eksplorasi konsep sistem cerdas dan arsitektur NEXUS AI OFFICE',
+    'Menempuh pendidikan vokasi kelas 10 jurusan PPLG di SMKN 1 Talaga',
   ],
 }
 

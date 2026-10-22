@@ -8,7 +8,7 @@ const FAQ_ITEMS_ID = [
   {
     question: 'Siapa itu Reski Setiawan?',
     answer:
-      'Reski Setiawan adalah seorang software engineer dan web developer muda asal Talaga, Majalengka, Jawa Barat. Ia merupakan lulusan SMPN 1 Talaga (2026) dan saat ini menempuh pendidikan di SMKN 1 Talaga jurusan Pengembangan Perangkat Lunak dan Gim (PPLG / RPL). Di dunia teknologi, Reski aktif sebagai solo developer di balik platform LifeHub AI, perancang konsep NEXUS AI OFFICE, serta mendalami bidang IoT (Arduino & ESP) dan keamanan siber (Cybersecurity).',
+      'Reski Setiawan adalah Software Engineer dan Web Developer muda asal Majalengka, Jawa Barat. Saat ini, ia menempuh pendidikan di SMKN 1 Talaga kelas 10 program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG / RPL). Dalam dunia teknologi, Reski berfokus pada rekayasa web modern, arsitektur perangkat lunak, serta eksplorasi sistem cerdas dan keamanan siber.',
   },
   {
     question: 'Apa yang membedakan Reski Setiawan dari individu lain dengan nama serupa?',
@@ -41,7 +41,7 @@ const FAQ_ITEMS_EN = [
   {
     question: 'Who is Reski Setiawan?',
     answer:
-      'Reski Setiawan is an emerging software engineer and web developer from Talaga, Majalengka, West Java, Indonesia. He graduated from SMPN 1 Talaga (2026) and is currently studying Software and Game Development (PPLG) at SMKN 1 Talaga. In technology, Reski actively works as a solo developer behind the LifeHub AI platform, conceptualizes the NEXUS AI OFFICE architecture, and delves into IoT (Arduino & ESP) and cybersecurity.',
+      'Reski Setiawan is a Software Engineer and Web Developer from Majalengka, West Java, Indonesia. He is currently a 10th-grade student majoring in Software and Game Development (PPLG) at SMKN 1 Talaga, focusing on modern web engineering, software architecture, and cybersecurity.',
   },
   {
     question: 'What distinguishes Reski Setiawan from others with the same name?',

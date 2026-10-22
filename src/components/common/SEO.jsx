@@ -46,7 +46,7 @@ function SEO({
       email: siteConfig.contacts.email,
       description: siteConfig.description,
       disambiguatingDescription:
-        'Software engineer, web developer, alumnus of SMPN 1 Talaga (2026), and student at SMKN 1 Talaga (PPLG) from West Java, Indonesia. Passionate about IoT (Arduino & ESP), cybersecurity (Fortinet & Cisco certified), and creator of LifeHub AI, distinguishing from other individuals named Reski Setiawan.',
+        'Software engineer, web developer, and 10th-grade vocational student in Software and Game Development (PPLG) at SMKN 1 Talaga, West Java, Indonesia. Focused on modern web engineering, IoT systems, and software development, distinguishing from other individuals named Reski Setiawan.',
       subjectOf: [
         {
           '@type': 'Article',
@@ -267,7 +267,7 @@ function SEO({
           name: 'Siapa itu Reski Setiawan?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Reski Setiawan adalah seorang software engineer dan web developer muda asal Talaga, Majalengka, Jawa Barat. Lulusan SMPN 1 Talaga (2026) dan saat ini menempuh pendidikan di SMKN 1 Talaga jurusan PPLG. Di dunia teknologi, ia aktif mengembangkan platform LifeHub AI, konsep NEXUS AI OFFICE, serta mendalami cybersecurity dan IoT (Arduino & ESP).',
+            text: 'Reski Setiawan adalah Software Engineer dan Web Developer muda asal Majalengka, Jawa Barat. Saat ini, ia menempuh pendidikan di SMKN 1 Talaga kelas 10 program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG / RPL). Dalam rekayasa perangkat lunak, Reski berfokus pada teknologi web modern, arsitektur aplikasi, serta eksplorasi sistem cerdas dan keamanan siber.',
           },
         },
         {
