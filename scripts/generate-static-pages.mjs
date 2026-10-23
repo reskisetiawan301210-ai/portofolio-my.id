@@ -104,19 +104,24 @@ function generatePages() {
 
   // 0. BERANDA RESMI (/)
   const homeContent = `
-    <main class="detail-page-wrap">
-      <div class="container">
-        <header class="detail-header-block" style="text-align: center; margin-bottom: 2.5rem;">
-          <h1 class="detail-title">Reski Setiawan – Software Engineer &amp; Web Developer</h1>
-          <p class="detail-lead" style="max-width: 800px; margin: 0 auto;">Portofolio resmi Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak, arsitektur web modern, dan sistem cerdas.</p>
-        </header>
+    <main class="home-semantic-stage">
+      <section class="hero-semantic-block">
+        <div class="hero-headline-row">
+          <span class="hero-word-outline">RESKI</span>
+          <span class="hero-word-solid">SETIAWAN</span>
+        </div>
+        <div class="hero-ui-row">
+          <div class="hero-col-left">
+            <h1 class="hero-role-heading">
+              <span>Software Engineer &amp;</span>
+              <span>Web Developer</span>
+            </h1>
+            <p class="hero-bio-lead">Halo, saya Reski Setiawan, seorang Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Saya merancang aplikasi web modern dan mendalami rekayasa perangkat lunak melalui kurikulum kejuruan PPLG di SMKN 1 Talaga serta pembelajaran mandiri.</p>
+          </div>
+        </div>
+      </section>
 
-        <figure class="author-profile-figure" style="margin: 0 auto 3rem auto; text-align: center; max-width: 900px;">
-          <img src="${SITE_URL}/images/og-image.png" alt="Reski Setiawan – Software Engineer &amp; Web Developer" title="Reski Setiawan" width="1200" height="630" loading="eager" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
-          <figcaption style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Reski Setiawan – Software Engineer &amp; Web Developer asal Majalengka, Jawa Barat</figcaption>
-        </figure>
-
-        <section class="home-semantic-projects" style="margin-bottom: 3.5rem;">
+      <section class="home-semantic-projects" style="margin-bottom: 3.5rem;">
           <h2>Karya &amp; Rekayasa Perangkat Lunak Pilihan</h2>
           <div class="projects-list">
             ${projectsData.map(p => `

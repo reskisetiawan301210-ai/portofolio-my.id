@@ -114,6 +114,7 @@
 .nav-indicator-dot {
   font-size: 0.65rem;
   color: #0a0a0a;
+  margin-right: 0.45rem;
   display: inline-block;
   vertical-align: middle;
 }
