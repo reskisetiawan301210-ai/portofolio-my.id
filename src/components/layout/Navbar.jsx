@@ -34,16 +34,14 @@ function Navbar() {
     }
   }, [])
 
-  // Menu navigasi tanpa nomor badge counter - hanya teks nama menu yang bersih & elegan
+  // Menu navigasi presisi sesuai Gambar 1: Beranda, Tentang, Proyek, Layanan, Blog, Kontak
   const navLinks = [
-    { name: t('nav_work'), id: 'projects' },
-    { name: t('nav_services'), id: 'services' },
-    { name: t('nav_experience'), id: 'experience' },
-    { name: t('nav_focus'), id: 'certificates' },
-    { name: t('nav_blog'), path: '/blog' },
-    { name: t('nav_about'), id: 'about' },
-    { name: t('nav_faq'), id: 'faq' },
-    { name: t('nav_contact'), id: 'contact' },
+    { name: t('nav_home') || 'Beranda', id: 'hero' },
+    { name: t('nav_about') || 'Tentang', id: 'about' },
+    { name: t('nav_work') || 'Proyek', id: 'projects' },
+    { name: t('nav_services') || 'Layanan', id: 'services' },
+    { name: t('nav_blog') || 'Blog', path: '/blog' },
+    { name: t('nav_contact') || 'Kontak', id: 'contact' },
   ]
 
   const closeMenu = () => setMobileMenuOpen(false)
@@ -56,6 +54,10 @@ function Navbar() {
       return
     }
     if (isHomePage) {
+      if (link.id === 'hero') {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        return
+      }
       const el = document.getElementById(link.id)
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' })
@@ -75,6 +77,17 @@ function Navbar() {
     }
   }
 
+  const isItemActive = (link) => {
+    if (link.path) {
+      return location.pathname === link.path
+    }
+    if (!isHomePage) return false
+    if (link.id === 'hero') {
+      return activeSection === 'hero' || (!activeSection && window.scrollY < 300)
+    }
+    return activeSection === link.id
+  }
+
   return (
     <header
       className={`navbar-header ${isMounted ? 'navbar-entered' : ''} ${
@@ -82,24 +95,21 @@ function Navbar() {
       }`}
     >
       <div className="container navbar-container">
-        {/* Sisi Kiri: Status Pill Kapsul & Logo Reski Setiawan */}
+        {/* Sisi Kiri: Logo Teks 2 Baris "RESKI SETIAWAN" Tebal Sesuai Gambar 1 */}
         <div className="navbar-left">
-          <a href="/" className="navbar-logo" onClick={handleLogoClick}>
-            <span className="logo-text">RESKI SETIAWAN</span>
+          <a href="/" className="navbar-logo" onClick={handleLogoClick} aria-label="Beranda Reski Setiawan">
+            <div className="navbar-logo-two-lines">
+              <span className="logo-line-top">RESKI</span>
+              <span className="logo-line-bottom">SETIAWAN</span>
+            </div>
           </a>
-          <div className="navbar-status-pill">
-            <span className="status-dot status-dot-pulse"></span>
-            <span className="status-pill-text">Available for Project</span>
-          </div>
         </div>
 
-        {/* Desktop Navigation Links - Teks Bersih Sesuai Permintaan */}
-        <nav className="navbar-nav desktop-nav">
+        {/* Desktop Navigation Links Sesuai Gambar 1 */}
+        <nav className="navbar-nav desktop-nav" aria-label="Navigasi Utama">
           <ul className="nav-list">
             {navLinks.map((link) => {
-              const isActive = link.path
-                ? location.pathname === link.path
-                : isHomePage && activeSection === link.id
+              const isActive = isItemActive(link)
               return (
                 <li key={link.id || link.path} className="nav-item">
                   <a
@@ -107,7 +117,12 @@ function Navbar() {
                     onClick={(e) => handleNavClick(e, link)}
                     className={`nav-link ${isActive ? 'nav-link-active' : ''}`}
                   >
-                    <span className="nav-link-name">{link.name}</span>
+                    <span className="nav-link-name">
+                      {link.id === 'hero' && isActive && (
+                        <span className="nav-indicator-dot" aria-hidden="true">● </span>
+                      )}
+                      {link.name}
+                    </span>
                   </a>
                 </li>
               )
@@ -115,49 +130,47 @@ function Navbar() {
           </ul>
         </nav>
 
-        {/* Sisi Kanan: Language Switcher (ID / EN), Tombol CTA Kapsul Hitam & Hamburger */}
+        {/* Sisi Kanan: Tombol Pemilih Bahasa Kapsul Hitam (Globe + ID + Chevron) & Mobile Toggle */}
         <div className="navbar-actions">
-          {/* Language Switcher Pill: ID / EN */}
-          <div className="lang-switcher-pill" role="group" aria-label="Pilih Bahasa / Language Selector">
-            <button
-              type="button"
-              className={`lang-btn ${lang === 'ID' ? 'active' : ''}`}
-              onClick={(e) => {
-                e.preventDefault()
-                e.stopPropagation()
-                setLang('ID')
-              }}
-              aria-label="Pilih Bahasa Indonesia"
-              title="Bahasa Indonesia"
-            >
-              ID
-            </button>
-            <span className="lang-divider" aria-hidden="true">/</span>
-            <button
-              type="button"
-              className={`lang-btn ${lang === 'EN' ? 'active' : ''}`}
-              onClick={(e) => {
-                e.preventDefault()
-                e.stopPropagation()
-                setLang('EN')
-              }}
-              aria-label="Switch to English"
-              title="English"
-            >
-              EN
-            </button>
-          </div>
-
-          <a
-            href={`mailto:${siteConfig.contacts.email}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-cta-btn"
-            aria-label={`Kirim email ke ${siteConfig.contacts.email}`}
+          <button
+            type="button"
+            className="navbar-lang-pill"
+            onClick={() => setLang(lang === 'ID' ? 'EN' : 'ID')}
+            aria-label={`Ganti bahasa (Saat ini: ${lang})`}
+            title={`Switch language (Current: ${lang})`}
           >
-            <span>{t('nav_talk')}</span>
-            <span className="arrow-icon">↗</span>
-          </a>
+            <svg
+              className="lang-globe-icon"
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <span className="lang-code-text">{lang}</span>
+            <svg
+              className="lang-chevron-icon"
+              width="11"
+              height="11"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
 
           {/* Mobile Menu Toggle Button */}
           <button

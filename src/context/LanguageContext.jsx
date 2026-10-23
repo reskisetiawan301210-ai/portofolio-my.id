@@ -8,14 +8,10 @@ export const translations = {
     nav_available: 'Available for Project',
     nav_talk: "Let's Talk",
     nav_home: 'Beranda',
-    nav_work: 'Karya',
-    nav_services: 'Layanan',
     nav_about: 'Tentang',
-    nav_experience: 'Pengalaman',
-    nav_education: 'Pendidikan',
-    nav_focus: 'Area Fokus',
+    nav_work: 'Proyek',
+    nav_services: 'Layanan',
     nav_blog: 'Blog',
-    nav_faq: 'FAQ',
     nav_contact: 'Kontak',
     
     // Hero
@@ -91,14 +87,10 @@ export const translations = {
     nav_available: 'Available for Project',
     nav_talk: "Let's Talk",
     nav_home: 'Home',
-    nav_work: 'Work',
-    nav_services: 'Services',
     nav_about: 'About',
-    nav_experience: 'Experience',
-    nav_education: 'Education',
-    nav_focus: 'Focus Areas',
+    nav_work: 'Projects',
+    nav_services: 'Services',
     nav_blog: 'Blog',
-    nav_faq: 'FAQ',
     nav_contact: 'Contact',
     
     // Hero

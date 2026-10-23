@@ -3,16 +3,16 @@
   top: 0;
   z-index: 100;
   padding: 1.25rem 0;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-light);
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
   opacity: 0;
   transform: translateY(-12px);
   transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
               transform 700ms cubic-bezier(0.16, 1, 0.3, 1),
               background 300ms ease,
               padding 300ms ease,
+              border-color 300ms ease,
               box-shadow 300ms ease;
 }
 
@@ -22,9 +22,12 @@
 }
 
 .navbar-scrolled {
-  background: rgba(255, 255, 255, 0.96);
-  padding: 0.95rem 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  background: rgba(245, 248, 248, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .navbar-container {
@@ -41,57 +44,34 @@
 }
 
 .navbar-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  text-decoration: none;
 }
 
-.logo-text {
-  font-size: 0.95rem;
-  font-weight: 850;
-  letter-spacing: 0.06em;
-  color: var(--text-primary);
+/* Logo Teks Dua Baris Tebal Sesuai Gambar 1 */
+.navbar-logo-two-lines {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.05;
+  user-select: none;
   transition: opacity 0.2s ease;
 }
 
-.navbar-logo:hover .logo-text {
+.navbar-logo:hover .navbar-logo-two-lines {
   opacity: 0.75;
 }
 
-/* Status Pill di kiri Navbar (Ref Frame 00:00) */
-.navbar-status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 0.85rem;
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-pill);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #10b981;
-}
-
-.status-dot-pulse {
-  animation: pulse-dot 2s infinite ease-in-out;
-}
-
-@keyframes pulse-dot {
-  0% { transform: scale(0.95); opacity: 0.85; }
-  50% { transform: scale(1.35); opacity: 1; }
-  100% { transform: scale(0.95); opacity: 0.85; }
-}
-
-.status-pill-text {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  letter-spacing: -0.01em;
-  white-space: nowrap;
+.logo-line-top,
+.logo-line-bottom {
+  font-family: var(--font-display, 'Outfit', 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #0a0a0a;
+  text-transform: uppercase;
+  display: block;
 }
 
 .navbar-nav {
@@ -102,42 +82,84 @@
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #52525b;
+  text-decoration: none;
   transition: color var(--transition-fast);
   position: relative;
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.3rem;
-  padding: 0.25rem 0;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0;
 }
 
 .nav-link:hover {
-  color: var(--text-primary);
+  color: #0a0a0a;
 }
 
 .nav-link-active {
-  color: var(--text-primary);
+  color: #0a0a0a;
   font-weight: 700;
 }
 
-.nav-link-counter {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-weight: 500;
+/* Indikator titik hitam pada menu Beranda / aktif sesuai Gambar 1 */
+.nav-indicator-dot {
+  font-size: 0.65rem;
+  color: #0a0a0a;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-/* CTA Let's Talk button */
+/* Tombol Bahasa Kapsul Hitam di Kanan Atas Sesuai Gambar 1 */
 .navbar-actions {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.navbar-lang-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.48rem 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.navbar-lang-pill:hover {
+  background: #27272a;
+  transform: translateY(-1px);
+}
+
+.lang-globe-icon {
+  stroke: #ffffff;
+  flex-shrink: 0;
+}
+
+.lang-code-text {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.lang-chevron-icon {
+  stroke: #ffffff;
+  flex-shrink: 0;
 }
 
 /* Language Switcher Pill (ID / EN) - High-contrast & Immediate Click Target */
