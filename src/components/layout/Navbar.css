@@ -1,6 +1,9 @@
 .navbar-header {
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 100;
   padding: 1.25rem 0;
   background: transparent;
@@ -22,7 +25,8 @@
 }
 
 .navbar-scrolled {
-  background: rgba(245, 248, 248, 0.94);
+  position: fixed;
+  background: rgba(243, 247, 247, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   padding: 0.85rem 0;

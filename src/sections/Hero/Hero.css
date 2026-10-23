@@ -1,235 +1,214 @@
 /* ============================================================== */
-/* HERO SECTION STYLING – HIGH FIDELITY RESTORATION (GAMBAR 2)     */
-/* Clean Studio Canvas with Center Cowboy Silhouette & Mint Aura  */
+/* HERO SECTION STYLING – HIGH FIDELITY SPECIFICATION             */
+/* Reference Target: 1765 × 891 px (Responsive Clamp & %)         */
 /* ============================================================== */
 
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 72px);
-  max-height: 820px;
-  background-color: #f4f8f8;
+  height: 100vh;
+  min-height: 500px;
+  max-height: clamp(520px, 52vw, 920px);
+  background-color: #f3f7f7;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-@media (min-height: 800px) and (min-width: 1025px) {
-  .hero-section {
-    height: calc(100vh - 72px);
-  }
+  box-sizing: border-box;
 }
 
 /* ============================================================== */
-/* LAYER 0: Background Layer & Ambient Soft Mint Glow             */
+/* LAYER 1: Background & Ambient Mint Glow (z-index: 1)           */
 /* ============================================================== */
 
-.hero-bg-layer {
+.hero-layer-bg {
   position: absolute;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
-  z-index: 0;
   overflow: hidden;
 }
 
+/* Glow Mint: Center x≈50%, y≈50% H, Diameter 28vw (Radius ≈ 14% W) */
 .hero-ambient-glow {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(360px, 46vw, 680px);
-  height: clamp(360px, 46vw, 680px);
+  width: clamp(320px, 28vw, 540px);
+  height: clamp(320px, 28vw, 540px);
   border-radius: 50%;
   background: radial-gradient(
     circle at 50% 50%,
-    rgba(167, 243, 208, 0.52) 0%,
-    rgba(209, 250, 229, 0.3) 32%,
-    rgba(244, 248, 248, 0.75) 60%,
-    rgba(244, 248, 248, 0) 75%
+    rgba(160, 245, 210, 0.35) 0%,
+    rgba(160, 245, 210, 0.18) 45%,
+    rgba(243, 247, 247, 0.6) 70%,
+    transparent 85%
   );
-  filter: blur(24px);
-  pointer-events: none;
+  filter: blur(28px);
 }
 
 /* ============================================================== */
-/* CONTAINER STAGE                                                */
+/* LAYER 2: Nama RESKI SETIAWAN (z-index: 2, y≈22%–37% H)         */
 /* ============================================================== */
 
-.hero-container {
-  position: relative;
-  width: 100%;
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: 0 clamp(1.25rem, 3.5vw, 3.5rem);
-  height: 100%;
-  min-height: calc(100vh - 72px);
-  max-height: 820px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* ============================================================== */
-/* LAYER 1: Unified Horizontal Headline "RESKI SETIAWAN"          */
-/* ============================================================== */
-
-.hero-headline-stage {
+.hero-layer-name {
   position: absolute;
-  top: clamp(1rem, 2.5vh, 2.2rem);
+  top: 22%;
   left: 0;
   right: 0;
-  width: 100%;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   user-select: none;
-}
-
-.hero-headline-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: clamp(2rem, 8.5vw, 7.5rem);
-  width: 100%;
+  box-sizing: border-box;
   white-space: nowrap;
 }
 
-/* "RESKI" – Outline uppercase with crisp outer stroke & zero interior artifacts */
-.hero-word-outline {
-  font-family: var(--font-display, 'Outfit', 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(3.2rem, 7.2vw, 7.6rem);
+/* "RESKI": Outline putih bersih, x≈5.4%–34.5% W */
+.hero-name-reski {
+  position: absolute;
+  left: 5.4%;
+  top: 0;
+  font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(3.2rem, 9.4vw, 10.2rem);
   font-weight: 900;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
   text-transform: uppercase;
-  color: #f4f8f8;
-  -webkit-text-stroke: clamp(2px, 0.2vw, 2.8px) #0a0a0a;
+  color: #ffffff;
+  -webkit-text-stroke: clamp(2.2px, 0.22vw, 3.2px) #0a0a0a;
   paint-order: stroke fill;
-  line-height: 0.92;
   display: inline-block;
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(16px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* "SETIAWAN" – Solid deep black bold text */
-.hero-word-solid {
-  font-family: var(--font-display, 'Outfit', 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(3.2rem, 7.2vw, 7.6rem);
+/* "SETIAWAN": Hitam solid (#0a0f12), x≈54%–95.5% W, huruf N utuh sempurna */
+/* Ujung kanan topi koboi menimpa sedikit sisi kiri huruf "S" (overlap alami) */
+.hero-name-setiawan {
+  position: absolute;
+  left: 54%;
+  top: 0;
+  font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2.8rem, 8.2vw, 8.6rem);
   font-weight: 900;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
   text-transform: uppercase;
-  color: #0a0a0a;
-  line-height: 0.92;
+  color: #0a0f12;
   display: inline-block;
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+  transform: translateY(16px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s,
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
 }
 
-.hero-section.is-entered .hero-word-outline,
-.hero-section.is-entered .hero-word-solid {
+.hero-section.is-entered .hero-name-reski,
+.hero-section.is-entered .hero-name-setiawan {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* ============================================================== */
-/* LAYER 2: Center Cowboy Silhouette Figure                       */
+/* LAYER 3: Figur Koboi (z-index: 3, Sumbu x=48% W, Topi y≈16.5% H) */
+/* Dasar Figur Menempel Dasar Hero (bottom: -1%), Tanpa Ruang Kosong */
 /* ============================================================== */
 
-.hero-cowboy-stage {
+.hero-layer-figure {
   position: absolute;
-  top: clamp(0.2rem, 1.2vh, 1.2rem);
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: -1%;
+  height: 85%;
+  width: auto;
+  left: 48%;
+  transform: translateX(-48.7%);
+  z-index: 3;
+  pointer-events: none;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  pointer-events: none;
-  z-index: 2;
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
-              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.12s;
 }
 
-.hero-section.is-entered .hero-cowboy-stage {
+.hero-section.is-entered .hero-layer-figure {
   opacity: 1;
-  transform: translateY(0);
+}
+
+.hero-cowboy-picture {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .hero-cowboy-img {
   height: 100%;
-  max-height: clamp(440px, 72vh, 660px);
-  max-width: clamp(340px, 35vw, 450px);
   width: auto;
-  object-fit: contain;
-  object-position: bottom center;
   display: block;
   user-select: none;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 90%, rgba(0, 0, 0, 0.4) 97%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 90%, rgba(0, 0, 0, 0.4) 97%, transparent 100%);
+  filter: none;
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 /* ============================================================== */
-/* LAYER 3: Interactive UI Content (Left Bio & Right Contacts)    */
+/* LAYER 4: Konten Kiri & Kartu Kontak Kanan (z-index: 4)         */
 /* ============================================================== */
 
-.hero-content-row {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-bottom: clamp(1.25rem, 3.2vh, 2.5rem);
-  margin-top: auto;
+.hero-layer-content {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
   pointer-events: none;
-  gap: 2rem;
 }
 
-/* Sisi Kiri: Heading Peran, Bio Singkat & Tombol Kolaborasi */
-.hero-col-left {
+/* Sisi Kiri: x mulai 5.4% W, y≈41%–82% H, max-width ≈ 22% W */
+.hero-content-left {
+  position: absolute;
+  top: 41%;
+  left: 5.4%;
+  width: 22%;
+  max-width: 390px;
+  min-width: 260px;
   pointer-events: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
-  max-width: 320px;
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.22s,
-              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.22s;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
 }
 
-.hero-section.is-entered .hero-col-left {
+.hero-section.is-entered .hero-content-left {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Judul peran: 2 baris, bold, hitam, y≈41%–51% H */
 .hero-role-heading {
-  font-family: var(--font-display, 'Outfit', 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.4rem, 2.25vw, 2.45rem);
   font-weight: 800;
-  color: #0a0a0a;
+  color: #0a0f12;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  margin: 0 0 0.85rem 0;
+  margin: 0 0 clamp(0.6rem, 1.1vh, 1.15rem) 0;
   display: flex;
   flex-direction: column;
 }
 
+/* Bio: abu-abu (#6b7280), y≈54%–72% H, tidak menabrak figur */
 .hero-bio-lead {
-  font-size: clamp(0.8rem, 0.9vw, 0.875rem);
-  color: #52525b;
-  line-height: 1.58;
-  margin: 0 0 1.35rem 0;
-  max-width: 36ch;
+  font-size: clamp(0.8rem, 1vw, 0.98rem);
+  color: #6b7280;
+  line-height: 1.52;
+  margin: 0 0 clamp(0.9rem, 1.6vh, 1.75rem) 0;
+  max-width: 100%;
 }
 
+/* Tombol kolaborasi: pill hitam, y≈75%–82% H */
 .hero-cta-wrap {
   display: flex;
   align-items: center;
@@ -242,12 +221,12 @@
   background: #000000;
   color: #ffffff;
   border-radius: 9999px;
-  padding: 0.75rem 1.65rem;
-  font-size: 0.875rem;
+  padding: clamp(0.6rem, 1.1vh, 0.9rem) clamp(1.3rem, 2vw, 1.9rem);
+  font-size: clamp(0.8rem, 0.92vw, 0.92rem);
   font-weight: 700;
   letter-spacing: -0.01em;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
               background 0.25s ease,
               box-shadow 0.25s ease;
@@ -256,12 +235,12 @@
 .hero-collab-btn:hover {
   background: #27272a;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .collab-arrow {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -269,21 +248,22 @@
   transform: translate(2px, -2px);
 }
 
-/* Sisi Kanan: Tiga Kartu Kontak Horizontal Kapsul Putih */
-.hero-col-right {
+/* Sisi Kanan: Tiga Kartu Kontak Pill Putih, x≈73.8%–95.9% W, y≈46%–70% H */
+.hero-content-right {
+  position: absolute;
+  top: 46%;
+  right: 4.1%;
+  width: 22.1%;
+  max-width: 360px;
+  min-width: 240px;
   pointer-events: auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 100%;
-  max-width: 300px;
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s,
-              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.28s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.28s;
 }
 
-.hero-section.is-entered .hero-col-right {
+.hero-section.is-entered .hero-content-right {
   opacity: 1;
   transform: translateY(0);
 }
@@ -291,9 +271,8 @@
 .hero-contact-cards-stack {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: clamp(0.5rem, 0.9vh, 0.8rem);
   width: 100%;
-  max-width: 300px;
 }
 
 .hero-contact-card {
@@ -303,8 +282,8 @@
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 9999px;
-  padding: 0.32rem 1.15rem 0.32rem 0.32rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  padding: clamp(0.28rem, 0.55vh, 0.42rem) 1.15rem clamp(0.28rem, 0.55vh, 0.42rem) clamp(0.28rem, 0.55vh, 0.42rem);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
   text-decoration: none;
   color: #18181b;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
@@ -319,10 +298,10 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
 }
 
-/* Lingkaran hitam badge logo monokrom resmi */
+/* Lingkaran hitam badge logo monokrom */
 .contact-card-badge {
-  width: 34px;
-  height: 34px;
+  width: clamp(28px, 2.3vw, 38px);
+  height: clamp(28px, 2.3vw, 38px);
   border-radius: 50%;
   background: #000000;
   color: #ffffff;
@@ -337,7 +316,7 @@
 }
 
 .contact-card-label {
-  font-size: 0.8rem;
+  font-size: clamp(0.74rem, 0.85vw, 0.86rem);
   font-weight: 600;
   letter-spacing: -0.01em;
   color: #18181b;
@@ -350,109 +329,144 @@
 /* RESPONSIVENESS & ADAPTIVE LAYOUT                               */
 /* ============================================================== */
 
-/* Tablet (max-width: 1024px) */
-@media (max-width: 1024px) {
-  .hero-headline-row {
-    gap: clamp(1.5rem, 5vw, 4rem);
+/* Laptop menengah / Tablet landscape (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .hero-name-reski {
+    font-size: clamp(2.8rem, 8.8vw, 7.5rem);
   }
-
-  .hero-word-outline,
-  .hero-word-solid {
-    font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+  .hero-name-setiawan {
+    left: 52%;
+    font-size: clamp(2.6rem, 7.8vw, 7.2rem);
   }
-
-  .hero-cowboy-img {
-    max-height: clamp(380px, 60vh, 520px);
-    max-width: clamp(300px, 32vw, 380px);
+  .hero-content-left {
+    width: 25%;
+    top: 42%;
   }
-
-  .hero-col-left {
-    max-width: 280px;
-  }
-
-  .hero-contact-cards-stack {
-    max-width: 270px;
+  .hero-content-right {
+    width: 24%;
+    top: 46%;
   }
 }
 
-/* Mobile & Small Screens (max-width: 768px) */
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    height: auto;
+    min-height: 750px;
+    max-height: none;
+    padding-bottom: 2rem;
+  }
+
+  .hero-layer-figure {
+    bottom: 0;
+    height: 76%;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-content-left {
+    width: 30%;
+    top: 45%;
+  }
+
+  .hero-content-right {
+    width: 28%;
+    top: 48%;
+  }
+}
+
+/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .hero-section {
+    height: auto;
     min-height: auto;
-    max-height: none;
-    padding-top: 1rem;
-    padding-bottom: 2.5rem;
+    padding-top: 5.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .hero-container {
-    min-height: auto;
-    max-height: none;
-    padding: 0 1.25rem;
+  .hero-layer-bg {
+    position: absolute;
   }
 
-  .hero-headline-stage {
+  .hero-layer-name {
     position: relative;
     top: auto;
     left: auto;
     right: auto;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-headline-row {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.15rem;
+    padding: 0 1rem;
+    gap: 0.2rem;
+    margin-bottom: 1rem;
+    width: 100%;
   }
 
-  .hero-word-outline,
-  .hero-word-solid {
-    font-size: clamp(2.4rem, 12vw, 3.8rem);
+  .hero-name-reski,
+  .hero-name-setiawan {
+    position: relative;
+    left: auto;
+    top: auto;
+    font-size: clamp(2.4rem, 12vw, 4.2rem);
     line-height: 0.95;
     text-align: center;
   }
 
-  .hero-cowboy-stage {
+  .hero-layer-figure {
     position: relative;
     top: auto;
     bottom: auto;
-    height: 320px;
-    margin: 1rem 0;
+    left: auto;
+    transform: none;
+    width: 90vw;
+    height: 380px;
+    margin: 0.5rem auto 1.5rem auto;
+  }
+
+  .hero-cowboy-picture {
+    width: 100%;
+    height: 100%;
   }
 
   .hero-cowboy-img {
-    height: 320px;
-    max-height: 320px;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
   }
 
-  .hero-content-row {
+  .hero-layer-content {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    padding: 0 1.25rem;
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 2rem;
-    padding-bottom: 0;
-    margin-top: 0;
   }
 
-  .hero-col-left {
+  .hero-content-left {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
     max-width: 100%;
     align-items: center;
     text-align: center;
   }
 
-  .hero-bio-lead {
-    max-width: 100%;
-  }
-
-  .hero-col-right {
-    justify-content: center;
-    max-width: 100%;
+  .hero-content-right {
+    position: relative;
+    top: auto;
+    right: auto;
     width: 100%;
-  }
-
-  .hero-contact-cards-stack {
     max-width: 100%;
-    width: 100%;
   }
 
   .hero-contact-card {

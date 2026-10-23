@@ -22,7 +22,7 @@ body {
   font-family: var(--font-family);
   font-size: 1rem;
   color: var(--text-primary);
-  background-color: #ffffff;
+  background-color: #f3f7f7;
   line-height: 1.68;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -39,7 +39,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: var(--bg-card, #ffffff);
+  background-color: #f3f7f7;
   border-radius: 0;
   box-shadow: none;
   border: none;
