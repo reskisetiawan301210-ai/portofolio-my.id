@@ -54,9 +54,10 @@ function ArticleDetailPage() {
       jobTitle: article.author.role,
       url: siteConfig.siteUrl,
       sameAs: [
+        siteConfig.contacts.linkedin?.url,
         siteConfig.contacts.instagram.url,
         siteConfig.contacts.tiktokOffice.url,
-      ],
+      ].filter(Boolean),
       affiliation: {
         '@type': 'EducationalOrganization',
         name: 'SMKN 1 Talaga',
@@ -267,9 +268,9 @@ function ArticleDetailPage() {
         <section className="article-bottom-bio" aria-label="Tentang penulis">
           <div className="bottom-bio-avatar" aria-hidden="true">RS</div>
           <div className="bottom-bio-content">
-            <h2 className="bottom-bio-title">Ditulis oleh Reski Setiawan</h2>
+            <h2 className="bottom-bio-title">Ditulis oleh <Link to="/profil" style={{ color: 'inherit', textDecoration: 'underline' }}>Reski Setiawan</Link></h2>
             <p className="bottom-bio-text">
-              Alumni SMPN 1 Talaga (2026) dan siswa kelas 10 SMKN 1 Talaga konsentrasi PPLG asal Jawa Barat. Solo developer LifeHub AI dan perancang konsep NEXUS AI OFFICE. Memiliki keahlian pada rekayasa web modern, sistem IoT mikrokontroler (Arduino/ESP), dan keamanan siber bersertifikasi Fortinet &amp; Cisco.
+              <Link to="/" style={{ color: 'var(--color-primary, #10b981)', textDecoration: 'none', fontWeight: 600 }}>Software Engineer &amp; Web Developer</Link> asal Majalengka, Jawa Barat. Siswa kelas 10 SMKN 1 Talaga konsentrasi PPLG, solo developer LifeHub AI, serta perancang konsep NEXUS AI OFFICE. Pelajari lebih lanjut di <Link to="/profil" style={{ color: 'var(--color-primary, #10b981)', textDecoration: 'none', fontWeight: 600 }}>profil lengkap</Link> atau jelajahi <Link to="/proyek" style={{ color: 'var(--color-primary, #10b981)', textDecoration: 'none', fontWeight: 600 }}>katalog karya</Link>.
             </p>
           </div>
         </section>

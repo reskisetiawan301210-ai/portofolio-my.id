@@ -26,7 +26,7 @@ function Hero() {
       </div>
 
       {/* LAYER 2: Nama RESKI (Kiri) & SETIAWAN (Kanan) - Satu Baris Horizontal (y≈22%–37% H) */}
-      <div className="hero-layer-name" aria-hidden="true">
+      <div className="hero-layer-name">
         <span className="hero-name-reski">RESKI</span>
         <span className="hero-name-setiawan">SETIAWAN</span>
       </div>
@@ -53,6 +53,7 @@ function Hero() {
         {/* Sisi Kiri: Judul (y≈41%–51%), Bio (y≈54%–72%), Tombol (y≈75%–82%) */}
         <div className="hero-content-left">
           <h1 className="hero-role-heading">
+            <span className="sr-only">Reski Setiawan – </span>
             <span>Software Engineer &amp;</span>
             <span>Web Developer</span>
           </h1>

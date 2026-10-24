@@ -49,7 +49,7 @@ function buildHtmlPage(template, pageMeta) {
     contentHtml,
   } = pageMeta
 
-  const canonicalUrl = `${SITE_URL}${routePath === '/' ? '/' : routePath}`
+  const canonicalUrl = pageMeta.canonical || `${SITE_URL}${routePath === '/' ? '/' : routePath}`
   const imageUrl = image ? (image.startsWith('http') ? image : `${SITE_URL}${image}`) : `${SITE_URL}/images/og-image.png`
 
   let html = template
@@ -76,10 +76,21 @@ function buildHtmlPage(template, pageMeta) {
   html = html.replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${escapeHtml(description)}" />`)
   html = html.replace(/<meta name="twitter:image" content=".*?" \/>/i, `<meta name="twitter:image" content="${imageUrl}" />`)
 
-  // 6. Inject Schema JSON-LD if provided
-  if (schema) {
-    const schemaScript = `\n    <!-- Page Specific Structured Data JSON-LD -->\n    <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>\n  </head>`
-    html = html.replace('</head>', schemaScript)
+  // 6. Manage Structured Data JSON-LD
+  // Halaman turunan tidak boleh mewarisi skema homepage yang tidak relevan dari baseTemplate
+  if (routePath !== '/') {
+    html = html.replace(/(?:<!--[^\n]*?-->\s*)?<script type=['"]application\/ld\+json['"]>[\s\S]*?<\/script>\s*/i, '')
+    if (schema) {
+      const schemaScript = `\n    <!-- Page Specific Structured Data JSON-LD -->\n    <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>\n  </head>`
+      html = html.replace('</head>', schemaScript)
+    }
+  } else {
+    // Homepage: pertahankan skema bawaan baseTemplate, atau ganti jika ada skema eksplisit
+    if (schema) {
+      html = html.replace(/(?:<!--[^\n]*?-->\s*)?<script type=['"]application\/ld\+json['"]>[\s\S]*?<\/script>\s*/i, '')
+      const schemaScript = `\n    <!-- Homepage Structured Data JSON-LD -->\n    <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>\n  </head>`
+      html = html.replace('</head>', schemaScript)
+    }
   }
 
   // 7. Inject Semantic Static Content into #root (Hydration compatible)
@@ -113,6 +124,7 @@ function generatePages() {
         <div class="hero-ui-row">
           <div class="hero-col-left">
             <h1 class="hero-role-heading">
+              <span class="sr-only">Reski Setiawan – </span>
               <span>Software Engineer &amp;</span>
               <span>Web Developer</span>
             </h1>
@@ -185,13 +197,13 @@ function generatePages() {
     contentHtml: homeContent,
   })
 
-  // 1. TENTANG SAYA (/tentang & /profil)
-  const aboutSchema = {
+  // 1. PROFIL ENTITAS RESKI SETIAWAN (/profil & alias /tentang)
+  const profileSchema = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
+    name: 'Profil Reski Setiawan – Software Engineer & Web Developer',
     description: 'Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak dan teknologi web.',
-    url: `${SITE_URL}/tentang`,
+    url: `${SITE_URL}/profil`,
     mainEntity: {
       '@type': 'Person',
       '@id': `${SITE_URL}/#person`,
@@ -201,16 +213,17 @@ function generatePages() {
       url: SITE_URL,
       image: `${SITE_URL}/images/og-image.png`,
       sameAs: [
+        siteConfig.contacts.linkedin?.url,
         siteConfig.contacts.instagram.url,
         siteConfig.contacts.tiktokOffice.url,
-      ],
+      ].filter(Boolean),
       alumniOf: { '@type': 'EducationalOrganization', name: 'SMP Negeri 1 Talaga' },
     },
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Tentang Saya', item: `${SITE_URL}/tentang` },
+        { '@type': 'ListItem', position: 2, name: 'Profil', item: `${SITE_URL}/profil` },
       ],
     },
   }
@@ -219,7 +232,7 @@ function generatePages() {
     <main class="detail-page-wrap">
       <div class="container">
         <header class="detail-header-block">
-          <h1 class="detail-title">Tentang Reski Setiawan</h1>
+          <h1 class="detail-title">Profil Reski Setiawan</h1>
           <p class="detail-lead">Halo, saya <strong>Reski Setiawan</strong>. Saya adalah Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Saat ini, saya menempuh pendidikan kelas 10 di SMKN 1 Talaga pada program keahlian Pengembangan Perangkat Lunak dan Gim (PPLG).</p>
         </header>
         <figure class="author-profile-figure" style="margin: 0 0 2rem 0;">
@@ -236,10 +249,11 @@ function generatePages() {
   `
 
   writeRoute('/tentang', {
-    title: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
+    title: 'Profil Reski Setiawan – Software Engineer & Web Developer',
     description: 'Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak dan teknologi web.',
     path: '/tentang',
-    schema: aboutSchema,
+    canonical: `${SITE_URL}/profil`,
+    schema: profileSchema,
     contentHtml: aboutContent,
   })
 
@@ -247,18 +261,7 @@ function generatePages() {
     title: 'Profil Reski Setiawan – Software Engineer & Web Developer',
     description: 'Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga yang berfokus pada rekayasa perangkat lunak dan teknologi web.',
     path: '/profil',
-    schema: {
-      ...aboutSchema,
-      name: 'Profil Reski Setiawan – Software Engineer & Web Developer',
-      url: `${SITE_URL}/profil`,
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Beranda', item: SITE_URL },
-          { '@type': 'ListItem', position: 2, name: 'Profil', item: `${SITE_URL}/profil` },
-        ],
-      },
-    },
+    schema: profileSchema,
     contentHtml: aboutContent,
   })
 
@@ -713,9 +716,10 @@ function generatePages() {
         jobTitle: a.author.role,
         url: SITE_URL,
         sameAs: [
+          siteConfig.contacts.linkedin?.url,
           siteConfig.contacts.instagram.url,
           siteConfig.contacts.tiktokOffice.url,
-        ],
+        ].filter(Boolean),
       },
       publisher: {
         '@type': 'Person',
@@ -770,6 +774,12 @@ function generatePages() {
                   })
                   .join('')}
               </div>
+              <footer class="article-bottom-bio" style="margin-top: 3rem; padding: 1.5rem; background: rgba(0,0,0,0.02); border-radius: 8px;">
+                <h2>Ditulis oleh <a href="${SITE_URL}/profil">Reski Setiawan</a></h2>
+                <p>
+                  <a href="${SITE_URL}/">Software Engineer &amp; Web Developer</a> asal Majalengka, Jawa Barat. Siswa kelas 10 SMKN 1 Talaga konsentrasi PPLG, solo developer LifeHub AI, serta perancang konsep NEXUS AI OFFICE. Pelajari lebih lanjut di <a href="${SITE_URL}/profil">profil lengkap</a> atau jelajahi <a href="${SITE_URL}/proyek">katalog karya</a>.
+                </p>
+              </footer>
             </div>
           </div>
         </article>
@@ -880,9 +890,10 @@ function generatePages() {
       name: siteConfig.name,
       email: siteConfig.contacts.email,
       sameAs: [
+        siteConfig.contacts.linkedin?.url,
         siteConfig.contacts.instagram.url,
         siteConfig.contacts.tiktokOffice.url,
-      ],
+      ].filter(Boolean),
     },
     breadcrumb: {
       '@type': 'BreadcrumbList',

@@ -11,10 +11,10 @@ function AboutPage() {
   const aboutSchema = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'Tentang Saya – Reski Setiawan | Software Engineer & Web Developer',
+    name: 'Profil Reski Setiawan – Software Engineer & Web Developer',
     description:
       'Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga.',
-    url: `${siteConfig.siteUrl}/tentang`,
+    url: `${siteConfig.siteUrl}/profil`,
     mainEntity: {
       '@type': 'Person',
       '@id': `${siteConfig.siteUrl}/#person`,
@@ -23,9 +23,10 @@ function AboutPage() {
       jobTitle: 'Software Engineer & Web Developer',
       image: `${siteConfig.siteUrl}/images/og-image.png`,
       sameAs: [
-        siteConfig.contacts.instagram.url,
-        siteConfig.contacts.tiktokOffice.url,
-      ],
+        siteConfig.contacts.linkedin?.url,
+        siteConfig.contacts.instagram?.url,
+        siteConfig.contacts.tiktokOffice?.url,
+      ].filter(Boolean),
       alumniOf: {
         '@type': 'EducationalOrganization',
         name: 'SMP Negeri 1 Talaga',
@@ -40,7 +41,7 @@ function AboutPage() {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteConfig.siteUrl },
-        { '@type': 'ListItem', position: 2, name: 'Tentang Saya', item: `${siteConfig.siteUrl}/tentang` },
+        { '@type': 'ListItem', position: 2, name: 'Profil', item: `${siteConfig.siteUrl}/profil` },
       ],
     },
   }
@@ -48,9 +49,9 @@ function AboutPage() {
   return (
     <main className="detail-page-wrap page-enter" style={{ minHeight: '80vh', paddingTop: 'calc(var(--nav-height, 80px) + 2rem)', paddingBottom: '6rem' }}>
       <SEO
-        title="Tentang Saya – Reski Setiawan | Software Engineer & Web Developer"
+        title="Profil Reski Setiawan – Software Engineer & Web Developer"
         description="Profil personal dan latar belakang Reski Setiawan, Software Engineer dan Web Developer asal Majalengka, Jawa Barat. Siswa kelas 10 jurusan PPLG di SMKN 1 Talaga."
-        path="/tentang"
+        path="/profil"
         image="/images/og-image.png"
       />
 

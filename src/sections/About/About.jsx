@@ -71,7 +71,7 @@ function About() {
 
                 <div style={{ marginTop: '1.75rem' }}>
                   <Link
-                    to="/tentang"
+                    to="/profil"
                     className="hero-cta-btn"
                     style={{ display: 'inline-flex', padding: '0.65rem 1.4rem', fontSize: '0.85rem' }}
                   >

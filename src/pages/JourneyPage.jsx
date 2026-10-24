@@ -254,8 +254,8 @@ function JourneyPage() {
               <div className="detail-side-card">
                 <span className="side-card-label">Halaman Terkait</span>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <Link to="/tentang" className="tech-pill" style={{ textDecoration: 'none', display: 'block' }}>
-                    ✦ Tentang Profil Saya ↗
+                  <Link to="/profil" className="tech-pill" style={{ textDecoration: 'none', display: 'block' }}>
+                    ✦ Profil Lengkap Saya ↗
                   </Link>
                   <Link to="/pendidikan" className="tech-pill pill-accent-emerald" style={{ textDecoration: 'none', display: 'block' }}>
                     ✦ Pendidikan Saya &amp; Vokasi ↗

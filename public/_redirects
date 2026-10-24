@@ -1,2 +1,7 @@
-/*    /index.html   200
+# Redirect permanen konsolidasi profil
+/tentang    /profil    301
+
+# SPA fallback
+/*          /index.html   200
+
 

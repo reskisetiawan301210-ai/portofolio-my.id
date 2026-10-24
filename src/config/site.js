@@ -39,9 +39,15 @@ export const siteConfig = {
     nexus: 'NEXUS AI OFFICE (NEXUS Kantor AI)',
   },
 
-  // KANAL KONTAK RESMI: EMAIL, INSTAGRAM, DAN TIKTOK TERVERIFIKASI
+  // KANAL KONTAK RESMI: EMAIL, LINKEDIN, INSTAGRAM, DAN TIKTOK TERVERIFIKASI
   contacts: {
     email: 'reskisetiawan301210@gmail.com',
+    linkedin: {
+      handle: 'Reski Setiawan',
+      label: 'Reski Setiawan (LinkedIn Profesional)',
+      url: 'https://www.linkedin.com/in/reski-setiawan-320209432',
+      title: 'LinkedIn Profesional: Reski Setiawan',
+    },
     instagram: {
       handle: '@qariol',
       label: '@qariol (Instagram Personal)',

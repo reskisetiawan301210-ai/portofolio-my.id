@@ -413,7 +413,7 @@ Saya menyematkan metadata terstruktur format \`@graph\` yang menghubungkan entit
 ### 2. Multi-Page Architecture dengan Rich Content
 Saya merancang website ini bukan sebagai landing page 1 halaman datar, melainkan situs web komprehensif dengan banyak rute terindeks:
 - Halaman Beranda (\`/\`)
-- Halaman Profil Detail (\`/tentang\`)
+- Halaman Profil Detail (\`/profil\`)
 - Katalog Karya Lengkap (\`/proyek\`)
 - Direktori Layanan (\`/layanan\`)
 - Galeri Kredensial & Sertifikat (\`/sertifikat\`)

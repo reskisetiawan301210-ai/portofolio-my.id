@@ -31,6 +31,7 @@ function SEO({
   let structuredData = null
   if (isHomePage) {
     const verifiedSameAs = [
+      siteConfig.contacts.linkedin?.url,
       siteConfig.contacts.instagram?.url,
       siteConfig.contacts.tiktokOffice?.url,
     ].filter(Boolean)

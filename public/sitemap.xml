@@ -22,20 +22,7 @@
     </image:image>
   </url>
 
-  <!-- 2. HALAMAN TENTANG (BIOGRAFI LENGKAP & LATAR BELAKANG) -->
-  <url>
-    <loc>https://reskisetiawan-dev.my.id/tentang</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <image:image>
-      <image:loc>https://reskisetiawan-dev.my.id/images/og-image.png</image:loc>
-      <image:title>Tentang Saya – Reski Setiawan | Software Engineer &amp; Web Developer</image:title>
-      <image:caption>Profil personal dan latar belakang rekayasa web Reski Setiawan</image:caption>
-    </image:image>
-  </url>
-
-  <!-- 2b. HALAMAN PROFIL ENTITAS RESKI SETIAWAN -->
+  <!-- 2. HALAMAN PROFIL ENTITAS RESKI SETIAWAN -->
   <url>
     <loc>https://reskisetiawan-dev.my.id/profil</loc>
     <lastmod>2026-10-20</lastmod>
