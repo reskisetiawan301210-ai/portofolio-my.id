@@ -79,16 +79,16 @@ function buildHtmlPage(template, pageMeta) {
   // 6. Manage Structured Data JSON-LD
   // Halaman turunan tidak boleh mewarisi skema homepage yang tidak relevan dari baseTemplate
   if (routePath !== '/') {
-    html = html.replace(/(?:<!--[^\n]*?-->\s*)?<script type=['"]application\/ld\+json['"]>[\s\S]*?<\/script>\s*/i, '')
+    html = html.replace(/(?:<!--[^\n]*?-->\s*)?<script\b[^>]*?type=['"]application\/ld\+json['"][^>]*>[\s\S]*?<\/script>\s*/i, '')
     if (schema) {
-      const schemaScript = `\n    <!-- Page Specific Structured Data JSON-LD -->\n    <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>\n  </head>`
+      const schemaScript = `\n    <!-- Page Specific Structured Data JSON-LD -->\n    <script id="schema-jsonld" type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>\n  </head>`
       html = html.replace('</head>', schemaScript)
     }
   } else {
     // Homepage: pertahankan skema bawaan baseTemplate, atau ganti jika ada skema eksplisit
     if (schema) {
-      html = html.replace(/(?:<!--[^\n]*?-->\s*)?<script type=['"]application\/ld\+json['"]>[\s\S]*?<\/script>\s*/i, '')
-      const schemaScript = `\n    <!-- Homepage Structured Data JSON-LD -->\n    <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>\n  </head>`
+      html = html.replace(/(?:<!--[^\n]*?-->\s*)?<script\b[^>]*?type=['"]application\/ld\+json['"][^>]*>[\s\S]*?<\/script>\s*/i, '')
+      const schemaScript = `\n    <!-- Homepage Structured Data JSON-LD -->\n    <script id="schema-jsonld" type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>\n  </head>`
       html = html.replace('</head>', schemaScript)
     }
   }
@@ -704,6 +704,7 @@ function generatePages() {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${a.slug}` },
+      url: `${SITE_URL}/blog/${a.slug}`,
       headline: a.title,
       description: a.excerpt,
       image: `${SITE_URL}${a.coverImage}`,
@@ -714,7 +715,7 @@ function generatePages() {
         '@id': `${SITE_URL}/#person`,
         name: a.author.name,
         jobTitle: a.author.role,
-        url: SITE_URL,
+        url: `${SITE_URL}/profil`,
         sameAs: [
           siteConfig.contacts.linkedin?.url,
           siteConfig.contacts.instagram.url,
@@ -725,7 +726,7 @@ function generatePages() {
         '@type': 'Person',
         '@id': `${SITE_URL}/#person`,
         name: siteConfig.name,
-        url: SITE_URL,
+        url: `${SITE_URL}/profil`,
       },
       keywords: a.keywords.join(', '),
       articleSection: a.category,

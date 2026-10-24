@@ -42,6 +42,7 @@ function ArticleDetailPage() {
       '@type': 'WebPage',
       '@id': `${siteConfig.siteUrl}/blog/${article.slug}`,
     },
+    url: `${siteConfig.siteUrl}/blog/${article.slug}`,
     headline: article.title,
     description: article.excerpt,
     image: `${siteConfig.siteUrl}${article.coverImage}`,
@@ -52,7 +53,7 @@ function ArticleDetailPage() {
       '@id': `${siteConfig.siteUrl}/#person`,
       name: article.author.name,
       jobTitle: article.author.role,
-      url: siteConfig.siteUrl,
+      url: `${siteConfig.siteUrl}/profil`,
       sameAs: [
         siteConfig.contacts.linkedin?.url,
         siteConfig.contacts.instagram.url,
@@ -72,7 +73,7 @@ function ArticleDetailPage() {
       '@type': 'Person',
       '@id': `${siteConfig.siteUrl}/#person`,
       name: siteConfig.name,
-      url: siteConfig.siteUrl,
+      url: `${siteConfig.siteUrl}/profil`,
     },
     keywords: article.keywords.join(', '),
     articleSection: article.category,
@@ -86,6 +87,25 @@ function ArticleDetailPage() {
       ],
     },
   }
+
+  // Sinkronisasi structured data untuk navigasi SPA tanpa menduplikasi script statis di DOM
+  React.useEffect(() => {
+    const existingStatic = document.getElementById('schema-jsonld')
+    if (existingStatic) {
+      existingStatic.textContent = JSON.stringify(blogPostingSchema)
+    } else {
+      let dynamicTag = document.querySelector('head script[data-rh="article-schema"]')
+      if (!dynamicTag) {
+        dynamicTag = document.createElement('script')
+        dynamicTag.type = 'application/ld+json'
+        dynamicTag.setAttribute('data-rh', 'article-schema')
+        dynamicTag.textContent = JSON.stringify(blogPostingSchema)
+        document.head.appendChild(dynamicTag)
+      } else {
+        dynamicTag.textContent = JSON.stringify(blogPostingSchema)
+      }
+    }
+  }, [article.slug])
 
   // Helper untuk merender markdown sederhana menjadi JSX
   const renderMarkdown = (content) => {
@@ -174,11 +194,6 @@ function ArticleDetailPage() {
         path={`/blog/${article.slug}`}
         image={article.coverImage}
         type="article"
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />
 
       <div className="article-container">

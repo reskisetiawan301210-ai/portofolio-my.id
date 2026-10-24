@@ -53,16 +53,70 @@ function SEO({
           '@type': 'Article',
           headline: 'Siapa Reski Setiawan? Profil Software Engineer Muda dan Web Developer Asal Jawa Barat',
           url: `${siteConfig.siteUrl}/blog/siapa-reski-setiawan-profil-software-engineer-web-developer`,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${siteConfig.siteUrl}/blog/siapa-reski-setiawan-profil-software-engineer-web-developer`,
+          },
+          image: `${siteConfig.siteUrl}/images/articles/profil-developer.webp`,
+          author: {
+            '@type': 'Person',
+            '@id': `${siteConfig.siteUrl}/#person`,
+            name: 'Reski Setiawan',
+            url: `${siteConfig.siteUrl}/profil`,
+          },
+          publisher: {
+            '@type': 'Person',
+            '@id': `${siteConfig.siteUrl}/#person`,
+            name: 'Reski Setiawan',
+            url: `${siteConfig.siteUrl}/profil`,
+          },
+          datePublished: '2026-10-20',
         },
         {
           '@type': 'Article',
           headline: 'FAQ Reski Setiawan: Pertanyaan Populer Seputar Profil, Pendidikan, dan Proyek',
           url: `${siteConfig.siteUrl}/blog/faq-reski-setiawan-pendidikan-proyek-keahlian`,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${siteConfig.siteUrl}/blog/faq-reski-setiawan-pendidikan-proyek-keahlian`,
+          },
+          image: `${siteConfig.siteUrl}/images/articles/pplg-smk-learning.webp`,
+          author: {
+            '@type': 'Person',
+            '@id': `${siteConfig.siteUrl}/#person`,
+            name: 'Reski Setiawan',
+            url: `${siteConfig.siteUrl}/profil`,
+          },
+          publisher: {
+            '@type': 'Person',
+            '@id': `${siteConfig.siteUrl}/#person`,
+            name: 'Reski Setiawan',
+            url: `${siteConfig.siteUrl}/profil`,
+          },
+          datePublished: '2026-10-20',
         },
         {
           '@type': 'Article',
           headline: 'Tentang Saya: Perjalanan di Dunia Software Development',
           url: `${siteConfig.siteUrl}/blog/profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer`,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${siteConfig.siteUrl}/blog/profil-reski-setiawan-siswa-smkn-1-talaga-pplg-solo-developer`,
+          },
+          image: `${siteConfig.siteUrl}/images/articles/profil-developer.webp`,
+          author: {
+            '@type': 'Person',
+            '@id': `${siteConfig.siteUrl}/#person`,
+            name: 'Reski Setiawan',
+            url: `${siteConfig.siteUrl}/profil`,
+          },
+          publisher: {
+            '@type': 'Person',
+            '@id': `${siteConfig.siteUrl}/#person`,
+            name: 'Reski Setiawan',
+            url: `${siteConfig.siteUrl}/profil`,
+          },
+          datePublished: '2026-10-15',
         },
       ],
       affiliation: {
@@ -356,9 +410,9 @@ function SEO({
       <meta name="twitter:description" content={finalDesc} />
       {absoluteImageUrl && <meta name="twitter:image" content={absoluteImageUrl} />}
 
-      {/* Structured Data JSON-LD untuk Beranda */}
-      {structuredData && (
-        <script type="application/ld+json">
+      {/* Structured Data JSON-LD untuk Beranda: hindari duplikasi jika sudah dirender secara statis di template */}
+      {structuredData && typeof document !== 'undefined' && !document.getElementById('schema-jsonld') && (
+        <script id="schema-jsonld" type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
